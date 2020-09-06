@@ -1,1 +1,1 @@
-/home/jalonso/alonso/estudio/Logica_con_Lean/texto/Logica_con_Lean.org
+#+INCLUDE: "texto/Logica_con_Lean.org"
