@@ -12,7 +12,7 @@
 * Introducción
 
 El objetivo de este trabajo es presentar una introducción a la Lógica usando
-[[https://leanprover.github.io/][Lean]] para usarla en las clases de la asignatura de [[https://www.cs.us.es/~jalonso/cursos/m-ra-19/][Razonamiento automático]] del
+[[https://leanprover-community.github.io/][Lean]] para usarla en las clases de la asignatura de [[https://www.cs.us.es/~jalonso/cursos/m-ra-19/][Razonamiento automático]] del
 [[http://www.cs.us.es/blogs/mulcia/docencia-plan-estudios/][Máster Universitario en Lógica, Computación e Inteligencia Artificial]] de la
 Universidad de Sevilla. Por tanto, el único prerrequisito es, como en el Máster,
 cierta madurez matemática como la que deben tener los alumnos de los Grados de
@@ -27,9 +27,9 @@ pulsarlo abre el ejercicio en Lean Web (en una sesión del navegador) de forma
 que se puede navegar por las pruebas y editar otras alternativas, y el tercero es
 un enlace a un vídeo explicando las soluciones del ejercicio.
  
-El trabajo se desarrolla como un [[https://github.com/jaalonso/DAO_con_Lean][proyecto en GitHub]] que contiene [[https://github.com/jaalonso/DAO_con_Lean/raw/master/DAO_con_Lean.pdf][libro en PDF]]. 
+El trabajo se desarrolla como un [[https://github.com/jaalonso/Logica_con_Lean][proyecto en GitHub]] que contiene [[https://github.com/jaalonso/Logica_con_Lean/raw/master/Logica_con_Lean.pdf][libro en PDF]]. 
 Además, los vídeos correspondientes a cada uno de los ejercicios se encuentran
-en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbE-0_FEblzjmDSjIxQUT4x2][YouTube]].
+en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][YouTube]].
 
 El trabajo se basa fundamentalmente en el libro [[https://leanprover.github.io/logic_and_proof/][Logic and proof]] de eremy Avigad,
 Robert Y. Lewis y Floris van Doorn.
