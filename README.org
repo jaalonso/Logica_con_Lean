@@ -46,5 +46,11 @@ Robert Y. Lewis y Floris van Doorn.
 *** Eliminación del condicional
 + Enlaces al [[./src/1_Proposicional/Eliminacion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/src/1_Proposicional/Eliminacion_del_condicional.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/1_Proposicional/Eliminacion_del_condicional.lean" src lean 
+#+INDEX: apply
+#+INDEX: exact
+
+*** Introducción del condicional
++ Enlaces al [[./src/1_Proposicional/Introduccion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/src/1_Proposicional/Introduccion_del_condicional.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/1_Proposicional/Introduccion_del_condicional.lean" src lean :lines "7-"
 
 
