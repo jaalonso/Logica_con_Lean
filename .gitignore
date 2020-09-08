@@ -12,3 +12,6 @@
 *.toc
 *.tex
 /excluido
+*.idx
+*.ilg
+*.ind
