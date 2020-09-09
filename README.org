@@ -47,7 +47,7 @@ Robert Y. Lewis y Floris van Doorn.
 ** Reglas del condicional
 
 *** Eliminación del condicional
-+ Enlaces al [[./src/1_Proposicional/Eliminacion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/src/1_Proposicional/Eliminacion_del_condicional.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/1_Proposicional/Eliminacion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Eliminacion_del_condicional.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/1_Proposicional/Eliminacion_del_condicional.lean" src lean 
 #+INDEX: Órdenes!import
 #+INDEX: Órdenes!variables
@@ -63,10 +63,8 @@ Robert Y. Lewis y Floris van Doorn.
 #+INDEX: Tipos!Prop
 
 *** Introducción del condicional
-+ Enlaces al [[./src/1_Proposicional/Introduccion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/src/1_Proposicional/Introduccion_del_condicional.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/1_Proposicional/Introduccion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Introduccion_del_condicional.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/1_Proposicional/Introduccion_del_condicional.lean" src lean :lines "7-"
-
-
 
 
 #+LATEX:\printindex
