@@ -7,7 +7,7 @@
 -- ---------------------------------------------------------------------
 
 import tactic          
-variables (P : Prop)   
+variable (P : Prop)   
 
 -- 1ª demostración
 example : P → P :=
