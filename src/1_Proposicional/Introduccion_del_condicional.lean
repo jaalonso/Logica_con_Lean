@@ -70,9 +70,8 @@ by tauto
 
 -- 12ª demostración
 example : P → P :=
-by finish
+by finish  
 
 -- 13ª demostración
 example : P → P :=
 by simp
-
