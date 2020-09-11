@@ -60,12 +60,12 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** Eliminación del condicional
 + Enlaces al [[./src/1_Proposicional/Eliminacion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Eliminacion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/BE3qHiV7wRM][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Eliminacion_del_condicional.lean" src lean 
-#+INDEX: Órdenes!import
-#+INDEX: Órdenes!variables
-#+INDEX: Órdenes!example
-#+INDEX: Órdenes!begin
-#+INDEX: Órdenes!end
-#+INDEX: Órdenes!by
+#+INDEX: Ordenes!import
+#+INDEX: Ordenes!variables
+#+INDEX: Ordenes!example
+#+INDEX: Ordenes!begin
+#+INDEX: Ordenes!end
+#+INDEX: Ordenes!by
 #+INDEX: Tácticas!apply
 #+INDEX: Tácticas!exact
 #+INDEX: Tácticas!tauto
