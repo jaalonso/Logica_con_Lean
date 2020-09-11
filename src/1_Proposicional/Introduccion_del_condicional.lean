@@ -72,7 +72,7 @@ assume h : P ∧ Q, ⟨h.2, h.1⟩
 -- ===============
 
 example : P ∧ Q → Q ∧ P :=
-λ h, ⟨h.2, h.1⟩
+λ h, ⟨h.2,h.1⟩
 
 -- 8ª demostración
 -- =============== 
