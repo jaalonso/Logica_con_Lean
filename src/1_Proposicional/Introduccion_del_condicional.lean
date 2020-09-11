@@ -1,120 +1,77 @@
--- Introducción del condicional
--- ============================
+-- Introducción del condicional en Lean
+-- =====================================================================
 
--- Demostrar que
---    P ∧ Q → Q ∧ P
+-- ---------------------------------------------------------------------
+-- Ejercicio 1. Demostrar que
+--    P → P
+-- ---------------------------------------------------------------------
 
-import tactic            
-
-variables (P Q R : Prop)
+import tactic          
+variable (P : Prop)   
 
 -- 1ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-assume h : P ∧ Q,
-have hP : P, 
-  from and.left h,
-have hQ : Q, 
-  from and.right h,
-show Q ∧ P,  
-  from and.intro hQ hP
+example : P → P :=
+assume h : P, 
+show P, from h
 
 -- 2ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-assume h : P ∧ Q,
-have hP : P, 
-  from h.left,
-have hQ : Q, 
-  from h.right,
-show Q ∧ P,  
-  from ⟨hQ, hP⟩
+example : P → P :=
+assume : P, 
+show P, from this
 
 -- 3ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-assume h : P ∧ Q,
-have hP : P, 
-  from h.1,
-have hQ : Q, 
-  from h.2,
-show Q ∧ P,  
-  from ⟨hQ, hP⟩
+example : P → P :=
+assume : P, 
+show P, from ‹P›
 
 -- 4ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-assume h : P ∧ Q,
-have hP : P := h.1,
-have hQ : Q := h.2,
-show Q ∧ P,  
-  from ⟨hQ, hP⟩
+example : P → P :=
+assume h : P, h
 
 -- 5ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-assume h : P ∧ Q,
-show Q ∧ P,  
-  from ⟨h.2, h.1⟩
+example : P → P :=
+λ h, h
 
 -- 6ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-assume h : P ∧ Q, ⟨h.2, h.1⟩
+example : P → P :=
+id
 
 -- 7ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-λ h, ⟨h.2,h.1⟩
-
--- 8ª demostración
--- =============== 
-
-example : P ∧ Q → Q ∧ P :=
+example : P → P :=
 begin
   intro h,
-  cases h with hP hQ,
-  split,
-  { exact hQ, },
-  { exact hP, },
+  exact h,
+end
+
+-- 8ª demostración
+example : P → P :=
+begin
+  intro,
+  exact ‹P›,
 end
 
 -- 9ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
+example : P → P :=
 begin
-  rintro ⟨hP, hQ⟩,
-  exact ⟨hQ, hP⟩,
+  intro h,
+  assumption,
 end
 
 -- 10ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-λ ⟨hP, hQ⟩, ⟨hQ, hP⟩
+example : P → P :=
+begin
+  intro,
+  assumption,
+end
 
 -- 11ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
-and.comm.mp
-
--- 12ª demostración
--- ===============
-
-example : P ∧ Q → Q ∧ P :=
+example : P → P :=
 by tauto
 
--- 13ª demostración
--- ===============
+-- 12ª demostración
+example : P → P :=
+by finish  
 
-example : P ∧ Q → Q ∧ P :=
-by finish
+-- 13ª demostración
+example : P → P :=
+by simp
