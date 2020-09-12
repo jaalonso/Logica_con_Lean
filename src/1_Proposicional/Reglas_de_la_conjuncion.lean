@@ -86,7 +86,8 @@ example
   : Q ∧ R :=
 begin
   split,
-  { cases hPQ with _ hQ,
+  { cases hPQ with hP hQ,
+    clear hP,
     exact hQ, },
   { exact hR, },
 end
