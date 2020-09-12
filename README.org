@@ -10,7 +10,11 @@
 #+LATEX_HEADER:\usepackage{makeidx}
 #+LATEX_HEADER:\makeindex
 
-# * Contenido                                                             :TOC:
+* Contenido                                                             :TOC:
+- [[#introducción][Introducción]]
+- [[#lógica-proposicional][Lógica proposicional]]
+  - [[#reglas-del-condicional][Reglas del condicional]]
+  - [[#reglas-de-la-conjunción][Reglas de la conjunción]]
 
 * Introducción
 
@@ -77,7 +81,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Introduccion_del_condicional.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Introduccion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/XTiVb1gtr5U][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Introduccion_del_condicional.lean" src lean :lines "7-"
 
-*** Reglas de la conjunción
+** Reglas de la conjunción
 + Enlaces al [[./src/1_Proposicional/Reglas_de_la_conjuncion.lean][código]], a la [[https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_la_conjuncion.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/1_Proposicional/Reglas_de_la_conjuncion.lean" src lean 
 
