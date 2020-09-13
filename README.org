@@ -9,7 +9,7 @@
 #+LATEX_CLASS_OPTIONS: [a4paper,12pt,twoside]
 #+LATEX_HEADER:\usepackage{makeidx}
 #+LATEX_HEADER:\makeindex
-#+LINK: lean https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/
+
 # * Contenido                                                             :TOC:
 
 * Introducción
@@ -84,3 +84,5 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 
 # #+LATEX:\printindex
+
+
