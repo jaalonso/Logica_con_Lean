@@ -82,8 +82,8 @@ h2 h1
 example : ¬(P ∧ ¬P) :=
 not.intro 
   ( assume h : P ∧ ¬P,
-    have h1 : P  := h.1
-    have h2 : ¬P := h.2
+    have h1 : P  := h.1,
+    have h2 : ¬P := h.2,
     show false, from h2 h1 )
   
 -- 2ª demostración
