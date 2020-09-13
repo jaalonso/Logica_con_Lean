@@ -89,7 +89,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 ** Reglas de la negación
 
-*** Reglas de la negación
+*** Reglas de la negación con (⊥ ⊢ P), (P, ¬P ⊢ ⊥) y ¬(P ∧ ¬P)
 + Enlaces al [[./src/1_Proposicional/Reglas_de_la_negacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_la_negacion.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/1_Proposicional/Reglas_de_la_negacion.lean" src lean 
 
