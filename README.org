@@ -10,7 +10,11 @@
 #+LATEX_HEADER:\usepackage{makeidx}
 #+LATEX_HEADER:\makeindex
 
-# * Contenido                                                             :TOC:
+* Contenido                                                             :TOC:
+- [[#introducción][Introducción]]
+- [[#lógica-proposicional][Lógica proposicional]]
+  - [[#reglas-del-condicional][Reglas del condicional]]
+  - [[#reglas-de-la-conjunción][Reglas de la conjunción]]
 
 * Introducción
 
