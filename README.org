@@ -79,7 +79,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 ** Reglas de la conjunción
 + Enlaces al [[./src/1_Proposicional/Reglas_de_la_conjuncion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_la_conjuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/pXSs3ytn6Nc][vídeo]].
-+ Enlaces al [[./src/1_Proposicional/Reglas_de_la_conjuncion.lean][código]], a la [[lean::1_Proposicional/Reglas_de_la_conjuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/pXSs3ytn6Nc][vídeo]].
++ Enlaces al [[./src/1_Proposicional/Reglas_de_la_conjuncion.lean][código]], a la [[lean:1_Proposicional/Reglas_de_la_conjuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/pXSs3ytn6Nc][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Reglas_de_la_conjuncion.lean" src lean 
 
 
