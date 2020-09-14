@@ -50,7 +50,7 @@ example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
-λ h3, h2 (h1 h3)
+λ h, h2 (h1 h)
 
 -- 6ª demostración
 example 
@@ -80,3 +80,31 @@ example
   : ¬P :=
 by finish
 
+-- 10ª demostración
+example 
+  (h1 : P → Q)
+  (h2 : ¬Q)
+  : ¬P :=
+begin
+  intro h,
+  apply h2,
+  apply h1,
+  exact h,
+end
+
+-- 11ª demostración
+example 
+  (h1 : P → Q)
+  (h2 : ¬Q)
+  : ¬P :=
+begin
+  intro h,
+  exact h2 (h1 h),
+end
+
+-- 12ª demostración
+example 
+  (h1 : P → Q)
+  (h2 : ¬Q)
+  : ¬P :=
+λ h, h2 (h1 h)
