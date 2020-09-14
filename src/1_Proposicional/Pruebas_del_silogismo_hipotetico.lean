@@ -66,8 +66,9 @@ example
   : P → R :=
 begin
   intro h,
-  apply h2,
-  exact h1 h,
+  apply h2, 
+  apply h1,
+  exact h,
 end
 
 -- 8º demostración
@@ -77,7 +78,8 @@ example
   : P → R :=
 begin
   intro h,
-  exact h2 (h1 h),
+  apply h2, 
+  exact h1 h,
 end
 
 -- 9º demostración
@@ -85,9 +87,19 @@ example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
-λ h, h2 (h1 h)
+begin
+  intro h,
+  exact h2 (h1 h),
+end
 
 -- 10º demostración
+example 
+  (h1 : P → Q)
+  (h2 : Q → R)
+  : P → R :=
+λ h, h2 (h1 h)
+
+-- 11º demostración
 example 
   (h1 : P → Q)
   (h2 : Q → R)
