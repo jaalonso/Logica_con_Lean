@@ -11,6 +11,8 @@
 
 # * Contenido                                                             :TOC:
 
+#+LATEX: \input preambulo
+
 * Introducción
 
 El objetivo de este trabajo es presentar una introducción a la Lógica usando
@@ -106,4 +108,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 # #+LATEX:\printindex
 
+
+
+#+LATEX: \end{document}
 
