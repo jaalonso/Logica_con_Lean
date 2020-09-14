@@ -82,9 +82,8 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 
 # *** Pruebas del modus tollens
-+ Enlaces al [[./src/1_Proposicional/Pruebas_del_modus_tollens.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_modus_tollens.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/1_Proposicional/Pruebas_del_modus_tollens.lean" src lean 
-
+# + Enlaces al [[./src/1_Proposicional/Pruebas_del_modus_tollens.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_modus_tollens.lean][sesión en Lean Web]] y al vídeo.
+# #+INCLUDE: "./src/1_Proposicional/Pruebas_del_modus_tollens.lean" src lean 
 
 ** Reglas de la conjunción 
 
