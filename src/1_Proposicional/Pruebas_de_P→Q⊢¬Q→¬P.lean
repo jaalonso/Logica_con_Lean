@@ -16,21 +16,25 @@ assume h2 : ¬Q,
 show ¬P,
   from mt h1 h2
 
+-- 2ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
 assume h2 : ¬Q, mt h1 h2
 
+-- 3ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
 λ h2, mt h1 h2
 
+-- 4ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
 mt h1
 
+-- 5ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
@@ -39,6 +43,7 @@ begin
   exact mt h1 h2,
 end
 
+-- 6ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
@@ -50,6 +55,7 @@ begin
   exact h3,
 end
 
+-- 7ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
@@ -60,6 +66,7 @@ begin
   exact h1 h3,
 end
 
+-- 8ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
@@ -69,6 +76,7 @@ begin
   exact h2 (h1 h3),
 end
 
+-- 9ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
@@ -77,16 +85,19 @@ begin
   exact h2 (h1 h3),
 end
 
+-- 10ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
 λ h2 h3, h2 (h1 h3)
 
+-- 11ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
 by tauto
 
+-- 12ª demostración
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
