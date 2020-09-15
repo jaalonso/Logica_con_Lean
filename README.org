@@ -74,6 +74,10 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INDEX: Tácticas!solve-by-elim
 #+INDEX: Tipos!Prop
 
+*** Pruebas de P, P → Q, P → (Q → R) ⊢ R
++ Enlaces al [[./src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean" src lean 
+
 *** Regla de introducción del condicional en P → P
 + Enlaces al [[./src/1_Proposicional/Introduccion_del_condicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Introduccion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/XTiVb1gtr5U][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Introduccion_del_condicional.lean" src lean 
