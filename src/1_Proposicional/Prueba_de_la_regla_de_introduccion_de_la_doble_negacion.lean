@@ -12,10 +12,10 @@ example
   (h1 : P)
   : ¬¬P :=
 not.intro 
-  ( assume h2 : ¬P,
-    show false,
-      from h2 h1 )
-
+  ( assume h2: ¬P,
+    show false, 
+      from h2 h1)
+  
 -- 2ª demostración
 example
   (h1 : P)
