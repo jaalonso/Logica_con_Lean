@@ -44,7 +44,7 @@ example
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
-mt (h1 h2) h3  
+mt (h1 h2) h3
 
 -- 5ª demostración
 example 
@@ -96,4 +96,4 @@ example
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
-by finish 
+by finish
