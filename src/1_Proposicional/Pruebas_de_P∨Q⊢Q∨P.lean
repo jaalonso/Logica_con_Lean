@@ -32,15 +32,21 @@ or.elim h1
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
-or.rec or.inr or.inl h1
+or.elim h1 or.inr or.inl
 
 -- 4ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
-or.swap h1 
+or.rec or.inr or.inl h1
 
 -- 5ª demostración
+example
+  (h1 : P ∨ Q)
+  : Q ∨ P :=
+or.swap h1
+
+-- 6ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
@@ -50,7 +56,7 @@ begin
   { exact or.inl h3, },
 end 
 
--- 6ª demostración
+-- 7ª demostración
 example
   (P ∨ Q)
   : Q ∨ P :=
@@ -60,13 +66,13 @@ begin
   { exact or.inl ‹Q›, },
 end 
 
--- 7ª demostración
+-- 8ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
 by tauto
 
--- 8ª demostración
+-- 9ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
