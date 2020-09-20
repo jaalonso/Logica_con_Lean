@@ -137,10 +137,14 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/1_Proposicional/Regla_de_eliminacion_de_la_disyuncion.lean" src lean 
 
 *** Pruebas de P ∨ Q ⊢ Q ∨ P
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][sesión en Lean Web]] y al [[https://youtu.be/s2HlWqZPJAE][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean" src lean 
 
-# *** Pruebas de P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R
+*** Pruebas de Q → R ⊢ P ∨ Q → P ∨ R 
++ Enlaces al [[./src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean" src lean 
+
+# *** Pruebas de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R
 # + Enlaces al [[./src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean][sesión en Lean Web]] y al vídeo.
 # #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean" src lean 
 
