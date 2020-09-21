@@ -83,7 +83,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/1_Proposicional/Introduccion_del_condicional.lean" src lean 
 
 *** Pruebas de P → (Q → P)
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→(Q→P).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→(Q→P).lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→(Q→P).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→(Q→P).lean][sesión en Lean Web]] y al [[https://youtu.be/-gr74e8Z38c][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P→(Q→P).lean" src lean 
 
 *** Pruebas del silogismo hipotético: P → Q, Q → R ⊢ P → R
@@ -146,7 +146,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean" src lean 
 
 *** Pruebas de Q → R ⊢ P ∨ Q → P ∨ R 
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][sesión en Lean Web]] y al [[https://youtu.be/mNT4FFBjGtk][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean" src lean 
 
 # *** Pruebas de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R
