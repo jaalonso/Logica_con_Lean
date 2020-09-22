@@ -83,8 +83,8 @@ iff.intro
 -- 7ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 iff.intro
-  ( λ h1, ⟨h1.2, h1.1⟩)
-  ( λ h4, ⟨h4.2, h4.1⟩)
+  ( λ h, ⟨h.2, h.1⟩)
+  ( λ h, ⟨h.2, h.1⟩)
 
 -- 8ª demostración
 lemma aux :
