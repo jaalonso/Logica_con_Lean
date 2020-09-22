@@ -129,9 +129,21 @@ end
 example 
   (h1 : ¬P ∨ Q)
   : P → Q :=
-by tauto
+begin
+  intro h2,
+  cases h1 with h3 h4,
+  { exfalso,
+    exact h3 h2, },
+  { exact h4, },
+end
 
 -- 13ª demostración
+example 
+  (h1 : ¬P ∨ Q)
+  : P → Q :=
+by tauto
+
+-- 14ª demostración
 example 
   (h1 : ¬P ∨ Q)
   : P → Q :=
