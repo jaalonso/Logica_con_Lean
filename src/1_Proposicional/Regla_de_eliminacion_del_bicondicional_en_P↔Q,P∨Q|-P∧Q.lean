@@ -1,5 +1,5 @@
--- Regla de eliminacion del condicional
--- ====================================
+-- Reglas de eliminacion del condicional
+-- =====================================
 
 -- Ej. 1. Demostrar
 --     P ↔ Q, P ∨ Q ⊢ P ∧ Q
