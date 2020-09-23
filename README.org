@@ -162,9 +162,9 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean][sesión en Lean Web]] y al [[https://youtu.be/CX55HDaKV7M][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean" src lean 
 
-*** Regla de eliminacion del condicional en P ↔ Q, P ∨ Q ⊢ P ∧ Q
-+ Enlaces al [[./src/1_Proposicional/Regla_de_eliminacion_del_condicional_en_P↔Q,P∨Q|-P∧Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_eliminacion_del_condicional_en_P↔Q,P∨Q|-P∧Q.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/1_Proposicional/Regla_de_eliminacion_del_condicional_en_P↔Q,P∨Q|-P∧Q.lean" src lean 
+*** Regla de eliminacion del bicondicional en P ↔ Q, P ∨ Q ⊢ P ∧ Q
++ Enlaces al [[./src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean" src lean 
 
 
 
