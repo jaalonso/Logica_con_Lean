@@ -39,6 +39,8 @@ example
   : P :=
 not_not.mp (λ h2, h1 h2)
 
+#print axioms not_not
+
 -- 5ª demostración
 example
   (h1 : ¬P → false)
