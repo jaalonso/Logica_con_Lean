@@ -23,7 +23,7 @@ example
   (h1 : ¬P → Q)
   (h2 : ¬Q)
   : P :=
-show P, from not_not.mp (mt h1 h2)
+not_not.mp (mt h1 h2)
 
 -- 3ª demostración
 example
@@ -84,9 +84,11 @@ example
 by tauto
 
 -- 10ª demostración
-example
+lemma aux
   (h1 : ¬P → Q)
   (h2 : ¬Q)
   : P :=
 -- by hint
 by finish
+
+#print axioms aux
