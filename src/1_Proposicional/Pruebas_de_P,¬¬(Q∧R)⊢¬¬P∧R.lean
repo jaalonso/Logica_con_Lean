@@ -54,7 +54,7 @@ example
   : ¬¬P ∧ R :=
 begin
   split,
-  { exact not_not_intro h1 },
+  { exact not_not_intro h1, },
   { push_neg at h2,
     exact h2.2, },
 end
