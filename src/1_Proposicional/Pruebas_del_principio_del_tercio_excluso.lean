@@ -8,7 +8,7 @@ import tactic
 
 variable (F : Prop)
 
--- open classical
+open_locale classical
 
 -- 1ª demostración
 example : F ∨ ¬F :=
@@ -61,7 +61,6 @@ by_contradiction
       h1 (or.inl h3),
     h1 (or.inr h2) )
 
-
 -- 6ª demostración
 example : F ∨ ¬F :=
 by_contradiction
@@ -88,8 +87,6 @@ em F
 #print axioms em
 
 -- 10ª demostración
-open_locale classical
-
 example : F ∨ ¬F :=
 begin
   by_contra h1,
@@ -136,7 +133,7 @@ end
 
 -- 15ª demostración
 example : F ∨ ¬F :=
-by_contra (λh1, h1 (or.inr (λh2, h1 (or.inl h2))))
+by_contra (λ h1, h1 (or.inr (λh2, h1 (or.inl h2))))
 
 -- 16ª demostración
 example : F ∨ ¬F :=

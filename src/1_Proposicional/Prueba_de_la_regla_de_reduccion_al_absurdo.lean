@@ -50,8 +50,9 @@ by_contra h1
 #print axioms by_contra
 
 -- 6ª demostración
-example 
+lemma RAA
   (h1 : ¬P → false)
   : P :=
 by finish
 
+#print axioms RAA

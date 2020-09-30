@@ -17,7 +17,7 @@ example
 by_contra 
   ( assume h2 : ¬P,
     show false, 
-      from h1 h2)
+      from h1 h2 )
 
 -- 2ª demostración
 example
@@ -25,7 +25,7 @@ example
   : P :=
 by_contra 
   ( assume h2 : ¬P,
-    h1 h2)
+    h1 h2 )
 
 -- 3ª demostración
 example
@@ -39,23 +39,25 @@ example
   : P :=
 not_not.mp h1
 
--- 6ª demostración
+-- 5ª demostración
 example
   (h1 : ¬¬P)
   : P :=
 begin
-  by_contra h2,
+  by_contradiction h2,
   exact h1 h2,
 end
 
--- 7ª demostración
+-- 6ª demostración
 example
   (h1 : ¬¬P)
   : P :=
 by tauto
 
--- 8ª demostración
-example
+-- 7ª demostración
+lemma aux
   (h1 : ¬¬P)
   : P :=
 by finish
+
+#print axioms aux
