@@ -135,10 +135,22 @@ end
 example 
   (h1 : P → Q)
   : ¬P ∨ Q :=
+begin
+  by_cases h2 : P,
+  { right,
+    exact h1 h2, },
+  { left,
+    exact h2, },
+end
+
+-- 13ª demostración
+example 
+  (h1 : P → Q)
+  : ¬P ∨ Q :=
 -- by hint
 by tauto
 
--- 12ª demostración
+-- 14ª demostración
 example 
   (h1 : P → Q)
   : ¬P ∨ Q :=

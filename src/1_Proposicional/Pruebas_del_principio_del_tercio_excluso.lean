@@ -137,8 +137,20 @@ by_contra (λ h1, h1 (or.inr (λh2, h1 (or.inl h2))))
 
 -- 16ª demostración
 example : F ∨ ¬F :=
-by tauto
+begin
+  by_contra h1,
+  apply h1,
+  right,
+  intro h2,
+  apply h1,
+  left,
+  exact h2,
+end
 
 -- 17ª demostración
+example : F ∨ ¬F :=
+by tauto
+
+-- 18ª demostración
 example : F ∨ ¬F :=
 by finish

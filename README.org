@@ -167,7 +167,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean" src lean 
 
 
-** Demostraciones por reducción al absurdo (o por contradicción)
+** Reglas de la lógica clásica
 
 *** Pruebas de la regla de reducción al absurdo
 + Enlaces al [[./src/1_Proposicional/Prueba_de_la_regla_de_reduccion_al_absurdo.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_la_regla_de_reduccion_al_absurdo.lean][sesión en Lean Web]] y al [[https://youtu.be/3HLxFpKjld8][vídeo]].
@@ -182,12 +182,12 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/1_Proposicional/Pruebas_del_principio_del_tercio_excluso.lean" src lean 
 
 *** Pruebas de P → Q ⊢ ¬P ∨ Q
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][sesión en Lean Web]] y al [[https://youtu.be/1_3Th-HOARI][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean" src lean 
 
-# *** Pruebas de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R
-# + Enlaces al [[./src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean][sesión en Lean Web]] y al vídeo.
-# #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean" src lean 
+*** Pruebas de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R
++ Enlaces al [[./src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/1_Proposicional/Pruebas_de_P, ¬¬(Q ∧ R ) ⊢ ¬¬P ∧ R.lean" src lean 
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}

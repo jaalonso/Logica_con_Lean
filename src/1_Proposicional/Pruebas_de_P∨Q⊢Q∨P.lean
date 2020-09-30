@@ -70,9 +70,21 @@ end
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
-by tauto
+begin
+  cases h1 with h2 h3,
+  { right, 
+    exact h2, },
+  { left, 
+    exact h3, },
+end 
 
 -- 9ª demostración
+example
+  (h1 : P ∨ Q)
+  : Q ∨ P :=
+by tauto
+
+-- 10ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=

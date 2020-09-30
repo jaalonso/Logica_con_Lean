@@ -87,9 +87,34 @@ end
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
-by tauto
+begin
+  intro h2,
+  cases h2 with h3 h4,
+  { left, 
+    exact h3, },
+  { right,
+    exact (h1 h4), },
+end  
 
 -- 10ª demostración
+example
+  (h1 : Q → R)
+  : P ∨ Q → P ∨ R :=
+begin
+  rintro (h3 | h4),
+  { left, 
+    exact h3, },
+  { right,
+    exact (h1 h4), },
+end  
+
+-- 11ª demostración
+example
+  (h1 : Q → R)
+  : P ∨ Q → P ∨ R :=
+by tauto
+
+-- 12ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
