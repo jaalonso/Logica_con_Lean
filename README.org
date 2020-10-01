@@ -197,6 +197,34 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean" src lean 
 
+* Lógica de primer orden
+
+** Reglas del cuantificador universal
+
+*** Regla de eliminación del cuantificador universal
++ Enlaces al [[./src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean" src lean 
+
+*** Regla de introducción del cuantificador universal
++ Enlaces al [[./src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean" src lean 
+
+** Reglas del cuantificador existencial
+
+*** Regla de introducción del cuantificador existencial
++ Enlaces al [[./src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean" src lean 
+
+*** Regla de eliminación del cuantificador existencial
++ Enlaces al [[./src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean" src lean 
+
+** Ejercicios sobre cuantificadores
+
+*** Pruebas de ¬∀x P(x) ↔ ∃x ¬P(x)
++ Enlaces al [[./src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean" src lean 
+
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}

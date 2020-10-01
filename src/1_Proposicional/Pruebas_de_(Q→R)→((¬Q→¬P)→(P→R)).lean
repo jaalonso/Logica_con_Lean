@@ -142,8 +142,7 @@ example :
   (Q → R) → ((¬Q → ¬P) → (P → R)) :=
 begin
   intros h1 h2 h3,
-  apply h1,
-  exact not_not.mp (mt h2 (not_not_intro h3)),
+  exact h1 (not_not.mp (mt h2 (not_not_intro h3))),
 end
 
 -- 15ª demostración
@@ -154,6 +153,7 @@ example :
 -- 16ª demostración
 lemma aux :
   (Q → R) → ((¬Q → ¬P) → (P → R)) :=
+-- by hint
 by finish
 
 #print axioms aux
