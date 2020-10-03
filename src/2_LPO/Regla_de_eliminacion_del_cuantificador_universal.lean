@@ -55,3 +55,13 @@ example
   (h2 : ∀x, P x → ¬Q x)
   : ¬Q c :=
 by finish
+
+-- 7ª demostración
+example
+  (h1 : P c) 
+  (h2 : ∀x, P x → ¬Q x)
+  : ¬Q c :=
+begin
+  apply h2,
+  exact h1,
+end

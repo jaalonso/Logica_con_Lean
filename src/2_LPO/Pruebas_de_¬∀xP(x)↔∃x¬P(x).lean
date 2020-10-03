@@ -1,15 +1,15 @@
 -- Pruebas de ¬∀x P(x) ↔ ∃x ¬P(x)
 -- ==============================
 
--- ------------------------------------------------------
--- Ej. 1. Demostrar que
---    ¬∀x P(x) ⊢ ∃x ¬P(x)
--- ------------------------------------------------------
-
 import tactic
 
 variable {U : Type}
 variable {P : U -> Prop}
+
+-- ------------------------------------------------------
+-- Ej. 1. Demostrar que
+--    ¬∀x P(x) ⊢ ∃x ¬P(x)
+-- ------------------------------------------------------
 
 -- 1ª demostración
 example 
@@ -146,8 +146,6 @@ lemma aux1
 -- by hint
 by finish
 
-#print axioms aux1
-
 -- ------------------------------------------------------
 -- Ej. 2. Demostrar que
 --    ∃x ¬P(x) ⊢ ¬∀x P(x)
@@ -188,7 +186,7 @@ example
   : ¬∀x, P x :=
 assume h2 : ∀x, P x,
 exists.elim h1
-  (λ x₀ h3,  h3 (h2 x₀))
+  (λ x₀ h3, h3 (h2 x₀))
 
 -- 5ª demostración
 example
