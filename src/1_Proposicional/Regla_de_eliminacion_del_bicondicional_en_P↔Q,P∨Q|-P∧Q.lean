@@ -64,6 +64,14 @@ or.elim h2
   (λh, ⟨h, (h1.1 h)⟩)
   (λh, ⟨h1.2 h, h⟩)
 
+example 
+  (h1 : P ↔ Q) 
+  (h2 : P ∨ Q)
+  : P ∧ Q :=
+h2.elim 
+  (λh, ⟨h, (h1.1 h)⟩)
+  (λh, ⟨h1.2 h, h⟩)
+
 -- 5ª demostración
 example 
   (h1 : P ↔ Q) 

@@ -96,6 +96,16 @@ example
   : P → Q :=
 λ h2, or.elim h1 (λ h3, false.elim (h3 h2)) id
 
+example 
+  (h1 : ¬P ∨ Q)
+  : P → Q :=
+λ h2, h1.elim (λ h3, false.elim (h3 h2)) id
+
+example 
+  (h1 : ¬P ∨ Q)
+  : P → Q :=
+λ h2, h1.elim (λ h3, (h3 h2).elim) id
+
 -- 9ª demostración
 example 
   (h1 : ¬P ∨ Q)

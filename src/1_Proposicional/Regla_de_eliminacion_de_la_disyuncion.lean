@@ -16,6 +16,13 @@ example
   : R :=
 or.elim h1 h2 h3
 
+example
+  (h1 : P ∨ Q)
+  (h2 : P → R) 
+  (h3 : Q → R)
+  : R :=
+h1.elim h2 h3
+
 -- 2ª demostración
 example
   (h1 : P ∨ Q)

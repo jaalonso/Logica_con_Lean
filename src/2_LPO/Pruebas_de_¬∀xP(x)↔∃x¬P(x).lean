@@ -192,7 +192,7 @@ exists.elim h1
 example
   (h1 : ∃x, ¬P x) 
   : ¬∀x, P x :=
-λ h2, exists.elim h1 (λ x₀ h3,  h3 (h2 x₀))
+λ h2, exists.elim h1 (λ x₀ h3, h3 (h2 x₀))
 
 -- 6ª demostración
 example

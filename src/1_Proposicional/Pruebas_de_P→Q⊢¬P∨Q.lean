@@ -97,6 +97,13 @@ or.elim (em P)
   ( λ h3, or.inr (h1 h3))
   ( λ h5, or.inl h5)
 
+example 
+  (h1 : P → Q)
+  : ¬P ∨ Q :=
+(em P).elim
+  ( λ h3, or.inr (h1 h3))
+  ( λ h5, or.inl h5)
+
 -- 8ª demostración
 example 
   (h1 : P → Q)

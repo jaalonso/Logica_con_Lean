@@ -34,6 +34,11 @@ example
   : Q ∨ P :=
 or.elim h1 or.inr or.inl
 
+example
+  (h1 : P ∨ Q)
+  : Q ∨ P :=
+h1.elim or.inr or.inl
+
 -- 4ª demostración
 example
   (h1 : P ∨ Q)
