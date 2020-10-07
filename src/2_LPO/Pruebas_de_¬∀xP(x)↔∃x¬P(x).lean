@@ -212,6 +212,16 @@ begin
   apply h2,
 end
 
+example
+  (h1 : ∃x, ¬P x) 
+  : ¬∀x, P x :=
+begin
+  intro h2,
+  obtain ⟨x₀, h3⟩ := h1,
+  apply h3,
+  apply h2,
+end
+
 -- 8ª demostración
 example
   (h1 : ∃x, ¬P x) 

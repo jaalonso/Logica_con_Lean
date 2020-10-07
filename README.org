@@ -233,6 +233,10 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean" src lean 
 
+*** Pruebas de ∃x∃y P(x,y) ↔ ∃y∃x P(x,y)
++ Enlaces al [[./src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean" src lean 
+
 
 
 # #+LATEX:\printindex
