@@ -21,8 +21,8 @@ exists.elim h1
   ( assume x₀ (h2 : ∃ y, P x₀ y), 
     exists.elim h2
       ( assume y₀ (h3 : P x₀ y₀),
-        have h5 : ∃ x, P x y₀, from exists.intro x₀ h3,
-        show ∃ y, ∃ x, P x y,  from exists.intro y₀ h5))
+        have h4 : ∃ x, P x y₀, from exists.intro x₀ h3,
+        show ∃ y, ∃ x, P x y,  from exists.intro y₀ h4))
 
 -- 2ª demostración
 example :
@@ -56,7 +56,7 @@ example :
 
 -- 7ª demostración
 example :
-  (∃ x, ∃ y, P x y) → (∃ y, ∃ x, P x y) :=
+  (∃ x y, P x y) → (∃ y x, P x y) :=
 -- by library_search
 exists_comm.mp 
 

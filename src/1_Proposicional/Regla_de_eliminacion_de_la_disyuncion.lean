@@ -16,6 +16,7 @@ example
   : R :=
 or.elim h1 h2 h3
 
+-- 2ª demostración
 example
   (h1 : P ∨ Q)
   (h2 : P → R) 
@@ -23,7 +24,7 @@ example
   : R :=
 h1.elim h2 h3
 
--- 2ª demostración
+-- 3ª demostración
 example
   (h1 : P ∨ Q)
   (h2 : P → R) 
@@ -31,7 +32,7 @@ example
   : R :=
 or.rec h2 h3 h1
 
--- 3ª demostración
+-- 4ª demostración
 example
   (h1 : P ∨ Q)
   (h2 : P → R) 
@@ -43,7 +44,7 @@ begin
   { exact h3 hQ, },
 end
 
--- 4ª demostración
+-- 5ª demostración
 example
   (h1 : P ∨ Q)
   (h2 : P → R) 
@@ -51,7 +52,7 @@ example
   : R :=
 by tauto
 
--- 5ª demostración
+-- 6ª demostración
 example
   (h1 : P ∨ Q)
   (h2 : P → R) 

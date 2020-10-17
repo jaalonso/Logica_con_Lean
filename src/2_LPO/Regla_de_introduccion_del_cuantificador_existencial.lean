@@ -6,7 +6,7 @@
 
 import tactic
 
-variable U : Type
+variable U : Type 
 variable c : U
 variable P : U -> Prop
 
@@ -44,3 +44,34 @@ begin
   use a,
   apply h1,
 end
+
+-- 6ª demostración
+example 
+  (a : U)
+  (h1 : ∀x, P x)
+  : ∃x, P x :=
+begin
+  constructor,
+  apply h1 a,
+end
+
+-- 7ª demostración
+example 
+  [inhabited U]
+  (h1 : ∀x, P x)
+  : ∃x, P x :=
+begin
+  constructor,
+  apply h1 (default U),
+end
+
+-- 8ª demostración
+example 
+  (h : nonempty U)
+  (h1 : ∀x, P x)
+  : ∃x, P x :=
+begin
+  use (classical.choice h),
+  apply h1,
+end
+

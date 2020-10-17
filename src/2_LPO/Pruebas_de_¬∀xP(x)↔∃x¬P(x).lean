@@ -205,6 +205,16 @@ not_forall.mpr h1
 example
   (h1 : ∃x, ¬P x) 
   : ¬∀x, P x :=
+assume h2 : ∀x, P x,
+match h1 with ⟨x₀, (h3 : ¬P x₀)⟩ :=
+  ( have h4 : P x₀, from h2 x₀,
+    show false,     from h3 h4)
+end
+
+-- 8ª demostración
+example
+  (h1 : ∃x, ¬P x) 
+  : ¬∀x, P x :=
 begin
   intro h2,
   cases h1 with x₀ h3,
@@ -222,14 +232,14 @@ begin
   apply h2,
 end
 
--- 8ª demostración
+-- 9ª demostración
 example
   (h1 : ∃x, ¬P x) 
   : ¬∀x, P x :=
 -- by hint
 by tauto
 
--- 9ª demostración
+-- 10ª demostración
 lemma aux2
   (h1 : ∃x, ¬P x) 
   : ¬∀x, P x :=

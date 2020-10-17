@@ -118,3 +118,4 @@ by tauto
 
 example : P ∧ Q → Q ∧ P :=
 by finish
+

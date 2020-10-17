@@ -130,8 +130,22 @@ end
 
 -- 12ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
+begin
+  constructor,
+  { rintro ⟨h2, h3⟩,
+    constructor,
+    { exact h3, },
+    { exact h2, }},
+  { rintro ⟨h5, h6⟩,
+    constructor,
+    { exact h6, },
+    { exact h5, }},
+end
+
+-- 13ª demostración
+example : P ∧ Q ↔ Q ∧ P :=
 by tauto
 
--- 12ª demostración
+-- 14ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 by finish

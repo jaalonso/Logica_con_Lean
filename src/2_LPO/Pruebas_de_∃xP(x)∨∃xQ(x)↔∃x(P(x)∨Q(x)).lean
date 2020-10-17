@@ -96,6 +96,20 @@ exists_or_distrib.mp h1
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
+match h1 with ⟨x₀, (h2 : P x₀ ∨ Q x₀)⟩ :=
+  ( or.elim h2
+    ( assume h3 : P x₀,
+      have h4 : ∃x, P x,          from exists.intro x₀ h3,
+      show (∃x, P x) ∨ (∃x, Q x), from or.inl h4 )
+    ( assume h6 : Q x₀,
+      have h7 : ∃x, Q x,          from exists.intro x₀ h6,
+      show (∃x, P x) ∨ (∃x, Q x), from or.inr h7 ))
+end
+
+-- 9ª demostración
+example
+  (h1 : ∃x, P x  ∨ Q x)
+  : (∃x, P x) ∨ (∃x, Q x) :=
 begin
   cases h1 with x₀ h3,
   cases h3 with hp hq,
@@ -107,7 +121,7 @@ begin
     exact hq, },
 end
 
--- 9ª demostración
+-- 10ª demostración
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
@@ -121,7 +135,7 @@ begin
     exact hq, },
 end
 
--- 10ª demostración
+-- 11ª demostración
 lemma aux1
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
