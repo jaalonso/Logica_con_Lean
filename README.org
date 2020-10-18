@@ -243,6 +243,10 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean" src lean 
 
+*** Pruebas de la transitividad de la igualdad
++ Enlaces al [[./src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean" src lean 
+
 
 
 

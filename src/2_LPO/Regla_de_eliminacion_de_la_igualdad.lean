@@ -50,21 +50,11 @@ example
   (h2 : x + 1 > 1 → x + 1 > 0)
   : 1 + x > 1 → 1 + x > 0 :=
 begin
-  rw h1 at h2,
-  exact h2,
-end
-
--- 5ª demostración
-example 
-  (h1 : x + 1 = 1 + x)
-  (h2 : x + 1 > 1 → x + 1 > 0)
-  : 1 + x > 1 → 1 + x > 0 :=
-begin
   rw ←h1,
   exact h2,
 end
 
--- 6ª demostración
+-- 5ª demostración
 example 
   (h1 : x + 1 = 1 + x)
   (h2 : x + 1 > 1 → x + 1 > 0)
