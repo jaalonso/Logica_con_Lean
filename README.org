@@ -253,11 +253,11 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 *** Pruebas de y = x → y = z → x = z
 + Enlaces al [[./src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean][sesión en Lean Web]] y al vídeo.
-#+IN→LUDE: "./src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean" src lean 
+#+INCLUDE: "./src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean" src lean 
 
 *** Pruebas de (x + y) + z = (x + z) + y
-+ Enlaces al [[./src/2_LPO/Pruebas_de_(x+y)+z=(x+z)+y.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_(x+y)+z=(x+z)+y.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/2_LPO/Pruebas_de_(x+y)+z=(x+z)+y.lean" src lean 
++ Enlaces al [[./src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean" src lean 
 
 
 
