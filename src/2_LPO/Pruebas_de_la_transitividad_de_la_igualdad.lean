@@ -6,6 +6,11 @@ import tactic
 variable  (U : Type)
 variables (x y z : U)
 
+-- ----------------------------------------------------
+-- Ej. 1. Demostrar que
+--    x = y, y = z ⊢ x = z
+-- ----------------------------------------------------
+
 -- 1ª demostración
 example 
   (h1 : x = y)
@@ -41,7 +46,7 @@ example
   : x = z :=
 begin
   rw h1,
-  exact h2
+  exact h2,
 end
 
 -- 6ª demostración
@@ -76,8 +81,7 @@ example
   (h2 : y = z)
   : x = z :=
 begin
-  rw ←h2,
-  exact h1
+  rwa ←h2,
 end
 
 -- 10ª demostración
@@ -86,8 +90,7 @@ example
   (h2 : y = z)
   : x = z :=
 begin
-  rw h2 at h1,
-  exact h1
+  rwa h2 at h1,
 end
 
 -- 11ª demostración
