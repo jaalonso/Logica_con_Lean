@@ -255,6 +255,10 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/2_LPO/Pruebas_de_y=x→y=z→x=z.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_y=x→y=z→x=z.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/2_LPO/Pruebas_de_y=x→y=z→x=z.lean" src lean 
 
+*** Pruebas de (x + y) + z = (x + z) + y
++ Enlaces al [[./src/2_LPO/Pruebas_de_(x+y)+z=(x+z)+y.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_(x+y)+z=(x+z)+y.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Pruebas_de_(x+y)+z=(x+z)+y.lean" src lean 
+
 
 
 

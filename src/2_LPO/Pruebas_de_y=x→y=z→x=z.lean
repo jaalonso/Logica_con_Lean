@@ -79,3 +79,27 @@ example : y = x → y = z → x = z :=
 -- by hint
 by finish
 
+-- 12ª demostración
+example : y = x → y = z → x = z :=
+assume h1 : y = x,
+assume h2 : y = z,
+show x = z,
+  begin
+    rw ←h1,
+    rw h2
+  end
+
+-- 13ª demostración
+example : y = x → y = z → x = z :=
+assume h1 : y = x,
+assume h2 : y = z,
+show x = z,
+  begin
+    rw [←h1, h2]
+  end
+
+-- 14ª demostración
+example : y = x → y = z → x = z :=
+assume h1 : y = x,
+assume h2 : y = z,
+show x = z, by rw [←h1, h2]
