@@ -259,6 +259,9 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean" src lean 
 
+*** Pruebas de desarrollo de producto de sumas
++ Enlaces al [[./src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean" src lean 
 
 
 
