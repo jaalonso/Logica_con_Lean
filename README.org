@@ -288,8 +288,8 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/3_Conjuntos/Minimimalidad_del_vacio.lean" src lean 
 
 *** Pruebas de A \ B ⊆ A
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A\B⊆A.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A\B⊆A.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A\B⊆A.lean" src lean 
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean" src lean 
 
 *** Pruebas de A \ B ⊆ Bᶜ
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_A\B⊆Bᶜ.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A\B⊆Bᶜ.lean][sesión en Lean Web]] y al vídeo.
