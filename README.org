@@ -263,6 +263,41 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean" src lean 
 
+* Conjuntos
+
+** Elementos básicos sobre conjuntos
+
+*** Pruebas de la reflexividad de la inclusión de conjuntos
++ Enlaces al [[./src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean" src lean 
+
+*** Pruebas de la antisimetría de la inclusión de conjuntos
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean" src lean 
+
+*** Introducción de la intersección
++ Enlaces al [[./src/3_Conjuntos/Introduccion_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_interseccion.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Introduccion_de_la_interseccion.lean" src lean 
+
+*** Introducción de la unión
++ Enlaces al [[./src/3_Conjuntos/Introduccion_de_la_union.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_union.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Introduccion_de_la_union.lean" src lean 
+
+*** Minimimalidad del vacío
++ Enlaces al [[./src/3_Conjuntos/Minimimalidad_del_vacio.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Minimimalidad_del_vacio.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Minimimalidad_del_vacio.lean" src lean 
+
+*** Pruebas de A \ B ⊆ A
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A\B⊆A.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A\B⊆A.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A\B⊆A.lean" src lean 
+
+*** Pruebas de A \ B ⊆ Bᶜ
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A\B⊆Bᶜ.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A\B⊆Bᶜ.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A\B⊆Bᶜ.lean" src lean 
+
+*** Pruebas de la conmutatividad de la intersección
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean" src lean 
 
 
 # #+LATEX:\printindex
