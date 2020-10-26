@@ -1,5 +1,5 @@
--- Introducción de la unión
--- ========================
+-- Regla de introducción de la unión
+-- =================================
 
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar
@@ -8,7 +8,7 @@
 
 import data.set
 
-variable  {U : Type}
+variable  U : Type
 variables A B : set U
 variable  x : U
 

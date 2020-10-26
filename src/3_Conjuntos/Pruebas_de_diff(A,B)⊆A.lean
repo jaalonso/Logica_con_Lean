@@ -1,5 +1,5 @@
--- Pruebas de A \ B ⊆ A
--- ====================
+-- Diferencia de conjuntos: A \ B ⊆ A
+-- ==================================
 
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar
@@ -8,12 +8,13 @@
 
 import data.set
 
-variable  {U : Type}
+variable  U : Type
 variables A B : set U
 variable  x : U
 
 open set
 
+-- #reduce (A \ B)
 -- #reduce x ∈ A \ B
 
 -- 1ª demostración
@@ -35,7 +36,7 @@ end
 example : A \ B ⊆ A :=
 assume x,
 assume h : x ∈ A \ B,
-show x ∈ A, from and.left h
+show x ∈ A, from h.left
 
 -- 4ª demostración
 example : A \ B ⊆ A :=
@@ -50,11 +51,11 @@ assume x,
 
 -- 6ª demostración
 example : A \ B ⊆ A :=
-λ x, λ h, and.left h
+assume x, and.left 
 
 -- 7ª demostración
 example : A \ B ⊆ A :=
-λ x h, and.left h
+λ _, and.left 
 
 -- 8ª demostración
 example : A \ B ⊆ A :=
@@ -69,5 +70,9 @@ show x ∈ A, from mem_of_mem_diff h
 
 -- 10ª demostración
 example : A \ B ⊆ A :=
-λ x h, mem_of_mem_diff h
+λ _, mem_of_mem_diff 
+
+-- 11ª demostración
+example : A \ B ⊆ A :=
+by finish [subset_def]
 

@@ -283,15 +283,15 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/3_Conjuntos/Introduccion_de_la_union.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_union.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Introduccion_de_la_union.lean" src lean 
 
-*** Minimimalidad del vacío
+*** El conjunto vacío
 + Enlaces al [[./src/3_Conjuntos/Minimimalidad_del_vacio.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Minimimalidad_del_vacio.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Minimimalidad_del_vacio.lean" src lean 
 
-*** Pruebas de A \ B ⊆ A
+*** Diferencia de conjuntos: A \ B ⊆ A
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean" src lean 
 
-*** Pruebas de A \ B ⊆ Bᶜ
+*** Complementario de un conjunto: Pruebas de A \ B ⊆ Bᶜ
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean" src lean 
 

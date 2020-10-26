@@ -1,5 +1,5 @@
--- Pruebas de A \ B ⊆ Bᶜ
--- =====================
+-- Complementario de un conjunto: Pruebas de A \ B ⊆ Bᶜ
+-- ====================================================
 
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar
@@ -15,6 +15,7 @@ variable  x : U
 open set
 
 -- #reduce x ∈ Bᶜ
+-- #reduce Bᶜ
 
 -- 1ª demostración
 example : A \ B ⊆ Bᶜ :=
@@ -42,20 +43,23 @@ show x ∈ Bᶜ,     from h2
 example : A \ B ⊆ Bᶜ :=
 assume x,
 assume h1 : x ∈ A \ B,
-have h2 : x ∉ B, from and.right h1,
-show x ∈ Bᶜ,     from h2
+show x ∈ Bᶜ, from and.right h1
 
 -- 5ª demostración
 example : A \ B ⊆ Bᶜ :=
 assume x,
-assume h1 : x ∈ A \ B,
-show x ∈ Bᶜ, from and.right h1
+λ h1, and.right h1
 
 -- 6ª demostración
 example : A \ B ⊆ Bᶜ :=
-λ x h, and.right h
+assume x, 
+and.right
 
 -- 7ª demostración
 example : A \ B ⊆ Bᶜ :=
-λ x h, not_mem_of_mem_diff h
+λ _, and.right 
+
+-- 8ª demostración
+example : A \ B ⊆ Bᶜ :=
+λ _, not_mem_of_mem_diff 
 

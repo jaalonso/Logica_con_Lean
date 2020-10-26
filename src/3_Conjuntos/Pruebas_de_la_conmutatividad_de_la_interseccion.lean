@@ -18,8 +18,7 @@ open set
 example : A ∩ B ⊆ B ∩ A :=
 begin
   intros x h,
-  simp,
-  simp at h,
+  simp at *,
   split,
   { exact h.right, },
   { exact h.left,  },
@@ -60,10 +59,44 @@ show x ∈ B ∩ A,  from and.intro h2 h1
 
 -- 6ª demostración
 example : A ∩ B ⊆ B ∩ A :=
+assume x,
+assume h : x ∈ A ∩ B,
+have h1 : x ∈ A ∧ x ∈ B, from h,
+have h2 : x ∈ B ∧ x ∈ A, from and.comm.mp h1,
+show x ∈ B ∩ A,          from h2 
+
+-- 7ª demostración
+example : A ∩ B ⊆ B ∩ A :=
+assume x,
+assume h : x ∈ A ∩ B,
+show x ∈ B ∩ A, from and.comm.mp h
+
+-- 8ª demostración
+example : A ∩ B ⊆ B ∩ A :=
+assume x,
+assume h : x ∈ A ∩ B,
+and.comm.mp h
+
+-- 9ª demostración
+example : A ∩ B ⊆ B ∩ A :=
+assume x,
+λ h, and.comm.mp h
+
+-- 10ª demostración
+example : A ∩ B ⊆ B ∩ A :=
+assume x,
+and.comm.mp 
+
+-- 10ª demostración
+example : A ∩ B ⊆ B ∩ A :=
+λ _, and.comm.mp 
+
+-- 11ª demostración
+example : A ∩ B ⊆ B ∩ A :=
 -- by hint
 by finish
 
--- ?ª demostración
+-- 12ª demostración
 lemma aux : A ∩ B ⊆ B ∩ A :=
 by simp
 

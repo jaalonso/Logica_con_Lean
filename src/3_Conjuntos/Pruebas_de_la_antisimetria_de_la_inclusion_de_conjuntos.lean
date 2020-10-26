@@ -8,9 +8,8 @@
 
 import data.set
 
-variable  {U : Type}
+variable  U : Type
 variables A B : set U
-variable  x : U
 
 open set
 
@@ -58,10 +57,10 @@ example
   (h2 : B ⊆ A)
   : A = B :=
 eq_of_subset_of_subset
-  (assume x,
+  ( assume x,
     assume h : x ∈ A,
     show x ∈ B, from h1 h)
-  (assume x,
+  ( assume x,
     assume h : x ∈ B,
     show x ∈ A, from h2 h)
 
