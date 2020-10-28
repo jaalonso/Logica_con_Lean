@@ -299,6 +299,31 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean" src lean 
 
+** Identidades conjuntistas
+
+*** Pruebas de la propiedad distributiva de la intersección sobre la unión: A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∩(B∪C)=(A∩B)∪(A∩C).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)=(A∩B)∪(A∩C).lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∩(B∪C)=(A∩B)∪(A∩C).lean" src lean 
+
+*** Prueba de (A ∩ Bᶜ) ∪ B = A ∪ B
++ Enlaces al [[./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B=A∪B.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B=A∪B.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B=A∪B.lean" src lean 
+
+** Familias de conjuntos
+
+*** Unión e intersección de familias de conjuntos
++ Enlaces al [[./src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean" src lean 
+
+*** Pertenencia a uniones e intersecciones de familias
++ Enlaces al [[./src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean" src lean 
+
+*** Pruebas de la propiedad distributiva de la intersección
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean" src lean 
+
+
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}
