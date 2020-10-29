@@ -301,13 +301,13 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 ** Identidades conjuntistas
 
-*** Pruebas de la propiedad distributiva de la intersección sobre la unión: A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+*** Pruebas de la propiedad distributiva de la intersección sobre la unión.
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean" src lean 
 
-*** Prueba de (A ∩ Bᶜ) ∪ B = A ∪ B
-+ Enlaces al [[./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B=A∪B.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B=A∪B.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B=A∪B.lean" src lean 
+*** Pruebas de (A ∩ Bᶜ) ∪ B = A ∪ B
++ Enlaces al [[./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean" src lean 
 
 ** Familias de conjuntos
 
