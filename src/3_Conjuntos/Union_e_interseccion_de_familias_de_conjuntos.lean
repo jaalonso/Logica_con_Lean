@@ -2,14 +2,14 @@
 -- =============================================
 
 -- ----------------------------------------------------
--- Ej.1. Declarar I y U como variables de tipo.
+-- Ej. 1. Declarar I y U como variables de tipo.
 -- ---------------------------------------------------- 
 
 variables {I U : Type}
 
 -- ----------------------------------------------------
 -- Ej. 2. Definir la función
---    Union (I → set U) → set U
+--    Union : (I → set U) → set U
 -- tal que (Union A) es la unión de de los conjuntos de
 -- la familia A.
 -- ---------------------------------------------------- 
@@ -19,7 +19,7 @@ def Union (A : I → set U) : set U :=
 
 -- ----------------------------------------------------
 -- Ej. 3. Definir la función
---    Inter (I → set U) → set U
+--    Inter : (I → set U) → set U
 -- tal que (Inter A) es la intersección de de los 
 -- conjuntos de la familia A.
 -- ---------------------------------------------------- 

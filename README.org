@@ -300,7 +300,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean" src lean 
 
 ** Identidades conjuntistas
-
+   
 *** Pruebas de la propiedad distributiva de la intersección sobre la unión.
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean" src lean 
@@ -319,9 +319,35 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean" src lean 
 
-*** Pruebas de la propiedad distributiva de la intersección
+*** Pruebas de la distributiva de la intersección general sobre la intersección
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean" src lean 
+
+*** Reglas de la intersección general
++ Enlaces al [[./src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Reglas_de_la_interseccion_general.lean" src lean 
+
+*** Reglas de la unión general
++ Enlaces al [[./src/3_Conjuntos/Reglas_de_la_union_general.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Reglas_de_la_union_general.lean" src lean 
+
+*** Pruebas de intersección sobre unión general
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean" src lean 
+
+*** Uniones de intersecciones
++ Enlaces al [[./src/3_Conjuntos/Uniones_de_intersecciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Uniones_de_intersecciones.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Uniones_de_intersecciones.lean" src lean 
+
+** Conjunto potencia
+
+*** Definición del conjunto potencia
++ Enlaces al [[./src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Definicion_del_conjunto_potencia.lean" src lean 
+
+*** Pruebas de A ∈ 𝒫 (A ∪ B)
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean" src lean 
 
 
 

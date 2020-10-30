@@ -1,14 +1,20 @@
--- Pruebas de la propiedad distributiva de la intersección
--- =======================================================
+-- Pruebas de la distributiva de la intersección general sobre la intersección 
+-- ===========================================================================
+
+-- ----------------------------------------------------
+-- Ej. 1. Demostrar
+--    (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i) 
+-- ----------------------------------------------------
 
 import data.set
 import tactic
+
 open set
 
 variables {I U : Type}
 variables {A B : I → set U}
 
--- ?ª demostración
+-- 1ª demostración
 example : 
   (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i) :=
 begin
@@ -29,7 +35,7 @@ begin
     exact ⟨h1 i, h2 i⟩, },
 end
 
--- ?ª demostración
+-- 2ª demostración
 example : 
   (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i) :=
 ext $
@@ -58,13 +64,14 @@ iff.intro
   show x ∈ ⋂ i, A i ∩ B i, 
     from mem_Inter.mpr h3)
 
--- ?ª demostración
+-- 3ª demostración
 example : 
   (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i) :=
 -- by library_search
 Inter_inter_distrib A B
 
--- ?ª demostración
+-- 4ª demostración
 example : 
   (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i) :=
 ext (by finish)
+

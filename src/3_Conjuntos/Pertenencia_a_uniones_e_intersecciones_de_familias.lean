@@ -2,6 +2,7 @@
 -- ==================================================
 
 import data.set
+
 open set
 
 variables {I U : Type}
