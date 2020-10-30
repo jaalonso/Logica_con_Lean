@@ -1,5 +1,10 @@
--- Uniones de intersecciones
--- =========================
+-- Pruebas de (⋃i, ⋂j, A i j) ⊆ (⋂j, ⋃i, A i j)
+-- ============================================
+
+-- ----------------------------------------------------
+-- Ej. 1. Demostrar
+--    (⋃i, ⋂j, A i j) ⊆ (⋂j, ⋃i, A i j)
+-- ----------------------------------------------------
 
 import data.set
 
@@ -8,7 +13,7 @@ open set
 variables {I J U : Type}
 variables (A : I → J → set U)
 
--- ?ª demostración
+-- 1ª demostración
 example : (⋃i, ⋂j, A i j) ⊆ (⋂j, ⋃i, A i j) :=
 begin
   intros x h,
@@ -22,7 +27,7 @@ begin
   exact (hi j),
 end
 
--- ?ª demostración
+-- 2ª demostración
 example : (⋃i, ⋂j, A i j) ⊆ (⋂j, ⋃i, A i j) :=
 begin
   intros x h,

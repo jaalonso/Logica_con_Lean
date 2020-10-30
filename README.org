@@ -335,7 +335,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean" src lean 
 
-*** Uniones de intersecciones
+*** Pruebas de (⋃i, ⋂j, A i j) ⊆ (⋂j, ⋃i, A i j)
 + Enlaces al [[./src/3_Conjuntos/Uniones_de_intersecciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Uniones_de_intersecciones.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Uniones_de_intersecciones.lean" src lean 
 
@@ -349,6 +349,9 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean" src lean 
 
+*** Monotonía del conjunto potencia: 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B
++ Enlaces al [[./src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean" src lean 
 
 
 # #+LATEX:\printindex
