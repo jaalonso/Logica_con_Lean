@@ -7,6 +7,9 @@ open set
 variable  {U : Type}
 variables {A B C : set U}
 
+-- #reduce 𝒫 A
+-- #reduce B ∈ 𝒫 A
+
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar
 --    𝒫 A ⊆ 𝒫 B → A ⊆ B 
@@ -118,3 +121,11 @@ example : 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B :=
 -- by library_search
 powerset_mono
 
+-- 3ª demostración
+example : 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B :=
+-- by hint
+by finish
+
+-- 4ª demostración
+example : 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B :=
+by simp
