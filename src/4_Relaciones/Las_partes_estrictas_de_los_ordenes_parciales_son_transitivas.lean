@@ -4,10 +4,10 @@
 -- ----------------------------------------------------
 -- Ej. 1. La parte estricta de una relación R es la 
 -- relación R' definida por
---    R' x y := R x y ∧ R y x
+--    R' a b := R a b ∧ a ≠ b
 -- 
 -- Demostrar que si R es un orden parcial, entonces su 
--- parte estricta es reflexiva.
+-- parte estricta es transitiva.
 -- ----------------------------------------------------
 
 import tactic
@@ -28,9 +28,9 @@ include transR
 include antisimR
 
 -- 1ª demostración
-example : R' a b → R' b c → R' a c :=
+example : transitive R' :=
 begin
-  rintros ⟨h1,h2⟩ ⟨h3,h4⟩,
+  rintros a b c ⟨h1,h2⟩ ⟨h3,h4⟩,
   split,
   { apply (transR h1 h3), },
   { intro h5,
@@ -46,10 +46,10 @@ end
 local infix ≤ := R
 local infix < := R'
 
-example  
-  (h₁ : a < b) 
-  (h₂ : b < c) 
-  : a < c :=
+example : transitive (<) :=
+assume a b c,
+assume h₁ : a < b,
+assume h₂ : b < c,
 have a ≤ b, from and.left h₁,
 have a ≠ b, from and.right h₁,
 have b ≤ c, from and.left h₂,

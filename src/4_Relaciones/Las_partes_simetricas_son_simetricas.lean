@@ -1,5 +1,5 @@
--- Las partes simétricas son transitivas
--- =====================================
+-- Las partes simétricas son simétricas
+-- ====================================
 
 -- ----------------------------------------------------
 -- Ej. 1. La parte simétrica de una relación R es la 
@@ -7,7 +7,7 @@
 --    S x y := R x y ∧ R y x
 -- 
 -- Demostrar que la parte simétrica de cualquier 
--- relación es transitiva.
+-- relación es simétrica.
 -- ----------------------------------------------------
 
 section
@@ -27,19 +27,30 @@ end
 
 -- 2ª demostración
 example : symmetric S :=
+begin
+  intros x y h,
+  exact ⟨h.right, h.left⟩,
+end
+
+-- 3ª demostración
+example : symmetric S :=
+λ x y h, ⟨h.right, h.left⟩
+
+-- 4ª demostración
+example : symmetric S :=
 assume x y,
 assume h : S x y,
 have h1 : R x y, from h.left,
 have h2 : R y x, from h.right,
 show S y x, from ⟨h2, h1⟩
 
--- 3ª demostración
+-- 5ª demostración
 example : symmetric S :=
 assume x y,
 assume h : S x y,
 show S y x, from ⟨h.right, h.left⟩
 
--- 4ª demostración
+-- 6ª demostración
 example : symmetric S :=
 λ x y h, ⟨h.right, h.left⟩
 

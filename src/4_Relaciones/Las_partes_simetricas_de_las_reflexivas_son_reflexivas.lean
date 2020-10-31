@@ -35,4 +35,19 @@ assume x,
 have R x x, from reflR x,
 show S x x, from and.intro this this
 
+-- 3ª demostración
+example : reflexive S :=
+assume x,
+show S x x, from and.intro (reflR x) (reflR x)
+
+-- 4ª demostración
+example : reflexive S :=
+assume x,
+and.intro (reflR x) (reflR x)
+
+-- 5ª demostración
+example : reflexive S :=
+λ x, ⟨reflR x, reflR x⟩
+
 end
+
