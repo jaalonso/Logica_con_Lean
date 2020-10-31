@@ -358,16 +358,16 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Relaciones de orden
 
 *** Las irreflexivas y transitivas son asimétricas
-+ Enlaces al [[./src/3_Conjuntos/Las_irreflexivas_y_transitivas_son_asimetricas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean" src lean 
 
-*** Las relaciones estrictas son irreflexivas
-+ Enlaces al [[./src/4_Relaciones/Las_relaciones_estrictas_son_irreflexivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_relaciones_estrictas_son_irreflexivas.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/4_Relaciones/Las_relaciones_estrictas_son_irreflexivas.lean" src lean 
+*** Las partes estrictas son irreflexivas
++ Enlaces al [[./src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean" src lean 
 
-*** Las relaciones estrictas de los órdenes parciales son transitivas
-+ Enlaces al [[./src/4_Relaciones/Las_relaciones_estrictas_de_los_ordenes_parciales_son_transitivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_relaciones_estrictas_de_los_ordenes_parciales_son_transitivas.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/4_Relaciones/Las_relaciones_estrictas_de_los_ordenes_parciales_son_transitivas.lean" src lean 
+*** Las partes estrictas de los órdenes parciales son transitivas
++ Enlaces al [[./src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean" src lean 
 
 *** Las partes simétricas de las reflexivas son reflexivas
 + Enlaces al [[./src/4_Relaciones/Las_partes_simetricas_de_las_reflexivas_son_reflexivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_simetricas_de_las_reflexivas_son_reflexivas.lean][sesión en Lean Web]] y al vídeo.

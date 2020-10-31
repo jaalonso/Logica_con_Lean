@@ -1,9 +1,13 @@
--- Las relaciones estrictas de los órdenes parciales son transitivas
--- =================================================================
+-- Las partes estrictas de los órdenes parciales son transitivas
+-- =============================================================
 
 -- ----------------------------------------------------
--- Ej. 1. Demostrar que si R es un orden parcial y R' 
--- es su relación estricta, entonces R' es transitiva.
+-- Ej. 1. La parte estricta de una relación R es la 
+-- relación R' definida por
+--    R' x y := R x y ∧ R y x
+-- 
+-- Demostrar que si R es un orden parcial, entonces su 
+-- parte estricta es reflexiva.
 -- ----------------------------------------------------
 
 import tactic
