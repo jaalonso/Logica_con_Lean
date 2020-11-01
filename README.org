@@ -377,6 +377,18 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean" src lean 
 
+** Órdenes sobre números
+
+*** Pruebas de n + 1 ≤ m ⊢ n < m + 1
++ Enlaces al [[./src/4_Relaciones/Pruebas_de_n+1≤m⊢n<m+1.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Pruebas_de_n+1≤m⊢n<m+1.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/4_Relaciones/Pruebas_de_n+1≤m⊢n<m+1.lean" src lean 
+
+** Relaciones de equivalencia
+
+*** Las equivalencias son preórdenes simétricos
++ Enlaces al [[./src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean" src lean 
+
 
 
 # #+LATEX:\printindex
