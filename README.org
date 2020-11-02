@@ -389,6 +389,9 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean" src lean 
 
+*** Las relaciones reflexivas y euclídeas son de equivalencia
++ Enlaces al [[./src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean" src lean 
 
 
 # #+LATEX:\printindex
