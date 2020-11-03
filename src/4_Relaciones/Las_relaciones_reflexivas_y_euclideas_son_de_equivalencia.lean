@@ -1,6 +1,15 @@
 -- Las relaciones reflexivas y euclídeas son de equivalencia
 -- =========================================================
 
+-- ----------------------------------------------------
+-- Una relación binaria (≈) es euclídea si
+--    ∀ {a b c}, a ≈ b → c ≈ b → a ≈ c
+--
+-- El objetivo de esta teoría es demostrar que si una 
+-- relación es reflexiva y euclídea, entonces es de 
+-- equivalencia.
+-- ----------------------------------------------------
+
 import tactic
 
 section
@@ -17,7 +26,7 @@ include reflexivaR euclideaR
 
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar que las relaciones reflexivas y 
--- y euclideas son simétricas.
+-- y euclídeas son simétricas.
 -- ----------------------------------------------------
 
 -- 1ª demostración
@@ -39,7 +48,7 @@ show b ≈ a, from euclideaR h2 h1
 
 -- ----------------------------------------------------
 -- Ej. 2. Demostrar que las relaciones reflexivas y 
--- y euclideas son transitivas.
+-- y euclídeas son transitivas.
 -- ----------------------------------------------------
 
 -- 1ª demostración
@@ -62,9 +71,17 @@ show a ≈ c, from euclideaR h1 h3
 
 -- ----------------------------------------------------
 -- Ej. 3. Demostrar que las relaciones reflexivas y 
--- y euclideas son de equivalencia.
+-- y euclídeas son de equivalencia.
 -- ----------------------------------------------------
 
+-- 1ª demostración
+example : equivalence (≈) :=
+begin
+  unfold equivalence,
+  exact ⟨reflexivaR, simetricaR, transitivaR⟩,
+end
+
+-- 2ª demostración
 example : equivalence (≈) :=
 ⟨reflexivaR, simetricaR, transitivaR⟩
 
