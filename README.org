@@ -422,8 +422,12 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/4_Relaciones/La_identidad_es_biyectiva.lean" src lean 
 
 *** La composición de funciones inyectivas es inyectiva
-+ Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/iBWppcXaoyQ][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean" src lean 
+
+*** La composición de funciones suprayectivas es suprayectiva
++ Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean" src lean 
 
 
 # #+LATEX:\printindex
