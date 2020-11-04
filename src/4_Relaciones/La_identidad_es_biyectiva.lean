@@ -5,7 +5,11 @@ import tactic
 
 open function
 
-variables {X Y Z : Type}
+variables {X : Type}
+
+-- #print injective
+-- #print surjective
+-- #print bijective
 
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar que la identidad es inyectiva.
@@ -34,7 +38,7 @@ show x₁ = x₂, from h
 
 -- 5ª demostración
 example : injective (@id X) :=
--- by library_search
+--by library_search
 injective_id
 
 -- 6ª demostración
