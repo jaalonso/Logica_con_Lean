@@ -90,7 +90,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean][sesión en Lean Web]] y al [[https://youtu.be/xOBStCZ8F2g][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean" src lean 
 
-
 ** Reglas de la conjunción 
 
 *** Reglas de la conjunción en P ∧ Q, R ⊢ Q ∧ R
@@ -100,7 +99,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** Pruebas de P ∧ Q → Q ∧ P
 + Enlaces al [[./src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean][sesión en Lean Web]] y al [[https://youtu.be/KhAke-0AbdQ][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean" src lean 
-
 
 ** Reglas de la negación
 
@@ -132,7 +130,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean][sesión en Lean Web]] y al [[https://youtu.be/QVGb8OWjWvY][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean" src lean 
 
-
 ** Reglas de la disyunción
 
 *** Reglas de introducción de la disyunción
@@ -155,7 +152,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean][sesión en Lean Web]] y al [[https://youtu.be/HdZbvRLqTW4][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean" src lean 
 
-
 ** Reglas del bicondicional
 
 *** Regla de introducción del bicondicional en P ∧ Q ↔ Q ∧ P
@@ -165,7 +161,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** Reglas de eliminación del bicondicional en P ↔ Q, P ∨ Q ⊢ P ∧ Q
 + Enlaces al [[./src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][sesión en Lean Web]] y al [[https://youtu.be/U3U8bXiKPF8][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean" src lean 
-
 
 ** Reglas de la lógica clásica
 
@@ -328,7 +323,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/3_Conjuntos/Reglas_de_la_interseccion_general.lean" src lean 
 
 *** Reglas de la unión general
-+ Enlaces al [[./src/3_Conjuntos/Reglas_de_la_union_general.lean][código]]y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][sesión en Lean Web]].
++ Enlaces al [[./src/3_Conjuntos/Reglas_de_la_union_general.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/3_Conjuntos/Reglas_de_la_union_general.lean" src lean 
 
 *** Pruebas de intersección sobre unión general
@@ -428,6 +423,10 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** La composición de funciones suprayectivas es suprayectiva
 + Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean" src lean 
+
+*** La composición de funciones biyectivas es biyectiva
++ Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/4_Relaciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean" src lean 
 
 
 # #+LATEX:\printindex

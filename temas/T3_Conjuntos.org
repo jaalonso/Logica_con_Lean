@@ -1,0 +1,69 @@
+#+TITLE: Tema 3: Conjuntos con Lean
+
+* Elementos básicos sobre conjuntos
+
+** Pruebas de la reflexividad de la inclusión de conjuntos
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/uAUAaOKL41A][vídeo]].
+
+** Pruebas de la antisimetría de la inclusión de conjuntos
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/t8dxr4jjvMM][vídeo]].
+
+** Introducción de la intersección
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Introduccion_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/EWBe22M3ef4][vídeo]].
+
+** Introducción de la unión
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Introduccion_de_la_union.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_union.lean][sesión en Lean Web]] y al [[https://youtu.be/PKcVmmBFB-c][vídeo]].
+
+** El conjunto vacío
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Minimimalidad_del_vacio.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Minimimalidad_del_vacio.lean][sesión en Lean Web]] y al [[https://youtu.be/MfoCvy36UP8][vídeo]].
+
+** Diferencia de conjuntos: A \ B ⊆ A
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][sesión en Lean Web]] y al [[https://youtu.be/iYlXqLMs5wc][vídeo]].
+
+** Complementario de un conjunto: Pruebas de A \ B ⊆ Bᶜ
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][sesión en Lean Web]] y al [[https://youtu.be/VIVvmAtq9nA][vídeo]].
+
+** Pruebas de la conmutatividad de la intersección
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/b9RzBNk6Tzg][vídeo]].
+
+* Identidades conjuntistas
+   
+** Pruebas de la propiedad distributiva de la intersección sobre la unión.
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][sesión en Lean Web]] y al [[https://youtu.be/sFJQHZ9fLZs][vídeo]].
+
+** Pruebas de (A ∩ Bᶜ) ∪ B = A ∪ B
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][sesión en Lean Web]] y al [[https://youtu.be/Co3dEzqLVzM][vídeo]].
+
+* Familias de conjuntos
+
+** Unión e intersección de familias de conjuntos
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/AnB6Gm477M4][vídeo]].
+
+** Pertenencia a uniones e intersecciones de familias
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][sesión en Lean Web]] y al [[https://youtu.be/KoJCz46QfXA][vídeo]].
+
+** Pruebas de la distributiva de la intersección general sobre la intersección
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/D10o8AZhyYE][vídeo]].
+
+** Reglas de la intersección general
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][sesión en Lean Web]].
+
+** Reglas de la unión general
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][código]]y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][sesión en Lean Web]].
+
+** Pruebas de intersección sobre unión general
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][sesión en Lean Web]] y al [[https://youtu.be/0jiyLryyubA][vídeo]].
+
+** Pruebas de (⋃i, ⋂j, A i j) ⊆ (⋂j, ⋃i, A i j)
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Uniones_de_intersecciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Uniones_de_intersecciones.lean][sesión en Lean Web]] y al [[https://youtu.be/9vTnKpMSblI][vídeo]].
+
+* Conjunto potencia
+
+** Definición del conjunto potencia
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][sesión en Lean Web]].
+
+** Pruebas de A ∈ 𝒫 (A ∪ B)
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][sesión en Lean Web]].
+
+** Monotonía del conjunto potencia: 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][sesión en Lean Web]] y al [[https://youtu.be/2b8GQdRazxQ][vídeo]].
