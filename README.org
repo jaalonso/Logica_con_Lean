@@ -393,48 +393,44 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Funciones en Lean
 
 *** Definición de la composición de funciones
-+ Enlaces al [[./src/4_Relaciones/Definicion_de_la_composicion_de_funciones.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Definicion_de_la_composicion_de_funciones.lean][sesión en Lean Web]].
-#+INCLUDE: "./src/4_Relaciones/Definicion_de_la_composicion_de_funciones.lean" src lean
++ Enlaces al [[./src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean][sesión en Lean Web]].
+#+INCLUDE: "./src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean" src lean
 
 *** Definición de la función identidad
-+ Enlaces al [[./src/4_Relaciones/Definicion_de_la_funcion_identidad.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Definicion_de_la_funcion_identidad.lean][sesión en Lean Web]].
-#+INCLUDE: "./src/4_Relaciones/Definicion_de_la_funcion_identidad.lean" src lean
++ Enlaces al [[./src/5_Funciones/Definicion_de_la_funcion_identidad.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Definicion_de_la_funcion_identidad.lean][sesión en Lean Web]].
+#+INCLUDE: "./src/5_Funciones/Definicion_de_la_funcion_identidad.lean" src lean
 
 *** Extensionalidad funcional
-+ Enlaces al [[./src/4_Relaciones/Extensionalidad_funcional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Extensionalidad_funcional.lean][sesión en Lean Web]].
-#+INCLUDE: "./src/4_Relaciones/Extensionalidad_funcional.lean" src lean
++ Enlaces al [[./src/5_Funciones/Extensionalidad_funcional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Extensionalidad_funcional.lean][sesión en Lean Web]].
+#+INCLUDE: "./src/5_Funciones/Extensionalidad_funcional.lean" src lean
 
 *** Propiedades de la composición de funciones (elemento neutro y asociatividad)
-+ Enlaces al [[./src/4_Relaciones/Propiedades_de_la_composicion_de_funciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Propiedades_de_la_composicion_de_funciones.lean][sesión en Lean Web]] y al [[https://youtu.be/6-VglWN0e7g][vídeo]].
-#+INCLUDE: "./src/4_Relaciones/Propiedades_de_la_composicion_de_funciones.lean" src lean
++ Enlaces al [[./src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean][sesión en Lean Web]] y al [[https://youtu.be/6-VglWN0e7g][vídeo]].
+#+INCLUDE: "./src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean" src lean
 
 *** Funciones inyectivas, suprayectivas y biyectivas
-+ Enlaces al [[./src/4_Relaciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][sesión en Lean Web]].
-#+INCLUDE: "./src/4_Relaciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean" src lean
++ Enlaces al [[./src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][sesión en Lean Web]].
+#+INCLUDE: "./src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean" src lean
 
 *** La identidad es biyectiva
-+ Enlaces al [[./src/4_Relaciones/La_identidad_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_identidad_es_biyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/KrjzxBs_EuU][vídeo]].
-#+INCLUDE: "./src/4_Relaciones/La_identidad_es_biyectiva.lean" src lean
++ Enlaces al [[./src/5_Funciones/La_identidad_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_identidad_es_biyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/KrjzxBs_EuU][vídeo]].
+#+INCLUDE: "./src/5_Funciones/La_identidad_es_biyectiva.lean" src lean
 
 *** La composición de funciones inyectivas es inyectiva
-+ Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/iBWppcXaoyQ][vídeo]].
-#+INCLUDE: "./src/4_Relaciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean" src lean
++ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/iBWppcXaoyQ][vídeo]].
+#+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean" src lean
 
 *** La composición de funciones suprayectivas es suprayectiva
-+ Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/4_Relaciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean" src lean
++ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean" src lean
 
 *** La composición de funciones biyectivas es biyectiva
-+ Enlaces al [[./src/4_Relaciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/4_Relaciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean" src lean
++ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean" src lean
 
-*** La composición con la inversa por la izquierda es la identidad
-+ Enlaces al [[./src/4_Relaciones/La_composicion_con_la_inversa_por_la_izquierda_es_la_identidad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_con_la_inversa_por_la_izquierda_es_la_identidad.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/4_Relaciones/La_composicion_con_la_inversa_por_la_izquierda_es_la_identidad.lean" src lean
-
-*** La composición con la inversa por la derecha es la identidad
-+ Enlaces al [[./src/4_Relaciones/La_composicion_con_la_inversa_por_la_derecha_es_la_identidad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/La_composicion_con_la_inversa_por_la_derecha_es_la_identidad.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/4_Relaciones/La_composicion_con_la_inversa_por_la_derecha_es_la_identidad.lean" src lean
+*** Las composiciones con las inversas son la identidad
++ Enlaces al [[./src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean" src lean
 
 
 # #+LATEX:\printindex
