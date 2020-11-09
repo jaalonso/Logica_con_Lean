@@ -1,5 +1,5 @@
--- La composición con la inversa por la izquierda es la identidad
--- ==============================================================
+-- Las composiciones con las inversas son la identidad
+-- ===================================================
 
 import tactic
 
@@ -9,8 +9,8 @@ variables {X Y Z : Type}
 variable  {f : X → Y}
 variable  {g : Y → X}
 
--- #reduce left_inverse g f
--- #reduce right_inverse g f
+#reduce left_inverse g f
+#reduce right_inverse g f
 
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar que si g es una inversa por la
