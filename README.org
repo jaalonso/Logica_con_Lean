@@ -421,20 +421,24 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean" src lean
 
 *** La composición de funciones suprayectivas es suprayectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/omEhi6MuBuc][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean" src lean
 
 *** La composición de funciones biyectivas es biyectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/59wTRENsv04][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean" src lean
 
 *** Las composiciones con las inversas son la identidad
-+ Enlaces al [[./src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][sesión en Lean Web]] y al [[https://youtu.be/U7o0Wxtmdwc][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean" src lean
 
 *** Las funciones con inversa por la izquierda son inyectivas
-+ Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][sesión en Lean Web]] y al [[https://youtu.be/4M9PWJpXtfI][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean" src lean
+
+*** Las funciones con inversa por la derecha son suprayectivas
++ Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean" src lean
 
 
 # #+LATEX:\printindex

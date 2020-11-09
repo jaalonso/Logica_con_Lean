@@ -33,7 +33,7 @@ begin
   intros x₁ x₂ h1,
   calc x₁ = g (f x₁) : (h x₁).symm
       ... = g (f x₂) : congr_arg g h1
-      ... = x₂       : h x₂
+      ... = x₂       : h x₂,
 end
 
 -- 3ª demostración
