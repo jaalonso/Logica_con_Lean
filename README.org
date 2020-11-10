@@ -440,6 +440,12 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean" src lean
 
+** La función inversa
+
+*** Las funciones inyectivas tienen inversa por la izquierda
++ Enlaces al [[./src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean" src lean
+
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}
