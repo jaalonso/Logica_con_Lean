@@ -31,22 +31,22 @@ variable (y : Y)
 -- Ej. 2. Demostrar que si
 --    ∃ x, f x = y
 -- entonces,
---    f (inversa f d y) = y
+--    f ((inversa f d) y) = y
 -- ----------------------------------------------------
 
 -- 1ª demostración
 example
   (h : ∃ x, f x = y)
-  : f (inversa f d y) = y :=
-calc f (inversa f d y)
+  : f ((inversa f d) y) = y :=
+calc f ((inversa f d) y)
          = f (some h)  : congr rfl (dif_pos h)
      ... = y           : some_spec h
 
 -- 2ª demostración
 lemma inversa_cuando_existe
   (h : ∃ x, f x = y)
-  : f (inversa f d y) = y :=
-have h1 : inversa f d y = some h,
+  : f ((inversa f d) y) = y :=
+have h1 : (inversa f d) y = some h,
   from dif_pos h,
 have h2 : f (some h) = y,
   from some_spec h,

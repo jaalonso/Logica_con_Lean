@@ -437,14 +437,20 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean" src lean
 
 *** Las funciones con inversa por la derecha son suprayectivas
-+ Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][sesión en Lean Web]] y al [[https://youtu.be/XvATf_1yTYo][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean" src lean
 
 ** La función inversa
 
 *** Las funciones inyectivas tienen inversa por la izquierda
-+ Enlaces al [[./src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][sesión en Lean Web]] y al [[https://youtu.be/gIXCSfZOaP8][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean" src lean
+
+** Funciones y conjuntos
+
+*** La composición de inyectivas parciales es inyectiva
++ Enlaces al [[./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean" src lean
 
 
 # #+LATEX:\printindex
