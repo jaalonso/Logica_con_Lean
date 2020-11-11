@@ -456,6 +456,10 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean" src lean
 
+*** La imagen de la unión es la unión de las imágenes
++ Enlaces al [[./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean" src lean
+
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}
