@@ -452,9 +452,9 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean" src lean
 
-*** La composición de suprayectivas parciales es inyectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_inyectiva.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_inyectiva.lean" src lean
+*** La composición de suprayectivas parciales es suprayectiva
++ Enlaces al [[./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean" src lean
 
 
 # #+LATEX:\printindex
