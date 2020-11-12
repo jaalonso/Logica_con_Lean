@@ -22,6 +22,7 @@ begin
     cases hx with xA₁A₂ fxy,
     cases xA₁A₂ with xA₁ xA₂,
     { left,
+      -- simp,
       use x,
       exact ⟨xA₁, fxy⟩, },
     { right,

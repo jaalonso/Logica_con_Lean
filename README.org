@@ -460,6 +460,19 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean" src lean
 
+* Números naturales e inducción
+
+** Inducción y recursión
+
+*** Definiciones por recursión sobre los naturales
++ Enlaces al [[./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean" src lean
+
+
+*** Pruebas de m^(succ n) = m * m^n
++ Enlaces al [[./src/6_Naturales/Pruebas_de_m^(succ_n)_Eq_m_por_m^n.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Pruebas_de_m^(succ_n)_Eq_m_por_m^n.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Pruebas_de_m^(succ_n)_Eq_m_por_m^n.lean" src lean
+
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}
