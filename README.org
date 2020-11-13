@@ -460,18 +460,33 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean" src lean
 
-* Números naturales e inducción
+* Números naturales, recursión e inducción
 
-** Inducción y recursión
+** Recursión e inducción
 
 *** Definiciones por recursión sobre los naturales
 + Enlaces al [[./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean" src lean
 
+*** Prueba por inducción 1: ∀ n : ℕ, 0 + n = n
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_1.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_1.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_1.lean" src lean
 
-*** Pruebas de m^(succ n) = m * m^n
-+ Enlaces al [[./src/6_Naturales/Pruebas_de_m^(succ_n)_Eq_m_por_m^n.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Pruebas_de_m^(succ_n)_Eq_m_por_m^n.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/6_Naturales/Pruebas_de_m^(succ_n)_Eq_m_por_m^n.lean" src lean
+*** Prueba por inducción 2: ∀ m n k : ℕ, (m + n) + k = m + (n + k)
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_2.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_2.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_2.lean" src lean
+
+*** Prueba por inducción 3: ∀ m n : ℕ, succ m + n = succ (m + n)
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_3.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_3.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_3.lean" src lean
+
+*** Prueba por inducción 4: ∀ m n : ℕ, m + n = n + m
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_4.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_4.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_4.lean" src lean
+
+*** Prueba por inducción 5: m^(succ n) = m * m^n
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_5.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_5.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_5.lean" src lean
 
 
 # #+LATEX:\printindex

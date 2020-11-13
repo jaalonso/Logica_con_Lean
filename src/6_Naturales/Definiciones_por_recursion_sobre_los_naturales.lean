@@ -45,7 +45,7 @@ def factorial2 : ℕ → ℕ
 
 -- El cáculo es
 --    #eval factorial 3
---    #eval factorial 30
+--    #eval factorial 300
 
 -- ----------------------------------------------------
 -- Ej. 5. Demostrar que el factorial de 3 es 6.
