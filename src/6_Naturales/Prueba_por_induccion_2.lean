@@ -15,7 +15,7 @@ variables (m n k : ℕ)
 -- 1ª demostración
 example : (m + n) + k = m + (n + k) :=
 begin
-  induction k with k HI,
+  induction k with k' HI,
   { rw nat.add_zero,
     rw nat.add_zero, },
   { rw add_succ,
@@ -26,7 +26,7 @@ end
 -- 2ª demostración
 example : (m + n) + k = m + (n + k) :=
 begin
-  induction k with k HI,
+  induction k with k' HI,
   { rw [nat.add_zero, nat.add_zero], },
   { rw [add_succ, HI, add_succ], },
 end
@@ -49,11 +49,13 @@ end
 
 -- 5ª demostración
 example : (m + n) + k = m + (n + k) :=
-by induction k; simp only [*, add_zero, add_succ]
+by induction k;
+   simp only [*, add_zero, add_succ]
 
 -- 6ª demostración
 example : (m + n) + k = m + (n + k) :=
-by induction k; simp [*, add_succ]
+by induction k;
+   simp [*, add_succ]
 
 -- 7ª demostración
 example : (m + n) + k = m + (n + k) :=
@@ -144,5 +146,5 @@ lemma asociativa_suma2 :
 -- 19ª demostración
 lemma asociativa_suma3 :
   ∀ k : ℕ, (m + n) + k = m + (n + k)
-| 0       := by simp only [add_zero]
-| (k + 1) := by simp only [add_zero, add_succ, asociativa_suma3 k]
+| 0       := by simp only [nat.add_zero]
+| (k + 1) := by simp only [nat.add_zero, add_succ, asociativa_suma3 k]

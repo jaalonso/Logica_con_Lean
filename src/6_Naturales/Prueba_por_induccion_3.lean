@@ -26,17 +26,19 @@ end
 example : succ m + n = succ (m + n) :=
 begin
   induction n with n HI,
-  { simp only [add_zero] },
-  { simp only [add_succ, HI] },
+  { simp only [nat.add_zero], },
+  { simp only [add_succ, HI], },
 end
 
 -- 3ª demostración
 example : succ m + n = succ (m + n) :=
-by induction n; simp only [*, add_zero, add_succ]
+by induction n;
+   simp only [*, nat.add_zero, add_succ]
 
 -- 4ª demostración
 example : succ m + n = succ (m + n) :=
-by induction n; simp [*, add_succ]
+by induction n;
+   simp [*, add_succ]
 
 -- 5ª demostración
 example : succ m + n = succ (m + n) :=

@@ -11,18 +11,25 @@ open nat
 
 variables (m n : ℕ)
 
+-- #check nat.pow_zero
+-- #check nat.pow_succ
+-- #check nat.mul_one
+-- #check nat.one_mul
+-- #check nat.mul_assoc
+-- #check nat.mul_comm
+
 -- 1ª demostración
 example : m^(succ n) = m * m^n :=
 begin
   induction n with n HI,
   { rw nat.pow_succ,
     rw nat.pow_zero,
-    rw one_mul,
-    rw mul_one, },
+    rw nat.one_mul,
+    rw nat.mul_one, },
   { rw nat.pow_succ,
     rw HI,
-    rw mul_assoc,
-    rw mul_comm (m^n), },
+    rw nat.mul_assoc,
+    rw nat.mul_comm (m^n), },
 end
 
 -- 2ª demostración
@@ -47,10 +54,10 @@ by induction n;
    simp only [*,
               nat.pow_succ,
               nat.pow_zero,
-              one_mul,
-              mul_one,
-              mul_assoc,
-              mul_comm]
+              nat.one_mul,
+              nat.mul_one,
+              nat.mul_assoc,
+              nat.mul_comm]
 
 -- 5ª demostración
 example : m^(succ n) = m * m^n :=

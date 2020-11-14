@@ -12,11 +12,16 @@ open nat
 
 variables (m n : ℕ)
 
+-- #check nat.add_zero
+-- #check nat.add_succ
+-- #check nat.zero_add
+-- #check nat.succ_add
+
 -- 1ª demostración
 example : m + n = n + m :=
 begin
   induction n with n HI,
-  { rw add_zero,
+  { rw nat.add_zero,
     rw nat.zero_add, },
   { rw add_succ,
     rw HI,
@@ -27,14 +32,14 @@ end
 example : m + n = n + m :=
 begin
   induction n with n HI,
-  { simp only [add_zero, zero_add] },
+  { simp only [nat.add_zero, nat.zero_add] },
   { simp only [add_succ, HI, succ_add] },
 end
 
 -- 3ª demostración
 example : m + n = n + m :=
 by induction n;
-   simp only [*, add_zero, add_succ, succ_add, zero_add]
+   simp only [*, nat.add_zero, add_succ, succ_add, nat.zero_add]
 
 -- 4ª demostración
 example : m + n = n + m :=
@@ -46,20 +51,21 @@ example : m + n = n + m :=
 nat.rec_on n
   (show m + 0 = 0 + m, from
     calc m + 0
-             = m     : by rw add_zero
+             = m     : by rw nat.add_zero
          ... = 0 + m : by rw nat.zero_add )
   (assume n,
    assume HI : m + n = n + m,
-   calc
-     m + succ n
-         = succ (m + n) : by rw add_succ
-     ... = succ (n + m) : by rw HI
-     ... = succ n + m   : by rw succ_add)
+   show m + n.succ = n.succ + m, from
+     calc
+       m + succ n
+           = succ (m + n) : by rw add_succ
+       ... = succ (n + m) : by rw HI
+       ... = succ n + m   : by rw succ_add)
 
 -- 6ª demostración
 example : m + n = n + m :=
 nat.rec_on n
-  (show m + 0 = 0 + m, by rw [nat.zero_add, add_zero])
+  (show m + 0 = 0 + m, by rw [nat.zero_add, nat.add_zero])
   (assume n,
    assume HI : m + n = n + m,
    calc
@@ -70,7 +76,7 @@ nat.rec_on n
 -- 7ª demostración
 example : m + n = n + m :=
 nat.rec_on n
-  (by simp only [nat.zero_add, add_zero])
+  (by simp only [nat.zero_add, nat.add_zero])
   (λ n HI, by simp only [add_succ, HI, succ_add])
 
 -- 8ª demostración
@@ -82,7 +88,7 @@ nat.rec_on n
 -- 9ª demostración
 example : m + n = n + m :=
 -- by library_search
-add_comm m n
+nat.add_comm m n
 
 -- 10ª demostración
 example : m + n = n + m :=
@@ -112,5 +118,5 @@ lemma conmutativa : ∀ m n : ℕ, m + n = n + m
 
 -- 16ª demostración
 lemma conmutativa2 : ∀ m n : ℕ, m + n = n + m
-| m 0     := by simp only [add_zero, zero_add]
-| m (n+1) := by simp only [add_zero, add_succ, conmutativa2 m n, succ_add]
+| m 0     := by simp only [nat.add_zero, nat.zero_add]
+| m (n+1) := by simp only [nat.add_zero, add_succ, conmutativa2 m n, succ_add]

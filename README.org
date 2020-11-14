@@ -449,15 +449,15 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Funciones y conjuntos
 
 *** La composición de inyectivas parciales es inyectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/-D0bilml760][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean" src lean
 
 *** La composición de suprayectivas parciales es suprayectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/2NJA1c7wGVo][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean" src lean
 
 *** La imagen de la unión es la unión de las imágenes
-+ Enlaces al [[./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][sesión en Lean Web]] y al [[https://youtu.be/Usm8AnhSDJM][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean" src lean
 
 * Números naturales, recursión e inducción
@@ -465,26 +465,26 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Recursión e inducción
 
 *** Definiciones por recursión sobre los naturales
-+ Enlaces al [[./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][sesión en Lean Web]] y al [[https://youtu.be/XbJiD-K9IDI][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean" src lean
 
-*** Prueba por inducción 1: ∀ n : ℕ, 0 + n = n
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_1.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_1.lean][sesión en Lean Web]] y al vídeo.
+*** Prueba por inducción 1: (∀ n ∈ ℕ) 0 + n = n
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_1.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_1.lean][sesión en Lean Web]] y al [[https://youtu.be/qALe8Xk5Lcs][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_1.lean" src lean
 
-*** Prueba por inducción 2: ∀ m n k : ℕ, (m + n) + k = m + (n + k)
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_2.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_2.lean][sesión en Lean Web]] y al vídeo.
+*** Prueba por inducción 2: (∀ m n k ∈ ℕ) (m + n) + k = m + (n + k)
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_2.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_2.lean][sesión en Lean Web]] y al [[https://youtu.be/H5sIsvoAt6A][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_2.lean" src lean
 
-*** Prueba por inducción 3: ∀ m n : ℕ, succ m + n = succ (m + n)
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_3.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_3.lean][sesión en Lean Web]] y al vídeo.
+*** Prueba por inducción 3: (∀ m n ∈ ℕ) succ m + n = succ (m + n)
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_3.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_3.lean][sesión en Lean Web]] y al [[https://youtu.be/t7i3WY4OTek][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_3.lean" src lean
 
-*** Prueba por inducción 4: ∀ m n : ℕ, m + n = n + m
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_4.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_4.lean][sesión en Lean Web]] y al vídeo.
+*** Prueba por inducción 4: (∀ m n ∈ ℕ) m + n = n + m
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_4.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_4.lean][sesión en Lean Web]] y al [[https://youtu.be/Q7KLej0jjTY][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_4.lean" src lean
 
-*** Prueba por inducción 5: m^(succ n) = m * m^n
+*** Prueba por inducción 5: (∀ m n ∈ ℕ) m^(n+1) = m * m^n
 + Enlaces al [[./src/6_Naturales/Prueba_por_induccion_5.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_5.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_5.lean" src lean
 

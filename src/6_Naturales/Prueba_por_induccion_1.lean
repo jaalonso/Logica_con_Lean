@@ -1,5 +1,5 @@
--- Prueba por inducción 1: 0 + n = n
--- =================================
+-- Pruebas por inducción 1: 0 + n = n
+-- ==================================
 
 -- ----------------------------------------------------
 -- Ej. 1. Sean m y n números naturales. Demostrar que
@@ -14,7 +14,7 @@ variables (m n : ℕ)
 
 -- 1ª demostración
 example : m + 0 = m :=
-add_zero m
+nat.add_zero m
 
 -- 2ª demostración
 example : m + 0 = m :=
@@ -34,7 +34,7 @@ example : m + (n + 1) = (m + n) + 1 :=
 rfl
 
 -- ----------------------------------------------------
--- Ej. 3. Sean m y n números naturales. Demostrar que
+-- Ej. 3. Sean n un número natural. Demostrar que
 --    0 + n = n
 -- ----------------------------------------------------
 
@@ -42,7 +42,7 @@ rfl
 example : 0 + n = n :=
 begin
   induction n with n HI,
-  { rw add_zero, },
+  { rw nat.add_zero, },
   { rw add_succ,
     rw HI, },
 end
@@ -51,7 +51,7 @@ end
 example : 0 + n = n :=
 begin
   induction n with n HI,
-  { rw add_zero, },
+  { rw nat.add_zero, },
   { rw [add_succ, HI], },
 end
 
@@ -67,7 +67,7 @@ end
 example : 0 + n = n :=
 begin
   induction n with n HI,
-  { simp only [add_zero], },
+  { simp only [nat.add_zero], },
   { simp only [add_succ, HI], },
 end
 
@@ -75,7 +75,7 @@ end
 example : 0 + n = n :=
 by induction n;
    simp only [*,
-              add_zero,
+              nat.add_zero,
               add_succ]
 
 -- 6ª demostración
@@ -86,7 +86,7 @@ by induction n;
 -- 7ª demostración
 example : 0 + n = n :=
 nat.rec_on n
-  ( show 0 + 0 = 0, from add_zero 0)
+  ( show 0 + 0 = 0, from nat.add_zero 0)
   ( assume n,
     assume HI : 0 + n = n,
     show 0 + succ n = succ n, from
@@ -164,7 +164,7 @@ lemma cero_mas : ∀ n : ℕ, 0 + n = n
 -- 22ª demostración
 lemma cero_mas2 : ∀ n : ℕ, 0 + n = n
 | 0     := by simp
-| (n+1) := by simp [cero_mas2 n]
+| (n+1) := by simp
 
 -- 23ª demostración
 lemma cero_mas3 : ∀ n : ℕ, 0 + n = n
