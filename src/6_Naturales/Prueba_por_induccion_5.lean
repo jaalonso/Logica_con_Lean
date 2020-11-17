@@ -1,5 +1,5 @@
 -- Prueba por inducción 5: m^(succ n) = m * m^n
--- =============================================
+-- ============================================
 
 -- ----------------------------------------------------
 -- Ej. 1. Sean m y n números naturales. Demostrar que
@@ -83,14 +83,14 @@ begin
       m^(succ 0)
           = m^0 * m : by rw nat.pow_succ
       ... = 1 * m   : by rw nat.pow_zero
-      ... = m       : by rw one_mul
-      ... = m * 1   : by rw mul_one
+      ... = m       : by rw nat.one_mul
+      ... = m * 1   : by rw nat.mul_one
       ... = m * m^0 : by rw nat.pow_zero, },
   { calc
       m^(succ (succ n))
           = m^(succ n) * m   : by rw nat.pow_succ
       ... = (m * m^n) * m    : by rw HI
-      ... = m * (m^n * m)    : by rw mul_assoc
+      ... = m * (m^n * m)    : by rw nat.mul_assoc
       ... = m * m^(succ n)   : by rw nat.pow_succ, },
 end
 

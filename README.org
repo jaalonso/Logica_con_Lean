@@ -462,11 +462,17 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 * Números naturales, recursión e inducción
 
-** Recursión e inducción
+** Definiciones por recursión
 
 *** Definiciones por recursión sobre los naturales
 + Enlaces al [[./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][sesión en Lean Web]] y al [[https://youtu.be/XbJiD-K9IDI][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean" src lean
+
+*** Operaciones aritméticas definidas
++ Enlaces al [[./src/6_Naturales/Operaciones_aritmeticas_definidas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Operaciones_aritmeticas_definidas.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Operaciones_aritmeticas_definidas.lean" src lean
+
+** Recursión e inducción
 
 *** Prueba por inducción 1: (∀ n ∈ ℕ) 0 + n = n
 + Enlaces al [[./src/6_Naturales/Prueba_por_induccion_1.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_1.lean][sesión en Lean Web]] y al [[https://youtu.be/qALe8Xk5Lcs][vídeo]].
@@ -485,8 +491,22 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_4.lean" src lean
 
 *** Prueba por inducción 5: (∀ m n ∈ ℕ) m^(n+1) = m * m^n
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_5.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_5.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_5.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_5.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_5.lean" src lean
+
+*** Prueba por inducción 6: (∀ m n k ∈ ℕ) m^(n + k) = m^n * m^k
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_6.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_6.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_6.lean" src lean
+
+*** Prueba por induccion 7: (∀ n ∈ ℕ) n ≠ 0 → succ (pred n) = n
++ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_7.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_7.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_7.lean" src lean
+
+* Razonamiento sobre programas
+
+*** Razonamiento sobre programas
++ Enlaces al [[./src/6_Naturales/Razonamiento_sobre_programas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Razonamiento_sobre_programas.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/6_Naturales/Razonamiento_sobre_programas.lean" src lean
 
 
 # #+LATEX:\printindex
