@@ -1,8 +1,10 @@
--- Pruebas de Q → R ⊢ P ∨ Q → P ∨ R 
+-- Pruebas de Q → R ⊢ P ∨ Q → P ∨ R
 -- ================================
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 12) Demostrar
 --    Q → R ⊢ P ∨ Q → P ∨ R
+-- ----------------------------------------------------
 
 import tactic
 
@@ -13,9 +15,9 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( assume h3 : P,
-    show P ∨ R, 
+    show P ∨ R,
       from or.inl h3 )
   ( assume h4 : Q,
     have h5 : R := h1 h4,
@@ -27,9 +29,9 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( assume h3 : P, or.inl h3 )
-  ( assume h4 : Q, 
+  ( assume h4 : Q,
     show P ∨ R,
       from or.inr (h1 h4) )
 
@@ -38,7 +40,7 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( assume h3 : P, or.inl h3 )
   ( assume h4 : Q, or.inr (h1 h4) )
 
@@ -47,7 +49,7 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( λ h3, or.inl h3 )
   ( λ h4, or.inr (h1 h4) )
 
@@ -56,7 +58,7 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   or.inl
   ( λ h, or.inr (h1 h) )
 
@@ -86,7 +88,7 @@ begin
   cases h2 with h3 h4,
   { exact or.inl h3, },
   { exact or.inr (h1 h4), },
-end  
+end
 
 -- 9ª demostración
 example
@@ -95,11 +97,11 @@ example
 begin
   intro h2,
   cases h2 with h3 h4,
-  { left, 
+  { left,
     exact h3, },
   { right,
     exact (h1 h4), },
-end  
+end
 
 -- 10ª demostración
 example
@@ -107,11 +109,11 @@ example
   : P ∨ Q → P ∨ R :=
 begin
   rintro (h3 | h4),
-  { left, 
+  { left,
     exact h3, },
   { right,
     exact (h1 h4), },
-end  
+end
 
 -- 11ª demostración
 example

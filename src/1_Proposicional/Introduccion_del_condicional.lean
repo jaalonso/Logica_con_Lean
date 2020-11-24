@@ -1,25 +1,27 @@
 -- Introducción del condicional en Lean
 -- ====================================
 
--- Ej. 1. Demostrar que
+-- ----------------------------------------------------
+-- Ej. 1. (p. 9) Demostrar que
 --    P → P
+-- ----------------------------------------------------
 
-import tactic          
-variable (P : Prop)   
+import tactic
+variable (P : Prop)
 
 -- 1ª demostración
 example : P → P :=
-assume h : P, 
+assume h : P,
 show P, from h
 
 -- 2ª demostración
 example : P → P :=
-assume : P, 
+assume : P,
 show P, from this
 
 -- 3ª demostración
 example : P → P :=
-assume : P, 
+assume : P,
 show P, from ‹P›
 
 -- 4ª demostración
@@ -32,6 +34,7 @@ example : P → P :=
 
 -- 6ª demostración
 example : P → P :=
+-- by library_search
 id
 
 -- 7ª demostración
@@ -64,6 +67,7 @@ end
 
 -- 11ª demostración
 example : P → P :=
+-- by hint
 by tauto
 
 -- 12ª demostración

@@ -1,8 +1,10 @@
 -- Regla de introducción de la doble negación
 -- ==========================================
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 21) Demostrar
 --    P ⊢ ¬¬P
+-- ----------------------------------------------------
 
 import tactic
 variable (P : Prop)
@@ -11,11 +13,11 @@ variable (P : Prop)
 example
   (h1 : P)
   : ¬¬P :=
-not.intro 
+not.intro
   ( assume h2: ¬P,
-    show false, 
+    show false,
       from h2 h1)
-  
+
 -- 2ª demostración
 example
   (h1 : P)
@@ -68,4 +70,3 @@ example
   (h1 : P)
   : ¬¬P :=
 by finish
-

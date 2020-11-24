@@ -1,75 +1,77 @@
 -- Reglas de la conjunción
 -- =======================
 
+-- ----------------------------------------------------
 -- Ej. 1. Demostrar que
 --    P ∧ Q, R ⊢ Q ∧ R
+-- ----------------------------------------------------
 
-import tactic            
+import tactic
 
 variables (P Q R : Prop)
 
 -- 1ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-have hQ : Q, 
+have hQ : Q,
   from and.right hPQ,
-show Q ∧ R,  
+show Q ∧ R,
   from and.intro hQ hR
 
 -- 2ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-have hQ : Q, 
+have hQ : Q,
   from hPQ.right,
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 3ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-have hQ : Q, 
+have hQ : Q,
   from hPQ.2,
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 4ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
 have hQ : Q :=
   hPQ.2,
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 5ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hPQ.2, hR⟩
 
 -- 6ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -78,7 +80,7 @@ example
 -- 7ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -89,14 +91,13 @@ end
 -- 8ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
 begin
   split,
   { cases hPQ with hP hQ,
-    clear hP,
     exact hQ, },
   { exact hR, },
 end
@@ -104,7 +105,7 @@ end
 -- 9ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -118,7 +119,7 @@ end
 -- 10ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -132,16 +133,17 @@ end
 -- 11ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
+-- by hint
 by tauto
 
 -- 12ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=

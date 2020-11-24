@@ -1,8 +1,10 @@
 -- Pruebas de (Q → R) → ((¬Q → ¬P) → (P → R))
 -- ==========================================
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 10) Demostrar
 --    (Q → R) → ((¬Q → ¬P) → (P → R))
+-- ----------------------------------------------------
 
 import tactic
 
@@ -20,7 +22,7 @@ show (¬Q → ¬P) → (P → R), from
         have h5 : ¬¬Q, from mt h2 h4,
         have h6 : Q,   from not_not.mp h5,
         show R, from h1 h6))
-  
+
 -- 2ª demostración
 example :
   (Q → R) → ((¬Q → ¬P) → (P → R)) :=
@@ -89,7 +91,7 @@ example :
   (Q → R) → ((¬Q → ¬P) → (P → R)) :=
 assume h1 : Q → R,
 show (¬Q → ¬P) → (P → R), from
-  ( λh2, 
+  ( λh2,
     (λh3, h1 (not_not.mp (mt h2 (not_not_intro h3)))))
 
 -- 9ª demostración

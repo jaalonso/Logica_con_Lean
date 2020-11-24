@@ -5,8 +5,13 @@ import tactic
 
 variable (P : Prop)
 
+-- ----------------------------------------------------
+-- Ej. 1 (p. 22) Demostrar que
+--    ¬P → false ⊢ P
+-- ----------------------------------------------------
+
 -- 1ª demostración
-example 
+example
   (h1 : ¬P → false)
   : P :=
 have h2 : ¬¬P, from
@@ -15,7 +20,7 @@ have h2 : ¬¬P, from
 show P, from not_not.mp h2
 
 -- 2ª demostración
-example 
+example
   (h1 : ¬P → false)
   : P :=
 begin
@@ -25,7 +30,7 @@ begin
 end
 
 -- 3ª demostración
-example 
+example
   (h1 : ¬P → false)
   : P :=
 begin
@@ -34,7 +39,7 @@ begin
 end
 
 -- 4ª demostración
-example 
+example
   (h1 : ¬P → false)
   : P :=
 not_not.mp (λ h2, h1 h2)
@@ -47,7 +52,7 @@ example
   : P :=
 by_contra h1
 
-#print axioms by_contra
+-- #print axioms by_contra
 
 -- 6ª demostración
 lemma RAA
@@ -55,4 +60,4 @@ lemma RAA
   : P :=
 by finish
 
-#print axioms RAA
+-- #print axioms RAA

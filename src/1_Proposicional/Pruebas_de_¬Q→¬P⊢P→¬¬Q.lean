@@ -1,8 +1,10 @@
 -- Pruebas de ¬Q → ¬P ⊢ P → ¬¬Q
 -- ============================
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 9) Demostrar
 --    ¬Q → ¬P ⊢ P → ¬¬Q
+-- ----------------------------------------------------
 
 import tactic
 
@@ -15,7 +17,7 @@ example
 assume h2 : P,
 have h3 : ¬¬P,
   from not_not_intro h2,
-show ¬¬Q, 
+show ¬¬Q,
   from mt h1 h3
 
 -- 2ª demostración
@@ -24,7 +26,7 @@ example
   : P → ¬¬Q :=
 assume h2 : P,
 have h3 : ¬¬P := not_not_intro h2,
-show ¬¬Q, 
+show ¬¬Q,
   from mt h1 h3
 
 -- 3ª demostración
@@ -32,7 +34,7 @@ example
   (h1 : ¬Q → ¬P)
   : P → ¬¬Q :=
 assume h2 : P,
-show ¬¬Q, 
+show ¬¬Q,
   from mt h1 (not_not_intro h2)
 
 -- 4ª demostración

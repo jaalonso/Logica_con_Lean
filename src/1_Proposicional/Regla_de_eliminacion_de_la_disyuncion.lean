@@ -5,13 +5,15 @@ import tactic
 
 variables (P Q R : Prop)
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 11) Demostrar
 --    P ∨ Q, P → R, Q → R ⊢ R
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 or.elim h1 h2 h3
@@ -19,7 +21,7 @@ or.elim h1 h2 h3
 -- 2ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 h1.elim h2 h3
@@ -27,7 +29,7 @@ h1.elim h2 h3
 -- 3ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 or.rec h2 h3 h1
@@ -35,7 +37,7 @@ or.rec h2 h3 h1
 -- 4ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 begin
@@ -47,7 +49,7 @@ end
 -- 5ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 by tauto
@@ -55,7 +57,7 @@ by tauto
 -- 6ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 by finish

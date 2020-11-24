@@ -5,8 +5,10 @@ import tactic
 
 variables (P Q : Prop)
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 16) Demostrar
 --    P → Q, P → ¬Q ⊢ ¬P
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
@@ -17,8 +19,8 @@ assume h : P,
 have h4 : Q,
   from h1 h,
 have h5 : ¬Q,
-  from h2 h,  
-show false, 
+  from h2 h,
+show false,
   from h5 h4
 
 -- 2ª demostración
@@ -28,8 +30,8 @@ example
   : ¬P :=
 assume h : P,
 have h4 : Q  := h1 h,
-have h5 : ¬Q := h2 h,  
-show false, 
+have h5 : ¬Q := h2 h,
+show false,
   from h5 h4
 
 -- 3ª demostración
@@ -38,7 +40,7 @@ example
   (h2 : P → ¬Q)
   : ¬P :=
 assume h : P,
-show false, 
+show false,
   from (h2 h) (h1 h)
 
 -- 4ª demostración
@@ -113,4 +115,5 @@ example
   (h1 : P → Q)
   (h2 : P → ¬Q)
   : ¬P :=
+-- by hint
 by finish

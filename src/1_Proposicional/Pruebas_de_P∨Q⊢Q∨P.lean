@@ -5,14 +5,16 @@ import tactic
 
 variables (P Q R : Prop)
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 11) Demostrar
 --    P ∨ Q ⊢ Q ∨ P
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
-or.elim h1 
+or.elim h1
   ( assume h2 : P,
     show Q ∨ P,
       from or.inr h2 )
@@ -24,7 +26,7 @@ or.elim h1
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
-or.elim h1 
+or.elim h1
   ( λ h, or.inr h )
   ( λ h, or.inl h )
 
@@ -59,17 +61,17 @@ begin
   cases h1 with h2 h3,
   { exact or.inr h2, },
   { exact or.inl h3, },
-end 
+end
 
 -- 7ª demostración
 example
   (P ∨ Q)
   : Q ∨ P :=
 begin
-  cases ‹P ∨ Q›, 
+  cases ‹P ∨ Q›,
   { exact or.inr ‹P›, },
   { exact or.inl ‹Q›, },
-end 
+end
 
 -- 8ª demostración
 example
@@ -77,11 +79,11 @@ example
   : Q ∨ P :=
 begin
   cases h1 with h2 h3,
-  { right, 
+  { right,
     exact h2, },
-  { left, 
+  { left,
     exact h3, },
-end 
+end
 
 -- 9ª demostración
 example
@@ -104,7 +106,7 @@ by finish
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
-or.elim h1 
+or.elim h1
   ( assume h2 : P,
     show Q ∨ P,
       from or.inr h2 )
@@ -116,7 +118,7 @@ or.elim h1
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
-or.elim h1 
+or.elim h1
   ( λ h, or.inr h )
   ( λ h, or.inl h )
 
@@ -151,17 +153,17 @@ begin
   cases h1 with h2 h3,
   { exact or.inr h2, },
   { exact or.inl h3, },
-end 
+end
 
 -- 7ª demostración
 example
   (P ∨ Q)
   : Q ∨ P :=
 begin
-  cases ‹P ∨ Q›, 
+  cases ‹P ∨ Q›,
   { exact or.inr ‹P›, },
   { exact or.inl ‹Q›, },
-end 
+end
 
 -- 8ª demostración
 example
@@ -169,11 +171,11 @@ example
   : Q ∨ P :=
 begin
   cases h1 with h2 h3,
-  { right, 
+  { right,
     exact h2, },
-  { left, 
+  { left,
     exact h3, },
-end 
+end
 
 -- 9ª demostración
 example
@@ -197,9 +199,9 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( assume h3 : P,
-    show P ∨ R, 
+    show P ∨ R,
       from or.inl h3 )
   ( assume h4 : Q,
     have h5 : R := h1 h4,
@@ -211,9 +213,9 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( assume h3 : P, or.inl h3 )
-  ( assume h4 : Q, 
+  ( assume h4 : Q,
     show P ∨ R,
       from or.inr (h1 h4) )
 
@@ -222,7 +224,7 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( assume h3 : P, or.inl h3 )
   ( assume h4 : Q, or.inr (h1 h4) )
 
@@ -231,7 +233,7 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   ( λ h3, or.inl h3 )
   ( λ h4, or.inr (h1 h4) )
 
@@ -240,7 +242,7 @@ example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
-or.elim h2 
+or.elim h2
   or.inl
   ( λ h, or.inr (h1 h) )
 
@@ -270,7 +272,7 @@ begin
   cases h2 with h3 h4,
   { exact or.inl h3, },
   { exact or.inr (h1 h4), },
-end  
+end
 
 -- 9ª demostración
 example
@@ -279,11 +281,11 @@ example
 begin
   intro h2,
   cases h2 with h3 h4,
-  { left, 
+  { left,
     exact h3, },
   { right,
     exact (h1 h4), },
-end  
+end
 
 -- 10ª demostración
 example
@@ -291,11 +293,11 @@ example
   : P ∨ Q → P ∨ R :=
 begin
   rintro (h3 | h4),
-  { left, 
+  { left,
     exact h3, },
   { right,
     exact (h1 h4), },
-end  
+end
 
 -- 11ª demostración
 example
@@ -315,111 +317,111 @@ by finish
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 assume h2 : P,
-or.elim h1 
+or.elim h1
   ( assume h3 : ¬P,
     have h4 : false,
       from h3 h2,
-    show Q, 
-      from false.elim h4) 
+    show Q,
+      from false.elim h4)
   ( assume h5 : Q,
     show Q, from h5)
 
 -- 2ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 assume h2 : P,
-or.elim h1 
+or.elim h1
   ( assume h3 : ¬P,
     have h4 : false,
       from h3 h2,
-    show Q, 
-      from false.elim h4) 
+    show Q,
+      from false.elim h4)
   ( assume h5 : Q, h5)
 
 -- 3ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 assume h2 : P,
-or.elim h1 
+or.elim h1
   ( assume h3 : ¬P,
     have h4 : false,
       from h3 h2,
-    show Q, 
-      from false.elim h4) 
+    show Q,
+      from false.elim h4)
   ( λ h5, h5)
 
 -- 4ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 assume h2 : P,
-or.elim h1 
+or.elim h1
   ( assume h3 : ¬P,
     have h4 : false,
       from h3 h2,
-    show Q, 
-      from false.elim h4) 
+    show Q,
+      from false.elim h4)
   id
-    
+
 -- 5ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 assume h2 : P,
-or.elim h1 
+or.elim h1
   ( assume h3 : ¬P,
-    show Q, 
-      from false.elim (h3 h2)) 
+    show Q,
+      from false.elim (h3 h2))
   id
-        
+
 -- 6ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 assume h2 : P,
-or.elim h1 
-  ( assume h3 : ¬P, false.elim (h3 h2)) 
+or.elim h1
+  ( assume h3 : ¬P, false.elim (h3 h2))
   id
-        
+
 -- 7ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 assume h2 : P,
-or.elim h1 
-  ( λ h3, false.elim (h3 h2)) 
+or.elim h1
+  ( λ h3, false.elim (h3 h2))
   id
-        
+
 -- 8ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 λ h2, or.elim h1 (λ h3, false.elim (h3 h2)) id
 
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 λ h2, h1.elim (λ h3, false.elim (h3 h2)) id
 
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 λ h2, h1.elim (λ h3, (h3 h2).elim) id
 
 -- 9ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 imp_iff_not_or.mpr h1
 
 -- 10ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 begin
@@ -431,7 +433,7 @@ begin
 end
 
 -- 11ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 begin
@@ -442,7 +444,7 @@ begin
 end
 
 -- 12ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 begin
@@ -454,13 +456,13 @@ begin
 end
 
 -- 13ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 by tauto
 
 -- 14ª demostración
-example 
+example
   (h1 : ¬P ∨ Q)
   : P → Q :=
 by finish

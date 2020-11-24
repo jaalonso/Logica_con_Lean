@@ -1,8 +1,10 @@
 -- Pruebas del principio del tercio excluso
 -- ========================================
 
--- Demostrar que
+-- ----------------------------------------------------
+-- Ej. 1. (p. 23) Demostrar que
 --    F ∨ ¬F
+-- ----------------------------------------------------
 
 import tactic
 
@@ -12,7 +14,7 @@ open_locale classical
 
 -- 1ª demostración
 example : F ∨ ¬F :=
-by_contradiction 
+by_contradiction
   ( assume h1 : ¬(F ∨ ¬F),
     have h2 : ¬F, from
       assume h3 : F,

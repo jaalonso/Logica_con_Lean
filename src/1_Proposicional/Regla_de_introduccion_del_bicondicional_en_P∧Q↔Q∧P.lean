@@ -1,8 +1,10 @@
 -- Regla de introducción del bicondicional
 -- =======================================
 
--- Ej. 1. Demostrar
+-- ----------------------------------------------------
+-- Ej. 1. (p. 17) Demostrar
 --    P ∧ Q ↔ Q ∧ P
+-- ----------------------------------------------------
 
 import tactic
 
@@ -15,14 +17,14 @@ iff.intro
     have h2 : P,
       from and.elim_left h1,
     have h3 : Q,
-      from and.elim_right h1,  
+      from and.elim_right h1,
     show Q ∧ P,
       from and.intro h3 h2)
   ( assume h4 : Q ∧ P,
     have h5 : Q,
       from and.elim_left h4,
     have h6 : P,
-      from and.elim_right h4,  
+      from and.elim_right h4,
     show P ∧ Q,
       from and.intro h6 h5)
 
@@ -33,14 +35,14 @@ iff.intro
     have h2 : P,
       from h1.1,
     have h3 : Q,
-      from h1.2,  
+      from h1.2,
     show Q ∧ P,
       from and.intro h3 h2)
   ( assume h4 : Q ∧ P,
     have h5 : Q,
       from h4.1,
     have h6 : P,
-      from h4.2,  
+      from h4.2,
     show P ∧ Q,
       from and.intro h6 h5)
 
@@ -49,12 +51,12 @@ example : P ∧ Q ↔ Q ∧ P :=
 iff.intro
   ( assume h1 : P ∧ Q,
     have h2 : P := h1.1,
-    have h3 : Q := h1.2,  
+    have h3 : Q := h1.2,
     show Q ∧ P,
       from and.intro h3 h2)
   ( assume h4 : Q ∧ P,
     have h5 : Q := h4.1,
-    have h6 : P := h4.2,  
+    have h6 : P := h4.2,
     show P ∧ Q,
       from and.intro h6 h5)
 
@@ -89,7 +91,7 @@ iff.intro
 -- 8ª demostración
 lemma aux :
   P ∧ Q → Q ∧ P :=
-λ h, ⟨h.2, h.1⟩  
+λ h, ⟨h.2, h.1⟩
 
 example : P ∧ Q ↔ Q ∧ P :=
 iff.intro (aux P Q) (aux Q P)

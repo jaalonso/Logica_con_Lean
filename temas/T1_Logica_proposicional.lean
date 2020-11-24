@@ -1,76 +1,76 @@
 -- Tema 1: Lógica proposicional
 -- ============================
 
-import tactic            
-variables (P Q R : Prop)   
+import tactic
+variables (P Q R : Prop)
 
--- * Reglas del condicional
--- ========================
+-- 1. Reglas del condicional
+-- =========================
 
--- ** Regla de eliminación del condicional
--- =======================================
+-- 1.1. Regla de eliminación del condicional
+-- =========================================
 
 -- ----------------------------------------------------
--- Ej. 1. Demostrar que 
---    (P → Q), P ⊢ Q. 
+-- Ej. 1 (p. 6). Demostrar que
+--    (P → Q), P ⊢ Q.
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example  
-  (h1 : P → Q) 
-  (h2 : P) 
+example
+  (h1 : P → Q)
+  (h2 : P)
   : Q :=
 begin
   apply h1,
   exact h2,
-end 
+end
 
 -- 2ª demostración
-example  
-  (h1 : P → Q) 
-  (h2 : P) 
+example
+  (h1 : P → Q)
+  (h2 : P)
   : Q :=
 begin
   exact h1 h2,
-end 
+end
 
 -- 3ª demostración
-example  
-  (h1 : P → Q) 
-  (h2 : P) 
+example
+  (h1 : P → Q)
+  (h2 : P)
   : Q :=
 by exact h1 h2
 
 -- 4ª demostración
-example  
-  (h1 : P → Q) 
-  (h2 : P) 
+example
+  (h1 : P → Q)
+  (h2 : P)
   : Q :=
 h1 h2
 
 -- 5ª demostración
-example  
-  (h1 : P → Q) 
-  (h2 : P) 
+example
+  (h1 : P → Q)
+  (h2 : P)
   : Q :=
 by tauto
 
 -- 6ª demostración
-example  
-  (h1 : P → Q) 
-  (h2 : P) 
+example
+  (h1 : P → Q)
+  (h2 : P)
   : Q :=
 by finish
 
 -- 7ª demostración
-example  
-  (h1 : P → Q) 
-  (h2 : P) 
+example
+  (h1 : P → Q)
+  (h2 : P)
   : Q :=
 by solve_by_elim
 
 -- ----------------------------------------------------
--- Ej. 2. Demostrar que
+-- Ej. 2 (p. 6). Demostrar que
 --    P, P → Q, P → (Q → R) ⊢ R
 -- ----------------------------------------------------
 
@@ -85,7 +85,7 @@ have h4 : Q,
 have h5 : Q → R,
   from h3 h1,
 show R,
-  from h5 h4    
+  from h5 h4
 
 -- 2ª demostración
 example
@@ -95,7 +95,7 @@ example
   : R :=
 have h4 : Q     := h2 h1,
 have h5 : Q → R := h3 h1,
-show R, from h5 h4    
+show R, from h5 h4
 
 -- 3ª demostración
 example
@@ -103,7 +103,7 @@ example
   (h2 : P → Q)
   (h3 : P → (Q → R))
   : R :=
-show R, from (h3 h1) (h2 h1)    
+show R, from (h3 h1) (h2 h1)
 
 -- 4ª demostración
 example
@@ -111,7 +111,7 @@ example
   (h2 : P → Q)
   (h3 : P → (Q → R))
   : R :=
-(h3 h1) (h2 h1)    
+(h3 h1) (h2 h1)
 
 -- 5ª demostración
 example
@@ -125,23 +125,23 @@ by finish
 -- ========================================
 
 -- ----------------------------------------------------
--- Ej. 3. Demostrar que
+-- Ej. 3 (p. 9). Demostrar que
 --    P → P
 -- ----------------------------------------------------
 
 -- 1ª demostración
 example : P → P :=
-assume h : P, 
+assume h : P,
 show P, from h
 
 -- 2ª demostración
 example : P → P :=
-assume : P, 
+assume : P,
 show P, from this
 
 -- 3ª demostración
 example : P → P :=
-assume : P, 
+assume : P,
 show P, from ‹P›
 
 -- 4ª demostración
@@ -197,44 +197,44 @@ example : P → P :=
 by simp
 
 -- ----------------------------------------------------
--- Ej. 4. Demostrar
+-- Ej. 4 (p. 13). Demostrar
 --    P → (Q → P)
 -- ----------------------------------------------------
 
 -- 1ª demostración
 example : P → (Q → P) :=
 assume (h1 : P),
-show Q → P, from 
+show Q → P, from
   ( assume h2 : Q,
     show P, from h1)
 
 -- 2ª demostración
 example : P → (Q → P) :=
 assume (h1 : P),
-show Q → P, from 
-  ( assume h2 : Q, h1)    
+show Q → P, from
+  ( assume h2 : Q, h1)
 
 -- 3ª demostración
 example : P → (Q → P) :=
 assume (h1 : P),
-show Q → P, from 
-  ( λ h2, h1)      
+show Q → P, from
+  ( λ h2, h1)
 
 -- 4ª demostración
 example : P → (Q → P) :=
-assume (h1 : P), (λ h2, h1)        
+assume (h1 : P), (λ h2, h1)
 
 -- 5ª demostración
 example : P → (Q → P) :=
-λ h1, λ h2, h1        
+λ h1, λ h2, h1
 
 -- 6ª demostración
 example : P → (Q → P) :=
-λ h1 h2, h1        
+λ h1 h2, h1
 
 -- 7ª demostración
 example : P → (Q → P) :=
-λ h _, h        
+λ h _, h
 
 -- 8ª demostración
 example : P → (Q → P) :=
@@ -246,14 +246,14 @@ begin
   intro h1,
   intro h2,
   exact h1,
-end 
+end
 
 -- 10ª demostración
 example : P → (Q → P) :=
 begin
   intros h1 h2,
   exact h1,
-end 
+end
 
 -- 6ª demostración
 example : P → (Q → P) :=
@@ -268,86 +268,86 @@ example : P → (Q → P) :=
 by finish
 
 -- ----------------------------------------------------
--- Ej. 5. Demostrar que
+-- Ej. 5. (p. ) Demostrar que
 --    P → Q, Q → R ⊢ P → R
 -- ----------------------------------------------------
 
 -- 1º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 assume h : P,
 have h3 : Q,
   from h1 h,
-show R, 
+show R,
   from h2 h3
 
 -- 2º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 assume h : P,
 have h3 : Q := h1 h,
-show R, 
+show R,
   from h2 h3
 
 -- 3º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 assume h : P,
-show R, 
+show R,
   from h2 (h1 h)
 
 -- 4º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 assume h : P, h2 (h1 h)
 
 -- 5º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 λ h, h2 (h1 h)
 
 -- 6º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 h2 ∘ h1
 
 -- 7º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 begin
   intro h,
-  apply h2, 
+  apply h2,
   apply h1,
   exact h,
 end
 
 -- 8º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 begin
   intro h,
-  apply h2, 
+  apply h2,
   exact h1 h,
 end
 
 -- 9º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
@@ -357,103 +357,103 @@ begin
 end
 
 -- 10º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 λ h, h2 (h1 h)
 
 -- 11º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 h2 ∘ h1
 
 -- 12º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 by tauto
 
 -- 13º demostración
-example 
+example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 by finish
 
--- * Reglas de la conjunción 
+-- * Reglas de la conjunción
 -- =========================
 
 -- ----------------------------------------------------
--- Ej. 6. Demostrar que
+-- Ej. 6. (p. 4) Demostrar que
 --    P ∧ Q, R ⊢ Q ∧ R
 -- ----------------------------------------------------
 
 -- 1ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-have hQ : Q, 
+have hQ : Q,
   from and.right hPQ,
-show Q ∧ R,  
+show Q ∧ R,
   from and.intro hQ hR
 
 -- 2ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-have hQ : Q, 
+have hQ : Q,
   from hPQ.right,
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 3ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-have hQ : Q, 
+have hQ : Q,
   from hPQ.2,
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 4ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
 have hQ : Q :=
   hPQ.2,
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 5ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-show Q ∧ R,  
+show Q ∧ R,
   from ⟨hPQ.2, hR⟩
 
 -- 6ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -462,7 +462,7 @@ example
 -- 7ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -473,7 +473,7 @@ end
 -- 8ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -488,7 +488,7 @@ end
 -- 9ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -502,7 +502,7 @@ end
 -- 10ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -516,7 +516,7 @@ end
 -- 11ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -525,7 +525,7 @@ by tauto
 -- 12ª demostración
 -- ===============
 
-example  
+example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
@@ -541,11 +541,11 @@ by finish
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-have hP : P, 
+have hP : P,
   from and.left h,
-have hQ : Q, 
+have hQ : Q,
   from and.right h,
-show Q ∧ P,  
+show Q ∧ P,
   from and.intro hQ hP
 
 -- 2ª demostración
@@ -553,11 +553,11 @@ show Q ∧ P,
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-have hP : P, 
+have hP : P,
   from h.left,
-have hQ : Q, 
+have hQ : Q,
   from h.right,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨hQ, hP⟩
 
 -- 3ª demostración
@@ -565,11 +565,11 @@ show Q ∧ P,
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-have hP : P, 
+have hP : P,
   from h.1,
-have hQ : Q, 
+have hQ : Q,
   from h.2,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨hQ, hP⟩
 
 -- 4ª demostración
@@ -579,7 +579,7 @@ example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
 have hP : P := h.1,
 have hQ : Q := h.2,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨hQ, hP⟩
 
 -- 5ª demostración
@@ -587,7 +587,7 @@ show Q ∧ P,
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨h.2, h.1⟩
 
 -- 6ª demostración
@@ -609,7 +609,7 @@ example : P ∧ Q → Q ∧ P :=
 and.comm.mp
 
 -- 9ª demostración
--- =============== 
+-- ===============
 
 example : P ∧ Q → Q ∧ P :=
 begin
@@ -659,37 +659,37 @@ by finish
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example 
+example
   (h : false)
   : P :=
 false.elim h
 
 -- 2ª demostración
-example 
+example
   (h : false)
   : P :=
 false.rec P h
 
 -- 3ª demostración
-example 
+example
   (h : false)
   : P :=
 by tauto
 
 -- 4ª demostración
-example 
+example
   (h : false)
   : P :=
 by cases h
 
 -- 5ª demostración
-example 
+example
   (h : false)
   : P :=
 by finish
 
 -- 6ª demostración
-example 
+example
   (h : false)
   : P :=
 by solve_by_elim
@@ -697,9 +697,9 @@ by solve_by_elim
 -- ** Definición de la negación
 -- ============================
 
--- ¬P ≡ (P → false)  
+-- ¬P ≡ (P → false)
 
--- #reduce ¬P 
+-- #reduce ¬P
 
 -- ** Eliminación de la negación
 -- =============================
@@ -727,33 +727,33 @@ h2 h1
 -- ==============================
 
 -- ----------------------------------------------------
--- Ej. 10. Demostrar 
+-- Ej. 10. Demostrar
 --    ¬(P ∧ ¬P)
 -- ----------------------------------------------------
 
 -- 1ª demostración
 example : ¬(P ∧ ¬P) :=
-not.intro 
+not.intro
   ( assume h : P ∧ ¬P,
     have h1 : P  := h.1,
     have h2 : ¬P := h.2,
     show false, from h2 h1 )
-  
+
 -- 2ª demostración
 example : ¬(P ∧ ¬P) :=
-not.intro 
+not.intro
   ( assume h : P ∧ ¬P,
     show false, from h.2 h.1 )
-  
+
 -- 3ª demostración
 example : ¬(P ∧ ¬P) :=
-not.intro 
+not.intro
   ( assume h : P ∧ ¬P, h.2 h.1 )
-  
+
 -- 4ª demostración
 example : ¬(P ∧ ¬P) :=
 not.intro (λ h, h.2 h.1)
-  
+
 -- 5ª demostración
 example : ¬(P ∧ ¬P) :=
 begin
@@ -761,14 +761,14 @@ begin
   cases h with h1 h2,
   apply h2,
   exact h1,
-end  
+end
 
 -- 6ª demostración
 example : ¬(P ∧ ¬P) :=
 begin
   rintro ⟨h1, h2⟩,
   exact h2 h1,
-end  
+end
 
 -- 7ª demostración
 example : ¬(P ∧ ¬P) :=
@@ -788,10 +788,10 @@ by finish
 
 -- 11ª demostración
 example : ¬(P ∧ ¬P) :=
-by simp 
+by simp
 
 -- ----------------------------------------------------
--- Ej. 11. Demostrar
+-- Ej. 11. (p. 8) Demostrar
 --    P → Q, P → ¬Q ⊢ ¬P
 -- ----------------------------------------------------
 
@@ -804,8 +804,8 @@ assume h : P,
 have h4 : Q,
   from h1 h,
 have h5 : ¬Q,
-  from h2 h,  
-show false, 
+  from h2 h,
+show false,
   from h5 h4
 
 -- 2ª demostración
@@ -815,8 +815,8 @@ example
   : ¬P :=
 assume h : P,
 have h4 : Q  := h1 h,
-have h5 : ¬Q := h2 h,  
-show false, 
+have h5 : ¬Q := h2 h,
+show false,
   from h5 h4
 
 -- 3ª demostración
@@ -825,7 +825,7 @@ example
   (h2 : P → ¬Q)
   : ¬P :=
 assume h : P,
-show false, 
+show false,
   from (h2 h) (h1 h)
 
 -- 4ª demostración
@@ -908,79 +908,79 @@ by finish
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 assume h3 : P,
 have h4 : Q,
   from h1 h3,
-show false, 
+show false,
   from h2 h4
 
 -- 2ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 assume h3 : P,
 have h4 : Q := h1 h3,
-show false, 
+show false,
   from h2 h4
 
 -- 3ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 assume h3 : P,
-show false, 
+show false,
   from h2 (h1 h3)
 
 -- 4ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 assume h3 : P, h2 (h1 h3)
 
 -- 5ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 λ h, h2 (h1 h)
 
 -- 6ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 h2 ∘ h1
 
 -- 7ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 mt h1 h2
 
 -- 8ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 by tauto
 
 -- 9ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 by finish
 
 -- 10ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
@@ -992,7 +992,7 @@ begin
 end
 
 -- 11ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
@@ -1002,58 +1002,58 @@ begin
 end
 
 -- 12ª demostración
-example 
+example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 λ h, h2 (h1 h)
 
 -- ----------------------------------------------------
--- Ej. 13. Demostrar
---    P → (Q → R), P, ¬R ⊢ ¬Q 
+-- Ej. 13. (p. 7). Demostrar
+--    P → (Q → R), P, ¬R ⊢ ¬Q
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
 have h4 : Q → R,
   from h1 h2,
 show ¬Q,
-  from mt h4 h3  
+  from mt h4 h3
 
 -- 2ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
 have h4 : Q → R := h1 h2,
 show ¬Q,
-  from mt h4 h3  
+  from mt h4 h3
 
 -- 3ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
 show ¬Q,
-  from mt (h1 h2) h3  
+  from mt (h1 h2) h3
 
 -- 4ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
 mt (h1 h2) h3
 
 -- 5ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
@@ -1065,8 +1065,8 @@ begin
 end
 
 -- 6ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
@@ -1077,8 +1077,8 @@ begin
 end
 
 -- 7ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
@@ -1088,16 +1088,16 @@ begin
 end
 
 -- 8ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
 λ h4, h3 ((h1 h2) h4)
 
 -- 9ª demostración
-example 
-  (h1 : P → (Q → R)) 
+example
+  (h1 : P → (Q → R))
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
@@ -1215,11 +1215,11 @@ by finish
 example
   (h1 : P)
   : ¬¬P :=
-not.intro 
+not.intro
   ( assume h2: ¬P,
-    show false, 
+    show false,
       from h2 h1)
-  
+
 -- 2ª demostración
 example
   (h1 : P)
@@ -1274,7 +1274,7 @@ example
 by finish
 
 -- ----------------------------------------------------
--- Ej. 16. Demostrar
+-- Ej. 16. (p. 9) Demostrar
 --    ¬Q → ¬P ⊢ P → ¬¬Q
 -- ----------------------------------------------------
 
@@ -1285,7 +1285,7 @@ example
 assume h2 : P,
 have h3 : ¬¬P,
   from not_not_intro h2,
-show ¬¬Q, 
+show ¬¬Q,
   from mt h1 h3
 
 -- 2ª demostración
@@ -1294,7 +1294,7 @@ example
   : P → ¬¬Q :=
 assume h2 : P,
 have h3 : ¬¬P := not_not_intro h2,
-show ¬¬Q, 
+show ¬¬Q,
   from mt h1 h3
 
 -- 3ª demostración
@@ -1302,7 +1302,7 @@ example
   (h1 : ¬Q → ¬P)
   : P → ¬¬Q :=
 assume h2 : P,
-show ¬¬Q, 
+show ¬¬Q,
   from mt h1 (not_not_intro h2)
 
 -- 4ª demostración
@@ -1404,30 +1404,30 @@ by finish
 -- ==========================================
 
 -- ----------------------------------------------------
--- Ej. 17. Demostrar
+-- Ej. 17 (p. 11). Demostrar
 --    P ⊢ P ∨ Q
 -- ----------------------------------------------------
 
--- 1ª demostración 
-example 
+-- 1ª demostración
+example
   (h : P)
   : P ∨ Q :=
 or.intro_left Q h
 
--- 2ª demostración 
-example 
+-- 2ª demostración
+example
   (h : P)
   : P ∨ Q :=
 or.inl h
 
--- 3ª demostración 
-example 
+-- 3ª demostración
+example
   (h : P)
   : P ∨ Q :=
 by tauto
 
--- 4ª demostración 
-example 
+-- 4ª demostración
+example
   (h : P)
   : P ∨ Q :=
 by finish
@@ -1438,7 +1438,7 @@ by finish
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : P ∨ R :=
 have h2 : P,
@@ -1447,7 +1447,7 @@ show P ∨ R,
   from or.inl h2
 
 -- 2ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : P ∨ R :=
 have h2 : P,
@@ -1456,7 +1456,7 @@ show P ∨ R,
   from or.inl h2
 
 -- 3ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : P ∨ R :=
 have h2 : P := h1.1,
@@ -1464,55 +1464,55 @@ show P ∨ R,
   from or.inl h2
 
 -- 4ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : P ∨ R :=
 show P ∨ R,
   from or.inl h1.1
 
 -- 5ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : P ∨ R :=
 or.inl h1.1
 
 -- 6ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : P ∨ R :=
 by tauto
 
 -- 7ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : P ∨ R :=
 by finish
 
 -- ----------------------------------------------------
--- Ej. 19. Demostrar
+-- Ej. 19 (p. 11) . Demostrar
 --    Q ⊢ P ∨ Q
 -- ----------------------------------------------------
 
--- 1ª demostración 
-example 
+-- 1ª demostración
+example
   (h : Q)
   : P ∨ Q :=
 or.intro_right P h
 
--- 2ª demostración 
-example 
+-- 2ª demostración
+example
   (h : Q)
   : P ∨ Q :=
 or.inr h
 
--- 3ª demostración 
-example 
+-- 3ª demostración
+example
   (h : Q)
   : P ∨ Q :=
 by tauto
 
--- 4ª demostración 
-example 
+-- 4ª demostración
+example
   (h : Q)
   : P ∨ Q :=
 by finish
@@ -1523,7 +1523,7 @@ by finish
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : R ∨ Q :=
 have h2 : Q,
@@ -1532,7 +1532,7 @@ show R ∨ Q,
   from or.inr h2
 
 -- 2ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : R ∨ Q :=
 have h2 : Q,
@@ -1541,7 +1541,7 @@ show R ∨ Q,
   from or.inr h2
 
 -- 3ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : R ∨ Q :=
 have h2 : Q := h1.2,
@@ -1549,26 +1549,26 @@ show R ∨ Q,
   from or.inr h2
 
 -- 4ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : R ∨ Q :=
 show R ∨ Q,
   from or.inr h1.2
 
 -- 5ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : R ∨ Q :=
 or.inr h1.2
 
 -- 6ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : R ∨ Q :=
 by tauto
 
 -- 7ª demostración
-example 
+example
   (h1 : P ∧ Q)
   : R ∨ Q :=
 by finish
@@ -1584,7 +1584,7 @@ by finish
 -- 1ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 or.elim h1 h2 h3
@@ -1592,7 +1592,7 @@ or.elim h1 h2 h3
 -- 2ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 h1.elim h2 h3
@@ -1600,7 +1600,7 @@ h1.elim h2 h3
 -- 3ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 or.rec h2 h3 h1
@@ -1608,7 +1608,7 @@ or.rec h2 h3 h1
 -- 4ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 begin
@@ -1620,7 +1620,7 @@ end
 -- 5ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 by tauto
@@ -1628,9 +1628,7 @@ by tauto
 -- 6ª demostración
 example
   (h1 : P ∨ Q)
-  (h2 : P → R) 
+  (h2 : P → R)
   (h3 : Q → R)
   : R :=
 by finish
-
-

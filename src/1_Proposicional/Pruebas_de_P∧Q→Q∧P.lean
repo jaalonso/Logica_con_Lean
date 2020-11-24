@@ -1,10 +1,12 @@
 -- Pruebas en Lean de P ∧ Q → Q ∧ P
 -- ================================
 
+-- ----------------------------------------------------
 -- Ej. 1. Demostrar que
 --    P ∧ Q → Q ∧ P
+-- ----------------------------------------------------
 
-import tactic            
+import tactic
 
 variables (P Q : Prop)
 
@@ -13,11 +15,11 @@ variables (P Q : Prop)
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-have hP : P, 
+have hP : P,
   from and.left h,
-have hQ : Q, 
+have hQ : Q,
   from and.right h,
-show Q ∧ P,  
+show Q ∧ P,
   from and.intro hQ hP
 
 -- 2ª demostración
@@ -25,11 +27,11 @@ show Q ∧ P,
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-have hP : P, 
+have hP : P,
   from h.left,
-have hQ : Q, 
+have hQ : Q,
   from h.right,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨hQ, hP⟩
 
 -- 3ª demostración
@@ -37,11 +39,11 @@ show Q ∧ P,
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-have hP : P, 
+have hP : P,
   from h.1,
-have hQ : Q, 
+have hQ : Q,
   from h.2,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨hQ, hP⟩
 
 -- 4ª demostración
@@ -51,7 +53,7 @@ example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
 have hP : P := h.1,
 have hQ : Q := h.2,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨hQ, hP⟩
 
 -- 5ª demostración
@@ -59,7 +61,7 @@ show Q ∧ P,
 
 example : P ∧ Q → Q ∧ P :=
 assume h : P ∧ Q,
-show Q ∧ P,  
+show Q ∧ P,
   from ⟨h.2, h.1⟩
 
 -- 6ª demostración
@@ -78,10 +80,11 @@ example : P ∧ Q → Q ∧ P :=
 -- ===============
 
 example : P ∧ Q → Q ∧ P :=
+-- by library_search
 and.comm.mp
 
 -- 9ª demostración
--- =============== 
+-- ===============
 
 example : P ∧ Q → Q ∧ P :=
 begin
@@ -111,6 +114,7 @@ example : P ∧ Q → Q ∧ P :=
 -- ===============
 
 example : P ∧ Q → Q ∧ P:=
+-- by hint
 by tauto
 
 -- 13ª demostración

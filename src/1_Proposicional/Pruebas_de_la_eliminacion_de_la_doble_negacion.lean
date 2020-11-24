@@ -1,8 +1,10 @@
 -- Pruebas de la eliminación de la doble negación
 -- ==============================================
 
+-- ----------------------------------------------------
 -- Ej. 1. Demostrar
 --     ¬¬P ⊢ P
+-- ----------------------------------------------------
 
 import tactic
 
@@ -14,16 +16,16 @@ open_locale classical
 example
   (h1 : ¬¬P)
   : P :=
-by_contra 
+by_contra
   ( assume h2 : ¬P,
-    show false, 
+    show false,
       from h1 h2 )
 
 -- 2ª demostración
 example
   (h1 : ¬¬P)
   : P :=
-by_contra 
+by_contra
   ( assume h2 : ¬P,
     h1 h2 )
 
