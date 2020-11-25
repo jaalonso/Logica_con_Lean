@@ -77,6 +77,7 @@ example
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
+-- by library_search
 or.imp_right h1
 
 -- 8ª demostración
@@ -119,6 +120,7 @@ end
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
+-- by hint
 by tauto
 
 -- 12ª demostración

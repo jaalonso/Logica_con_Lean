@@ -84,9 +84,10 @@ by_contradiction
 
 -- 9ª demostración
 example : F ∨ ¬F :=
+-- by library_search
 em F
 
-#print axioms em
+-- #print axioms em
 
 -- 10ª demostración
 example : F ∨ ¬F :=
@@ -151,6 +152,7 @@ end
 
 -- 17ª demostración
 example : F ∨ ¬F :=
+-- by hint
 by tauto
 
 -- 18ª demostración

@@ -23,6 +23,7 @@ false.elim h
 example
   (h : false)
   : P :=
+-- by library_search
 false.rec P h
 
 -- 3ª demostración
@@ -82,8 +83,10 @@ h2 h1
 -- Introducción de la negación
 -- ---------------------------
 
+-- ----------------------------------------------------
 -- Ej. 3. Demostrar
 --    ¬(P ∧ ¬P)
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example : ¬(P ∧ ¬P) :=

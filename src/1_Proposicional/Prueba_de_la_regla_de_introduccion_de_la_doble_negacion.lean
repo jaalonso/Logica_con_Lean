@@ -48,6 +48,7 @@ not_not.mpr h1
 example
   (h1 : P)
   : ¬¬P :=
+-- by library_search
 not_not_intro h1
 
 -- 7ª demostración
@@ -63,6 +64,7 @@ end
 example
   (h1 : P)
   : ¬¬P :=
+-- by hint
 by tauto
 
 -- 9ª demostración

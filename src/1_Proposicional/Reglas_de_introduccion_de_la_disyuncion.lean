@@ -20,12 +20,14 @@ or.intro_left Q h
 example
   (h : P)
   : P ∨ Q :=
+-- by library_search
 or.inl h
 
 -- 3ª demostración
 example
   (h : P)
   : P ∨ Q :=
+-- by hint
 by tauto
 
 -- 4ª demostración
@@ -76,12 +78,14 @@ show P ∨ R,
 example
   (h1 : P ∧ Q)
   : P ∨ R :=
+-- by suggest
 or.inl h1.1
 
 -- 6ª demostración
 example
   (h1 : P ∧ Q)
   : P ∨ R :=
+-- by hint
 by tauto
 
 -- 7ª demostración
@@ -90,8 +94,10 @@ example
   : P ∨ R :=
 by finish
 
+-- ----------------------------------------------------
 -- Ej. 3. Demostrar
 --    Q ⊢ P ∨ Q
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
@@ -103,12 +109,14 @@ or.intro_right P h
 example
   (h : Q)
   : P ∨ Q :=
+-- by suggest
 or.inr h
 
 -- 3ª demostración
 example
   (h : Q)
   : P ∨ Q :=
+-- by hint
 by tauto
 
 -- 4ª demostración
@@ -119,7 +127,7 @@ by finish
 
 -- ----------------------------------------------------
 -- Ej. 4. Demostrar
---    P ∧ Q ⊢ P ∨ R
+--    P ∧ Q ⊢ R ∨ Q
 -- ----------------------------------------------------
 
 -- 1ª demostración
@@ -159,12 +167,14 @@ show R ∨ Q,
 example
   (h1 : P ∧ Q)
   : R ∨ Q :=
+-- by suggest
 or.inr h1.2
 
 -- 6ª demostración
 example
   (h1 : P ∧ Q)
   : R ∨ Q :=
+-- by hint
 by tauto
 
 -- 7ª demostración

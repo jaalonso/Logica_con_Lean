@@ -112,6 +112,7 @@ example
 example
   (h1 : ¬P ∨ Q)
   : P → Q :=
+-- by library_search
 imp_iff_not_or.mpr h1
 
 -- 10ª demostración
@@ -153,6 +154,7 @@ end
 example
   (h1 : ¬P ∨ Q)
   : P → Q :=
+-- by hint
 by tauto
 
 -- 14ª demostración

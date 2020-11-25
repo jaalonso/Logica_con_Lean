@@ -32,6 +32,7 @@ example
   (h2 : P → R)
   (h3 : Q → R)
   : R :=
+-- by library_search
 or.rec h2 h3 h1
 
 -- 4ª demostración
@@ -52,6 +53,7 @@ example
   (h2 : P → R)
   (h3 : Q → R)
   : R :=
+-- by hint
 by tauto
 
 -- 6ª demostración

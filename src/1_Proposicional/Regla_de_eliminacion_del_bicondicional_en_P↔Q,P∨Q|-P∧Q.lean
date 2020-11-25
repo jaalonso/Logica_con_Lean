@@ -113,6 +113,7 @@ example
   (h1 : P ↔ Q)
   (h2 : P ∨ Q)
   : P ∧ Q :=
+-- by hint
 by tauto
 
 -- 8ª demostración

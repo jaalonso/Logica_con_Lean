@@ -39,6 +39,7 @@ by_contra (λ h2, h1 h2)
 example
   (h1 : ¬¬P)
   : P :=
+-- by library_search
 not_not.mp h1
 
 -- 5ª demostración
@@ -54,6 +55,7 @@ end
 example
   (h1 : ¬¬P)
   : P :=
+-- by hint
 by tauto
 
 -- 7ª demostración
@@ -62,4 +64,4 @@ lemma aux
   : P :=
 by finish
 
-#print axioms aux
+-- #print axioms aux

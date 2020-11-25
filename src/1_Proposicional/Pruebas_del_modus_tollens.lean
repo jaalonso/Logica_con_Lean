@@ -66,6 +66,7 @@ example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
+-- by library_search
 mt h1 h2
 
 -- 8ª demostración
@@ -73,6 +74,7 @@ example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
+-- by hint
 by tauto
 
 -- 9ª demostración

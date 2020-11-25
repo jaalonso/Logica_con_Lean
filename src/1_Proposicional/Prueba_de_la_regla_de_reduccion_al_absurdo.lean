@@ -44,12 +44,13 @@ example
   : P :=
 not_not.mp (λ h2, h1 h2)
 
-#print axioms not_not
+-- #print axioms not_not
 
 -- 5ª demostración
 example
   (h1 : ¬P → false)
   : P :=
+-- by library_search
 by_contra h1
 
 -- #print axioms by_contra
@@ -58,6 +59,7 @@ by_contra h1
 lemma RAA
   (h1 : ¬P → false)
   : P :=
+-- by hint
 by finish
 
 -- #print axioms RAA

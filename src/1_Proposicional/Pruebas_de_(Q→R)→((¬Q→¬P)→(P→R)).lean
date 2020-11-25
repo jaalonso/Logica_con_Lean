@@ -158,4 +158,4 @@ lemma aux :
 -- by hint
 by finish
 
-#print axioms aux
+-- #print axioms aux

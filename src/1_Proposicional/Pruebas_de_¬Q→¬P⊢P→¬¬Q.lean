@@ -53,6 +53,7 @@ example
 example
   (h1 : ¬Q → ¬P)
   : P → ¬¬Q :=
+-- by library_search
 imp_not_comm.mp h1
 
 -- 7ª demostración
@@ -121,6 +122,7 @@ example
 example
   (h1 : ¬Q → ¬P)
   : P → ¬¬Q :=
+-- by hint
 by tauto
 
 -- 15ª demostración

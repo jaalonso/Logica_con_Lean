@@ -51,6 +51,7 @@ or.rec or.inr or.inl h1
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
+-- by library_search
 or.swap h1
 
 -- 6ª demostración
@@ -89,6 +90,7 @@ end
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
+-- by hint
 by tauto
 
 -- 10ª demostración
@@ -98,7 +100,7 @@ example
 by finish
 
 -- ----------------------------------------------------
--- Ej. 1. Demostrar
+-- Ej. 2. Demostrar
 --    P ∨ Q ⊢ Q ∨ P
 -- ----------------------------------------------------
 
@@ -143,6 +145,7 @@ or.rec or.inr or.inl h1
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
+-- by library_search
 or.swap h1
 
 -- 6ª demostración
@@ -181,6 +184,7 @@ end
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
+-- by hint
 by tauto
 
 -- 10ª demostración
@@ -190,7 +194,7 @@ example
 by finish
 
 -- ----------------------------------------------------
--- Ej. 1. Demostrar
+-- Ej. 3. Demostrar
 --    Q → R ⊢ P ∨ Q → P ∨ R
 -- ----------------------------------------------------
 
@@ -261,6 +265,7 @@ example
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
+-- by library_search
 or.imp_right h1
 
 -- 8ª demostración
@@ -303,6 +308,7 @@ end
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
+-- by hint
 by tauto
 
 -- 12ª demostración
@@ -312,7 +318,7 @@ example
 by finish
 
 -- ----------------------------------------------------
--- Ej. 1. Demostrar
+-- Ej. 4. Demostrar
 --    ¬P ∨ Q ⊢ P → Q
 -- ----------------------------------------------------
 
@@ -418,6 +424,7 @@ example
 example
   (h1 : ¬P ∨ Q)
   : P → Q :=
+-- by library_search
 imp_iff_not_or.mpr h1
 
 -- 10ª demostración
@@ -459,6 +466,7 @@ end
 example
   (h1 : ¬P ∨ Q)
   : P → Q :=
+-- by hint
 by tauto
 
 -- 14ª demostración

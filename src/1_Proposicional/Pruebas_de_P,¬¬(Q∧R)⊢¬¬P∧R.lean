@@ -76,4 +76,4 @@ lemma aux
   : ¬¬P ∧ R :=
 by finish
 
-#print axioms aux
+-- #print axioms aux

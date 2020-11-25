@@ -98,6 +98,7 @@ iff.intro (aux P Q) (aux Q P)
 
 -- 9ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
+-- by library_search
 and.comm
 
 -- 10ª demostración
@@ -146,6 +147,7 @@ end
 
 -- 13ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
+-- by hint
 by tauto
 
 -- 14ª demostración

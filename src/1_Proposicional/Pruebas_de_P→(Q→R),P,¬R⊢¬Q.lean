@@ -46,6 +46,7 @@ example
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
+-- by library_search
 mt (h1 h2) h3
 
 -- 5ª demostración
@@ -98,4 +99,5 @@ example
   (h2 : P)
   (h3 : ¬R)
   : ¬Q :=
+-- by hint
 by finish

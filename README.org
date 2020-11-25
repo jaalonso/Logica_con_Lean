@@ -192,11 +192,11 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][sesión en Lean Web]] y al [[https://youtu.be/j3eE39xwElY][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean" src lean
 
-** Ejercicios
-
-*** Ejercicios de lógica proposicional
-+ Enlaces al [[./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean" src lean
+# ** Ejercicios
+#
+# *** Ejercicios de lógica proposicional
+# + Enlaces al [[./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][sesión en Lean Web]] y al vídeo.
+# #+INCLUDE: "./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean" src lean
 
 * Lógica de primer orden
 
@@ -508,11 +508,11 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/6_Naturales/Prueba_por_induccion_7.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_7.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_7.lean" src lean
 
-* Razonamiento sobre programas
-
-*** Razonamiento sobre programas
-+ Enlaces al [[./src/7_Programas/Razonamiento_sobre_programas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_sobre_programas.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/7_Programas/Razonamiento_sobre_programas.lean" src lean
+# * Razonamiento sobre programas
+#
+# *** Razonamiento sobre programas
+# + Enlaces al [[./src/7_Programas/Razonamiento_sobre_programas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_sobre_programas.lean][sesión en Lean Web]] y al vídeo.
+# #+INCLUDE: "./src/7_Programas/Razonamiento_sobre_programas.lean" src lean
 
 
 # #+LATEX:\printindex

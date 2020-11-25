@@ -34,6 +34,7 @@ example
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
+-- by library_search
 mt h1
 
 -- 5ª demostración
@@ -97,6 +98,7 @@ example
 example
   (h1 : P → Q)
   : ¬Q → ¬P :=
+-- by hint
 by tauto
 
 -- 12ª demostración
