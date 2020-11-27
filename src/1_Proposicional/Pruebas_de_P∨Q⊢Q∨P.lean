@@ -101,100 +101,6 @@ by finish
 
 -- ----------------------------------------------------
 -- Ej. 2. Demostrar
---    P ∨ Q ⊢ Q ∨ P
--- ----------------------------------------------------
-
--- 1ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-or.elim h1
-  ( assume h2 : P,
-    show Q ∨ P,
-      from or.inr h2 )
-  ( assume h3 : Q,
-    show Q ∨ P,
-      from or.inl h3 )
-
--- 2ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-or.elim h1
-  ( λ h, or.inr h )
-  ( λ h, or.inl h )
-
--- 3ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-or.elim h1 or.inr or.inl
-
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-h1.elim or.inr or.inl
-
--- 4ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-or.rec or.inr or.inl h1
-
--- 5ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
--- by library_search
-or.swap h1
-
--- 6ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-begin
-  cases h1 with h2 h3,
-  { exact or.inr h2, },
-  { exact or.inl h3, },
-end
-
--- 7ª demostración
-example
-  (P ∨ Q)
-  : Q ∨ P :=
-begin
-  cases ‹P ∨ Q›,
-  { exact or.inr ‹P›, },
-  { exact or.inl ‹Q›, },
-end
-
--- 8ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-begin
-  cases h1 with h2 h3,
-  { right,
-    exact h2, },
-  { left,
-    exact h3, },
-end
-
--- 9ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
--- by hint
-by tauto
-
--- 10ª demostración
-example
-  (h1 : P ∨ Q)
-  : Q ∨ P :=
-by finish
-
--- ----------------------------------------------------
--- Ej. 3. Demostrar
 --    Q → R ⊢ P ∨ Q → P ∨ R
 -- ----------------------------------------------------
 
@@ -256,19 +162,26 @@ example
   : P ∨ Q → P ∨ R :=
 λ h2, or.elim h2 or.inl (λ h, or.inr (h1 h))
 
+-- 7ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 λ h2, h2.elim or.inl (λ h, or.inr (h1 h))
 
--- 7ª demostración
+-- 8ª demostración
+example
+  (h1 : Q → R)
+  : P ∨ Q → P ∨ R :=
+λ h2, h2.elim or.inl (or.inr ∘ h1)
+
+-- 9ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 -- by library_search
 or.imp_right h1
 
--- 8ª demostración
+-- 10ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
@@ -279,7 +192,7 @@ begin
   { exact or.inr (h1 h4), },
 end
 
--- 9ª demostración
+-- 11ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
@@ -292,7 +205,7 @@ begin
     exact (h1 h4), },
 end
 
--- 10ª demostración
+-- 12ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
@@ -304,14 +217,14 @@ begin
     exact (h1 h4), },
 end
 
--- 11ª demostración
+-- 13ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 -- by hint
 by tauto
 
--- 12ª demostración
+-- 14ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=

@@ -73,6 +73,11 @@ example
   : P ∨ Q → P ∨ R :=
 λ h2, h2.elim or.inl (λ h, or.inr (h1 h))
 
+example
+  (h1 : Q → R)
+  : P ∨ Q → P ∨ R :=
+λ h2, h2.elim or.inl (or.inr ∘ h1)
+
 -- 7ª demostración
 example
   (h1 : Q → R)

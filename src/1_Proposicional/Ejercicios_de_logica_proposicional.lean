@@ -2780,547 +2780,995 @@ example
   : (p ∨ q) ∧ (p ∨ r) :=
 by finish
 
+-- ----------------------------------------------------
+-- Ejercicio 36. Demostrar
+--    (p ∨ q) ∧ (p ∨ r) ⊢ p ∨ (q ∧ r)
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+begin
+  cases H with Hpq Hpr,
+  cases Hpq with Hp Hq,
+  { left,
+    exact Hp, },
+  { cases Hpr with Hp Hr,
+    { left,
+      exact Hp, },
+    { right,
+      split,
+      { exact Hq, },
+      { exact Hr, }}},
+end
+
+-- 2ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+begin
+  cases H with Hpq Hpr,
+  cases Hpq with Hp Hq,
+  { left,
+    exact Hp, },
+  { cases Hpr with Hp Hr,
+    { left,
+      exact Hp, },
+    { right,
+      exact ⟨Hq, Hr⟩, }},
+end
+
+-- 3ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+begin
+  cases H with Hpq Hpr,
+  cases Hpq with Hp Hq,
+  { left,
+    exact Hp, },
+  { cases Hpr with Hp Hr,
+    { left,
+      exact Hp, },
+    { exact or.inr ⟨Hq, Hr⟩, }},
+end
+
+-- 4ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+begin
+  cases H with Hpq Hpr,
+  cases Hpq with Hp Hq,
+  { left,
+    exact Hp, },
+  { cases Hpr with Hp Hr,
+    { exact or.inl Hp, },
+    { exact or.inr ⟨Hq, Hr⟩, }},
+end
+
+-- 5ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+begin
+  cases H with Hpq Hpr,
+  cases Hpq with Hp Hq,
+  { exact or.inl Hp, },
+  { cases Hpr with Hp Hr,
+    { exact or.inl Hp, },
+    { exact or.inr ⟨Hq, Hr⟩, }},
+end
+
+-- 6ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+begin
+  rcases H with ⟨Hp | Hq, Hp | Hr⟩,
+  { exact or.inl Hp, },
+  { exact or.inl Hp, },
+  { exact or.inl Hp, },
+  { exact or.inr ⟨Hq, Hr⟩, },
+end
+
+-- 7ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+-- by library_search
+or_and_distrib_left.mpr H
+
+-- 8ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+have Hpq : p ∨ q,
+  from and.left H,
+or.elim Hpq
+  ( assume Hp : p,
+    show p ∨ (q ∧ r),
+      from or.inl Hp )
+  ( assume Hq : q,
+    have Hpr : p ∨ r,
+      from and.right H,
+    or.elim Hpr
+      ( assume Hp : p,
+        show p ∨ (q ∧ r),
+          from or.inl Hp )
+      ( assume Hr : r,
+        have Hqr : q ∧ r,
+          from and.intro Hq Hr,
+        show p ∨ (q ∧ r),
+          from or.inr Hqr ))
+
+-- 9ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+or.elim (and.left H)
+  or.inl
+  (λ Hq, or.elim (and.right H)
+           or.inl
+           (λ Hr, or.inr ⟨Hq, Hr⟩))
+
+-- 10ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+-- by hint
+by tauto
+
+-- 11ª demostración
+example
+  (H : (p ∨ q) ∧ (p ∨ r))
+  : p ∨ (q ∧ r) :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 37. Demostrar
+--    (p → r) ∧ (q → r) ⊢ p ∨ q → r
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+begin
+  cases H with Hpr Hqr,
+  intro Hpq,
+  cases Hpq with Hp Hq,
+  { apply Hpr,
+    exact Hp, },
+  { apply Hqr,
+    exact Hq, },
+end
+
+-- 2ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+begin
+  cases H with Hpr Hqr,
+  intro Hpq,
+  cases Hpq with Hp Hq,
+  { exact Hpr Hp, },
+  { exact Hqr Hq, },
+end
+
+-- 3ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+begin
+  intro Hpq,
+  cases Hpq with Hp Hq,
+  { exact H.left  Hp, },
+  { exact H.right Hq, },
+end
+
+-- 4ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+-- by library_search
+or_imp_distrib.mpr H
+
+-- 5ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+assume Hpq : p ∨ q,
+or.elim Hpq
+  ( assume Hp : p,
+    have Hpr: p → r,
+      from and.left H,
+    show r,
+      from Hpr Hp )
+  ( assume Hq : q,
+    have Hqr : q → r,
+      from and.right H,
+    show r,
+      from Hqr Hq)
+
+-- 6ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+assume Hpq : p ∨ q,
+or.elim Hpq
+  ( assume Hp : p,
+    have Hpr: p → r,
+      from and.left H,
+    Hpr Hp )
+  ( assume Hq : q,
+    have Hqr : q → r,
+      from and.right H,
+    Hqr Hq)
+
+-- 7ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+assume Hpq : p ∨ q,
+or.elim Hpq
+  ( assume Hp : p,
+    H.1 Hp )
+  ( assume Hq : q,
+    H.2 Hq)
+
+-- 8ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+assume Hpq : p ∨ q,
+or.elim Hpq
+  (λ Hp, H.1 Hp)
+  (λ Hq, H.2 Hq)
+
+-- 9ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+assume Hpq : p ∨ q,
+or.elim Hpq H.1 H.2
+
+-- 10ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+λ Hpq, or.elim Hpq H.1 H.2
+
+-- 11ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+-- by hint
+by tauto
+
+-- 12ª demostración
+example
+  (H : (p → r) ∧ (q → r))
+  : p ∨ q → r :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 38. Demostrar
+--    p ∨ q → r ⊢ (p → r) ∧ (q → r)
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+begin
+  split,
+  { intro Hp,
+    apply H,
+    left,
+    exact Hp, },
+  { intro Hq,
+    apply H,
+    right,
+    exact Hq, },
+end
+
+-- 2ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+begin
+  split,
+  { intro Hp,
+    apply H,
+    exact or.inl Hp, },
+  { intro Hq,
+    apply H,
+    exact or.inr Hq, },
+end
+
+-- 3ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+begin
+  split,
+  { intro Hp,
+    exact H (or.inl Hp), },
+  { intro Hq,
+    exact H (or.inr Hq), },
+end
+
+-- 4ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+⟨λ Hp, H (or.inl Hp),
+ λ Hq, H (or.inr Hq)⟩
+
+-- 5ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+-- by library_search
+or_imp_distrib.mp H
+
+-- 6ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+and.intro
+  ( assume Hp : p,
+    have Hpq : p ∨ q,
+      from or.inl Hp,
+    show r,
+      from H Hpq)
+  ( assume Hq : q,
+    have Hpq : p ∨ q,
+      from or.inr Hq,
+    show r,
+      from H Hpq)
+
+-- 7ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+and.intro
+  ( assume Hp : p,
+    have Hpq : p ∨ q,
+      from or.inl Hp,
+    H Hpq)
+  ( assume Hq : q,
+    have Hpq : p ∨ q,
+      from or.inr Hq,
+    H Hpq)
+
+-- 8ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+and.intro
+  ( assume Hp : p,
+    H (or.inl Hp))
+  ( assume Hq : q,
+    H (or.inr Hq))
+
+-- 9ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+and.intro
+  (λ Hp, H (or.inl Hp))
+  (λ Hq, H (or.inr Hq))
+
+-- 10ª demostración
+example
+  (H : p ∨ q → r)
+  : (p → r) ∧ (q → r) :=
+⟨λ Hp, H (or.inl Hp),
+ λ Hq, H (or.inr Hq)⟩
+
+-- § Negación
+-- ==========
+
+-- ----------------------------------------------------
+-- Ejercicio 39. Demostrar
+--    p ⊢ ¬¬p
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : p)
+  : ¬¬p :=
+begin
+  intro H1,
+  apply H1 H,
+end
+
+-- 2ª demostración
+example
+  (H : p)
+  : ¬¬p :=
+λ H1, H1 H
+
+-- 3ª demostración
+example
+  (H : p)
+  : ¬¬p :=
+-- by library_search
+not_not.mpr H
+
+-- 4ª demostración
+example
+  (H : p)
+  : ¬¬p :=
+assume H1 : ¬p,
+show false,
+  from H1 H
+
+-- 5ª demostración
+example
+  (H : p)
+  : ¬¬p :=
+-- by hint
+by tauto
+
+-- 6ª demostración
+example
+  (H : p)
+  : ¬¬p :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 40. Demostrar
+--    ¬p ⊢ p → q
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : ¬p)
+  : p → q :=
+begin
+  intro Hp,
+  exfalso,
+  apply H,
+  exact Hp,
+end
+
+-- 2ª demostración
+example
+  (H : ¬p)
+  : p → q :=
+begin
+  intro Hp,
+  exfalso,
+  exact H Hp,
+end
+
+-- 3ª demostración
+example
+  (H : ¬p)
+  : p → q :=
+begin
+  intro Hp,
+  exact absurd Hp H,
+end
+
+-- 4ª demostración
+example
+  (H : ¬p)
+  : p → q :=
+λ Hp, absurd Hp H
+
+-- 5ª demostración
+example
+  (H : ¬p)
+  : p → q :=
+-- by library_search
+not.elim H
+
+-- 6ª demostración
+example
+  (H : ¬p)
+  : p → q :=
+assume Hp : p,
+show q,
+  from absurd Hp H
+
+-- ----------------------------------------------------
+-- Ejercicio 41. Demostrar
+--    p → q ⊢ ¬q → ¬p
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+begin
+  intro Hnq,
+  intro Hp,
+  apply Hnq,
+  exact H Hp,
+end
+
+-- 2ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+begin
+  intro Hnq,
+  intro Hp,
+  exact Hnq (H Hp),
+end
+
+-- 3ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+begin
+  intros Hnq Hp,
+  exact Hnq (H Hp),
+end
+
+-- 4ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+λ Hnq Hp, Hnq (H Hp)
+
+-- 5ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+-- by library_search
+mt H
+
+-- 6ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+assume Hnq : ¬q,
+assume Hp : p,
+have Hq : q,
+  from H Hp,
+show false,
+  from Hnq Hq
+
+-- 7ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+assume Hnq : ¬q,
+assume Hp : p,
+have Hq : q,
+  from H Hp,
+Hnq Hq
+
+-- 8ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+assume Hnq : ¬q,
+assume Hp : p,
+Hnq (H Hp)
+
+-- 9ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+assume Hnq : ¬q,
+λ Hp, Hnq (H Hp)
+
+-- 10ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+λ Hnq Hp, Hnq (H Hp)
+
+-- 11ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+-- by hint
+by tauto
+
+-- 12ª demostración
+example
+  (H : p → q)
+  : ¬q → ¬p :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 42. Demostrar
+--    p ∨ q, ¬q ⊢ p
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+begin
+  cases Hpq with Hp Hq,
+  { exact Hp, },
+  { exact absurd Hq Hnq, },
+end
+
+-- 2ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+-- by library_search
+or.resolve_right Hpq Hnq
+
+-- 3ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+or.elim Hpq
+  ( assume Hp : p,
+    show p,
+      from Hp)
+  ( assume Hq : q,
+    show p,
+      from absurd Hq Hnq)
+
+-- 4ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+or.elim Hpq
+  ( assume Hp : p,
+    show p,
+      from Hp)
+  ( assume Hq : q,
+    absurd Hq Hnq)
+
+-- 5ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+or.elim Hpq
+  ( assume Hp : p,
+    show p,
+      from Hp)
+  ( λ Hq, absurd Hq Hnq)
+
+-- 6ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+or.elim Hpq
+  ( assume Hp : p,
+    Hp)
+  ( λ Hq, absurd Hq Hnq)
+
+-- 7ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+or.elim Hpq id (λ Hq, absurd Hq Hnq)
+
+-- 8ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+-- by hint
+by tauto
+
+-- 9ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnq : ¬q)
+  : p :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 43. Demostrar
+--    p ∨ q, ¬p ⊢ q
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnp: ¬p)
+  : q :=
+begin
+  cases Hpq with Hp Hq,
+  { exact absurd Hp Hnp, },
+  { exact Hq, },
+end
+
+-- 2ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnp: ¬p)
+  : q :=
+or.elim Hpq (λ Hp, absurd Hp Hnp) id
+
+-- 3ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnp: ¬p)
+  : q :=
+-- by library_search
+or.resolve_left Hpq Hnp
+
+-- 4ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnp: ¬p)
+  : q :=
+or.elim Hpq
+  ( assume Hp : p,
+    show q,
+      from absurd Hp Hnp)
+  ( assume Hq : q,
+    show q,
+      from Hq)
+
+-- 5ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnp: ¬p)
+  : q :=
+-- by hint
+by tauto
+
+-- 6ª demostración
+example
+  (Hpq : p ∨ q)
+  (Hnp: ¬p)
+  : q :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 44. Demostrar
+--    p ∨ q ⊢ ¬(¬p ∧ ¬q)
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : p ∨ q)
+  : ¬(¬p ∧ ¬q) :=
+begin
+  intro H1,
+  cases H1 with H2 H3,
+  cases H with H4 H5,
+  { exact H2 H4, },
+  { exact H3 H5, },
+end
+
+-- 2ª demostración
+example
+  (H : p ∨ q)
+  : ¬(¬p ∧ ¬q) :=
+begin
+  rintro ⟨H2, H3⟩,
+  cases H with H4 H5,
+  { exact H2 H4, },
+  { exact H3 H5, },
+end
+
+-- 3ª demostración
+example
+  (H : p ∨ q)
+  : ¬(¬p ∧ ¬q) :=
+λ ⟨H2, H3⟩, or.elim H (λ H4, H2 H4) (λ H5, H3 H5)
+
+-- 4ª demostración
+example
+  (H : p ∨ q)
+  : ¬(¬p ∧ ¬q) :=
+-- by library_search
+or_iff_not_and_not.mp H
+
+-- 5ª demostración
+example
+  (H : p ∨ q)
+  : ¬(¬p ∧ ¬q) :=
+assume H3 : ¬p ∧ ¬q,
+or.elim H
+  ( assume Hp : p,
+    show false,
+      from absurd Hp (and.left H3))
+  ( assume Hq : q,
+    show false,
+      from absurd Hq (and.right H3))
+
+-- 6ª demostración
+example
+  (H : p ∨ q)
+  : ¬(¬p ∧ ¬q) :=
+-- by hint
+by tauto
+
+-- 7ª demostración
+example
+  (H : p ∨ q)
+  : ¬(¬p ∧ ¬q) :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 45. Demostrar
+--    p ∧ q ⊢ ¬(¬p ∨ ¬q)
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : p ∧ q)
+  : ¬(¬p ∨ ¬q) :=
+begin
+  intro H1,
+  cases H1 with H2 H3,
+  { apply H2,
+    exact H.left, },
+  { apply H3,
+    exact H.right, },
+end
+
+-- 2ª demostración
+example
+  (H : p ∧ q)
+  : ¬(¬p ∨ ¬q) :=
+begin
+  intro H1,
+  cases H1 with H2 H3,
+  { exact H2 H.left, },
+  { exact H3 H.right, },
+end
+
+-- 3ª demostración
+example
+  (H : p ∧ q)
+  : ¬(¬p ∨ ¬q) :=
+λ H1, or.elim H1 (λ H2, H2 H.1) (λ H3, H3 H.2)
+
+-- 4ª demostración
+example
+  (H : p ∧ q)
+  : ¬(¬p ∨ ¬q) :=
+begin
+  rintro (H2 | H3),
+  { exact H2 H.left, },
+  { exact H3 H.right, },
+end
+
+-- 5ª demostración
+example
+  (H : p ∧ q)
+  : ¬(¬p ∨ ¬q) :=
+-- by library_search
+and_iff_not_or_not.mp H
+
+-- 6ª demostración
+example
+  (H : p ∧ q)
+  : ¬(¬p ∨ ¬q) :=
+-- by hint
+by tauto
+
+-- 7ª demostración
+example
+  (H : p ∧ q)
+  : ¬(¬p ∨ ¬q) :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 46. Demostrar
+--    ¬(p ∨ q) ⊢ ¬p ∧ ¬q
+-- ----------------------------------------------------
+
+-- 1ª demostración
+example
+  (H : ¬(p ∨ q))
+  : ¬p ∧ ¬q :=
+begin
+  split,
+  { intro Hp,
+    apply H,
+    exact or.inl Hp, },
+  { intro Hq,
+    apply H,
+    exact or.inr Hq, },
+end
+
+-- 2ª demostración
+example
+  (H : ¬(p ∨ q))
+  : ¬p ∧ ¬q :=
+begin
+  split,
+  { intro Hp,
+    exact H (or.inl Hp), },
+  { intro Hq,
+    exact H (or.inr Hq), },
+end
+
+-- 3ª demostración
+example
+  (H : ¬(p ∨ q))
+  : ¬p ∧ ¬q :=
+⟨ λ Hp, H (or.inl Hp),
+  λ Hq, H (or.inr Hq)⟩
+
+-- 4ª demostración
+example
+  (H : ¬(p ∨ q))
+  : ¬p ∧ ¬q :=
+-- by library_search
+not_or_distrib.mp H
+
+-- 5ª demostración
+example
+  (H : ¬(p ∨ q))
+  : ¬p ∧ ¬q :=
+have H1 : ¬p, from
+  assume Hp : p,
+  have H2: p ∨ q,
+    from or.inl Hp,
+  show false,
+    from absurd H2 H,
+have H3 : ¬q, from
+  assume Hq : q,
+  have H4: p ∨ q,
+    from or.inr Hq,
+  show false,
+    from absurd H4 H,
+show ¬p ∧ ¬q,
+  from and.intro H1 H3
+
+-- 6ª demostración
+example
+  (H : ¬(p ∨ q))
+  : ¬p ∧ ¬q :=
+-- by hint
+by tauto
+
+-- 7ª demostración
+example
+  (H : ¬(p ∨ q))
+  : ¬p ∧ ¬q :=
+by finish
+
+-- ----------------------------------------------------
+-- Ejercicio 47. Demostrar
+--    ¬p ∧ ¬q ⊢ ¬(p ∨ q)
+-- ----------------------------------------------------
+
+-- ?ª demostración
+example
+  (H : ¬p ∧ ¬q)
+  : ¬(p ∨ q) :=
+begin
+  intro H1,
+  cases H1 with H2 H3,
+  { exact absurd H2 H.1, },
+  { exact absurd H3 H.2, },
+end
+
+-- ?ª demostración
+example
+  (H : ¬p ∧ ¬q)
+  : ¬(p ∨ q) :=
+λ H1, or.elim H1 (λ H2, absurd H2 H.1) (λ H3, absurd H3 H.2)
+
+-- ?ª demostración
+example
+  (H : ¬p ∧ ¬q)
+  : ¬(p ∨ q) :=
+-- by library_search
+not_or_distrib.mpr H
+
 /-
-
-
-― ‹La demostración estructurada es›
-lemma ejercicio_35_1:
-  assumes "p ∨ (q ∧ r)"
-  shows   "(p ∨ q) ∧ (p ∨ r)"
-using assms
-proof
-  assume "p"
-  show "(p ∨ q) ∧ (p ∨ r)"
-  proof
-    show "p ∨ q" using ‹p› ..
-  next
-    show "p ∨ r" using ‹p› ..
-  qed
-next
-  assume "q ∧ r"
-  show "(p ∨ q) ∧ (p ∨ r)"
-  proof
-    have "q" using ‹q ∧ r› ..
-    thus "p ∨ q" ..
-  next
-    have "r" using ‹q ∧ r› ..
-    thus "p ∨ r" ..
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_35_2:
-  assumes "p ∨ (q ∧ r)"
-  shows   "(p ∨ q) ∧ (p ∨ r)"
-using assms
-proof (rule disjE)
-  assume "p"
-  show "(p ∨ q) ∧ (p ∨ r)"
-  proof (rule conjI)
-    show "p ∨ q" using ‹p› by (rule disjI1)
-  next
-    show "p ∨ r" using ‹p› by (rule disjI1)
-  qed
-next
-  assume "q ∧ r"
-  show "(p ∨ q) ∧ (p ∨ r)"
-  proof (rule conjI)
-    have "q" using ‹q ∧ r› ..
-    thus "p ∨ q" by (rule disjI2)
-  next
-    have "r" using ‹q ∧ r› by (rule conjunct2)
-    thus "p ∨ r" by (rule disjI2)
-  qed
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_35_3:
-  assumes "p ∨ (q ∧ r)"
-  shows   "(p ∨ q) ∧ (p ∨ r)"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 36. Demostrar
-     (p ∨ q) ∧ (p ∨ r) ⊢ p ∨ (q ∧ r)
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_36_1:
-  assumes "(p ∨ q) ∧ (p ∨ r)"
-  shows   "p ∨ (q ∧ r)"
-proof -
-  have "p ∨ q" using assms ..
-  thus "p ∨ (q ∧ r)"
-  proof
-    assume "p"
-    thus "p ∨ (q ∧ r)" ..
-  next
-    assume "q"
-    have "p ∨ r" using assms ..
-    thus "p ∨ (q ∧ r)"
-    proof
-      assume "p"
-      thus "p ∨ (q ∧ r)" ..
-    next
-      assume "r"
-      with ‹q› have "q ∧ r" ..
-      thus "p ∨ (q ∧ r)" ..
-    qed
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_36_2:
-  assumes "(p ∨ q) ∧ (p ∨ r)"
-  shows   "p ∨ (q ∧ r)"
-proof -
-  have "p ∨ q" using assms by (rule conjunct1)
-  thus "p ∨ (q ∧ r)"
-  proof (rule disjE)
-    assume "p"
-    thus "p ∨ (q ∧ r)" by (rule disjI1)
-  next
-    assume "q"
-    have "p ∨ r" using assms by (rule conjunct2)
-    thus "p ∨ (q ∧ r)"
-    proof (rule disjE)
-      assume "p"
-      thus "p ∨ (q ∧ r)" by (rule disjI1)
-    next
-      assume "r"
-      have "q ∧ r" using ‹q› ‹r› by (rule conjI)
-      thus "p ∨ (q ∧ r)" by (rule disjI2)
-    qed
-  qed
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_36_3:
-  assumes "(p ∨ q) ∧ (p ∨ r)"
-  shows   "p ∨ (q ∧ r)"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 37. Demostrar
-     (p → r) ∧ (q → r) ⊢ p ∨ q → r
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_37_1:
-  assumes "(p → r) ∧ (q → r)"
-  shows   "p ∨ q → r"
-proof
-  assume "p ∨ q"
-  thus "r"
-  proof
-    assume "p"
-    have "p → r" using assms ..
-    thus "r" using ‹p› ..
-  next
-    assume "q"
-    have "q → r" using assms ..
-    thus "r" using ‹q› ..
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_37_2:
-  assumes "(p → r) ∧ (q → r)"
-  shows   "p ∨ q → r"
-proof (rule impI)
-  assume "p ∨ q"
-  thus "r"
-  proof (rule disjE)
-    assume "p"
-    have "p → r" using assms by (rule conjunct1)
-    thus "r" using ‹p› by (rule mp)
-  next
-    assume "q"
-    have "q → r" using assms by (rule conjunct2)
-    thus "r" using ‹q› by (rule mp)
-  qed
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_37_3:
-  assumes "(p → r) ∧ (q → r)"
-  shows   "p ∨ q → r"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 38. Demostrar
-     p ∨ q → r ⊢ (p → r) ∧ (q → r)
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_38_1:
-  assumes "p ∨ q → r"
-  shows   "(p → r) ∧ (q → r)"
-proof
-  show "p → r"
-  proof
-    assume "p"
-    hence "p ∨ q" ..
-    with assms show "r" ..
-  qed
-next
-  show "q → r"
-  proof
-    assume "q"
-    hence "p ∨ q" ..
-    with assms show "r" ..
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_38_2:
-  assumes "p ∨ q → r"
-  shows   "(p → r) ∧ (q → r)"
-proof (rule conjI)
-  show "p → r"
-  proof (rule impI)
-    assume "p"
-    hence "p ∨ q" by (rule disjI1)
-    show "r" using assms ‹p ∨ q› by (rule mp)
-  qed
-next
-  show "q → r"
-  proof (rule impI)
-    assume "q"
-    hence "p ∨ q" by (rule disjI2)
-    show "r" using assms ‹p ∨ q› by (rule mp)
-  qed
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_38_3:
-  assumes "p ∨ q → r"
-  shows   "(p → r) ∧ (q → r)"
-using assms
-by auto
-
-section ‹Negación›
-
--- ----------------------------------------------------
-  Ejercicio 39. Demostrar
-     p ⊢ ¬¬p
--- ----------------------------------------------------
-
-― ‹La demostración detallada es›
-lemma ejercicio_39_1:
-  assumes "p"
-  shows   "¬¬p"
-proof -
-  show "¬¬p" using assms by (rule notnotI)
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_39_2:
-  assumes "p"
-  shows   "¬¬p"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 40. Demostrar
-     ¬p ⊢ p → q
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_40_1:
-  assumes "¬p"
-  shows   "p → q"
-proof
-  assume "p"
-  with assms(1) show "q" ..
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_40_2:
-  assumes "¬p"
-  shows   "p → q"
-proof (rule impI)
-  assume "p"
-  show "q" using assms(1) ‹p› by (rule notE)
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_40_3:
-  assumes "¬p"
-  shows   "p → q"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 41. Demostrar
-     p → q ⊢ ¬q → ¬p
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_41_1:
-  assumes "p → q"
-  shows   "¬q → ¬p"
-proof
-  assume "¬q"
-  with assms(1) show "¬p" by (rule mt)
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_41_2:
-  assumes "p → q"
-  shows   "¬q → ¬p"
-proof (rule impI)
-  assume "¬q"
-  show "¬p" using assms(1) ‹¬q› by (rule mt)
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_41_3:
-  assumes "p → q"
-  shows   "¬q → ¬p"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 42. Demostrar
-     p ∨ q, ¬q ⊢ p
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_42_1:
-  assumes "p ∨ q"
-          "¬q"
-  shows   "p"
-using assms(1)
-proof
-  assume "p"
-  thus "p" .
-next
-  assume "q"
-  with assms(2) show "p" ..
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_42_2:
-  assumes "p ∨ q"
-          "¬q"
-  shows   "p"
-using assms(1)
-proof (rule disjE)
-  assume "p"
-  thus "p" by this
-next
-  assume "q"
-  show "p" using assms(2) ‹q› by (rule notE)
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_42_3:
-  assumes "p ∨ q"
-          "¬q"
-  shows   "p"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 42. Demostrar
-     p ∨ q, ¬p ⊢ q
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_43_1:
-  assumes "p ∨ q"
-          "¬p"
-  shows   "q"
-using assms(1)
-proof
-  assume "p"
-  with assms(2) show "q" ..
-next
-  assume "q"
-  thus "q" .
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_43_2:
-  assumes "p ∨ q"
-          "¬p"
-  shows   "q"
-using assms(1)
-proof (rule disjE)
-  assume "p"
-  show "q" using assms(2) ‹p› by (rule notE)
-next
-  assume "q"
-  thus "q" by this
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_43_3:
-  assumes "p ∨ q"
-          "¬p"
-  shows   "q"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 44. Demostrar
-     p ∨ q ⊢ ¬(¬p ∧ ¬q)
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_44_1:
-  assumes "p ∨ q"
-  shows   "¬(¬p ∧ ¬q)"
-proof
-  assume "¬p ∧ ¬q"
-  note ‹p ∨ q›
-  thus "False"
-  proof
-    assume "p"
-    have "¬p" using ‹¬p ∧ ¬q› ..
-    thus "False" using ‹p› ..
-  next
-    assume "q"
-    have "¬q" using ‹¬p ∧ ¬q› ..
-    thus "False" using ‹q› ..
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_44_2:
-  assumes "p ∨ q"
-  shows   "¬(¬p ∧ ¬q)"
-proof (rule notI)
-  assume "¬p ∧ ¬q"
-  note ‹p ∨ q›
-  thus "False"
-  proof
-    assume "p"
-    have "¬p" using ‹¬p ∧ ¬q› by (rule conjunct1)
-    thus "False" using ‹p› by (rule notE)
-  next
-    assume "q"
-    have "¬q" using ‹¬p ∧ ¬q› by (rule conjunct2)
-    thus "False" using ‹q› by (rule notE)
-  qed
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_44_3:
-  assumes "p ∨ q"
-  shows   "¬(¬p ∧ ¬q)"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 45. Demostrar
-     p ∧ q ⊢ ¬(¬p ∨ ¬q)
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_45_1:
-  assumes "p ∧ q"
-  shows   "¬(¬p ∨ ¬q)"
-proof
-  assume "¬p ∨ ¬q"
-  thus "False"
-  proof
-    assume "¬p"
-    have "p" using assms ..
-    with ‹¬p› show "False" ..
-  next
-    assume "¬q"
-    have "q" using assms ..
-    with ‹¬q› show "False" ..
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_45_2:
-  assumes "p ∧ q"
-  shows   "¬(¬p ∨ ¬q)"
-proof (rule notI)
-  assume "¬p ∨ ¬q"
-  thus "False"
-  proof
-    assume "¬p"
-    have "p" using assms by (rule conjunct1)
-    show "False" using ‹¬p› ‹p› by (rule notE)
-  next
-    assume "¬q"
-    have "q" using assms by (rule conjunct2)
-    show "False" using ‹¬q› ‹q› by (rule notE)
-  qed
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_45_3:
-  assumes "p ∧ q"
-  shows   "¬(¬p ∨ ¬q)"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 46. Demostrar
-     ¬(p ∨ q) ⊢ ¬p ∧ ¬q
--- ----------------------------------------------------
-
-― ‹La demostración estructurada es›
-lemma ejercicio_46_1:
-  assumes "¬(p ∨ q)"
-  shows   "¬p ∧ ¬q"
-proof
-  show "¬p"
-  proof
-    assume "p"
-    hence "p ∨ q" ..
-    with assms show "False" ..
-  qed
-next
-  show "¬q"
-  proof
-    assume "q"
-    hence "p ∨ q" ..
-    with assms show "False" ..
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_46_2:
-  assumes "¬(p ∨ q)"
-  shows   "¬p ∧ ¬q"
-proof (rule conjI)
-  show "¬p"
-  proof (rule notI)
-    assume "p"
-    hence "p ∨ q" by (rule disjI1)
-    show "False" using assms ‹p ∨ q› by (rule notE)
-  qed
-next
-  show "¬q"
-  proof (rule notI)
-    assume "q"
-    hence "p ∨ q" by (rule disjI2)
-    show "False" using assms ‹p ∨ q› by (rule notE)
-  qed
-qed
-
-― ‹La demostración automática es›
-lemma ejercicio_46_3:
-  assumes "¬(p ∨ q)"
-  shows   "¬p ∧ ¬q"
-using assms
-by auto
-
--- ----------------------------------------------------
-  Ejercicio 47. Demostrar
-     ¬p ∧ ¬q ⊢ ¬(p ∨ q)
--- ----------------------------------------------------
-
 ― ‹La demostración estructurada es›
 lemma ejercicio_47_1:
   assumes "¬p ∧ ¬q"
