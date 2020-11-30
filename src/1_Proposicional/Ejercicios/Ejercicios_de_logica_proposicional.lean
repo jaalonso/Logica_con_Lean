@@ -2370,8 +2370,8 @@ example
 by finish
 
 -- ----------------------------------------------------
---   Ejercicio 33. Demostrar
---      p ∧ (q ∨ r) ⊢ (p ∧ q) ∨ (p ∧ r)
+-- Ejercicio 33. Demostrar
+--    p ∧ (q ∨ r) ⊢ (p ∧ q) ∨ (p ∧ r)
 -- ----------------------------------------------------
 
 -- 1ª demostración

@@ -26,10 +26,14 @@ distintos estilos:
 + funcional con términos del tipo especificado y
 + automático.
 
+Las demostraciones funcionales se obtienen mediante una sucesión de
+transformaciones de una aplicativa (o declarativa) eliminando elementos no
+esenciales.
+
 Además, al final de cada ejercicio se encuentra un enlace al código y otro a una
 sesión de Lean en la Web que contiene la solución del ejercicio.
 
-* Ejercicios sobre implicaciones
+* Ejercicios sobre condicionales
 
 ** p ⟶ q, p ⊢ q
    #+INCLUDE: "./src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean" src lean
@@ -47,11 +51,241 @@ sesión de Lean en la Web que contiene la solución del ejercicio.
    #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→q,q→r⊢p→r.lean" src lean
    Enlaces al [[./src/1_Proposicional/Ejercicios/p→q,q→r⊢p→r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→q,q→r⊢p→r.lean][sesión en Lean Web]].
 
+** p → (q → r) ⊢ q → (p → r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→(q→r)⊢q→(p→r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p→(q→r)⊢q→(p→r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→(q→r)⊢q→(p→r).lean][sesión en Lean Web]].
 
-# *** Todos los ejercicios
-# + Enlaces al [[./src/1_Proposicional/Ejercicios/Ejercicios_de_logica_proposicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/Ejercicios_de_logica_proposicional.lean][sesión en Lean Web]] y al vídeo.
-# #+INCLUDE: "./src/1_Proposicional/Ejercicios/Ejercicios_de_logica_proposicional.lean" src lean
+** p → (q → r) ⊢ (p → q) → (p → r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→(q→r)⊢(p→q)→(p→r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p→(q→r)⊢(p→q)→(p→r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→(q→r)⊢(p→q)→(p→r).lean][sesión en Lean Web]].
 
+** p ⊢ q → p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p⊢q→p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p⊢q→p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p⊢q→p.lean][sesión en Lean Web]].
+
+** ⊢ p → (q → p)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/⊢p→(q→p).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/⊢p→(q→p).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/⊢p→(q→p).lean][sesión en Lean Web]].
+
+** p → q ⊢ (q → r) → (p → r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→q⊢(q→r)→(p→r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p→q⊢(q→r)→(p→r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→q⊢(q→r)→(p→r).lean][sesión en Lean Web]].
+
+** p → (q → (r → s)) ⊢ r → (q → (p → s))
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→(q→(r→s))⊢r→(q→(p→s)).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p→(q→(r→s))⊢r→(q→(p→s)).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→(q→(r→s))⊢r→(q→(p→s)).lean][sesión en Lean Web]].
+
+** ⊢ (p → (q → r)) → ((p → q) → (p → r))
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/⊢(p→(q→r))→((p→q)→(p→r)).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/⊢(p→(q→r))→((p→q)→(p→r)).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/⊢(p→(q→r))→((p→q)→(p→r)).lean][sesión en Lean Web]].
+
+** (p → q) → r ⊢ p → (q → r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p→q)→r⊢p→(q→r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p→q)→r⊢p→(q→r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p→q)→r⊢p→(q→r).lean][sesión en Lean Web]].
+
+* Ejercicios sobre conjunciones
+
+** p, q ⊢  p ∧ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p,q⊢p∧q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p,q⊢p∧q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p,q⊢p∧q.lean][sesión en Lean Web]].
+
+** p ∧ q ⊢ p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧q⊢p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧q⊢p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧q⊢p.lean][sesión en Lean Web]].
+
+** p ∧ q ⊢ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧q⊢q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧q⊢q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧q⊢q.lean][sesión en Lean Web]].
+
+** p ∧ (q ∧ r) ⊢ (p ∧ q) ∧ r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧(q∧r)⊢(p∧q)∧r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧(q∧r)⊢(p∧q)∧r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧(q∧r)⊢(p∧q)∧r.lean][sesión en Lean Web]].
+
+** (p ∧ q) ∧ r ⊢ p ∧ (q ∧ r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p∧q)∧r⊢p∧(q∧r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p∧q)∧r⊢p∧(q∧r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p∧q)∧r⊢p∧(q∧r).lean][sesión en Lean Web]].
+
+** p ∧ q ⊢ p → q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧q⊢p→q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧q⊢p→q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧q⊢p→q.lean][sesión en Lean Web]].
+
+** (p → q) ∧ (p → r) ⊢ p → q ∧ r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p→q)∧(p→r)⊢p→q∧r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p→q)∧(p→r)⊢p→q∧r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p→q)∧(p→r)⊢p→q∧r.lean][sesión en Lean Web]].
+
+** p → q ∧ r ⊢ (p → q) ∧ (p → r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→q∧r⊢(p→q)∧(p→r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p→q∧r⊢(p→q)∧(p→r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→q∧r⊢(p→q)∧(p→r).lean][sesión en Lean Web]].
+
+** p → (q → r) ⊢ p ∧ q → r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→(q→r)⊢p∧q→r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p→(q→r)⊢p∧q→r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→(q→r)⊢p∧q→r.lean][sesión en Lean Web]].
+
+** p ∧ q → r ⊢ p → (q → r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧q→r⊢p→(q→r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧q→r⊢p→(q→r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧q→r⊢p→(q→r).lean][sesión en Lean Web]].
+
+** (p → q) → r ⊢ p ∧ q → r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p→q)→r⊢p∧q→r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p→q)→r⊢p∧q→r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p→q)→r⊢p∧q→r.lean][sesión en Lean Web]].
+
+** p ∧ (q → r) ⊢ (p → q) → r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧(q→r)⊢(p→q)→r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧(q→r)⊢(p→q)→r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧(q→r)⊢(p→q)→r.lean][sesión en Lean Web]].
+
+* Ejercicios sobre disyunciones
+
+** p ⊢ p ∨ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p⊢p∨q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p⊢p∨q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p⊢p∨q.lean][sesión en Lean Web]].
+
+** q ⊢ p ∨ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/q⊢p∨q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/q⊢p∨q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/q⊢p∨q.lean][sesión en Lean Web]].
+
+** p ∨ q ⊢ q ∨ p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨q⊢q∨p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨q⊢q∨p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨q⊢q∨p.lean][sesión en Lean Web]].
+
+** q → r ⊢ p ∨ q → p ∨ r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/q→r⊢p∨q→p∨r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/q→r⊢p∨q→p∨r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/q→r⊢p∨q→p∨r.lean][sesión en Lean Web]].
+
+** p ∨ p ⊢ p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨p⊢p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨p⊢p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨p⊢p.lean][sesión en Lean Web]].
+
+** p ⊢ p ∨ p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p⊢p∨p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p⊢p∨p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p⊢p∨p.lean][sesión en Lean Web]].
+
+** p ∨ (q ∨ r) ⊢ (p ∨ q) ∨ r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨(q∨r)⊢(p∨q)∨r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨(q∨r)⊢(p∨q)∨r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨(q∨r)⊢(p∨q)∨r.lean][sesión en Lean Web]].
+
+** (p ∨ q) ∨ r ⊢ p ∨ (q ∨ r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p∨q)∨r⊢p∨(q∨r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p∨q)∨r⊢p∨(q∨r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p∨q)∨r⊢p∨(q∨r).lean][sesión en Lean Web]].
+
+** p ∧ (q ∨ r) ⊢ (p ∧ q) ∨ (p ∧ r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧(q∨r)⊢(p∧q)∨(p∧r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧(q∨r)⊢(p∧q)∨(p∧r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧(q∨r)⊢(p∧q)∨(p∧r).lean][sesión en Lean Web]].
+
+** (p ∧ q) ∨ (p ∧ r) ⊢ p ∧ (q ∨ r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p∧q)∨(p∧r)⊢p∧(q∨r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p∧q)∨(p∧r)⊢p∧(q∨r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p∧q)∨(p∧r)⊢p∧(q∨r).lean][sesión en Lean Web]].
+
+** p ∨ (q ∧ r) ⊢ (p ∨ q) ∧ (p ∨ r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨(q∧r)⊢(p∨q)∧(p∨r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨(q∧r)⊢(p∨q)∧(p∨r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨(q∧r)⊢(p∨q)∧(p∨r).lean][sesión en Lean Web]].
+
+** (p ∨ q) ∧ (p ∨ r) ⊢ p ∨ (q ∧ r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p∨q)∧(p∨r)⊢p∨(q∧r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p∨q)∧(p∨r)⊢p∨(q∧r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p∨q)∧(p∨r)⊢p∨(q∧r).lean][sesión en Lean Web]].
+
+** (p → r) ∧ (q → r) ⊢ p ∨ q → r
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/(p→r)∧(q→r)⊢p∨q→r.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/(p→r)∧(q→r)⊢p∨q→r.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/(p→r)∧(q→r)⊢p∨q→r.lean][sesión en Lean Web]].
+
+** p ∨ q → r ⊢ (p → r) ∧ (q → r)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨q→r⊢(p→r)∧(q→r).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨q→r⊢(p→r)∧(q→r).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨q→r⊢(p→r)∧(q→r).lean][sesión en Lean Web]].
+
+* Ejercicios sobre negaciones
+
+** p ⊢ ¬¬p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p⊢¬¬p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p⊢¬¬p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p⊢¬¬p.lean][sesión en Lean Web]].
+
+** ¬p ⊢ p → q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬p⊢p→q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬p⊢p→q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬p⊢p→q.lean][sesión en Lean Web]].
+
+** p → q ⊢ ¬q → ¬p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→q⊢¬q→¬p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p→q⊢¬q→¬p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p→q⊢¬q→¬p.lean][sesión en Lean Web]].
+
+** p ∨ q, ¬q ⊢ p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨q,¬q⊢p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨q,¬q⊢p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨q,¬q⊢p.lean][sesión en Lean Web]].
+
+** p ∨ q, ¬p ⊢ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨q,¬p⊢q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨q,¬p⊢q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨q,¬p⊢q.lean][sesión en Lean Web]].
+
+** p ∨ q ⊢ ¬(¬p ∧ ¬q)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∨q⊢¬(¬p∧¬q).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∨q⊢¬(¬p∧¬q).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∨q⊢¬(¬p∧¬q).lean][sesión en Lean Web]].
+
+** p ∧ q ⊢ ¬(¬p ∨ ¬q)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧q⊢¬(¬p∨¬q).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧q⊢¬(¬p∨¬q).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧q⊢¬(¬p∨¬q).lean][sesión en Lean Web]].
+
+** ¬(p ∨ q) ⊢ ¬p ∧ ¬q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬(p∨q)⊢¬p∧¬q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬(p∨q)⊢¬p∧¬q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬(p∨q)⊢¬p∧¬q.lean][sesión en Lean Web]].
+
+** ¬p ∧ ¬q ⊢ ¬(p ∨ q)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬p∧¬q⊢¬(p∨q).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬p∧¬q⊢¬(p∨q).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬p∧¬q⊢¬(p∨q).lean][sesión en Lean Web]].
+
+** ¬p ∨ ¬q ⊢ ¬(p ∧ q)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬p∨¬q⊢¬(p∧q).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬p∨¬q⊢¬(p∧q).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬p∨¬q⊢¬(p∧q).lean][sesión en Lean Web]].
+
+** ¬(p ∧ ¬p)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬(p∧¬p).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬(p∧¬p).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬(p∧¬p).lean][sesión en Lean Web]].
+
+** p ∧ ¬p ⊢ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/p∧¬p⊢q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/p∧¬p⊢q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/p∧¬p⊢q.lean][sesión en Lean Web]].
+
+* Ejercicios de lógica clásica
+
+** ¬¬p ⊢ p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬¬p⊢p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬¬p⊢p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬¬p⊢p.lean][sesión en Lean Web]].
+
+** ⊢ p ∨ ¬p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/⊢p∨¬p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/⊢p∨¬p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/⊢p∨¬p.lean][sesión en Lean Web]].
+
+** ((p → q) → p) → p
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/((p→q)→p)→p.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/((p→q)→p)→p.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/((p→q)→p)→p.lean][sesión en Lean Web]].
+
+** ¬q → ¬p ⊢ p → q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬q→¬p⊢p→q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬q→¬p⊢p→q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬q→¬p⊢p→q.lean][sesión en Lean Web]].
+
+** ¬(¬p ∧ ¬q) ⊢ p ∨ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬(¬p∧¬q)⊢p∨q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬(¬p∧¬q)⊢p∨q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬(¬p∧¬q)⊢p∨q.lean][sesión en Lean Web]].
+
+** ¬(¬p ∨ ¬q) ⊢ p ∧ q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬(¬p∨¬q)⊢p∧q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬(¬p∨¬q)⊢p∧q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬(¬p∨¬q)⊢p∧q.lean][sesión en Lean Web]].
+
+** ¬(p ∧ q) ⊢ ¬p ∨ ¬q
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/¬(p∧q)⊢¬p∨¬q.lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/¬(p∧q)⊢¬p∨¬q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/¬(p∧q)⊢¬p∨¬q.lean][sesión en Lean Web]].
+
+** ⊢ (p → q) ∨ (q → p)
+   #+INCLUDE: "./src/1_Proposicional/Ejercicios/⊢(p→q)∨(q→p).lean" src lean
+   Enlaces al [[./src/1_Proposicional/Ejercicios/⊢(p→q)∨(q→p).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/⊢(p→q)∨(q→p).lean][sesión en Lean Web]]
+
+* Bibliografía
+
++ [[http://www.cs.us.es/~jalonso/cursos/li/temas/tema-2.pdf][Deducción natural proposicional]]. ~ J.A. Alonso, A. Cordón, M.J. Hidalgo.
++ [[https://github.com/jaalonso/Logica_con_Lean/raw/master/Logica_con_Lean.pdf][Lógica con Lean]] ~ J.A. Alonso.
+  + Cap. 2: Lógica proposicional.
++ [[https://leanprover.github.io/logic_and_proof/][Logic and proof]]. ~ J. Avigad, R.Y. Lewis, F. van Doorn.
+  + Cap. 4: Propositional Logic in Lean.
++ [[https://books.google.es/books?id=eUggAwAAQBAJ&lpg=PP1&dq=inauthor%3A%22Michael%20Huth%22&hl=es&pg=PP5#v=onepage&q&f=false][Logic in Computer Science]]. ~ M. Huth, M. Ryan.
+  + Cap. 1.2: Propositional logic. Natural deduction.
++ [[https://leanprover.github.io/theorem_proving_in_lean/][Theorem proving in Lean]]. ~ J. Avigad, L. de Moura, S. Kong.
+  + Cap. 3: Propositions and proofs.
 
 
 # #+LATEX:\printindex
