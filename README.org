@@ -192,19 +192,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][sesión en Lean Web]] y al [[https://youtu.be/j3eE39xwElY][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean" src lean
 
-** Ejercicios
-
-*** Ejercicios sobre implicaciones
-
-**** Pruebas de p ⟶ q, p ⊢ q
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_p_⟶_q,_p ⊢_q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_p_⟶_q,_p ⊢_q.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/1_Proposicional/Pruebas_de_p_⟶_q,_p ⊢_q.lean" src lean
-
-
-*** Todos los ejercicios
-+ Enlaces al [[./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][sesión en Lean Web]] y al vídeo.
-#+INCLUDE: "./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean" src lean
-
 * Lógica de primer orden
 
 ** Reglas del cuantificador universal
