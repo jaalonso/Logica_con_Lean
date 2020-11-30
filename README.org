@@ -201,11 +201,9 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_p_⟶_q,_p ⊢_q.lean" src lean
 
 
-# ** Ejercicios
-#
-# *** Ejercicios de lógica proposicional
-# + Enlaces al [[./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][sesión en Lean Web]] y al vídeo.
-# #+INCLUDE: "./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean" src lean
+*** Todos los ejercicios
++ Enlaces al [[./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios_de_logica_proposicional.lean][sesión en Lean Web]] y al vídeo.
+#+INCLUDE: "./src/1_Proposicional/Ejercicios_de_logica_proposicional.lean" src lean
 
 * Lógica de primer orden
 

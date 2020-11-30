@@ -1,0 +1,31 @@
+#+TITLE: Ejercicios de lógica proposicional con Lean
+#+AUTHOR: José A. Alonso
+#+OPTIONS: ^:nil
+#+OPTIONS: num:t
+#+OPTIONS: :makeindex
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./estilo.css" />
+#+LATEX_CLASS: book-noparts
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt,twoside]
+#+LATEX_HEADER:\usepackage{makeidx}
+#+LATEX_HEADER:\makeindex
+
+# * Contenido                                                             :TOC:
+
+#+LATEX: \input Ejercicios_de_logica_proposicional_con_Lean_Preambulo
+
+
+* Ejercicios sobre implicaciones
+
+** p ⟶ q, p ⊢ q
+#+INCLUDE: "./src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean" src lean
++ Enlaces al [[./src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean][sesión en Lean Web]] y al vídeo.
+
+
+# *** Todos los ejercicios
+# + Enlaces al [[./src/1_Proposicional/Ejercicios/Ejercicios_de_logica_proposicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/Ejercicios_de_logica_proposicional.lean][sesión en Lean Web]] y al vídeo.
+# #+INCLUDE: "./src/1_Proposicional/Ejercicios/Ejercicios_de_logica_proposicional.lean" src lean
+
+
+
+# #+LATEX:\printindex
+#+LATEX: \end{document}
