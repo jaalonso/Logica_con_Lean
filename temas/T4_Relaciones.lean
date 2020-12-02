@@ -10,7 +10,7 @@ import tactic
 -- =================================================
 
 -- ----------------------------------------------------
--- Ej. 1. Demostrar que las relaciones irreflexivas y 
+-- Ej. 1. Demostrar que las relaciones irreflexivas y
 -- transitivas son asimétricas.
 -- ----------------------------------------------------
 
@@ -23,9 +23,9 @@ variable R : A → A → Prop
 -- #reduce transitive R
 
 -- 1ª demostración
-example 
-  (h1 : irreflexive R) 
-  (h2 : transitive R) 
+example
+  (h1 : irreflexive R)
+  (h2 : transitive R)
   : ∀ x y, R x y → ¬ R y x :=
 begin
   intros x y h3 h4,
@@ -34,9 +34,9 @@ begin
 end
 
 -- 2ª demostración
-example 
-  (h1 : irreflexive R) 
-  (h2 : transitive R) 
+example
+  (h1 : irreflexive R)
+  (h2 : transitive R)
   : ∀ x y, R x y → ¬ R y x :=
 begin
   intros x y h3 h4,
@@ -44,16 +44,16 @@ begin
 end
 
 -- 3ª demostración
-example 
-  (h1 : irreflexive R) 
-  (h2 : transitive R) 
+example
+  (h1 : irreflexive R)
+  (h2 : transitive R)
   : ∀ x y, R x y → ¬ R y x :=
 λ x y h3 h4, (h1 x) (h2 h3 h4)
 
 -- 4ª demostración
-example 
-  (h1 : irreflexive R) 
-  (h2 : transitive R) 
+example
+  (h1 : irreflexive R)
+  (h2 : transitive R)
   : ∀ x y, R x y → ¬ R y x :=
 assume x y,
 assume h3 : R x y,
@@ -68,26 +68,26 @@ end Ej_1
 -- ========================================
 
 -- ----------------------------------------------------
--- Ej. 2. La parte estricta de una relación R es la 
+-- Ej. 2. La parte estricta de una relación R es la
 -- relación R' definida por
---    R' a b := R a b ∧ a ≠ b 
--- 
--- Demostrar que la parte estricta de cualquier 
+--    R' a b := R a b ∧ a ≠ b
+--
+-- Demostrar que la parte estricta de cualquier
 -- relación es irreflexiva.
 -- ----------------------------------------------------
 
 section Ej_2
 
-parameter {A : Type} 
+parameter {A : Type}
 parameter (R : A → A → Prop)
 
-definition R' (a b : A) : Prop := 
+definition R' (a b : A) : Prop :=
   R a b ∧ a ≠ b
 
 -- #reduce irreflexive R
 
 -- 1ª demostración
-example : 
+example :
   irreflexive R' :=
 begin
   intros a h,
@@ -111,20 +111,20 @@ end Ej_2
 -- ================================================================
 
 -- ----------------------------------------------------
--- Ej. 3. Demostrar que si R es un orden parcial, 
+-- Ej. 3. Demostrar que si R es un orden parcial,
 -- entonces su parte estricta es transitiva.
 -- ----------------------------------------------------
 
 section Ej_3
 
-parameter {A : Type} 
+parameter {A : Type}
 parameter (R : A → A → Prop)
 parameter (reflR    : reflexive R)
 parameter (transR   : transitive R)
 parameter (antisimR : anti_symmetric R)
 variables {a b c : A}
 
-definition R1 (a b : A) : Prop := 
+definition R1 (a b : A) : Prop :=
   R a b ∧ a ≠ b
 
 include transR
@@ -171,11 +171,11 @@ end Ej_3
 -- =========================================================
 
 -- ----------------------------------------------------
--- Ej. 4. La parte simétrica de una relación R es la 
+-- Ej. 4. La parte simétrica de una relación R es la
 -- relación S definida por
 --    S x y := R x y ∧ R y x
--- 
--- Demostrar que la parte simétrica de una relación 
+--
+-- Demostrar que la parte simétrica de una relación
 -- reflexiva es reflexiva.
 -- ----------------------------------------------------
 
@@ -222,7 +222,7 @@ example : reflexive S :=
 -- =======================================
 
 -- ----------------------------------------------------
--- Ej. 4b. Demostrar que la parte simétrica de cualquier 
+-- Ej. 4b. Demostrar que la parte simétrica de cualquier
 -- relación es simétrica.
 -- ----------------------------------------------------
 
@@ -280,8 +280,8 @@ end Ej_4
 variables n m : ℕ
 
 -- 1ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 calc
   n   < n + 1 : lt_add_one n
@@ -289,8 +289,8 @@ calc
   ... < m + 1 : lt_add_one m
 
 -- 2ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 have h1 : n < n + 1, from lt_add_one n,
 have h2 : n < m,     from lt_of_lt_of_le h1 h,
@@ -298,8 +298,8 @@ have h3 : m < m + 1, from lt_add_one m,
 show n < m + 1,      from lt.trans h2 h3
 
 -- 3ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 begin
   apply lt_trans (lt_add_one n),
@@ -307,34 +307,34 @@ begin
 end
 
 -- 4ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 lt_trans (lt_add_one n) (lt_of_le_of_lt h (lt_add_one m))
 
 -- 5ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 -- by suggest
 nat.lt.step h
 
 -- 6ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 -- by hint
 by omega
 
 -- 7ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 by linarith
 
 -- 8ª demostración
-example 
-  (h : n + 1 ≤ m) 
+example
+  (h : n + 1 ≤ m)
   : n < m + 1 :=
 by nlinarith
 
@@ -345,9 +345,9 @@ by nlinarith
 -- ==============================================
 
 -- ----------------------------------------------------
--- Ej. 6. Un preorden es una relación reflexiva y 
--- transitiva. 
--- 
+-- Ej. 6. Un preorden es una relación reflexiva y
+-- transitiva.
+--
 -- Demostrar que las relaciones de equivalencias son
 -- los prórdenes simétricos.
 -- ----------------------------------------------------
@@ -360,7 +360,7 @@ variable R : A → A → Prop
 def preorden (R : A → A → Prop) : Prop :=
   reflexive R ∧ transitive R
 
--- #print equivalence  
+-- #print equivalence
 -- #print symmetric
 
 -- 1ª demostración
@@ -373,12 +373,12 @@ begin
   { rintros ⟨⟨h1, h3⟩, h2⟩,
     exact ⟨h1, h2, h3⟩, },
 end
-  
+
 -- 2ª demostración
 example :
   equivalence R ↔ preorden R ∧ symmetric R :=
 ⟨λ ⟨h1, h2, h3⟩, ⟨⟨h1, h3⟩, h2⟩,
- λ ⟨⟨h1, h3⟩, h2⟩, ⟨h1, h2, h3⟩⟩  
+ λ ⟨⟨h1, h3⟩, h2⟩, ⟨h1, h2, h3⟩⟩
 
 -- 3ª demostración
 example :
@@ -418,14 +418,14 @@ end Ej_6
 -- Ej. 7. Una relación binaria (≈) es euclídea si
 --    ∀ {a b c}, a ≈ b → c ≈ b → a ≈ c
 --
--- El objetivo de este ejercicio es demostrar que si una 
--- relación es reflexiva y euclídea, entonces es de 
+-- El objetivo de este ejercicio es demostrar que si una
+-- relación es reflexiva y euclídea, entonces es de
 -- equivalencia.
 -- ----------------------------------------------------
 
 section Ej_7
 
-parameter {A : Type} 
+parameter {A : Type}
 parameter (R : A → A → Prop)
 
 local infix ≈ := R
@@ -433,10 +433,10 @@ local infix ≈ := R
 parameter reflexivaR : reflexive (≈)
 parameter euclideaR : ∀ {a b c}, a ≈ b → c ≈ b → a ≈ c
 
-include reflexivaR euclideaR 
+include reflexivaR euclideaR
 
 -- ----------------------------------------------------
--- Ej. 7a. Demostrar que las relaciones reflexivas y 
+-- Ej. 7a. Demostrar que las relaciones reflexivas y
 -- y euclídeas son simétricas.
 -- ----------------------------------------------------
 
@@ -458,7 +458,7 @@ have h2 : b ≈ b, from (reflexivaR b),
 show b ≈ a, from euclideaR h2 h1
 
 -- ----------------------------------------------------
--- Ej. 7b. Demostrar que las relaciones reflexivas y 
+-- Ej. 7b. Demostrar que las relaciones reflexivas y
 -- y euclídeas son transitivas.
 -- ----------------------------------------------------
 
@@ -481,7 +481,7 @@ have h3 : c ≈ b, from euclideaR (reflexivaR c) h2,
 show a ≈ c, from euclideaR h1 h3
 
 -- ----------------------------------------------------
--- Ej. 7c. Demostrar que las relaciones reflexivas y 
+-- Ej. 7c. Demostrar que las relaciones reflexivas y
 -- y euclídeas son de equivalencia.
 -- ----------------------------------------------------
 
@@ -497,6 +497,3 @@ example : equivalence (≈) :=
 ⟨reflexivaR, simetricaR, transitivaR⟩
 
 end Ej_7
-
-
-

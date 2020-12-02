@@ -1,4 +1,5 @@
 #+TITLE: Tema 3: Conjuntos con Lean
+#+AUTHOR: José A. Alonso
 
 * Elementos básicos sobre conjuntos
 
@@ -27,7 +28,7 @@
 + Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/b9RzBNk6Tzg][vídeo]].
 
 * Identidades conjuntistas
-   
+
 ** Pruebas de la propiedad distributiva de la intersección sobre la unión.
 + Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][sesión en Lean Web]] y al [[https://youtu.be/sFJQHZ9fLZs][vídeo]].
 
@@ -67,3 +68,7 @@
 
 ** Monotonía del conjunto potencia: 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B
 + Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][sesión en Lean Web]] y al [[https://youtu.be/2b8GQdRazxQ][vídeo]].
+* Bibliografía
++ [[https://leanprover.github.io/theorem_proving_in_lean/][Theorem proving in Lean]]. ~ J. Avigad, L. de Moura, S. Kong.
++ [[https://leanprover.github.io/logic_and_proof/][Logic and proof]]. ~ J. Avigad, R.Y. Lewis, F. van Doorn.
++ [[https://books.google.es/books?id=eUggAwAAQBAJ&lpg=PP1&dq=inauthor%3A%22Michael%20Huth%22&hl=es&pg=PP5#v=onepage&q&f=false][Logic in Computer Science]]. ~ M. Huth, M. Ryan.

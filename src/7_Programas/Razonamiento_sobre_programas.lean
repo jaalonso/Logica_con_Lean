@@ -1,7 +1,7 @@
 -- Razonamiento sobre programas
 -- ============================
 
--- En este tema se demuestra con Isabelle las
+-- En este tema se demuestra con Lean las
 -- propiedades de los programas funcionales como se
 -- expone en el tema 8 del curso "Informática" que
 -- puede leerse en http://bit.ly/2Za6YWY
@@ -23,7 +23,7 @@ variable  ns : list ℕ
 -- =========================
 
 -- ----------------------------------------------------
--- Ejemplo 1.a. Definir, por recursión, la función
+-- Ejercicio 1.a. Definir, por recursión, la función
 --    longitud : list α → ℕ
 -- tal que (longitud xs) es la longitud de la listas
 -- xs. Por ejemplo,
@@ -35,7 +35,7 @@ variable  ns : list ℕ
 | (x :: xs) := longitud xs + 1
 
 -- ----------------------------------------------------
--- Ejemplo 1.b. Calcular
+-- Ejercicio 1.b. Calcular
 --    longitud [4,2,5]
 -- ----------------------------------------------------
 
@@ -59,7 +59,7 @@ lemma longitud_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 2. Demostrar que
+-- Ejercicio 2. Demostrar que
 --    longitud [4,2,5] = 3
 -- ----------------------------------------------------
 
@@ -121,7 +121,7 @@ calc
   ... = 3                           : rfl
 
 -- ----------------------------------------------------
--- Ejemplo 3.a. Definir la función
+-- Ejercicio 3.a. Definir la función
 --    intercambia :: α × β → β × α
 -- tal que (intercambia p) es el par obtenido
 -- intercambiando las componentes del par p. Por
@@ -130,10 +130,10 @@ calc
 -- ----------------------------------------------------
 
 def intercambia : α × β → β × α :=
--- λp, (p.2, p.1)
+λp, (p.2, p.1)
 
 -- ----------------------------------------------------
--- Ejemplo 3.b. Demostrar el lema
+-- Ejercicio 3.b. Demostrar el lema
 --    intercambia_simp : intercambia p = (p.2, p.1)
 -- ----------------------------------------------------
 
@@ -143,7 +143,7 @@ lemma intercambia_simp
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 4. (p.6) Demostrar que
+-- Ejercicio 4. (p.6) Demostrar que
 --    intercambia (intercambia (x,y)) = (x,y)
 -- ----------------------------------------------------
 
@@ -164,12 +164,12 @@ example : ∀ p : α × β, intercambia (intercambia p) = p
 | (x,y) := rfl
 
 -- ----------------------------------------------------
--- Ejemplo 5.a. Definir, por recursión, la función
+-- Ejercicio 5.a. Definir, por recursión, la función
 --    inversa :: list α → list α
 -- tal que (inversa xs) es la lista obtenida
 -- invirtiendo el orden de los elementos de xs.
 -- Por ejemplo,
---    inversa [a,d,c] = [c,d,a]
+--    inversa [3,2,5] = [5,2,3]
 -- ----------------------------------------------------
 
 @[simp] def inversa : list α → list α
@@ -195,7 +195,7 @@ lemma inversa_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 6. (p. 9) Demostrar que
+-- Ejercicio 6. (p. 9) Demostrar que
 --    inversa [x] = [x]
 -- ----------------------------------------------------
 
@@ -220,12 +220,9 @@ rfl
 -- 4ª demostración
 example : inversa [x] = [x] :=
 calc inversa [x]
-         = inversa ([] : list α) ++ [x]
-           : by rw inversa_cons
-     ... = ([] : list α) ++ [x]
-           : by rw inversa_nil
-     ... = [x]
-           : by rw nil_append
+         = inversa ([] : list α) ++ [x] : by rw inversa_cons
+     ... = ([] : list α) ++ [x]         : by rw inversa_nil
+     ... = [x]                          : by rw nil_append
 
 -- 5ª demostración (con predefinida)
 example : reverse [x] = [x] :=
@@ -242,10 +239,10 @@ reverse_singleton x
 -- también la tiene.
 --
 -- En Lean el principio de inducción sobre los
--- naturales está formalizado en el lema  nat.rec_on.
+-- naturales está formalizado en el lema nat.rec_on.
 
 -- ----------------------------------------------------
--- Ejemplo 7.a. Definir la función
+-- Ejercicio 7.a. Definir la función
 --    repite :: ℕ → α → list α
 -- tal que (repite n x) es la lista formada por n
 -- copias del elemento x. Por ejemplo,
@@ -275,7 +272,7 @@ lemma repite_suc :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 8. (p. 18) Demostrar que
+-- Ejercicio 8. (p. 18) Demostrar que
 --    longitud (repite n x) = n
 -- ----------------------------------------------------
 
@@ -406,7 +403,7 @@ length_repeat x n
 --    #check list.rec_on
 
 -- ----------------------------------------------------
--- Ejemplo 9.a. Definir la función
+-- Ejercicio 9.a. Definir la función
 --    conc :: list α → list α → list α
 -- tal que (conc xs ys) es la concatención de las
 -- listas xs e ys. Por ejemplo,
@@ -436,7 +433,7 @@ lemma conc_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 10. (p. 24) Demostrar que
+-- Ejercicio 10. (p. 24) Demostrar que
 --    conc xs (conc ys zs) = conc (conc xs ys) zs
 -- ----------------------------------------------------
 
@@ -551,7 +548,7 @@ example :
 (append_assoc xs ys zs).symm
 
 -- ----------------------------------------------------
--- Ejemplo 12. (p. 28) Demostrar que
+-- Ejercicio 12. (p. 28) Demostrar que
 --    conc xs [] = xs
 -- ----------------------------------------------------
 
@@ -653,7 +650,7 @@ example : xs ++ [] = xs :=
 append_nil xs
 
 -- ----------------------------------------------------
--- Ejemplo 13. (p. 30) Demostrar que
+-- Ejercicio 13. (p. 30) Demostrar que
 --    longitud (conc xs ys) = longitud xs + longitud ys
 -- ----------------------------------------------------
 
@@ -833,7 +830,7 @@ length_append xs ys
 -- =====================================================
 
 -- ----------------------------------------------------
--- Ejemplo 14.a. Definir la función
+-- Ejercicio 14.a. Definir la función
 --    coge : ℕ → list α → list α
 -- tal que (coge n xs) es la lista de los n primeros
 -- elementos de xs. Por ejemplo,
@@ -848,7 +845,7 @@ length_append xs ys
 -- #eval coge 2 [1,4,2,7]
 
 -- ----------------------------------------------------
--- Ejermplo 14.b. Demostrar los siguientes lemas
+-- Ejercicio 14.b. Demostrar los siguientes lemas
 -- + coge_cero :
 --      coge 0 xs = []
 -- + coge_nil :
@@ -871,7 +868,7 @@ lemma coge_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 15.a. Definir la función
+-- Ejercicio 15.a. Definir la función
 --    elimina : ℕ → list α → list α
 -- tal que (elimina n xs) es la lista obtenida eliminando los n primeros
 -- elementos de xs. Por ejemplo,
@@ -909,7 +906,7 @@ lemma elimina_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 16. (p. 35) Demostrar que
+-- Ejercicio 16. (p. 35) Demostrar que
 --    conc (coge n xs) (elimina n xs) = xs
 -- ----------------------------------------------------
 
@@ -969,9 +966,10 @@ take_append_drop n xs
 -- ========================
 
 -- ----------------------------------------------------
--- Ejemplo 17.a. Definir la función
+-- Ejercicio 17.a. Definir la función
 --    esVacia : list α → bool
--- tal que (esVacia xs) se verifica si xs es la lista vacía. Por ejemplo,
+-- tal que (esVacia xs) se verifica si xs es la lista
+-- vacía. Por ejemplo,
 --    esVacia []  = tt
 --    esVacia [1] = ff
 -- ----------------------------------------------------
@@ -984,13 +982,11 @@ take_append_drop n xs
 -- #eval esVacia [1]
 
 -- ----------------------------------------------------
--- Ejermplo 17.b. Demostrar los siguientes lemas
--- + coge_cero :
---      coge 0 xs = []
--- + coge_nil :
---      coge n [] = []
--- + coge_cons :
---      coge (succ n) (x :: xs) = x :: coge n xs
+-- Ejercicio 17.b. Demostrar los siguientes lemas
+-- + esVacia_nil :
+--      esVacia ([] : list α) = tt :=
+-- + esVacia_cons :
+--      esVacia (x :: xs) = ff :=
 -- ----------------------------------------------------
 
 lemma esVacia_nil :
@@ -1002,7 +998,7 @@ lemma esVacia_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 18 (p. 39) . Demostrar que
+-- Ejercicio 18 (p. 39) . Demostrar que
 --    esVacia xs = esVacia (conc xs xs)
 -- ----------------------------------------------------
 
@@ -1045,7 +1041,7 @@ by cases xs ; simp
 -- ==============================
 
 -- ----------------------------------------------------
--- Ejemplo 19. Definir la función
+-- Ejercicio 19. Definir la función
 --    inversaAc : list α → list α
 -- tal que (inversaAc xs) es a inversa de xs calculada
 -- usando acumuladores. Por ejemplo,
@@ -1070,7 +1066,7 @@ lemma inversaAcAux_cons :
   inversaAcAux xs (x :: ys) :=
 rfl
 
--- [Ejemplo de equivalencia entre las definiciones]
+-- [Ejercicio de equivalencia entre las definiciones]
 -- La inversa de [a,b,c] es lo mismo calculada con la
 -- primera definición
 -- que con la segunda.
@@ -1078,7 +1074,7 @@ rfl
 example : inversaAc [1,2,3] = inversa [1,2,3] :=
 rfl
 
--- Nota [Ejemplo fallido de demostración por inducción]
+-- Nota [Ejercicio fallido de demostración por inducción]
 -- El siguiente intento de demostrar que para cualquier
 -- lista xs, se tiene que  "inversaAc xs = inversa xs"
 -- falla.
@@ -1098,7 +1094,7 @@ end
 -- universalmente las  variables libres.
 
 -- ----------------------------------------------------
--- Ejemplo 20. (p. 44) Demostrar que
+-- Ejercicio 20. (p. 44) Demostrar que
 --    inversaAcAux xs ys = (inversa xs) ++ ys
 -- ----------------------------------------------------
 
@@ -1163,7 +1159,7 @@ lemma inversa_equiv :
 | (x :: xs)  := by simp [inversa_equiv xs]
 
 -- ----------------------------------------------------
--- Ejemplo 21. (p. 43) Demostrar que
+-- Ejercicio 21. (p. 43) Demostrar que
 --    inversaAc xs = inversa xs
 -- ----------------------------------------------------
 
@@ -1182,7 +1178,7 @@ by simp [inversa_equiv]
 -- ============================================
 
 -- ----------------------------------------------------
--- Ejemplo 22.a. Definir la función
+-- Ejercicio 22.a. Definir la función
 --    suma : list ℕ → ℕ
 -- tal que (suma xs) es la suma de los elementos de
 -- xs. Por ejemplo,
@@ -1212,7 +1208,7 @@ lemma suma_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 23.a Definir la función
+-- Ejercicio 23.a Definir la función
 --    aplica_a_todos : (α → β) → list α → 'b list
 -- tal que (aplica_a_todos f xs) es la lista obtenida
 -- aplicando la función f a los elementos de xs. Por
@@ -1250,7 +1246,7 @@ lemma aplica_a_todos_cons
 rfl
 
 -- ----------------------------------------------------
--- Ejemplo 24. (p. 45) Demostrar que
+-- Ejercicio 24. (p. 45) Demostrar que
 --    suma (aplica_a_todos (λ x, 2*x) ns) = 2 * (suma ns)
 -- ----------------------------------------------------
 
@@ -1302,7 +1298,7 @@ example :
 by induction ns ; simp [*, mul_add]
 
 -- ----------------------------------------------------
--- Ejemplo 25. (p. 48) Demostrar que
+-- Ejercicio 25. (p. 48) Demostrar que
 --    longitud (aplica_a_todos f xs) = longitud xs
 -- ----------------------------------------------------
 

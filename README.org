@@ -1,5 +1,5 @@
-#+TITLE: Lógica con Lean
 #+AUTHOR: José A. Alonso
+#+TITLE: Lógica con Lean
 #+OPTIONS: ^:nil
 #+OPTIONS: num:t
 #+OPTIONS: :makeindex
@@ -341,8 +341,8 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INCLUDE: "./src/3_Conjuntos/Definicion_del_conjunto_potencia.lean" src lean
 
 *** Pruebas de A ∈ 𝒫 (A ∪ B)
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean][sesión en Lean Web]].
-#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∈𝒫(A∪B).lean" src lean
++ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean][sesión en Lean Web]].
+#+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean" src lean
 
 *** Monotonía del conjunto potencia: 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B
 + Enlaces al [[./src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][sesión en Lean Web]] y al [[https://youtu.be/2b8GQdRazxQ][vídeo]].
@@ -502,12 +502,69 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 + Enlaces al [[./src/6_Naturales/Prueba_por_induccion_7.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_7.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_7.lean" src lean
 
-# * Razonamiento sobre programas
-#
-# *** Razonamiento sobre programas
-# + Enlaces al [[./src/7_Programas/Razonamiento_sobre_programas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_sobre_programas.lean][sesión en Lean Web]] y al vídeo.
-# #+INCLUDE: "./src/7_Programas/Razonamiento_sobre_programas.lean" src lean
+* Razonamiento sobre programas
 
+** Razonamiento ecuacional
+
+*** Razonamiento ecuacional sobre longitudes de listas
+    Enlaces al [[./src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean" src lean
+
+*** Razonamiento ecuacional sobre intercambio en pares
+    Enlaces al [[./src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean" src lean
+
+*** Razonamiento ecuacional sobre la inversa de listas unitarias
+    Enlaces al [[./src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean" src lean
+
+** Razonamiento por inducción sobre los naturales
+
+*** Pruebas de longitud (repite n x) = n
+    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean" src lean
+
+** Razonamiento por inducción sobre listas
+
+*** Pruebas de la asociatividad de la concatenación
+    Enlaces al [[./src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean" src lean
+
+*** Pruebas del elemento neutro por la derecha de la concatenación
+    Enlaces al [[./src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean" src lean
+
+*** Pruebas de longitud (conc xs ys) = longitud xs + longitud ys
+    Enlaces al [[./src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean" src lean
+
+** Inducción con patrones para funciones recursivas generales
+
+*** Pruebas de conc (coge n xs) (elimina n xs) = xs
+    Enlaces al [[./src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean" src lean
+
+** Razonamiento por casos
+
+*** Pruebas de esVacia xs = esVacia (conc xs xs)
+    Enlaces al [[./src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean" src lean
+
+** Heurística de generalización
+
+*** Pruebas de la equivalencia entre las definiciones de inversa con o sin acumulador
+    Enlaces al [[./src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean" src lean
+
+** Inducción para funciones de orden superior
+
+*** Pruebas de la distributiva del producto sobre sumas
+    Enlaces al [[./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean" src lean
+
+*** Pruebas de longitud (aplica a todo f xs) = longitud xs
+    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean" src lean
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}
