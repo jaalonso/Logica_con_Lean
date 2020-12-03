@@ -59,7 +59,7 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Reglas del condicional
 
 *** Regla de eliminación del condicional en P → Q, P ⊢ Q
-+ Enlaces al [[./src/1_Proposicional/Eliminacion_del_condicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Eliminacion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/ov_8ddfR-yM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Eliminacion_del_condicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Eliminacion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/ov_8ddfR-yM][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Eliminacion_del_condicional.lean" src lean
 #+INDEX: Ordenes!import
 #+INDEX: Ordenes!variables
@@ -75,121 +75,121 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 #+INDEX: Tipos!Prop
 
 *** Pruebas de P, P → Q, P → (Q → R) ⊢ R
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][sesión en Lean Web]] y al [[https://youtu.be/_mWTkhjydk0][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][sesión en Lean Web]] y al [[https://youtu.be/_mWTkhjydk0][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean" src lean
 
 *** Regla de introducción del condicional en P → P
-+ Enlaces al [[./src/1_Proposicional/Introduccion_del_condicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Introduccion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/XTiVb1gtr5U][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Introduccion_del_condicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Introduccion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/XTiVb1gtr5U][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Introduccion_del_condicional.lean" src lean
 
 *** Pruebas de P → (Q → P)
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→(Q→P).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→(Q→P).lean][sesión en Lean Web]] y al [[https://youtu.be/-gr74e8Z38c][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P→(Q→P).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→(Q→P).lean][sesión en Lean Web]] y al [[https://youtu.be/-gr74e8Z38c][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P→(Q→P).lean" src lean
 
 *** Pruebas del silogismo hipotético: P → Q, Q → R ⊢ P → R
-+ Enlaces al [[./src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean][sesión en Lean Web]] y al [[https://youtu.be/xOBStCZ8F2g][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean][sesión en Lean Web]] y al [[https://youtu.be/xOBStCZ8F2g][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_del_silogismo_hipotetico.lean" src lean
 
 ** Reglas de la conjunción
 
 *** Reglas de la conjunción en P ∧ Q, R ⊢ Q ∧ R
-+ Enlaces al [[./src/1_Proposicional/Reglas_de_la_conjuncion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_la_conjuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/pXSs3ytn6Nc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Reglas_de_la_conjuncion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_la_conjuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/pXSs3ytn6Nc][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Reglas_de_la_conjuncion.lean" src lean
 
 *** Pruebas de P ∧ Q → Q ∧ P
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean][sesión en Lean Web]] y al [[https://youtu.be/KhAke-0AbdQ][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean][sesión en Lean Web]] y al [[https://youtu.be/KhAke-0AbdQ][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P∧Q→Q∧P.lean" src lean
 
 ** Reglas de la negación
 
 *** Reglas de la negación con (⊥ ⊢ P), (P, ¬P ⊢ ⊥) y ¬(P ∧ ¬P)
-+ Enlaces al [[./src/1_Proposicional/Reglas_de_la_negacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_la_negacion.lean][sesión en Lean Web]] y al [[https://youtu.be/6Pmk2Nr8BKE][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Reglas_de_la_negacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_la_negacion.lean][sesión en Lean Web]] y al [[https://youtu.be/6Pmk2Nr8BKE][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Reglas_de_la_negacion.lean" src lean
 
 *** Pruebas de P → Q, P → ¬Q ⊢ ¬P
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→Q,P→¬Q⊢¬P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q,P→¬Q⊢¬P.lean][sesión en Lean Web]] y al [[https://youtu.be/KhAke-0AbdQ][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P→Q,P→¬Q⊢¬P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q,P→¬Q⊢¬P.lean][sesión en Lean Web]] y al [[https://youtu.be/KhAke-0AbdQ][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P→Q,P→¬Q⊢¬P.lean" src lean
 
 *** Pruebas del modus tollens: P → Q, ¬Q ⊢ ¬P
-+ Enlaces al [[./src/1_Proposicional/Pruebas_del_modus_tollens.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_modus_tollens.lean][sesión en Lean Web]] y al [[https://youtu.be/sjMMGBFo9eY][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_del_modus_tollens.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_modus_tollens.lean][sesión en Lean Web]] y al [[https://youtu.be/sjMMGBFo9eY][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_del_modus_tollens.lean" src lean
 
 *** Pruebas de P → (Q → R), P, ¬R ⊢ ¬Q
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→(Q→R),P,¬R⊢¬Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→(Q→R),P,¬R⊢¬Q.lean][sesión en Lean Web]] y al [[https://youtu.be/VEyvycuVmdI][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P→(Q→R),P,¬R⊢¬Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→(Q→R),P,¬R⊢¬Q.lean][sesión en Lean Web]] y al [[https://youtu.be/VEyvycuVmdI][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P→(Q→R),P,¬R⊢¬Q.lean" src lean
 
 *** Pruebas de P → Q ⊢ ¬Q → ¬P
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→Q⊢¬Q→¬P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬Q→¬P.lean][sesión en Lean Web]] y al [[https://youtu.be/i-FV1lKxCfc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬Q→¬P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬Q→¬P.lean][sesión en Lean Web]] y al [[https://youtu.be/i-FV1lKxCfc][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P→Q⊢¬Q→¬P.lean" src lean
 
 *** Regla de introducción de la doble negación: P ⊢ ¬¬P
-+ Enlaces al [[./src/1_Proposicional/Prueba_de_la_regla_de_introduccion_de_la_doble_negacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_la_regla_de_introduccion_de_la_doble_negacion.lean][sesión en Lean Web]] y al [[https://youtu.be/F2UbA4n7XkU][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Prueba_de_la_regla_de_introduccion_de_la_doble_negacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_la_regla_de_introduccion_de_la_doble_negacion.lean][sesión en Lean Web]] y al [[https://youtu.be/F2UbA4n7XkU][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Prueba_de_la_regla_de_introduccion_de_la_doble_negacion.lean" src lean
 
 *** Pruebas de ¬Q → ¬P ⊢ P → ¬¬Q
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean][sesión en Lean Web]] y al [[https://youtu.be/QVGb8OWjWvY][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean][sesión en Lean Web]] y al [[https://youtu.be/QVGb8OWjWvY][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_¬Q→¬P⊢P→¬¬Q.lean" src lean
 
 ** Reglas de la disyunción
 
 *** Reglas de introducción de la disyunción
-+ Enlaces al [[./src/1_Proposicional/Reglas_de_introduccion_de_la_disyuncion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_introduccion_de_la_disyuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/vJzydeiWvOc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Reglas_de_introduccion_de_la_disyuncion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Reglas_de_introduccion_de_la_disyuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/vJzydeiWvOc][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Reglas_de_introduccion_de_la_disyuncion.lean" src lean
 
 *** Regla de eliminación de la disyunción
-+ Enlaces al [[./src/1_Proposicional/Regla_de_eliminacion_de_la_disyuncion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_eliminacion_de_la_disyuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/dpjRLUgJGK0][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Regla_de_eliminacion_de_la_disyuncion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_eliminacion_de_la_disyuncion.lean][sesión en Lean Web]] y al [[https://youtu.be/dpjRLUgJGK0][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Regla_de_eliminacion_de_la_disyuncion.lean" src lean
 
 *** Pruebas de P ∨ Q ⊢ Q ∨ P
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][sesión en Lean Web]] y al [[https://youtu.be/s2HlWqZPJAE][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean][sesión en Lean Web]] y al [[https://youtu.be/s2HlWqZPJAE][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P∨Q⊢Q∨P.lean" src lean
 
 *** Pruebas de Q → R ⊢ P ∨ Q → P ∨ R
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][sesión en Lean Web]] y al [[https://youtu.be/mNT4FFBjGtk][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean][sesión en Lean Web]] y al [[https://youtu.be/mNT4FFBjGtk][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_Q→R⊢P∨Q→P∨R.lean" src lean
 
 *** Pruebas de ¬P ∨ Q ⊢ P → Q
-+ Enlaces al [[./src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean][sesión en Lean Web]] y al [[https://youtu.be/HdZbvRLqTW4][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean][sesión en Lean Web]] y al [[https://youtu.be/HdZbvRLqTW4][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Prueba_de_¬P∨Q⊢P→Q.lean" src lean
 
 ** Reglas del bicondicional
 
 *** Regla de introducción del bicondicional en P ∧ Q ↔ Q ∧ P
-+ Enlaces al [[./src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean][sesión en Lean Web]] y al [[https://youtu.be/CX55HDaKV7M][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean][sesión en Lean Web]] y al [[https://youtu.be/CX55HDaKV7M][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Regla_de_introduccion_del_bicondicional_en_P∧Q↔Q∧P.lean" src lean
 
 *** Reglas de eliminación del bicondicional en P ↔ Q, P ∨ Q ⊢ P ∧ Q
-+ Enlaces al [[./src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][sesión en Lean Web]] y al [[https://youtu.be/U3U8bXiKPF8][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean][sesión en Lean Web]] y al [[https://youtu.be/U3U8bXiKPF8][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Regla_de_eliminacion_del_bicondicional_en_P↔Q,P∨Q|-P∧Q.lean" src lean
 
 ** Reglas de la lógica clásica
 
 *** Pruebas de la regla de reducción al absurdo
-+ Enlaces al [[./src/1_Proposicional/Prueba_de_la_regla_de_reduccion_al_absurdo.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_la_regla_de_reduccion_al_absurdo.lean][sesión en Lean Web]] y al [[https://youtu.be/3HLxFpKjld8][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Prueba_de_la_regla_de_reduccion_al_absurdo.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Prueba_de_la_regla_de_reduccion_al_absurdo.lean][sesión en Lean Web]] y al [[https://youtu.be/3HLxFpKjld8][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Prueba_de_la_regla_de_reduccion_al_absurdo.lean" src lean
 
 *** Pruebas de la eliminación de la doble negación
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_la_eliminacion_de_la_doble_negacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_la_eliminacion_de_la_doble_negacion.lean][sesión en Lean Web]] y al [[https://youtu.be/_nP_5KvwWUM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_la_eliminacion_de_la_doble_negacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_la_eliminacion_de_la_doble_negacion.lean][sesión en Lean Web]] y al [[https://youtu.be/_nP_5KvwWUM][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_la_eliminacion_de_la_doble_negacion.lean" src lean
 
 *** Pruebas del principio del tercio excluso
-+ Enlaces al [[./src/1_Proposicional/Pruebas_del_principio_del_tercio_excluso.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_principio_del_tercio_excluso.lean][sesión en Lean Web]] y al [[https://youtu.be/XkVJ5Ypvw44][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_del_principio_del_tercio_excluso.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_del_principio_del_tercio_excluso.lean][sesión en Lean Web]] y al [[https://youtu.be/XkVJ5Ypvw44][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_del_principio_del_tercio_excluso.lean" src lean
 
 *** Pruebas de P → Q ⊢ ¬P ∨ Q
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][sesión en Lean Web]] y al [[https://youtu.be/1_3Th-HOARI][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean][sesión en Lean Web]] y al [[https://youtu.be/1_3Th-HOARI][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P→Q⊢¬P∨Q.lean" src lean
 
 *** Pruebas de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean][sesión en Lean Web]] y al [[https://youtu.be/Ky8hmE_qCGM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean][sesión en Lean Web]] y al [[https://youtu.be/Ky8hmE_qCGM][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean" src lean
 
 *** Pruebas de ¬P → Q, ¬Q ⊢ P
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_¬P→Q,¬Q⊢P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_¬P→Q,¬Q⊢P.lean][sesión en Lean Web]] y al [[https://youtu.be/WBN8Ml17uyM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_¬P→Q,¬Q⊢P.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_¬P→Q,¬Q⊢P.lean][sesión en Lean Web]] y al [[https://youtu.be/WBN8Ml17uyM][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_¬P→Q,¬Q⊢P.lean" src lean
 
 *** Pruebas de (Q → R) → ((¬Q → ¬P) → (P → R))
-+ Enlaces al [[./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][sesión en Lean Web]] y al [[https://youtu.be/j3eE39xwElY][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][sesión en Lean Web]] y al [[https://youtu.be/j3eE39xwElY][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean" src lean
 
 * Lógica de primer orden
@@ -197,65 +197,65 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Reglas del cuantificador universal
 
 *** Regla de eliminación del cuantificador universal
-+ Enlaces al [[./src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean][sesión en Lean Web]] y al [[https://youtu.be/fy_2FThFvyo][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean][sesión en Lean Web]] y al [[https://youtu.be/fy_2FThFvyo][vídeo]].
 #+INCLUDE: "./src/2_LPO/Regla_de_eliminacion_del_cuantificador_universal.lean" src lean
 
 *** Regla de introducción del cuantificador universal
-+ Enlaces al [[./src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean][sesión en Lean Web]] y al [[https://youtu.be/MDpiS1BwNaU][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean][sesión en Lean Web]] y al [[https://youtu.be/MDpiS1BwNaU][vídeo]].
 #+INCLUDE: "./src/2_LPO/Regla_de_introduccion_del_cuantificador_universal.lean" src lean
 
 ** Reglas del cuantificador existencial
 
 *** Regla de introducción del cuantificador existencial
-+ Enlaces al [[./src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean][sesión en Lean Web]] y al [[https://youtu.be/vUHLphX4Aco][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean][sesión en Lean Web]] y al [[https://youtu.be/vUHLphX4Aco][vídeo]].
 #+INCLUDE: "./src/2_LPO/Regla_de_introduccion_del_cuantificador_existencial.lean" src lean
 
 *** Regla de eliminación del cuantificador existencial
-+ Enlaces al [[./src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean][sesión en Lean Web]] y al [[https://youtu.be/WWWqZ4BJAAM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean][sesión en Lean Web]] y al [[https://youtu.be/WWWqZ4BJAAM][vídeo]].
 #+INCLUDE: "./src/2_LPO/Regla_de_eliminacion_del_cuantificador_existencial.lean" src lean
 
 ** Ejercicios sobre cuantificadores
 
 *** Pruebas de ¬∀x P(x) ↔ ∃x ¬P(x)
-+ Enlaces al [[./src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean][sesión en Lean Web]] y al [[https://youtu.be/ldZfF6P5pNs][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean][sesión en Lean Web]] y al [[https://youtu.be/ldZfF6P5pNs][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_¬∀xP(x)↔∃x¬P(x).lean" src lean
 
 *** Pruebas de ∀x (P(x) ∧ Q(x)) ↔ ∀x P(x) ∧ ∀x Q(x)
-+ Enlaces al [[./src/2_LPO/Pruebas_de_∀x(P(x)∧Q(x))↔∀xP(x)∧∀xQ(x).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∀x(P(x)∧Q(x))↔∀xP(x)∧∀xQ(x).lean][sesión en Lean Web]] y al [[https://youtu.be/buEuarWb7QU][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_∀x(P(x)∧Q(x))↔∀xP(x)∧∀xQ(x).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∀x(P(x)∧Q(x))↔∀xP(x)∧∀xQ(x).lean][sesión en Lean Web]] y al [[https://youtu.be/buEuarWb7QU][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_∀x(P(x)∧Q(x))↔∀xP(x)∧∀xQ(x).lean" src lean
 
 *** Pruebas de ∃x (P(x) ∨ Q(x)) ↔ ∃x P(x) ∨ ∃x Q(x)
-+ Enlaces al [[./src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean][sesión en Lean Web]] y al [[https://youtu.be/Ai_IUwbuBBg][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean][sesión en Lean Web]] y al [[https://youtu.be/Ai_IUwbuBBg][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_∃xP(x)∨∃xQ(x)↔∃x(P(x)∨Q(x)).lean" src lean
 
 *** Pruebas de ∃x∃y P(x,y) ↔ ∃y∃x P(x,y)
-+ Enlaces al [[./src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean][sesión en Lean Web]] y al [[https://youtu.be/N8u54DEyb0o][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean][sesión en Lean Web]] y al [[https://youtu.be/N8u54DEyb0o][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_∃x∃yP(x,y)↔∃y∃xP(x,y).lean" src lean
 
 ** Reglas de la igualdad
 
 *** Regla de eliminación de la igualdad
-+ Enlaces al [[./src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean][sesión en Lean Web]] y al [[https://youtu.be/xFgxX6ZQtz4][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean][sesión en Lean Web]] y al [[https://youtu.be/xFgxX6ZQtz4][vídeo]].
 #+INCLUDE: "./src/2_LPO/Regla_de_eliminacion_de_la_igualdad.lean" src lean
 
 *** Pruebas de la transitividad de la igualdad
-+ Enlaces al [[./src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean][sesión en Lean Web]] y al [[https://youtu.be/DHWM7yy88oc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean][sesión en Lean Web]] y al [[https://youtu.be/DHWM7yy88oc][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_la_transitividad_de_la_igualdad.lean" src lean
 
 *** Regla de introducción de la igualdad
-+ Enlaces al [[./src/2_LPO/Regla_de_introduccion_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_de_la_igualdad.lean][sesión en Lean Web]] y al [[https://youtu.be/DHWM7yy88oc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Regla_de_introduccion_de_la_igualdad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Regla_de_introduccion_de_la_igualdad.lean][sesión en Lean Web]] y al [[https://youtu.be/DHWM7yy88oc][vídeo]].
 #+INCLUDE: "./src/2_LPO/Regla_de_introduccion_de_la_igualdad.lean" src lean
 
 *** Pruebas de y = x → y = z → x = z
-+ Enlaces al [[./src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean][sesión en Lean Web]] y al [[https://youtu.be/niY1mj3OSbk][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean][sesión en Lean Web]] y al [[https://youtu.be/niY1mj3OSbk][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_yIx→yIz→xIz.lean" src lean
 
 *** Pruebas de (x + y) + z = (x + z) + y
-+ Enlaces al [[./src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][sesión en Lean Web]] y al [[https://youtu.be/sI9Krgj0fpA][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean][sesión en Lean Web]] y al [[https://youtu.be/sI9Krgj0fpA][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_(x+y)+zI(x+z)+y.lean" src lean
 
 *** Pruebas de desarrollo de producto de sumas
-+ Enlaces al [[./src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][sesión en Lean Web]] y al [[https://youtu.be/78wuVCsvkP8][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean][sesión en Lean Web]] y al [[https://youtu.be/78wuVCsvkP8][vídeo]].
 #+INCLUDE: "./src/2_LPO/Pruebas_de_desarrollo_de_producto_de_sumas.lean" src lean
 
 * Conjuntos
@@ -263,89 +263,89 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Elementos básicos sobre conjuntos
 
 *** Pruebas de la reflexividad de la inclusión de conjuntos
-+ Enlaces al [[./src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/uAUAaOKL41A][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/uAUAaOKL41A][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Prueba_de_la_reflexividad_de_la_inclusion_de_conjuntos.lean" src lean
 
 *** Pruebas de la antisimetría de la inclusión de conjuntos
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/t8dxr4jjvMM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/t8dxr4jjvMM][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_antisimetria_de_la_inclusion_de_conjuntos.lean" src lean
 
 *** Introducción de la intersección
-+ Enlaces al [[./src/3_Conjuntos/Introduccion_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/EWBe22M3ef4][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Introduccion_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/EWBe22M3ef4][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Introduccion_de_la_interseccion.lean" src lean
 
 *** Introducción de la unión
-+ Enlaces al [[./src/3_Conjuntos/Introduccion_de_la_union.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_union.lean][sesión en Lean Web]] y al [[https://youtu.be/PKcVmmBFB-c][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Introduccion_de_la_union.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Introduccion_de_la_union.lean][sesión en Lean Web]] y al [[https://youtu.be/PKcVmmBFB-c][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Introduccion_de_la_union.lean" src lean
 
 *** El conjunto vacío
-+ Enlaces al [[./src/3_Conjuntos/Minimimalidad_del_vacio.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Minimimalidad_del_vacio.lean][sesión en Lean Web]] y al [[https://youtu.be/MfoCvy36UP8][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Minimimalidad_del_vacio.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Minimimalidad_del_vacio.lean][sesión en Lean Web]] y al [[https://youtu.be/MfoCvy36UP8][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Minimimalidad_del_vacio.lean" src lean
 
 *** Diferencia de conjuntos: A \ B ⊆ A
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][sesión en Lean Web]] y al [[https://youtu.be/iYlXqLMs5wc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean][sesión en Lean Web]] y al [[https://youtu.be/iYlXqLMs5wc][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆A.lean" src lean
 
 *** Complementario de un conjunto: Pruebas de A \ B ⊆ Bᶜ
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][sesión en Lean Web]] y al [[https://youtu.be/VIVvmAtq9nA][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean][sesión en Lean Web]] y al [[https://youtu.be/VIVvmAtq9nA][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_diff(A,B)⊆Bᶜ.lean" src lean
 
 *** Pruebas de la conmutatividad de la intersección
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/b9RzBNk6Tzg][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/b9RzBNk6Tzg][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_conmutatividad_de_la_interseccion.lean" src lean
 
 ** Identidades conjuntistas
 
 *** Pruebas de la propiedad distributiva de la intersección sobre la unión.
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][sesión en Lean Web]] y al [[https://youtu.be/sFJQHZ9fLZs][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean][sesión en Lean Web]] y al [[https://youtu.be/sFJQHZ9fLZs][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∩(B∪C)_igual_(A∩B)∪(A∩C).lean" src lean
 
 *** Pruebas de (A ∩ Bᶜ) ∪ B = A ∪ B
-+ Enlaces al [[./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][sesión en Lean Web]] y al [[https://youtu.be/Co3dEzqLVzM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean][sesión en Lean Web]] y al [[https://youtu.be/Co3dEzqLVzM][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Prueba_de_(A∩Bᶜ)∪B_igual_A∪B.lean" src lean
 
 ** Familias de conjuntos
 
 *** Unión e intersección de familias de conjuntos
-+ Enlaces al [[./src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/AnB6Gm477M4][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean][sesión en Lean Web]] y al [[https://youtu.be/AnB6Gm477M4][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Union_e_interseccion_de_familias_de_conjuntos.lean" src lean
 
 *** Pertenencia a uniones e intersecciones de familias
-+ Enlaces al [[./src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][sesión en Lean Web]] y al [[https://youtu.be/KoJCz46QfXA][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean][sesión en Lean Web]] y al [[https://youtu.be/KoJCz46QfXA][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pertenencia_a_uniones_e_intersecciones_de_familias.lean" src lean
 
 *** Pruebas de la distributiva de la intersección general sobre la intersección
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/D10o8AZhyYE][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean][sesión en Lean Web]] y al [[https://youtu.be/D10o8AZhyYE][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_la_propiedad_distributiva_de_la_interseccion.lean" src lean
 
 *** Reglas de la intersección general
-+ Enlaces al [[./src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_interseccion_general.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/3_Conjuntos/Reglas_de_la_interseccion_general.lean" src lean
 
 *** Reglas de la unión general
-+ Enlaces al [[./src/3_Conjuntos/Reglas_de_la_union_general.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Reglas_de_la_union_general.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/3_Conjuntos/Reglas_de_la_union_general.lean" src lean
 
 *** Pruebas de intersección sobre unión general
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][sesión en Lean Web]] y al [[https://youtu.be/0jiyLryyubA][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean][sesión en Lean Web]] y al [[https://youtu.be/0jiyLryyubA][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_interseccion_sobre_union_general.lean" src lean
 
 *** Pruebas de (⋃i, ⋂j, A i j) ⊆ (⋂j, ⋃i, A i j)
-+ Enlaces al [[./src/3_Conjuntos/Uniones_de_intersecciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Uniones_de_intersecciones.lean][sesión en Lean Web]] y al [[https://youtu.be/9vTnKpMSblI][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Uniones_de_intersecciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Uniones_de_intersecciones.lean][sesión en Lean Web]] y al [[https://youtu.be/9vTnKpMSblI][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Uniones_de_intersecciones.lean" src lean
 
 ** Conjunto potencia
 
 *** Definición del conjunto potencia
-+ Enlaces al [[./src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Definicion_del_conjunto_potencia.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/3_Conjuntos/Definicion_del_conjunto_potencia.lean" src lean
 
 *** Pruebas de A ∈ 𝒫 (A ∪ B)
-+ Enlaces al [[./src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean][sesión en Lean Web]].
 #+INCLUDE: "./src/3_Conjuntos/Pruebas_de_A∈P(A∪B).lean" src lean
 
 *** Monotonía del conjunto potencia: 𝒫 A ⊆ 𝒫 B ↔ A ⊆ B
-+ Enlaces al [[./src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][sesión en Lean Web]] y al [[https://youtu.be/2b8GQdRazxQ][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean][sesión en Lean Web]] y al [[https://youtu.be/2b8GQdRazxQ][vídeo]].
 #+INCLUDE: "./src/3_Conjuntos/Monotonia_del_conjunto_potencia.lean" src lean
 
 * Relaciones
@@ -353,39 +353,39 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Relaciones de orden
 
 *** Las irreflexivas y transitivas son asimétricas
-+ Enlaces al [[./src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean][sesión en Lean Web]] y al [[https://youtu.be/4DLWcRsISdE][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean][sesión en Lean Web]] y al [[https://youtu.be/4DLWcRsISdE][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Las_irreflexivas_y_transitivas_son_asimetricas.lean" src lean
 
 *** Las partes estrictas son irreflexivas
-+ Enlaces al [[./src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean][sesión en Lean Web]] y al [[https://youtu.be/nWIRDiyQ-14][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean][sesión en Lean Web]] y al [[https://youtu.be/nWIRDiyQ-14][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Las_partes_estrictas_son_irreflexivas.lean" src lean
 
 *** Las partes estrictas de los órdenes parciales son transitivas
-+ Enlaces al [[./src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean][sesión en Lean Web]] y al [[https://youtu.be/4XBqKYFVjto][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean][sesión en Lean Web]] y al [[https://youtu.be/4XBqKYFVjto][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Las_partes_estrictas_de_los_ordenes_parciales_son_transitivas.lean" src lean
 
 *** Las partes simétricas de las reflexivas son reflexivas
-+ Enlaces al [[./src/4_Relaciones/Las_partes_simetricas_de_las_reflexivas_son_reflexivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_simetricas_de_las_reflexivas_son_reflexivas.lean][sesión en Lean Web]] y al [[https://youtu.be/7IynBV5XiRQ][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Las_partes_simetricas_de_las_reflexivas_son_reflexivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_simetricas_de_las_reflexivas_son_reflexivas.lean][sesión en Lean Web]] y al [[https://youtu.be/7IynBV5XiRQ][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Las_partes_simetricas_de_las_reflexivas_son_reflexivas.lean" src lean
 
 *** Las partes simétricas son simétricas
-+ Enlaces al [[./src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean][sesión en Lean Web]] y al [[https://youtu.be/-B9CkdlvS2s][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean][sesión en Lean Web]] y al [[https://youtu.be/-B9CkdlvS2s][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Las_partes_simetricas_son_simetricas.lean" src lean
 
 ** Órdenes sobre números
 
 *** Pruebas de n + 1 ≤ m ⊢ n < m + 1
-+ Enlaces al [[./src/4_Relaciones/Pruebas_de_desigualdad_entre_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Pruebas_de_desigualdad_entre_naturales.lean][sesión en Lean Web]] y al [[https://youtu.be/rV_seI6Zlac][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Pruebas_de_desigualdad_entre_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Pruebas_de_desigualdad_entre_naturales.lean][sesión en Lean Web]] y al [[https://youtu.be/rV_seI6Zlac][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Pruebas_de_desigualdad_entre_naturales.lean" src lean
 
 ** Relaciones de equivalencia
 
 *** Las equivalencias son preórdenes simétricos
-+ Enlaces al [[./src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][sesión en Lean Web]] y al [[https://youtu.be/fhMF-JcSlKc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean][sesión en Lean Web]] y al [[https://youtu.be/fhMF-JcSlKc][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Las_equivalencias_son_preordenes_simetricos.lean" src lean
 
 *** Las relaciones reflexivas y euclídeas son de equivalencia
-+ Enlaces al [[./src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean][sesión en Lean Web]] y al [[https://youtu.be/OxcHaXGmmu4][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean][sesión en Lean Web]] y al [[https://youtu.be/OxcHaXGmmu4][vídeo]].
 #+INCLUDE: "./src/4_Relaciones/Las_relaciones_reflexivas_y_euclideas_son_de_equivalencia.lean" src lean
 
 * Funciones
@@ -393,71 +393,71 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Funciones en Lean
 
 *** Definición de la composición de funciones
-+ Enlaces al [[./src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/5_Funciones/Definicion_de_la_composicion_de_funciones.lean" src lean
 
 *** Definición de la función identidad
-+ Enlaces al [[./src/5_Funciones/Definicion_de_la_funcion_identidad.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Definicion_de_la_funcion_identidad.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Definicion_de_la_funcion_identidad.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Definicion_de_la_funcion_identidad.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/5_Funciones/Definicion_de_la_funcion_identidad.lean" src lean
 
 *** Extensionalidad funcional
-+ Enlaces al [[./src/5_Funciones/Extensionalidad_funcional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Extensionalidad_funcional.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Extensionalidad_funcional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Extensionalidad_funcional.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/5_Funciones/Extensionalidad_funcional.lean" src lean
 
 *** Propiedades de la composición de funciones (elemento neutro y asociatividad)
-+ Enlaces al [[./src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean][sesión en Lean Web]] y al [[https://youtu.be/6-VglWN0e7g][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean][sesión en Lean Web]] y al [[https://youtu.be/6-VglWN0e7g][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Propiedades_de_la_composicion_de_funciones.lean" src lean
 
 *** Funciones inyectivas, suprayectivas y biyectivas
-+ Enlaces al [[./src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/5_Funciones/Funciones_inyectivas_suprayectivas_y_biyectivas.lean" src lean
 
 *** La identidad es biyectiva
-+ Enlaces al [[./src/5_Funciones/La_identidad_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_identidad_es_biyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/KrjzxBs_EuU][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/La_identidad_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_identidad_es_biyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/KrjzxBs_EuU][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_identidad_es_biyectiva.lean" src lean
 
 *** La composición de funciones inyectivas es inyectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/iBWppcXaoyQ][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/iBWppcXaoyQ][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_inyectivas_es_inyectiva.lean" src lean
 
 *** La composición de funciones suprayectivas es suprayectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/omEhi6MuBuc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/omEhi6MuBuc][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean" src lean
 
 *** La composición de funciones biyectivas es biyectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/59wTRENsv04][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/59wTRENsv04][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_funciones_biyectivas_es_biyectiva.lean" src lean
 
 *** Las composiciones con las inversas son la identidad
-+ Enlaces al [[./src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][sesión en Lean Web]] y al [[https://youtu.be/U7o0Wxtmdwc][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean][sesión en Lean Web]] y al [[https://youtu.be/U7o0Wxtmdwc][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_composiciones_con_las_inversas_son_la_identidad.lean" src lean
 
 *** Las funciones con inversa por la izquierda son inyectivas
-+ Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][sesión en Lean Web]] y al [[https://youtu.be/4M9PWJpXtfI][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][sesión en Lean Web]] y al [[https://youtu.be/4M9PWJpXtfI][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean" src lean
 
 *** Las funciones con inversa por la derecha son suprayectivas
-+ Enlaces al [[./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][sesión en Lean Web]] y al [[https://youtu.be/XvATf_1yTYo][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][sesión en Lean Web]] y al [[https://youtu.be/XvATf_1yTYo][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean" src lean
 
 ** La función inversa
 
 *** Las funciones inyectivas tienen inversa por la izquierda
-+ Enlaces al [[./src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][sesión en Lean Web]] y al [[https://youtu.be/gIXCSfZOaP8][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][sesión en Lean Web]] y al [[https://youtu.be/gIXCSfZOaP8][vídeo]].
 #+INCLUDE: "./src/5_Funciones/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean" src lean
 
 ** Funciones y conjuntos
 
 *** La composición de inyectivas parciales es inyectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/-D0bilml760][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/-D0bilml760][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_inyectivas_parciales_es_inyectiva.lean" src lean
 
 *** La composición de suprayectivas parciales es suprayectiva
-+ Enlaces al [[./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/2NJA1c7wGVo][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean][sesión en Lean Web]] y al [[https://youtu.be/2NJA1c7wGVo][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_composicion_de_suprayectivas_parciales_es_suprayectiva.lean" src lean
 
 *** La imagen de la unión es la unión de las imágenes
-+ Enlaces al [[./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][sesión en Lean Web]] y al [[https://youtu.be/Usm8AnhSDJM][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean][sesión en Lean Web]] y al [[https://youtu.be/Usm8AnhSDJM][vídeo]].
 #+INCLUDE: "./src/5_Funciones/La_imagen_de_la_union_es_la_union_de_las_imagenes.lean" src lean
 
 * Números naturales, recursión e inducción
@@ -465,41 +465,41 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Definiciones por recursión
 
 *** Definiciones por recursión sobre los naturales
-+ Enlaces al [[./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][sesión en Lean Web]] y al [[https://youtu.be/XbJiD-K9IDI][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean][sesión en Lean Web]] y al [[https://youtu.be/XbJiD-K9IDI][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Definiciones_por_recursion_sobre_los_naturales.lean" src lean
 
 *** Operaciones aritméticas definidas
-+ Enlaces al [[./src/6_Naturales/Operaciones_aritmeticas_definidas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Operaciones_aritmeticas_definidas.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Operaciones_aritmeticas_definidas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Operaciones_aritmeticas_definidas.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/6_Naturales/Operaciones_aritmeticas_definidas.lean" src lean
 
 ** Recursión e inducción
 
 *** Prueba por inducción 1: (∀ n ∈ ℕ) 0 + n = n
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_1.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_1.lean][sesión en Lean Web]] y al [[https://youtu.be/qALe8Xk5Lcs][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Prueba_por_induccion_1.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_1.lean][sesión en Lean Web]] y al [[https://youtu.be/qALe8Xk5Lcs][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_1.lean" src lean
 
 *** Prueba por inducción 2: (∀ m n k ∈ ℕ) (m + n) + k = m + (n + k)
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_2.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_2.lean][sesión en Lean Web]] y al [[https://youtu.be/H5sIsvoAt6A][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Prueba_por_induccion_2.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_2.lean][sesión en Lean Web]] y al [[https://youtu.be/H5sIsvoAt6A][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_2.lean" src lean
 
 *** Prueba por inducción 3: (∀ m n ∈ ℕ) succ m + n = succ (m + n)
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_3.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_3.lean][sesión en Lean Web]] y al [[https://youtu.be/t7i3WY4OTek][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Prueba_por_induccion_3.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_3.lean][sesión en Lean Web]] y al [[https://youtu.be/t7i3WY4OTek][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_3.lean" src lean
 
 *** Prueba por inducción 4: (∀ m n ∈ ℕ) m + n = n + m
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_4.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_4.lean][sesión en Lean Web]] y al [[https://youtu.be/Q7KLej0jjTY][vídeo]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Prueba_por_induccion_4.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_4.lean][sesión en Lean Web]] y al [[https://youtu.be/Q7KLej0jjTY][vídeo]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_4.lean" src lean
 
 *** Prueba por inducción 5: (∀ m n ∈ ℕ) m^(n+1) = m * m^n
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_5.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_5.lean][sesión en Lean Web]].
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Prueba_por_induccion_5.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_5.lean][sesión en Lean Web]].
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_5.lean" src lean
 
 *** Prueba por inducción 6: (∀ m n k ∈ ℕ) m^(n + k) = m^n * m^k
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_6.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_6.lean][sesión en Lean Web]] y al vídeo.
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Prueba_por_induccion_6.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_6.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_6.lean" src lean
 
-*** Prueba por induccion 7: (∀ n ∈ ℕ) n ≠ 0 → succ (pred n) = n
-+ Enlaces al [[./src/6_Naturales/Prueba_por_induccion_7.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_7.lean][sesión en Lean Web]] y al vídeo.
+*** Prueba por inducción 7: (∀ n ∈ ℕ) n ≠ 0 → succ (pred n) = n
++ Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/6_Naturales/Prueba_por_induccion_7.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/6_Naturales/Prueba_por_induccion_7.lean][sesión en Lean Web]] y al vídeo.
 #+INCLUDE: "./src/6_Naturales/Prueba_por_induccion_7.lean" src lean
 
 * Razonamiento sobre programas
@@ -507,63 +507,63 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Razonamiento ecuacional
 
 *** Razonamiento ecuacional sobre longitudes de listas
-    Enlaces al [[./src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Razonamiento_ecuacional_sobre_longitudes_de_listas.lean" src lean
 
 *** Razonamiento ecuacional sobre intercambio en pares
-    Enlaces al [[./src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Razonamiento_ecuacional_sobre_intercambio_en_pares.lean" src lean
 
 *** Razonamiento ecuacional sobre la inversa de listas unitarias
-    Enlaces al [[./src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Razonamiento_ecuacional_sobre_la_inversa_de_listas_unitarias.lean" src lean
 
 ** Razonamiento por inducción sobre los naturales
 
 *** Pruebas de longitud (repite n x) = n
-    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud_(repite_n_x)_Ig_n.lean" src lean
 
 ** Razonamiento por inducción sobre listas
 
 *** Pruebas de la asociatividad de la concatenación
-    Enlaces al [[./src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean" src lean
 
 *** Pruebas del elemento neutro por la derecha de la concatenación
-    Enlaces al [[./src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean" src lean
 
 *** Pruebas de longitud (conc xs ys) = longitud xs + longitud ys
-    Enlaces al [[./src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean" src lean
 
 ** Inducción con patrones para funciones recursivas generales
 
 *** Pruebas de conc (coge n xs) (elimina n xs) = xs
-    Enlaces al [[./src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean" src lean
 
 ** Razonamiento por casos
 
 *** Pruebas de esVacia xs = esVacia (conc xs xs)
-    Enlaces al [[./src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean" src lean
 
 ** Heurística de generalización
 
 *** Pruebas de la equivalencia entre las definiciones de inversa con o sin acumulador
-    Enlaces al [[./src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean" src lean
 
 ** Inducción para funciones de orden superior
 
 *** Pruebas de la distributiva del producto sobre sumas
-    Enlaces al [[./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean" src lean
 
 *** Pruebas de longitud (aplica a todo f xs) = longitud xs
-    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][sesión en Lean Web]].
+    Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][sesión en Lean Web]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean" src lean
 
 # #+LATEX:\printindex
