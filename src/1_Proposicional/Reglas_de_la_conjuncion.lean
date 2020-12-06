@@ -2,7 +2,7 @@
 -- =======================
 
 -- ----------------------------------------------------
--- Ej. 1. Demostrar que
+-- Ej. 1 (p. 4). Demostrar que
 --    P ∧ Q, R ⊢ Q ∧ R
 -- ----------------------------------------------------
 
@@ -11,8 +11,6 @@ import tactic
 variables (P Q R : Prop)
 
 -- 1ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -23,8 +21,6 @@ show Q ∧ R,
   from and.intro hQ hR
 
 -- 2ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -35,8 +31,6 @@ show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 3ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -47,39 +41,22 @@ show Q ∧ R,
   from ⟨hQ, hR⟩
 
 -- 4ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-have hQ : Q :=
-  hPQ.2,
-show Q ∧ R,
-  from ⟨hQ, hR⟩
+have hQ : Q,
+  from hPQ.2,
+⟨hQ, hR⟩
 
 -- 5ª demostración
--- ===============
-
-example
-  (hPQ : P ∧ Q)
-  (hR : R)
-  : Q ∧ R :=
-show Q ∧ R,
-  from ⟨hPQ.2, hR⟩
-
--- 6ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
 ⟨hPQ.2, hR⟩
 
--- 7ª demostración
--- ===============
-
+-- 6ª demostración
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -88,9 +65,7 @@ match hPQ with ⟨hP, hQ⟩ :=
   and.intro hQ hR
 end
 
--- 8ª demostración
--- ===============
-
+-- 7ª demostración
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -103,8 +78,6 @@ begin
 end
 
 -- 9ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -117,8 +90,6 @@ begin
 end
 
 -- 10ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -131,8 +102,6 @@ begin
 end
 
 -- 11ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -141,8 +110,6 @@ example
 by tauto
 
 -- 12ª demostración
--- ===============
-
 example
   (hPQ : P ∧ Q)
   (hR : R)

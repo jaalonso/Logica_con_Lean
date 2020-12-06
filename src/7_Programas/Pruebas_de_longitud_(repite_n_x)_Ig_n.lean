@@ -38,7 +38,7 @@ rfl
 -- ----------------------------------------------------
 
 def repite : ℕ → α → list α
-| 0 x        := []
+| 0 _        := []
 | (succ n) x := x :: repite n x
 
 -- #eval repite 3 7
@@ -67,6 +67,23 @@ rfl
 -- ----------------------------------------------------
 
 -- 1ª demostración
+example :
+  longitud (repite n x) = n :=
+begin
+  induction n with n HI,
+  { calc
+      longitud (repite 0 x)
+          = longitud []                : by rw repite_cero
+      ... = 0                          : by rw longitud_nil },
+  { calc
+      longitud (repite (succ n) x)
+          = longitud (x :: repite n x) : by rw repite_suc
+      ... = longitud (repite n x) + 1  : by rw longitud_cons
+      ... = n + 1                      : by rw HI
+      ... = succ n                     : rfl, },
+end
+
+-- 2ª demostración
 example : longitud (repite n x) = n :=
 begin
   induction n with n HI,
@@ -77,7 +94,7 @@ begin
     rw HI, },
 end
 
--- 2ª demostración
+-- 3ª demostración
 example : longitud (repite n x) = n :=
 begin
   induction n with n HI,
@@ -85,7 +102,7 @@ begin
   { simp only [repite_suc, longitud_cons, HI], },
 end
 
--- 3ª demostración
+-- 4ª demostración
 example : longitud (repite n x) = n :=
 begin
   induction n with n HI,
@@ -93,25 +110,9 @@ begin
   { simp [HI], },
 end
 
--- 4ª demostración
-example : longitud (repite n x) = n :=
-by induction n ; simp [*]
-
 -- 5ª demostración
 example : longitud (repite n x) = n :=
-begin
-  induction n with n HI,
-  { calc
-      longitud (repite 0 x)
-          = longitud [] : by rw repite_cero
-      ... = 0           : by rw longitud_nil },
-  { calc
-      longitud (repite (succ n) x)
-          = longitud (x :: repite n x) : by rw repite_suc
-      ... = longitud (repite n x) + 1  : by rw longitud_cons
-      ... = n + 1                      : by rw HI
-      ... = succ n                     : rfl, },
-end
+by induction n ; simp [*]
 
 -- 6ª demostración
 example : longitud (repite n x) = n :=
@@ -119,8 +120,8 @@ nat.rec_on n
   ( show longitud (repite 0 x) = 0, from
       calc
         longitud (repite 0 x)
-            = longitud [] : by rw repite_cero
-        ... = 0           : by rw longitud_nil )
+            = longitud []              : by rw repite_cero
+        ... = 0                        : by rw longitud_nil )
   ( assume n,
     assume HI : longitud (repite n x) = n,
     show longitud (repite (succ n) x) = succ n, from
@@ -131,11 +132,11 @@ nat.rec_on n
       ... = n + 1                      : by rw HI
       ... = succ n                     : rfl )
 
--- 6ª demostración
+-- 7ª demostración
 example : longitud (repite n x) = n :=
 nat.rec_on n
   ( by simp )
-  ( λ n HI, by simp [*])
+  ( λ n HI, by simp [HI])
 
 -- 7ª demostración
 lemma longitud_repite_1 :

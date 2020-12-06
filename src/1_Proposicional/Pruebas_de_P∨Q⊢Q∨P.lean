@@ -36,25 +36,26 @@ example
   : Q ∨ P :=
 or.elim h1 or.inr or.inl
 
+-- 4ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
 h1.elim or.inr or.inl
 
--- 4ª demostración
+-- 5ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
 or.rec or.inr or.inl h1
 
--- 5ª demostración
+-- 6ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
 -- by library_search
 or.swap h1
 
--- 6ª demostración
+-- 7ª demostración
 example
   (h1 : P ∨ Q)
   : Q ∨ P :=
@@ -100,7 +101,7 @@ example
 by finish
 
 -- ----------------------------------------------------
--- Ej. 2. Demostrar
+-- Ej. 2 (p. 12). Demostrar
 --    Q → R ⊢ P ∨ Q → P ∨ R
 -- ----------------------------------------------------
 
@@ -154,7 +155,7 @@ example
 assume h2 : P ∨ Q,
 or.elim h2
   or.inl
-  ( λ h, or.inr (h1 h) )
+  (λ h, or.inr (h1 h) )
 
 -- 6ª demostración
 example
@@ -231,7 +232,7 @@ example
 by finish
 
 -- ----------------------------------------------------
--- Ej. 4. Demostrar
+-- Ej. 4 (p. 15). Demostrar
 --    ¬P ∨ Q ⊢ P → Q
 -- ----------------------------------------------------
 

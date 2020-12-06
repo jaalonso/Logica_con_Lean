@@ -48,17 +48,18 @@ rfl
 
 -- 1ª demostración
 example : inversa [x] = [x] :=
-begin
-  rw inversa_cons,
-  rw inversa_nil,
-  rw nil_append,
-end
+calc inversa [x]
+         = inversa ([] : list α) ++ [x] : by rw inversa_cons
+     ... = ([] : list α) ++ [x]         : by rw inversa_nil
+     ... = [x]                          : by rw nil_append
+
 
 -- 2ª demostración
 example : inversa [x] = [x] :=
-by simp [inversa_cons,
-         inversa_nil,
-         nil_append]
+calc inversa [x]
+         = inversa ([] : list α) ++ [x] : by simp
+     ... = ([] : list α) ++ [x]         : by simp
+     ... = [x]                          : by simp
 
 -- 3ª demostración
 example : inversa [x] = [x] :=
@@ -66,16 +67,23 @@ by simp
 
 -- 4ª demostración
 example : inversa [x] = [x] :=
-rfl
+begin
+  rw inversa_cons,
+  rw inversa_nil,
+  rw nil_append,
+end
 
 -- 5ª demostración
 example : inversa [x] = [x] :=
-calc inversa [x]
-         = inversa ([] : list α) ++ [x] : by rw inversa_cons
-     ... = ([] : list α) ++ [x]         : by rw inversa_nil
-     ... = [x]                          : by rw nil_append
+by rw [inversa_cons,
+       inversa_nil,
+       nil_append]
 
--- Comentarios sobre la función reverse
+-- 6ª demostración
+example : inversa [x] = [x] :=
+rfl
+
+-- Comentarios sobre la función reverse:
 -- + Es equivalente a la función inversa
 -- + Para usarla hay que importar la librería
 --   data.list.basic y abrir el espacio de nombre

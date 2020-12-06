@@ -21,15 +21,21 @@ have h3 : Q,
 show R,
   from h2 h3
 
+variable (h1 : P → Q)
+variable (h2 : Q → R)
+variable (h : P)
+#check h1 h
+#check h2 (h1 h)
+
 -- 2º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 assume h : P,
-have h3 : Q := h1 h,
-show R,
-  from h2 h3
+have h3 : Q,
+  from h1 h,
+h2 h3
 
 -- 3º demostración
 example
@@ -37,31 +43,23 @@ example
   (h2 : Q → R)
   : P → R :=
 assume h : P,
-show R,
-  from h2 (h1 h)
+h2 (h1 h)
 
 -- 4º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
-assume h : P, h2 (h1 h)
+λ h, h2 (h1 h)
 
 -- 5º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
-λ h, h2 (h1 h)
-
--- 6º demostración
-example
-  (h1 : P → Q)
-  (h2 : Q → R)
-  : P → R :=
 h2 ∘ h1
 
--- 7º demostración
+-- 6º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
@@ -73,7 +71,7 @@ begin
   exact h,
 end
 
--- 8º demostración
+-- 7º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
@@ -84,7 +82,7 @@ begin
   exact h1 h,
 end
 
--- 9º demostración
+-- 8º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
@@ -94,14 +92,14 @@ begin
   exact h2 (h1 h),
 end
 
--- 10º demostración
+-- 9º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
   : P → R :=
 λ h, h2 (h1 h)
 
--- 11º demostración
+-- 10º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
@@ -109,7 +107,7 @@ example
 -- by library_search
 h2 ∘ h1
 
--- 12º demostración
+-- 11º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)
@@ -117,7 +115,7 @@ example
 -- by hint
 by tauto
 
--- 13º demostración
+-- 12º demostración
 example
   (h1 : P → Q)
   (h2 : Q → R)

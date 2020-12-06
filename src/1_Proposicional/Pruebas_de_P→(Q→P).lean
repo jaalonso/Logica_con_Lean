@@ -27,7 +27,7 @@ show Q → P, from
 example : P → (Q → P) :=
 assume (h1 : P),
 show Q → P, from
-  ( λ h2, h1)
+  (λ h2, h1)
 
 -- 4ª demostración
 example : P → (Q → P) :=
@@ -65,15 +65,15 @@ begin
   exact h1,
 end
 
--- 6ª demostración
+-- 11ª demostración
 example : P → (Q → P) :=
 λ h1 h2, h1
 
--- 11ª demostración
+-- 12ª demostración
 example : P → (Q → P) :=
 -- by hint
 by tauto
 
--- 12ª demostración
+-- 13ª demostración
 example : P → (Q → P) :=
 by finish

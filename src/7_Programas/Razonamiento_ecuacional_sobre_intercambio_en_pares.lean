@@ -5,6 +5,8 @@ import data.prod
 open prod
 
 variables {α : Type*} {β : Type*}
+variable  (x : α)
+variable  (y : β)
 
 -- ----------------------------------------------------
 -- Ejercicio 1. Definir la función
@@ -15,8 +17,8 @@ variables {α : Type*} {β : Type*}
 --    intercambia (5,7) = (7,5)
 -- ----------------------------------------------------
 
-def intercambia : α × β → β × α :=
-λp, (p.2, p.1)
+def intercambia : α × β → β × α
+| (x,y) := (y, x)
 
 -- #eval intercambia (5,7)
 
@@ -26,37 +28,48 @@ def intercambia : α × β → β × α :=
 -- ----------------------------------------------------
 
 @[simp]
-lemma intercambia_simp
-  {p : α × β}
-  : intercambia p = (p.2, p.1) :=
+lemma intercambia_simp :
+  intercambia (x,y) = (y,x) :=
 rfl
 
 -- ----------------------------------------------------
 -- Ejercicio 3. (p.6) Demostrar que
---    intercambia (intercambia p) = p
+--    intercambia (intercambia (x,y)) = (x,y)
 -- ----------------------------------------------------
 
 -- 1ª demostración
-example : ∀ p : α × β, intercambia (intercambia p) = p :=
+example :
+  intercambia (intercambia (x,y)) = (x,y) :=
+calc intercambia (intercambia (x,y))
+         = intercambia (y,x)          : by rw intercambia_simp
+     ... = (x,y)                      : by rw intercambia_simp
+
+-- 2ª demostración
+example :
+  intercambia (intercambia (x,y)) = (x,y) :=
+calc intercambia (intercambia (x,y))
+         = intercambia (y,x)          : by simp
+     ... = (x,y)                      : by simp
+
+-- 3ª demostración
+example :
+  intercambia (intercambia (x,y)) = (x,y) :=
+by simp
+
+-- 4ª demostración
+example :
+  intercambia (intercambia (x,y)) = (x,y) :=
+rfl
+
+-- 5ª demostración
+example :
+  intercambia (intercambia (x,y)) = (x,y) :=
 begin
-  rintro ⟨x,y⟩,
   rw intercambia_simp,
   rw intercambia_simp,
 end
 
--- 2ª demostración
-example : ∀ p : α × β, intercambia (intercambia p) = p :=
-λ ⟨x,y⟩, by simp only [intercambia_simp]
-
--- 3ª demostración
-example : ∀ p : α × β, intercambia (intercambia p) = p :=
-by simp
-
--- 4ª demostración
-example : ∀ p : α × β, intercambia (intercambia p) = p
-| (x,y) := rfl
-
--- Comentarios sobre la función swap
+-- Comentarios sobre la función swap:
 -- + Es equivalente a la función intercambia.
 -- + Para usarla hay que importar la librería data.prod
 --   y abrir espacio de nombre prod el escribiendo al
@@ -66,9 +79,11 @@ example : ∀ p : α × β, intercambia (intercambia p) = p
 -- + Se puede evaluar. Por ejemplo,
 --      #eval swap (5,7)
 -- + Se puede demostrar. Por ejemplo,
---      example : ∀ p : α × β, swap (swap p) = p
---      | (x,y) := rfl
+--      example :
+--        swap (swap (x,y)) = (x,y) :=
+--      rfl
 --
---      example : ∀ p : α × β, swap (swap p) = p :=
+--      example :
+--        swap (swap (x,y)) = (x,y) :=
 --      -- by library_search
---      swap_swap
+--      swap_swap (x,y)

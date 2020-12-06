@@ -52,7 +52,7 @@ example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
-λ h, h2 (h1 h)
+λ h3, h2 (h1 h3)
 
 -- 6ª demostración
 example
@@ -74,21 +74,6 @@ example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
--- by hint
-by tauto
-
--- 9ª demostración
-example
-  (h1 : P → Q)
-  (h2 : ¬Q)
-  : ¬P :=
-by finish
-
--- 10ª demostración
-example
-  (h1 : P → Q)
-  (h2 : ¬Q)
-  : ¬P :=
 begin
   intro h,
   apply h2,
@@ -96,7 +81,7 @@ begin
   exact h,
 end
 
--- 11ª demostración
+-- 9ª demostración
 example
   (h1 : P → Q)
   (h2 : ¬Q)
@@ -106,9 +91,24 @@ begin
   exact h2 (h1 h),
 end
 
--- 12ª demostración
+-- 10ª demostración
 example
   (h1 : P → Q)
   (h2 : ¬Q)
   : ¬P :=
 λ h, h2 (h1 h)
+
+-- 11ª demostración
+example
+  (h1 : P → Q)
+  (h2 : ¬Q)
+  : ¬P :=
+-- by hint
+by tauto
+
+-- 12ª demostración
+example
+  (h1 : P → Q)
+  (h2 : ¬Q)
+  : ¬P :=
+by finish
