@@ -2,11 +2,10 @@
 -- ==============================================
 
 import tactic
-import data.list.basic
 open list
 
-variable {α : Type}
-variable  x : α
+variable  {α : Type}
+variable  (x : α)
 variables (xs ys zs : list α)
 
 -- ----------------------------------------------------
@@ -50,37 +49,39 @@ rfl
 example :
   conc xs (conc ys zs) = conc (conc xs ys) zs :=
 begin
-  induction xs with x xs HI,
-  { rw conc_nil,
-    rw conc_nil, },
-  { rw conc_cons,
-    rw HI,
-    rw conc_cons,
-    rw conc_cons, },
+  induction xs with a as HI,
+  { calc conc [] (conc ys zs)
+         = conc ys zs                  : by rw conc_nil
+     ... = conc (conc [] ys) zs        : by rw conc_nil, },
+  { calc conc (a :: as) (conc ys zs)
+         = a :: conc as (conc ys zs)   : by rw conc_cons
+     ... = a :: conc (conc as ys) zs   : by rw HI
+     ... = conc (a :: conc as ys) zs   : by rw conc_cons
+     ... = conc (conc (a :: as) ys) zs : by rw ←conc_cons, },
 end
 
 -- 2ª demostración
 example :
   conc xs (conc ys zs) = conc (conc xs ys) zs :=
 begin
-  induction xs with x xs HI,
+  induction xs with a as HI,
   { calc conc [] (conc ys zs)
-         = conc ys zs                  : by rw conc_nil
-     ... = conc (conc [] ys) zs        : by rw conc_nil, },
-  { calc conc (x :: xs) (conc ys zs)
-         = x :: conc xs (conc ys zs)   : by rw conc_cons
-     ... = x :: conc (conc xs ys) zs   : by rw HI
-     ... = conc (x :: conc xs ys) zs   : by rw conc_cons
-     ... = conc (conc (x :: xs) ys) zs : by rw ←conc_cons, },
+         = conc ys zs                  : by simp
+     ... = conc (conc [] ys) zs        : by simp, },
+  { calc conc (a :: as) (conc ys zs)
+         = a :: conc as (conc ys zs)   : by simp
+     ... = a :: conc (conc as ys) zs   : by simp [HI]
+     ... = conc (a :: conc as ys) zs   : by simp
+     ... = conc (conc (a :: as) ys) zs : by simp, },
 end
 
 -- 3ª demostración
 example :
   conc xs (conc ys zs) = conc (conc xs ys) zs :=
 begin
-  induction xs with x xs HI,
-  { simp, },
-  { simp [HI], },
+  induction xs with a as HI,
+  { by simp, },
+  { by simp [HI], },
 end
 
 -- 4ª demostración
@@ -91,50 +92,61 @@ by induction xs ; simp [*]
 -- 5ª demostración
 example :
   conc xs (conc ys zs) = conc (conc xs ys) zs :=
+begin
+  induction xs with a as HI,
+  { rw conc_nil,
+    rw conc_nil, },
+  { rw conc_cons,
+    rw HI,
+    rw conc_cons,
+    rw conc_cons, },
+end
+
+-- 6ª demostración
+example :
+  conc xs (conc ys zs) = conc (conc xs ys) zs :=
 list.rec_on xs
   ( show conc [] (conc ys zs) = conc (conc [] ys) zs,
       from calc
         conc [] (conc ys zs)
             = conc ys zs           : by rw conc_nil
         ... = conc (conc [] ys) zs : by rw conc_nil )
-    ( assume x xs,
-      assume HI : conc xs (conc ys zs) =
-                  conc (conc xs ys) zs,
-      show conc (x :: xs) (conc ys zs) =
-           conc (conc (x :: xs) ys) zs,
+    ( assume a as,
+      assume HI : conc as (conc ys zs) = conc (conc as ys) zs,
+      show conc (a :: as) (conc ys zs) = conc (conc (a :: as) ys) zs,
         from calc
-          conc (x :: xs) (conc ys zs)
-               = x :: conc xs (conc ys zs)  : by rw conc_cons
-          ... = x :: conc (conc xs ys) zs   : by rw HI
-          ... = conc (x :: conc xs ys) zs   : by rw conc_cons
-          ... = conc (conc (x :: xs) ys) zs : by rw ←conc_cons)
+          conc (a :: as) (conc ys zs)
+               = a :: conc as (conc ys zs)  : by rw conc_cons
+          ... = a :: conc (conc as ys) zs   : by rw HI
+          ... = conc (a :: conc as ys) zs   : by rw conc_cons
+          ... = conc (conc (a :: as) ys) zs : by rw ←conc_cons)
 
--- 6ª demostración
+-- 7ª demostración
 example :
   conc xs (conc ys zs) = conc (conc xs ys) zs :=
 list.rec_on xs
   (by simp)
   (by simp [*])
 
--- 7ª demostración
+-- 8ª demostración
 lemma conc_asoc_1 :
   ∀ xs, conc xs (conc ys zs) = conc (conc xs ys) zs
 | [] := by calc
     conc [] (conc ys zs)
         = conc ys zs           : by rw conc_nil
     ... = conc (conc [] ys) zs : by rw conc_nil
-| (x :: xs) := by calc
-    conc (x :: xs) (conc ys zs)
-        = x :: conc xs (conc ys zs)   : by rw conc_cons
-    ... = x :: conc (conc xs ys) zs   : by rw conc_asoc_1
-    ... = conc (x :: conc xs ys) zs   : by rw conc_cons
-    ... = conc (conc (x :: xs) ys) zs : by rw ←conc_cons
+| (a :: as) := by calc
+    conc (a :: as) (conc ys zs)
+        = a :: conc as (conc ys zs)   : by rw conc_cons
+    ... = a :: conc (conc as ys) zs   : by rw conc_asoc_1
+    ... = conc (a :: conc as ys) zs   : by rw conc_cons
+    ... = conc (conc (a :: as) ys) zs : by rw ←conc_cons
 
--- 8ª demostración
+-- 9ª demostración
 lemma conc_asoc_2 :
   ∀ xs, conc xs (conc ys zs) = conc (conc xs ys) zs
 | []         := by simp
-| (x :: xs)  := by simp [conc_asoc_2 xs]
+| (a :: as)  := by simp [conc_asoc_2 as]
 
 -- Comentarios sobre la función (++)
 -- + Es equivalente a la función conc.
@@ -148,9 +160,14 @@ lemma conc_asoc_2 :
 -- + Se puede demostrar. Por ejemplo,
 --      example :
 --        xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
---      by induction xs ; simp [*]
---
---      example :
---        xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 --      -- by library_search
 --      (append_assoc xs ys zs).symm
+--
+--      example :
+--        (xs ++ ys) ++ zs = xs ++ (ys ++ zs) :=
+--      -- by library_search
+--      append_assoc xs ys zs
+--
+--      example :
+--        (xs ++ ys) ++ zs = xs ++ (ys ++ zs) :=
+--      by induction xs ; simp [*]

@@ -5,9 +5,9 @@ import tactic
 import data.list.basic
 open list
 
-variable {α : Type}
-variable  x : α
-variables (xs ys zs : list α)
+variable  {α : Type}
+variable  (x : α)
+variables (xs ys : list α)
 
 -- ----------------------------------------------------
 -- Nota. Se usará la función conc y sus propiedades
@@ -36,7 +36,7 @@ rfl
 -- 1ª demostración
 example : conc xs [] = xs :=
 begin
-  induction xs with x xs HI,
+  induction xs with a as HI,
   { rw conc_nil, },
   { rw conc_cons,
     rw HI, },
@@ -74,13 +74,12 @@ by induction xs ; simp [*]
 -- 6ª demostración
 example : conc xs [] = xs :=
 begin
-  induction xs with x xs HI,
+  induction xs with a as HI,
+  { rw conc_nil, },
   { calc
-      conc [] [] = [] : by rw conc_nil, },
-  { calc
-      conc (x :: xs) []
-          = x :: (conc xs []) : by rw conc_cons
-      ... = x :: xs           : by rw HI, },
+      conc (a :: as) []
+          = a :: (conc as []) : by rw conc_cons
+      ... = a :: as           : by rw HI, },
 end
 
 -- 7ª demostración
@@ -88,42 +87,41 @@ example : conc xs [] = xs :=
 list.rec_on xs
   ( show conc [] [] = [], from calc
       conc [] [] = [] : by rw conc_nil )
-  ( assume x xs,
-    assume HI : conc xs [] = xs,
-    show conc (x :: xs) [] = x :: xs, from calc
-      conc (x :: xs) []
-          = x :: (conc xs []) : by rw conc_cons
-      ... = x :: xs           : by rw HI)
+  ( assume a as,
+    assume HI : conc as [] = as,
+    show conc (a :: as) [] = a :: as, from calc
+      conc (a :: as) []
+          = a :: (conc as []) : by rw conc_cons
+      ... = a :: as           : by rw HI)
 
 -- 8ª demostración
 example : conc xs [] = xs :=
 list.rec_on xs
   ( show conc [] [] = [], by simp)
-  ( assume x xs,
-    assume HI : conc xs [] = xs,
-    show conc (x :: xs) [] = x :: xs, by simp [HI])
+  ( assume a as,
+    assume HI : conc as [] = as,
+    show conc (a :: as) [] = a :: as, by simp [HI])
 
 -- 9ª demostración
 example : conc xs [] = xs :=
 list.rec_on xs
   (by simp)
-  (λ x xs HI, by simp [HI])
+  (λ a as HI, by simp [HI])
 
 -- 10ª demostración
 lemma conc_nil_1:
   ∀ xs : list α, conc xs [] = xs
-| []        := by calc
-    conc [] [] = [] : by rw conc_nil
-| (x :: xs) := by calc
-    conc (x :: xs) []
-        = x :: conc xs [] : by rw conc_cons
-    ... = x :: xs         : by rw conc_nil_1
+| []        := by rw conc_nil
+| (a :: as) := by calc
+    conc (a :: as) []
+        = a :: conc as [] : by rw conc_cons
+    ... = a :: as         : by rw conc_nil_1
 
 -- 11ª demostración
 lemma conc_nil_2:
   ∀ xs : list α, conc xs [] = xs
 | []        := by simp
-| (x :: xs) := by simp [conc_nil_2 xs]
+| (a :: as) := by simp [conc_nil_2 as]
 
 -- Comentarios sobre la función (++)
 -- + Es equivalente a la función conc.
@@ -135,9 +133,12 @@ lemma conc_nil_2:
 -- + Se puede evaluar. Por ejemplo,
 --      #eval [1,4] ++ [2,4,1,3]
 -- + Se puede demostrar. Por ejemplo,
---      example : xs ++ [] = xs :=
---      by induction xs ; simp [*]
---
---      example : xs ++ [] = xs :=
---      -- by library_search
---      append_nil xs
+example : xs ++ [] = xs :=
+by induction xs ; simp [*]
+
+example : xs ++ [] = xs :=
+-- by library_search
+append_nil xs
+
+example : xs ++ [] = xs :=
+by simp
