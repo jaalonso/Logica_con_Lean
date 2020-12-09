@@ -11,7 +11,7 @@
 
 # * Contenido                                                             :TOC:
 
-#+LATEX: \input Ejercicios_de_logica_proposicional_con_Lean_Preambulo
+#+LATEX: \input Ejercicios_de_LP_con_Lean_Preambulo
 
 * Introducción
 
@@ -37,7 +37,7 @@ sesión de Lean en la Web que contiene la solución del ejercicio.
 
 ** p ⟶ q, p ⊢ q
    #+INCLUDE: "./src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean" src lean
-   Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean][sesión en Lean Web]]. y al vídeo.
+   Enlaces al [[https://github.com/jaalonso/Logica_con_Lean/blob/master/src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Ejercicios/Pruebas_de_p_⟶_q,_p ⊢_q.lean][sesión en Lean Web]].
 
 ** p → q, q → r, p ⊢ r
    #+INCLUDE: "./src/1_Proposicional/Ejercicios/p→q,q→r,p⊢r.lean" src lean
