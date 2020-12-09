@@ -17,7 +17,7 @@
 
 Este libro es una colección de soluciones de ejercicios de lógica de primer
 orden (LPO) formalizadas con [[https://leanprover-community.github.io/][Lean]] que complementa el libro de [[https://github.com/jaalonso/Logica_con_Lean/raw/master/Logica_con_Lean.pdf][Lógica con Lean]] y
-es continuación del libro Ejercicios de lógica proposicional con Lean.
+es continuación del libro [[https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/Ejercicios_de_LP_con_Lean.pdf][Ejercicios de lógica proposicional con Lean]].
 
 En cada capítulo va entrando en juego un nuevo cuantificador y para cada uno de los
 ejercicios se formalizan las soluciones en distintos estilos:
@@ -32,6 +32,11 @@ esenciales.
 
 Además, al final de cada ejercicio se encuentra un enlace al código y otro a una
 sesión de Lean en la Web que contiene la solución del ejercicio.
+
+** ∀x, P x ⟶ Q x ⊢ (∀x, P x) ⟶ (∀x, Q x)
+   #+INCLUDE: "./src/2_LPO/Ejercicios/∀x,Px⟶Qx⊢(∀x,Px)⟶(∀x,Qx).lean" src lean
+   Enlaces al [[./src/2_LPO/Ejercicios/∀x,Px⟶Qx⊢(∀x,Px)⟶(∀x,Qx).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Ejercicios/∀x,Px⟶Qx⊢(∀x,Px)⟶(∀x,Qx).lean][sesión en Lean Web]].
+
 
 * Bibliografía
 
