@@ -4,9 +4,9 @@
 import data.list.basic
 open list
 
-variable {α : Type}
-variable  x : α
-variables (xs ys zs : list α)
+variable  {α : Type}
+variable  (x : α)
+variables (xs ys : list α)
 
 -- ----------------------------------------------------
 -- Nota. Se usará la función conc y sus propiedades
@@ -41,7 +41,7 @@ def esVacia : list α → bool
 | _  := ff
 
 -- #eval esVacia ([] : list ℕ)
--- #eval esVacia [1]
+-- #eval esVacia [1,5]
 
 -- ----------------------------------------------------
 -- Ejercicio 2. Demostrar los siguientes lemas
@@ -69,7 +69,7 @@ rfl
 -- 1ª demostración
 example : esVacia xs = esVacia (conc xs xs) :=
 begin
-  cases xs,
+  cases xs with a as,
   { rw conc_nil, },
   { rw conc_cons,
     rw esVacia_cons,
@@ -77,25 +77,52 @@ begin
 end
 
 -- 2ª demostración
-lemma esVacia_conc_1
-  : ∀ xs : list α, esVacia xs = esVacia (conc xs xs)
-| []        := by calc
-    esVacia [] = esVacia (conc [] []) : by rw conc_nil
-| (x :: xs) := by calc
-    esVacia (x :: xs)
-        = ff                                 : by rw esVacia_cons
-    ... = esVacia (x :: conc xs (x :: xs))   : by rw esVacia_cons
-    ... = esVacia (conc (x :: xs) (x :: xs)) : by rw conc_cons
-
--- 3ª demostración
-lemma esVacia_conc_2
-  : ∀ xs : list α, esVacia xs = esVacia (conc xs xs)
-| []        := by simp
-| (x :: xs) := by simp
+example : esVacia xs = esVacia (conc xs xs) :=
+begin
+  cases xs with a as,
+  { simp, },
+  { simp, },
+end
 
 -- 3ª demostración
 example : esVacia xs = esVacia (conc xs xs) :=
 by cases xs ; simp
+
+-- 4ª demostración
+example : esVacia xs = esVacia (conc xs xs) :=
+list.cases_on xs
+  (show esVacia ([] : list α) = esVacia (conc [] []),
+     from congr_arg esVacia (conc_nil []))
+  (assume a as,
+   show esVacia (a :: as) = esVacia (conc (a :: as) (a :: as)),
+     from calc
+       esVacia (a :: as)
+           = ff                                 : by rw esVacia_cons
+       ... = esVacia (a :: conc as (a :: as))   : by rw esVacia_cons
+       ... = esVacia (conc (a :: as) (a :: as)) : by rw conc_cons)
+
+-- 5ª demostración
+example : esVacia xs = esVacia (conc xs xs) :=
+list.cases_on xs
+  (by simp)
+  (by simp)
+
+-- 6ª demostración
+lemma esVacia_conc_1
+  : ∀ xs : list α, esVacia xs = esVacia (conc xs xs)
+| []        := by calc
+    esVacia [] = esVacia (conc [] []) : by rw conc_nil
+| (a :: as) := by calc
+    esVacia (a :: as)
+        = ff                                 : by rw esVacia_cons
+    ... = esVacia (a :: conc as (a :: as))   : by rw esVacia_cons
+    ... = esVacia (conc (a :: as) (a :: as)) : by rw conc_cons
+
+-- 7ª demostración
+lemma esVacia_conc_2
+  : ∀ xs : list α, esVacia xs = esVacia (conc xs xs)
+| []        := by simp
+| (a :: as) := by simp
 
 -- Comentarios sobre la función is_nil.
 -- + Es equivalente a la función esVacia.
@@ -108,5 +135,5 @@ by cases xs ; simp
 --      #eval is_nil ([] : list ℕ)
 --      #eval is_nil [1]
 -- + Se puede demostrar. Por ejemplo,
---      example : is_nil xs = is_nil (xs ++ xs) :=
---      by cases xs ; finish
+example : is_nil xs = is_nil (xs ++ xs) :=
+by cases xs ; finish

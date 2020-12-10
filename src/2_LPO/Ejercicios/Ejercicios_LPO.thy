@@ -1,86 +1,46 @@
 -- ----------------------------------------------------
-  Ejercicio 1. Demostrar
-       ∀x, P x → Q x ⊢ (∀x, P x) → (∀x, Q x)
--- ----------------------------------------------------
-
-― ‹La demostración automática es›
-lemma ejercicio_1a:
-  "∀x. P x → Q x ⟹ (∀x. P x) → (∀x. Q x)"
-by auto
-
-― ‹La demostración estructurada es›
-lemma ejercicio_1b:
-  assumes "∀x. P x → Q x"
-  shows   "(∀x. P x) → (∀x. Q x)"
-proof
-  assume "∀x. P x"
-  show "∀x. Q x"
-  proof
-    fix a
-    have "P a" using ‹∀x. P x› ..
-    have "P a → Q a" using assms(1) ..
-    thus "Q a" using ‹P a› ..
-  qed
-qed
-
-― ‹La demostración detallada es›
-lemma ejercicio_1c:
-  assumes "∀x. P x → Q x"
-  shows   "(∀x. P x) → (∀x. Q x)"
-proof (rule impI)
-  assume "∀x. P x"
-  show "∀x. Q x"
-  proof (rule allI)
-    fix a
-    have "P a" using ‹∀x. P x› by (rule allE)
-    have "P a → Q a" using assms(1) by (rule allE)
-    thus "Q a" using ‹P a› by (rule mp)
-  qed
-qed
-
--- ----------------------------------------------------
   Ejercicio 2. Demostrar
-       ∃x. ¬(P x) ⊢ ¬(∀x. P x)
+       ∃x. ¬(P x) ⊢ ¬(∀ x. P x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
-lemma ejercicio_2a: "∃x. ¬(P x) ⟹ ¬(∀x. P x)"
+lemma ejercicio_2a: "∃x. ¬(P x) ⟹ ¬(∀ x. P x)"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_2b:
   assumes "∃x. ¬(P x)"
-  shows   "¬(∀x. P x)"
+  shows   "¬(∀ x. P x)"
 proof
-  assume "∀x. P x"
+  assume "∀ x. P x"
   obtain a where "¬(P a)" using assms(1) ..
-  have "P a" using ‹∀x. P x› ..
+  have "P a" using ‹∀ x. P x› ..
   with ‹¬(P a)› show False ..
 qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_2c:
   assumes "∃x. ¬(P x)"
-  shows   "¬(∀x. P x)"
+  shows   "¬(∀ x. P x)"
 proof (rule notI)
-  assume "∀x. P x"
+  assume "∀ x. P x"
   obtain a where "¬(P a)" using assms(1) by (rule exE)
-  have "P a" using ‹∀x. P x› by (rule allE)
+  have "P a" using ‹∀ x. P x› by (rule allE)
   with ‹¬(P a)› show False by (rule notE)
 qed
 
 -- ----------------------------------------------------
   Ejercicio 3. Demostrar
-       ∀x. P x ⊢ ∀y. P y
+       ∀ x. P x ⊢ ∀y. P y
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
-lemma ejercicio_3a: "∀x. P x  ⟹ ∀y. P y"
+lemma ejercicio_3a: "∀ x. P x  ⟹ ∀y. P y"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_3b:
-  assumes "∀x. P x"
+  assumes "∀ x. P x"
   shows   "∀y. P y"
 proof
   fix a
@@ -89,7 +49,7 @@ qed
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_3c:
-  assumes "∀x. P x"
+  assumes "∀ x. P x"
   shows   "∀y. P y"
 proof (rule allI)
   fix a
@@ -98,21 +58,21 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 4. Demostrar
-       ∀x. P x → Q x ⊢ (∀x. ¬(Q x)) → (∀x. ¬ (P x))
+       ∀ x. P x → Q x ⊢ (∀ x. ¬(Q x)) → (∀ x. ¬ (P x))
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_4a:
-  "∀x. P x → Q x ⟹ (∀x. ¬(Q x)) → (∀x. ¬ (P x))"
+  "∀ x. P x → Q x ⟹ (∀ x. ¬(Q x)) → (∀ x. ¬ (P x))"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_4b:
-  assumes "∀x. P x → Q x"
-  shows   "(∀x. ¬(Q x)) → (∀x. ¬ (P x))"
+  assumes "∀ x. P x → Q x"
+  shows   "(∀ x. ¬(Q x)) → (∀ x. ¬ (P x))"
 proof
-  assume "∀x. ¬(Q x)"
-  show "∀x. ¬(P x)"
+  assume "∀ x. ¬(Q x)"
+  show "∀ x. ¬(P x)"
   proof
     fix a
     show "¬(P a)"
@@ -120,7 +80,7 @@ proof
       assume "P a"
       have "P a → Q a" using assms ..
       hence "Q a" using ‹P a› ..
-      have "¬(Q a)" using ‹∀x. ¬(Q x)› ..
+      have "¬(Q a)" using ‹∀ x. ¬(Q x)› ..
       thus False using ‹Q a› ..
     qed
   qed
@@ -128,11 +88,11 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_4c:
-  assumes "∀x. P x → Q x"
-  shows   "(∀x. ¬(Q x)) → (∀x. ¬ (P x))"
+  assumes "∀ x. P x → Q x"
+  shows   "(∀ x. ¬(Q x)) → (∀ x. ¬ (P x))"
 proof (rule impI)
-  assume "∀x. ¬(Q x)"
-  show "∀x. ¬(P x)"
+  assume "∀ x. ¬(Q x)"
+  show "∀ x. ¬(P x)"
   proof (rule allI)
     fix a
     show "¬(P a)"
@@ -140,7 +100,7 @@ proof (rule impI)
       assume "P a"
       have "P a → Q a" using assms by (rule allE)
       hence "Q a" using ‹P a› by (rule mp)
-      have "¬(Q a)" using ‹∀x. ¬(Q x)› by (rule allE)
+      have "¬(Q a)" using ‹∀ x. ¬(Q x)› by (rule allE)
       thus False using ‹Q a› by (rule notE)
     qed
   qed
@@ -148,17 +108,17 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 5. Demostrar
-       ∀x. P x  → ¬(Q x) ⊢ ¬(∃x. P x ∧ Q x)
+       ∀ x. P x  → ¬(Q x) ⊢ ¬(∃x. P x ∧ Q x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_5a:
-  "∀x. P x  → ¬(Q x) ⟹ ¬(∃x. P x ∧ Q x)"
+  "∀ x. P x  → ¬(Q x) ⟹ ¬(∃x. P x ∧ Q x)"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_5b:
-  assumes "∀x. P x  → ¬(Q x)"
+  assumes "∀ x. P x  → ¬(Q x)"
   shows   "¬(∃x. P x ∧ Q x)"
 proof
   assume "∃x. P x ∧ Q x"
@@ -172,7 +132,7 @@ qed
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_5c:
-  assumes "∀x. P x  → ¬(Q x)"
+  assumes "∀ x. P x  → ¬(Q x)"
   shows   "¬(∃x. P x ∧ Q x)"
 proof (rule notI)
   assume "∃x. P x ∧ Q x"
@@ -186,17 +146,17 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 6. Demostrar
-       ∀x y. P x y ⊢ ∀u v. P u v
+       ∀ x y. P x y ⊢ ∀u v. P u v
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_6a:
-  "∀x y. P x y ⟹ ∀u v. P u v"
+  "∀ x y. P x y ⟹ ∀u v. P u v"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_6b:
-  assumes "∀x y. P x y"
+  assumes "∀ x y. P x y"
   shows   "∀u v. P u v"
 proof
   fix a
@@ -210,7 +170,7 @@ qed
 
 ― ‹La demostración estructurada simplificada es›
 lemma ejercicio_6b2:
-  assumes "∀x y. P x y"
+  assumes "∀ x y. P x y"
   shows   "∀u v. P u v"
 proof (rule allI)+
   fix a b
@@ -220,7 +180,7 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_6c:
-  assumes "∀x y. P x y"
+  assumes "∀ x y. P x y"
   shows   "∀u v. P u v"
 proof (rule allI)+
   fix a b
@@ -387,18 +347,18 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 11. Demostrar
-       (∃x. P x) → Q a ⊢ ∀x. P x → Q a
+       (∃x. P x) → Q a ⊢ ∀ x. P x → Q a
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_11a:
-  "(∃x. P x) → Q a ⟹ ∀x. P x → Q a"
+  "(∃x. P x) → Q a ⟹ ∀ x. P x → Q a"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_11b:
   assumes "(∃x. P x) → Q a"
-  shows   "∀x. P x → Q a"
+  shows   "∀ x. P x → Q a"
 proof
   fix b
   show "P b → Q a"
@@ -412,7 +372,7 @@ qed
 ― ‹La demostración detallada es›
 lemma ejercicio_11c:
   assumes "(∃x. P x) → Q a"
-  shows   "∀x. P x → Q a"
+  shows   "∀ x. P x → Q a"
 proof (rule allI)
   fix b
   show "P b → Q a"
@@ -425,17 +385,17 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 12. Demostrar
-       ∀x. P x → Q a ⊢ ∃ x. P x → Q a
+       ∀ x. P x → Q a ⊢ ∃ x. P x → Q a
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_12a:
-  "∀x. P x → Q a ⟹ ∃x. P x → Q a"
+  "∀ x. P x → Q a ⟹ ∃x. P x → Q a"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_12b:
-  assumes "∀x. P x → Q a"
+  assumes "∀ x. P x → Q a"
   shows   "∃x. P x → Q a"
 proof -
   have "P b → Q a" using assms ..
@@ -444,7 +404,7 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_12c:
-  assumes "∀x. P x → Q a"
+  assumes "∀ x. P x → Q a"
   shows   "∃x. P x → Q a"
 proof -
   have "P b → Q a" using assms by (rule allE)
@@ -453,28 +413,28 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 13. Demostrar
-       (∀x. P x) ∨ (∀x. Q x) ⊢ ∀x. P x ∨ Q x
+       (∀ x. P x) ∨ (∀ x. Q x) ⊢ ∀ x. P x ∨ Q x
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_13a:
-  "(∀x. P x) ∨ (∀x. Q x) ⟹ ∀x. P x ∨ Q x"
+  "(∀ x. P x) ∨ (∀ x. Q x) ⟹ ∀ x. P x ∨ Q x"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_13b:
-  assumes "(∀x. P x) ∨ (∀x. Q x)"
-  shows   "∀x. P x ∨ Q x"
+  assumes "(∀ x. P x) ∨ (∀ x. Q x)"
+  shows   "∀ x. P x ∨ Q x"
 proof
   fix a
   note assms
   thus "P a ∨ Q a"
   proof
-    assume "∀x. P x"
+    assume "∀ x. P x"
     hence "P a" ..
     thus "P a ∨ Q a" ..
   next
-    assume "∀x. Q x"
+    assume "∀ x. Q x"
     hence "Q a" ..
     thus "P a ∨ Q a" ..
   qed
@@ -482,18 +442,18 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_13c:
-  assumes "(∀x. P x) ∨ (∀x. Q x)"
-  shows   "∀x. P x ∨ Q x"
+  assumes "(∀ x. P x) ∨ (∀ x. Q x)"
+  shows   "∀ x. P x ∨ Q x"
 proof (rule  allI)
   fix a
   note assms
   thus "P a ∨ Q a"
   proof (rule disjE)
-    assume "∀x. P x"
+    assume "∀ x. P x"
     hence "P a" by (rule allE)
     thus "P a ∨ Q a" by (rule disjI1)
   next
-    assume "∀x. Q x"
+    assume "∀ x. Q x"
     hence "Q a" by (rule allE)
     thus "P a ∨ Q a" by (rule disjI2)
   qed
@@ -539,22 +499,22 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 15. Demostrar
-       ∀x y. P y → Q x ⊢ (∃y. P y) → (∀x. Q x)
+       ∀ x y. P y → Q x ⊢ (∃y. P y) → (∀ x. Q x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_15a:
-  "∀x y. P y → Q x ⟹ (∃y. P y) → (∀x. Q x)"
+  "∀ x y. P y → Q x ⟹ (∃y. P y) → (∀ x. Q x)"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_15b:
-  assumes "∀x y. P y → Q x"
-  shows   "(∃y. P y) → (∀x. Q x)"
+  assumes "∀ x y. P y → Q x"
+  shows   "(∃y. P y) → (∀ x. Q x)"
 proof
   assume "∃y. P y"
   then obtain b where "P b" ..
-  show "∀x. Q x"
+  show "∀ x. Q x"
   proof
     fix a
     have "∀y. P y → Q a" using assms ..
@@ -565,12 +525,12 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_15c:
-  assumes "∀x y. P y → Q x"
-  shows   "(∃y. P y) → (∀x. Q x)"
+  assumes "∀ x y. P y → Q x"
+  shows   "(∃y. P y) → (∀ x. Q x)"
 proof (rule impI)
   assume "∃y. P y"
   then obtain b where "P b" by (rule exE)
-  show "∀x. Q x"
+  show "∀ x. Q x"
   proof (rule allI)
     fix a
     have "∀y. P y → Q a" using assms by (rule allE)
@@ -581,21 +541,21 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 16. Demostrar
-       ¬(∀x. ¬(P x)) ⊢ ∃x. P x
+       ¬(∀ x. ¬(P x)) ⊢ ∃x. P x
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_16a:
-  "¬(∀x. ¬(P x)) ⟹ ∃x. P x"
+  "¬(∀ x. ¬(P x)) ⟹ ∃x. P x"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_16b:
-  assumes "¬(∀x. ¬(P x))"
+  assumes "¬(∀ x. ¬(P x))"
   shows   "∃x. P x"
 proof (rule ccontr)
   assume "¬(∃x. P x)"
-  have "∀x. ¬(P x)"
+  have "∀ x. ¬(P x)"
   proof
     fix a
     show "¬(P a)"
@@ -610,11 +570,11 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_16c:
-  assumes "¬(∀x. ¬(P x))"
+  assumes "¬(∀ x. ¬(P x))"
   shows   "∃x. P x"
 proof (rule ccontr)
   assume "¬(∃x. P x)"
-  have "∀x. ¬(P x)"
+  have "∀ x. ¬(P x)"
   proof (rule allI)
     fix a
     show "¬(P a)"
@@ -629,17 +589,17 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 17. Demostrar
-       ∀x. ¬(P x) ⊢ ¬(∃x. P x)
+       ∀ x. ¬(P x) ⊢ ¬(∃x. P x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_17a:
-  "∀x. ¬(P x) ⟹ ¬(∃x. P x)"
+  "∀ x. ¬(P x) ⟹ ¬(∃x. P x)"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_17b:
-  assumes "∀x. ¬(P x)"
+  assumes "∀ x. ¬(P x)"
   shows   "¬(∃x. P x)"
 proof
   assume "∃x. P x"
@@ -650,7 +610,7 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_17c:
-  assumes "∀x. ¬(P x)"
+  assumes "∀ x. ¬(P x)"
   shows   "¬(∃x. P x)"
 proof (rule notI)
   assume "∃x. P x"
@@ -661,91 +621,91 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 18. Demostrar
-       ∃x. P x ⊢ ¬(∀x. ¬(P x))
+       ∃x. P x ⊢ ¬(∀ x. ¬(P x))
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_18a:
-  "∃x. P x ⟹ ¬(∀x. ¬(P x))"
+  "∃x. P x ⟹ ¬(∀ x. ¬(P x))"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_18b:
   assumes "∃x. P x"
-  shows   "¬(∀x. ¬(P x))"
+  shows   "¬(∀ x. ¬(P x))"
 proof
-  assume "∀x. ¬(P x)"
+  assume "∀ x. ¬(P x)"
   obtain a where "P a" using assms ..
-  have "¬(P a)" using ‹∀x. ¬(P x)› ..
+  have "¬(P a)" using ‹∀ x. ¬(P x)› ..
   thus False using ‹P a› ..
 qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_18c:
   assumes "∃x. P x"
-  shows   "¬(∀x. ¬(P x))"
+  shows   "¬(∀ x. ¬(P x))"
 proof (rule notI)
-  assume "∀x. ¬(P x)"
+  assume "∀ x. ¬(P x)"
   obtain a where "P a" using assms by (rule exE)
-  have "¬(P a)" using ‹∀x. ¬(P x)› by (rule allE)
+  have "¬(P a)" using ‹∀ x. ¬(P x)› by (rule allE)
   thus False using ‹P a› by (rule notE)
 qed
 
 -- ----------------------------------------------------
   Ejercicio 19. Demostrar
-       P a → (∀x. Q x) ⊢ ∀x. P a → Q x
+       P a → (∀ x. Q x) ⊢ ∀ x. P a → Q x
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_19a:
-  "P a → (∀x. Q x) ⟹ ∀x. P a → Q x"
+  "P a → (∀ x. Q x) ⟹ ∀ x. P a → Q x"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_19b:
-  assumes "P a → (∀x. Q x)"
-  shows   "∀x. P a → Q x"
+  assumes "P a → (∀ x. Q x)"
+  shows   "∀ x. P a → Q x"
 proof
   fix b
   show "P a → Q b"
   proof
     assume "P a"
-    with assms have "∀x. Q x" ..
+    with assms have "∀ x. Q x" ..
     thus "Q b" ..
   qed
 qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_19c:
-  assumes "P a → (∀x. Q x)"
-  shows   "∀x. P a → Q x"
+  assumes "P a → (∀ x. Q x)"
+  shows   "∀ x. P a → Q x"
 proof (rule allI)
   fix b
   show "P a → Q b"
   proof (rule impI)
     assume "P a"
-    with assms have "∀x. Q x" by (rule mp)
+    with assms have "∀ x. Q x" by (rule mp)
     thus "Q b" by (rule allE)
   qed
 qed
 
 -- ----------------------------------------------------
   Ejercicio 20. Demostrar
-       {∀x y z. R x y ∧ R y z → R x z,
-        ∀x. ¬(R x x)}
-       ⊢ ∀x y. R x y → ¬(R y x)
+       {∀ x y z. R x y ∧ R y z → R x z,
+        ∀ x. ¬(R x x)}
+       ⊢ ∀ x y. R x y → ¬(R y x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_20a:
-  "⟦∀x y z. R x y ∧ R y z → R x z; ∀x. ¬(R x x)⟧ ⟹ ∀x y. R x y → ¬(R y x)"
+  "⟦∀ x y z. R x y ∧ R y z → R x z; ∀ x. ¬(R x x)⟧ ⟹ ∀ x y. R x y → ¬(R y x)"
 by metis
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_20b:
-  assumes "∀x y z. R x y ∧ R y z → R x z"
-          "∀x. ¬(R x x)"
-  shows   "∀x y. R x y → ¬(R y x)"
+  assumes "∀ x y z. R x y ∧ R y z → R x z"
+          "∀ x. ¬(R x x)"
+  shows   "∀ x y. R x y → ¬(R y x)"
 proof (rule allI)+
   fix a b
   show "R a b → ¬(R b a)"
@@ -770,9 +730,9 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_20c:
-  assumes "∀x y z. R x y ∧ R y z → R x z"
-          "∀x. ¬(R x x)"
-  shows   "∀x y. R x y → ¬(R y x)"
+  assumes "∀ x y z. R x y ∧ R y z → R x z"
+          "∀ x. ¬(R x x)"
+  shows   "∀ x y. R x y → ¬(R y x)"
 proof (rule allI)+
   fix a b
   show "R a b → ¬(R b a)"
@@ -797,19 +757,19 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 21. Demostrar
-     {∀x. P x ∨ Q x, ∃x. ¬(Q x), ∀x. R x → ¬(P x)} ⊢ ∃x. ¬(R x)
+     {∀ x. P x ∨ Q x, ∃x. ¬(Q x), ∀ x. R x → ¬(P x)} ⊢ ∃x. ¬(R x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_21a:
-  "⟦∀x. P x ∨ Q x; ∃x. ¬(Q x); ∀x. R x → ¬(P x)⟧ ⟹ ∃x. ¬(R x)"
+  "⟦∀ x. P x ∨ Q x; ∃x. ¬(Q x); ∀ x. R x → ¬(P x)⟧ ⟹ ∃x. ¬(R x)"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_21b:
-  assumes "∀x. P x ∨ Q x"
+  assumes "∀ x. P x ∨ Q x"
           "∃x. ¬(Q x)"
-          "∀x. R x → ¬(P x)"
+          "∀ x. R x → ¬(P x)"
   shows   "∃x. ¬(R x)"
 proof -
   obtain a where "¬(Q a)" using assms(2) ..
@@ -830,9 +790,9 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_21c:
-  assumes "∀x. P x ∨ Q x"
+  assumes "∀ x. P x ∨ Q x"
           "∃x. ¬(Q x)"
-          "∀x. R x → ¬(P x)"
+          "∀ x. R x → ¬(P x)"
   shows   "∃x. ¬(R x)"
 proof -
   obtain a where "¬(Q a)" using assms(2) by (rule exE)
@@ -853,19 +813,19 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 22. Demostrar
-     {∀x. P x → Q x ∨ R x, ¬(∃x. P x ∧ R x)} ⊢ ∀x. P x → Q x
+     {∀ x. P x → Q x ∨ R x, ¬(∃x. P x ∧ R x)} ⊢ ∀ x. P x → Q x
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_22a:
-  "⟦∀x. P x → Q x ∨ R x; ¬(∃x. P x ∧ R x)⟧ ⟹ ∀x. P x → Q x"
+  "⟦∀ x. P x → Q x ∨ R x; ¬(∃x. P x ∧ R x)⟧ ⟹ ∀ x. P x → Q x"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_22b:
-  assumes "∀x. P x → Q x ∨ R x"
+  assumes "∀ x. P x → Q x ∨ R x"
           "¬(∃x. P x ∧ R x)"
-  shows   "∀x. P x → Q x"
+  shows   "∀ x. P x → Q x"
 proof
   fix a
   show "P a → Q a"
@@ -888,9 +848,9 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_22c:
-  assumes "∀x. P x → Q x ∨ R x"
+  assumes "∀ x. P x → Q x ∨ R x"
           "¬(∃x. P x ∧ R x)"
-  shows   "∀x. P x → Q x"
+  shows   "∀ x. P x → Q x"
 proof (rule allI)
   fix a
   show "P a → Q a"
@@ -996,27 +956,27 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 25. Demostrar
-       (∀x. P x → Q) ⟷ ((∃x. P x) → Q)
+       (∀ x. P x → Q) ⟷ ((∃x. P x) → Q)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
-lemma ejercicio_25a: "(∀x. P x → Q) ⟷ ((∃x. P x) → Q)"
+lemma ejercicio_25a: "(∀ x. P x → Q) ⟷ ((∃x. P x) → Q)"
 by auto
 
 ― ‹La demostración estructurada es›
-lemma ejercicio_25b: "(∀x. P x → Q) ⟷ ((∃x. P x) → Q)"
+lemma ejercicio_25b: "(∀ x. P x → Q) ⟷ ((∃x. P x) → Q)"
 proof
-  assume "∀x. P x → Q"
+  assume "∀ x. P x → Q"
   show "(∃x. P x) → Q"
   proof
     assume "∃x. P x"
     then obtain a where "P a" ..
-    have "P a → Q" using ‹∀x. P x → Q› ..
+    have "P a → Q" using ‹∀ x. P x → Q› ..
     thus "Q" using ‹P a› ..
   qed
 next
   assume "(∃x. P x) → Q"
-  show "∀x. P x → Q"
+  show "∀ x. P x → Q"
   proof
     fix b
     show "P b → Q"
@@ -1029,19 +989,19 @@ next
 qed
 
 ― ‹La demostración detallada es›
-lemma ejercicio_25c: "(∀x. P x → Q) ⟷ ((∃x. P x) → Q)"
+lemma ejercicio_25c: "(∀ x. P x → Q) ⟷ ((∃x. P x) → Q)"
 proof (rule iffI)
-  assume "∀x. P x → Q"
+  assume "∀ x. P x → Q"
   show "(∃x. P x) → Q"
   proof (rule impI)
     assume "∃x. P x"
     then obtain a where "P a" by (rule exE)
-    have "P a → Q" using ‹∀x. P x → Q› by (rule allE)
+    have "P a → Q" using ‹∀ x. P x → Q› by (rule allE)
     thus "Q" using ‹P a› by (rule mp)
   qed
 next
   assume "(∃x. P x) → Q"
-  show "∀x. P x → Q"
+  show "∀ x. P x → Q"
   proof (rule allI)
     fix b
     show "P b → Q"
@@ -1055,79 +1015,79 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 26. Demostrar
-       ((∀x. P x) ∧ (∀x. Q x)) ⟷ (∀x. P x ∧ Q x)
+       ((∀ x. P x) ∧ (∀ x. Q x)) ⟷ (∀ x. P x ∧ Q x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
-lemma ejercicio_26a: "((∀x. P x) ∧ (∀x. Q x)) ⟷ (∀x. P x ∧ Q x)"
+lemma ejercicio_26a: "((∀ x. P x) ∧ (∀ x. Q x)) ⟷ (∀ x. P x ∧ Q x)"
 by auto
 
 ― ‹La demostración estructurada es›
-lemma ejercicio_26b: "((∀x. P x) ∧ (∀x. Q x)) ⟷ (∀x. P x ∧ Q x)"
+lemma ejercicio_26b: "((∀ x. P x) ∧ (∀ x. Q x)) ⟷ (∀ x. P x ∧ Q x)"
 proof
-  assume "(∀x. P x) ∧ (∀x. Q x)"
-  show "∀x. P x ∧ Q x"
+  assume "(∀ x. P x) ∧ (∀ x. Q x)"
+  show "∀ x. P x ∧ Q x"
   proof
     fix a
-    have "∀x. P x" using ‹(∀x. P x) ∧ (∀x. Q x)› ..
-    have "∀x. Q x" using ‹(∀x. P x) ∧ (∀x. Q x)› ..
+    have "∀ x. P x" using ‹(∀ x. P x) ∧ (∀ x. Q x)› ..
+    have "∀ x. Q x" using ‹(∀ x. P x) ∧ (∀ x. Q x)› ..
     hence "Q a" ..
-    have "P a" using ‹∀x. P x› ..
+    have "P a" using ‹∀ x. P x› ..
     thus "P a ∧ Q a" using ‹Q a› ..
   qed
 next
-  assume "∀x. P x ∧ Q x"
-  have "∀x. P x"
+  assume "∀ x. P x ∧ Q x"
+  have "∀ x. P x"
   proof
     fix a
-    have "P a ∧ Q a" using ‹∀x. P x ∧ Q x› ..
+    have "P a ∧ Q a" using ‹∀ x. P x ∧ Q x› ..
     thus "P a" ..
   qed
-  moreover have "∀x. Q x"
+  moreover have "∀ x. Q x"
   proof
     fix a
-    have "P a ∧ Q a" using ‹∀x. P x ∧ Q x› ..
+    have "P a ∧ Q a" using ‹∀ x. P x ∧ Q x› ..
     thus "Q a" ..
   qed
-  ultimately show "(∀x. P x) ∧ (∀x. Q x)" ..
+  ultimately show "(∀ x. P x) ∧ (∀ x. Q x)" ..
 qed
 
 ― ‹La demostración detallada es›
-lemma ejercicio_26c: "((∀x. P x) ∧ (∀x. Q x)) = (∀x. P x ∧ Q x)"
+lemma ejercicio_26c: "((∀ x. P x) ∧ (∀ x. Q x)) = (∀ x. P x ∧ Q x)"
 proof (rule iffI)
-  assume "(∀x. P x) ∧ (∀x. Q x)"
-  show "∀x. P x ∧ Q x"
+  assume "(∀ x. P x) ∧ (∀ x. Q x)"
+  show "∀ x. P x ∧ Q x"
   proof (rule allI)
     fix a
-    have "∀x. P x" using ‹(∀x. P x) ∧ (∀x. Q x)› by (rule conjunct1)
-    have "∀x. Q x" using ‹(∀x. P x) ∧ (∀x. Q x)› by (rule conjunct2)
+    have "∀ x. P x" using ‹(∀ x. P x) ∧ (∀ x. Q x)› by (rule conjunct1)
+    have "∀ x. Q x" using ‹(∀ x. P x) ∧ (∀ x. Q x)› by (rule conjunct2)
     hence "Q a" by (rule allE)
-    have "P a" using ‹∀x. P x› by (rule allE)
+    have "P a" using ‹∀ x. P x› by (rule allE)
     thus "P a ∧ Q a" using ‹Q a› by (rule conjI)
   qed
 next
-  assume "∀x. P x ∧ Q x"
-  have "∀x. P x"
+  assume "∀ x. P x ∧ Q x"
+  have "∀ x. P x"
   proof (rule allI)
     fix a
-    have "P a ∧ Q a" using ‹∀x. P x ∧ Q x› by (rule allE)
+    have "P a ∧ Q a" using ‹∀ x. P x ∧ Q x› by (rule allE)
     thus "P a" by (rule conjunct1)
   qed
-  moreover have "∀x. Q x"
+  moreover have "∀ x. Q x"
   proof (rule allI)
     fix a
-    have "P a ∧ Q a" using ‹∀x. P x ∧ Q x› by (rule allE)
+    have "P a ∧ Q a" using ‹∀ x. P x ∧ Q x› by (rule allE)
     thus "Q a" by (rule conjunct2)
   qed
-  ultimately show "(∀x. P x) ∧ (∀x. Q x)" by (rule conjI)
+  ultimately show "(∀ x. P x) ∧ (∀ x. Q x)" by (rule conjI)
 qed
 
 -- ----------------------------------------------------
   Ejercicio 27. Demostrar o refutar
-       ((∀x. P x) ∨ (∀x. Q x)) ⟷ (∀x. P x ∨ Q x)
+       ((∀ x. P x) ∨ (∀ x. Q x)) ⟷ (∀ x. P x ∨ Q x)
 -- ----------------------------------------------------
 
-lemma ejercicio_27: "((∀x. P x) ∨ (∀x. Q x)) ⟷ (∀x. P x ∨ Q x)"
+lemma ejercicio_27: "((∀ x. P x) ∨ (∀ x. Q x)) ⟷ (∀ x. P x ∨ Q x)"
 oops
 
 (*
@@ -1212,11 +1172,11 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 29. Demostrar o refutar
-       (∀x. ∃y. P x y) → (∃y. ∀x. P x y)
+       (∀ x. ∃y. P x y) → (∃y. ∀ x. P x y)
 -- ----------------------------------------------------
 
 lemma ejercicio_29:
-  "(∀x. ∃y. P x y) → (∃y. ∀x. P x y)"
+  "(∀ x. ∃y. P x y) → (∃y. ∀ x. P x y)"
 quickcheck
 (*
 Quickcheck found a counterexample:
@@ -1227,23 +1187,23 @@ oops
 
 -- ----------------------------------------------------
   Ejercicio 30. Demostrar o refutar
-       (¬(∀x. P x)) ⟷ (∃x. ¬P x)
+       (¬(∀ x. P x)) ⟷ (∃x. ¬P x)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_30a:
-  "(¬(∀x. P x)) ⟷ (∃x. ¬P x)"
+  "(¬(∀ x. P x)) ⟷ (∃x. ¬P x)"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_30b:
-  "(¬(∀x. P x)) ⟷ (∃x. ¬P x)"
+  "(¬(∀ x. P x)) ⟷ (∃x. ¬P x)"
 proof
-  assume "¬(∀x. P x)"
+  assume "¬(∀ x. P x)"
   show "∃x. ¬P x"
   proof (rule ccontr)
     assume "¬(∃x. ¬P x)"
-    have "∀x. P x"
+    have "∀ x. P x"
     proof
       fix a
       show "P a"
@@ -1253,14 +1213,14 @@ proof
         with ‹¬(∃x. ¬P x)› show False ..
       qed
     qed
-    with ‹¬(∀x. P x)› show False ..
+    with ‹¬(∀ x. P x)› show False ..
   qed
 next
   assume "∃x. ¬P x"
   then obtain a where "¬P a" ..
-  show "¬(∀x. P x)"
+  show "¬(∀ x. P x)"
   proof
-    assume "∀x. P x"
+    assume "∀ x. P x"
     hence "P a" ..
     with ‹¬P a› show False ..
   qed
@@ -1268,13 +1228,13 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_30c:
-  "(¬(∀x. P x)) ⟷ (∃x. ¬P x)"
+  "(¬(∀ x. P x)) ⟷ (∃x. ¬P x)"
 proof (rule iffI)
-  assume "¬(∀x. P x)"
+  assume "¬(∀ x. P x)"
   show "∃x. ¬P x"
   proof (rule ccontr)
     assume "¬(∃x. ¬P x)"
-    have "∀x. P x"
+    have "∀ x. P x"
     proof (rule allI)
       fix a
       show "P a"
@@ -1284,14 +1244,14 @@ proof (rule iffI)
         with ‹¬(∃x. ¬P x)› show False by (rule notE)
       qed
     qed
-    with ‹¬(∀x. P x)› show False by (rule notE)
+    with ‹¬(∀ x. P x)› show False by (rule notE)
   qed
 next
   assume "∃x. ¬P x"
   then obtain a where "¬P a" by (rule exE)
-  show "¬(∀x. P x)"
+  show "¬(∀ x. P x)"
   proof (rule notI)
-    assume "∀x. P x"
+    assume "∀ x. P x"
     hence "P a" by (rule allE)
     show False using ‹¬P a› ‹P a› by (rule notE)
   qed
@@ -1301,18 +1261,18 @@ section ‹Ejercicios sobre igualdad›
 
 -- ----------------------------------------------------
   Ejercicio 31. Demostrar o refutar
-       P a ⟹ ∀x. x = a → P x
+       P a ⟹ ∀ x. x = a → P x
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_31a:
-  "P a ⟹ ∀x. x = a → P x"
+  "P a ⟹ ∀ x. x = a → P x"
 by auto
 
 ― ‹La demostración estructurada es›
 lemma ejercicio_31b:
   assumes "P a"
-  shows   "∀x. x = a → P x"
+  shows   "∀ x. x = a → P x"
 proof
   fix b
   show "b = a → P b"
@@ -1325,7 +1285,7 @@ qed
 ― ‹La demostración detallada es›
 lemma ejercicio_31c:
   assumes "P a"
-  shows   "∀x. x = a → P x"
+  shows   "∀ x. x = a → P x"
 proof (rule allI)
   fix b
   show "b = a → P b"
@@ -1417,20 +1377,20 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 33. Demostrar o refutar
-     {∀x. P a x x,
-      ∀x y z. P x y z → P (f x) y (f z)}
+     {∀ x. P a x x,
+      ∀ x y z. P x y z → P (f x) y (f z)}
      ⊢ P (f a) a (f a)
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_33a:
-  "⟦∀x. P a x x; ∀x y z. P x y z → P (f x) y (f z)⟧ ⟹ P (f a) a (f a)"
+  "⟦∀ x. P a x x; ∀ x y z. P x y z → P (f x) y (f z)⟧ ⟹ P (f a) a (f a)"
 by auto
 
 ― ‹La demostración estructura es›
 lemma ejercicio_33b:
-  assumes "∀x. P a x x"
-          "∀x y z. P x y z → P (f x) y (f z)"
+  assumes "∀ x. P a x x"
+          "∀ x y z. P x y z → P (f x) y (f z)"
   shows   "P (f a) a (f a)"
 proof -
   have "P a a a" using assms(1) ..
@@ -1442,8 +1402,8 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_33c:
-  assumes "∀x. P a x x"
-          "∀x y z. P x y z → P (f x) y (f z)"
+  assumes "∀ x. P a x x"
+          "∀ x y z. P x y z → P (f x) y (f z)"
   shows   "P (f a) a (f a)"
 proof -
   have "P a a a" using assms(1) by (rule allE)
@@ -1455,21 +1415,21 @@ qed
 
 -- ----------------------------------------------------
   Ejercicio 34. Demostrar o refutar
-     {∀x. P a x x,
-      ∀x y z. P x y z → P (f x) y (f z)⟧
+     {∀ x. P a x x,
+      ∀ x y z. P x y z → P (f x) y (f z)⟧
      ⊢ ∃z. P (f a) z (f (f a))
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_34a:
-  "⟦∀x. P a x x; ∀x y z. P x y z → P (f x) y (f z)⟧
+  "⟦∀ x. P a x x; ∀ x y z. P x y z → P (f x) y (f z)⟧
    ⟹ ∃z. P (f a) z (f (f a))"
 by metis
 
 ― ‹La demostración estructura es›
 lemma ejercicio_34b:
-  assumes "∀x. P a x x"
-          "∀x y z. P x y z → P (f x) y (f z)"
+  assumes "∀ x. P a x x"
+          "∀ x y z. P x y z → P (f x) y (f z)"
   shows   "∃z. P (f a) z (f (f a))"
 proof -
   have "P a (f a) (f a)" using assms(1) ..
@@ -1482,8 +1442,8 @@ qed
 
 ― ‹La demostración detallada es›
 lemma ejercicio_34c:
-  assumes "∀x. P a x x"
-          "∀x y z. P x y z → P (f x) y (f z)"
+  assumes "∀ x. P a x x"
+          "∀ x y z. P x y z → P (f x) y (f z)"
   shows   "∃z. P (f a) z (f (f a))"
 proof -
   have "P a (f a) (f a)" using assms(1) by (rule allE)
@@ -1497,19 +1457,19 @@ qed
 -- ----------------------------------------------------
   Ejercicio 35. Demostrar o refutar
      {∀y. Q a y,
-      ∀x y. Q x y → Q (s x) (s y)}
+      ∀ x y. Q x y → Q (s x) (s y)}
      ⊢ ∃z. Qa z ∧ Q z (s (s a))
 -- ----------------------------------------------------
 
 ― ‹La demostración automática es›
 lemma ejercicio_35a:
-  "⟦∀y. Q a y; ∀x y. Q x y → Q (s x) (s y)⟧ ⟹ ∃z. Q a z ∧ Q z (s (s a))"
+  "⟦∀y. Q a y; ∀ x y. Q x y → Q (s x) (s y)⟧ ⟹ ∃z. Q a z ∧ Q z (s (s a))"
 by auto
 
 ― ‹La demostración estructura es›
 lemma ejercicio_35b:
   assumes "∀y. Q a y"
-          "∀x y. Q x y → Q (s x) (s y)"
+          "∀ x y. Q x y → Q (s x) (s y)"
   shows   "∃z. Q a z ∧ Q z (s (s a))"
 proof -
   have "Q a (s a)" using assms(1) ..
@@ -1523,7 +1483,7 @@ qed
 ― ‹La demostración detallada es›
 lemma ejercicio_35c:
   assumes "∀y. Q a y"
-          "∀x y. Q x y → Q (s x) (s y)"
+          "∀ x y. Q x y → Q (s x) (s y)"
   shows   "∃z. Q a z ∧ Q z (s (s a))"
 proof -
   have "Q a (s a)" using assms(1) by (rule allE)

@@ -167,7 +167,7 @@ example
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
-λ h2, h2.elim or.inl (λ h, or.inr (h1 h))
+λ h2, or.elim h2 or.inl (or.inr ∘ h1)
 
 -- 8ª demostración
 example
