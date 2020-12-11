@@ -3,7 +3,7 @@
 
 import tactic
 
-variable (P : Prop)
+variables (P Q : Prop)
 
 -- Eliminación del falso
 -- ---------------------
@@ -16,15 +16,15 @@ variable (P : Prop)
 -- 1ª demostración
 example
   (h : false)
-  : P :=
+  : Q :=
 false.elim h
 
 -- 2ª demostración
 example
   (h : false)
-  : P :=
+  : Q :=
 -- by library_search
-false.rec P h
+false.rec Q h
 
 -- 3ª demostración
 example

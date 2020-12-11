@@ -1,11 +1,11 @@
--- Pruebas de la equivalencia entre las definiciones de inversa
--- ============================================================
+-- Pruebas de la equivalencia entre definiciones de inversa
+-- ========================================================
 
 import data.list.basic
 open list
 
 variable  {α : Type*}
-variable  x : α
+variable  (x : α)
 variables (xs ys : list α)
 
 -- ----------------------------------------------------
@@ -61,8 +61,7 @@ rfl
 
 @[simp]
 lemma inversaAcAux_cons :
-  inversaAcAux (x :: xs) ys =
-  inversaAcAux xs (x :: ys) :=
+  inversaAcAux (x :: xs) ys = inversaAcAux xs (x :: ys) :=
 rfl
 
 -- ----------------------------------------------------
@@ -80,14 +79,16 @@ rfl
 
 -- 1ª demostración
 example :
-  inversaAcAux xs ys = (inversa xs) ++ ys :=
+  ∀ ys, inversaAcAux xs ys = (inversa xs) ++ ys :=
 begin
-  induction xs with x xs HI generalizing ys,
-  { rw inversaAcAux_nil,
+  induction xs with a as HI,
+  { intro,
+    rw inversaAcAux_nil,
     rw inversa_nil,
     rw nil_append, },
-  { rw inversaAcAux_cons,
-    rw (HI (x :: ys)),
+  { intro,
+    rw inversaAcAux_cons,
+    rw (HI (a :: ys)),
     rw inversa_cons,
     rw append_assoc,
     rw singleton_append, },
@@ -95,40 +96,75 @@ end
 
 -- 2ª demostración
 example :
-  inversaAcAux xs ys = (inversa xs) ++ ys :=
+  ∀ ys, inversaAcAux xs ys = (inversa xs) ++ ys :=
 begin
-  induction xs with x xs HI generalizing ys,
-  { calc inversaAcAux [] ys
+  induction xs with a as HI,
+  { intro,
+    calc inversaAcAux [] ys
          = ys               : by rw inversaAcAux_nil
      ... = [] ++ ys         : by rw nil_append
      ... = inversa [] ++ ys : by rw inversa_nil },
-  { calc inversaAcAux (x :: xs) ys
-         = inversaAcAux xs (x :: ys) : by rw inversaAcAux_cons
-     ... = inversa xs ++ (x :: ys)   : by rw (HI (x :: ys))
-     ... = inversa xs ++ ([x] ++ ys) : by rw singleton_append
-     ... = (inversa xs ++ [x]) ++ ys : by rw append_assoc
-     ... = inversa (x :: xs) ++ ys   : by rw inversa_cons },
+  { intro,
+    calc inversaAcAux (a :: as) ys
+         = inversaAcAux as (a :: ys) : by rw inversaAcAux_cons
+     ... = inversa as ++ (a :: ys)   : by rw (HI (a :: ys))
+     ... = inversa as ++ ([a] ++ ys) : by rw singleton_append
+     ... = (inversa as ++ [a]) ++ ys : by rw append_assoc
+     ... = inversa (a :: as) ++ ys   : by rw inversa_cons },
 end
 
 -- 3ª demostración
 example :
   inversaAcAux xs ys = (inversa xs) ++ ys :=
 begin
-  induction xs with x xs HI generalizing ys,
-  { simp, },
-  { simp [HI (x :: ys)], },
+  induction xs with a as HI generalizing ys,
+  { rw inversaAcAux_nil,
+    rw inversa_nil,
+    rw nil_append, },
+  { rw inversaAcAux_cons,
+    rw (HI (a :: ys)),
+    rw inversa_cons,
+    rw append_assoc,
+    rw singleton_append, },
 end
 
 -- 4ª demostración
 example :
   inversaAcAux xs ys = (inversa xs) ++ ys :=
-by induction xs generalizing ys ; simp [*]
+begin
+  induction xs with a as HI generalizing ys,
+  { calc inversaAcAux [] ys
+         = ys               : by rw inversaAcAux_nil
+     ... = [] ++ ys         : by rw nil_append
+     ... = inversa [] ++ ys : by rw inversa_nil },
+  { calc inversaAcAux (a :: as) ys
+         = inversaAcAux as (a :: ys) : by rw inversaAcAux_cons
+     ... = inversa as ++ (a :: ys)   : by rw (HI (a :: ys))
+     ... = inversa as ++ ([a] ++ ys) : by rw singleton_append
+     ... = (inversa as ++ [a]) ++ ys : by rw append_assoc
+     ... = inversa (a :: as) ++ ys   : by rw inversa_cons },
+end
 
 -- 5ª demostración
+example :
+  inversaAcAux xs ys = (inversa xs) ++ ys :=
+begin
+  induction xs with a as HI generalizing ys,
+  { simp, },
+  { simp [HI (a :: ys)], },
+end
+
+-- 6ª demostración
+example :
+  inversaAcAux xs ys = (inversa xs) ++ ys :=
+by induction xs generalizing ys ; simp [*]
+
+-- 7ª demostración
+@[simp]
 lemma inversa_equiv :
   ∀ xs : list α, ∀ ys, inversaAcAux xs ys = (inversa xs) ++ ys
 | []         := by simp
-| (x :: xs)  := by simp [inversa_equiv xs]
+| (a :: as)  := by simp [inversa_equiv as]
 
 -- ----------------------------------------------------
 -- Ejercicio 5. (p. 43) Demostrar que
@@ -145,3 +181,7 @@ calc inversaAc xs
 -- 2ª demostración
 example : inversaAc xs = inversa xs :=
 by simp [inversa_equiv]
+
+-- 3ª demostración
+example : inversaAc xs = inversa xs :=
+by simp

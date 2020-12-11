@@ -28,7 +28,6 @@ show Q → P, from
 --    theorem ejemplo1 : ∀ (P Q : Prop), P → Q → P :=
 --    λ (P Q : Prop) (h1 : P), show Q → P, from λ (h2 : Q), show P, from h1
 
-
 -- 2ª demostración
 example : P → (Q → P) :=
 assume (h1 : P),

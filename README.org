@@ -552,9 +552,9 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 ** Heurística de generalización
 
-*** Pruebas de la equivalencia entre las definiciones de inversa con o sin acumulador
-    Enlaces al [[./src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean][sesión en Lean Web]] y al vídeo.
-    #+INCLUDE: "./src/7_Programas/Pruebas_de_la_equivalencia_entre_las_definiciones_de_inversa_con_o_sin_acumulador.lean" src lean
+*** Pruebas de equivalencia entre definiciones de inversa (Heurística de generalización)
+    Enlaces al [[./src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean" src lean
 
 ** Inducción para funciones de orden superior
 
