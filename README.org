@@ -558,13 +558,13 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 
 ** Inducción para funciones de orden superior
 
+*** Pruebas de la relación entre length y map.
+    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean" src lean
+
 *** Pruebas de la distributiva del producto sobre sumas
     Enlaces al [[./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean" src lean
-
-*** Pruebas de longitud (aplica a todo f xs) = longitud xs
-    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][sesión en Lean Web]] y al vídeo.
-    #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean" src lean
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}

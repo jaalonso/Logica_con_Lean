@@ -40,8 +40,25 @@ sesión de Lean en la Web que contiene la solución del ejercicio.
    Enlaces al [[./src/2_LPO/Ejercicios/∀x,Px⟶Qx⊢(∀x,Px)⟶(∀x,Qx).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Ejercicios/∀x,Px⟶Qx⊢(∀x,Px)⟶(∀x,Qx).lean][sesión en Lean Web]].
 
 *** ∃ x, ¬(P x) ⊢ ¬(∀ x, P x)
-    Enlaces al [[./src/7_Programas/∃x,¬(Px)⊢¬(∀x.Px).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/∃x,¬(Px)⊢¬(∀x.Px).lean][sesión en Lean Web]].
-    #+INCLUDE: "./src/7_Programas/∃x,¬(Px)⊢¬(∀x.Px).lean" src lean
+    Enlaces al [[./src/2_LPO/Ejercicios/∃x,¬(Px)⊢¬(∀x.Px).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Ejercicios/∃x,¬(Px)⊢¬(∀x.Px).lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/2_LPO/Ejercicios/∃x,¬(Px)⊢¬(∀x.Px).lean" src lean
+
+** ∀ x, P x ⊢ ∀ y, P y
+   #+INCLUDE: "./src/2_LPO/Ejercicios/∀x,Px⊢∀y,Py.lean" src lean
+   Enlaces al [[./src/2_LPO/Ejercicios/∀x,Px⊢∀y,Py.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Ejercicios/∀x,Px⊢∀y,Py.lean][sesión en Lean Web]].
+
+** ∀ x, P x → Q x ⊢ (∀ x, ¬(Q x)) → (∀ x, ¬(P x))
+   #+INCLUDE: "./src/2_LPO/Ejercicios/∀x,Px→Qx⊢(∀ x,¬(Qx))→(∀ x,¬(Px)).lean" src lean
+   Enlaces al [[./src/2_LPO/Ejercicios/∀x,Px→Qx⊢(∀ x,¬(Qx))→(∀ x,¬(Px)).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Ejercicios/∀x,Px→Qx⊢(∀ x,¬(Qx))→(∀ x,¬(Px)).lean][sesión en Lean Web]].
+
+** ∀ x, P x → ¬(Q x) ⊢ ¬(∃ x, P x ∧ Q x)
+   #+INCLUDE: "./src/2_LPO/Ejercicios/∀x,Px→¬(Qx)⊢¬(∃x,Px∧Qx).lean" src lean
+   Enlaces al [[./src/2_LPO/Ejercicios/∀x,Px→¬(Qx)⊢¬(∃x,Px∧Qx).lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Ejercicios/∀x,Px→¬(Qx)⊢¬(∃x,Px∧Qx).lean][sesión en Lean Web]].
+
+** ∀ x y, P x y ⊢ ∀ u v, P u v
+   #+INCLUDE: "./src/2_LPO/Ejercicios/∀ x y, P x y ⊢ ∀ u v, P u v.lean" src lean
+   Enlaces al [[./src/2_LPO/Ejercicios/∀ x y, P x y ⊢ ∀ u v, P u v.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/2_LPO/Ejercicios/∀ x y, P x y ⊢ ∀ u v, P u v.lean][sesión en Lean Web]].
+
 
 * Ejercicios sobre igualdad
 
