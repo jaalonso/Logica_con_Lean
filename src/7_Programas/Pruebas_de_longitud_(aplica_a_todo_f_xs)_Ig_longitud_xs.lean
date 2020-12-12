@@ -147,7 +147,7 @@ by induction xs ; simp [*]
 example
   (f : α → β)
   : length (map f xs) = length xs :=
--- by library_search
+-- by suggest
 length_map f xs
 
 example

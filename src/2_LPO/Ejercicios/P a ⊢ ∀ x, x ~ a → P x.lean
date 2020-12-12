@@ -1,6 +1,6 @@
 -- ----------------------------------------------------
--- Ejercicio. Demostrar
---    (∃ x, P x) → Q a ⊢ ∀ x, P x → Q a
+-- Ejercicio. Demostrar o refutar
+--    P a ⊢ ∀ x, x = a → P x
 -- ----------------------------------------------------
 
 import tactic
@@ -11,11 +11,19 @@ variables (P Q : U -> Prop)
 
 -- 1ª demostración
 example
-  (h : (∃ x, P x) → Q a)
-  : ∀ x, P x → Q a :=
+  (h : P a)
+  : ∀ x, x = a → P x :=
 begin
   intros b h1,
-  apply h,
-  use b,
-  exact h1,
+  rw h1,
+  exact h,
+end
+
+-- 1ª demostración
+example
+  (h : P a)
+  : ∀ x, x = a → P x :=
+begin
+  intros b h1,
+  rwa h1,
 end
