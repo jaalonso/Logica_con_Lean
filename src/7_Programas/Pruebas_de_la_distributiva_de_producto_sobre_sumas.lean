@@ -6,10 +6,31 @@ open nat
 open list
 
 variables {α : Type*} {β : Type*}
-variable  x : α
+variable  (x : α)
 variables (xs : list α)
-variable  n : ℕ
-variable  ns : list ℕ
+variable  (n : ℕ)
+variable  (ns : list ℕ)
+
+-- ----------------------------------------------------
+-- Nota. Se usará la función aplica y sus propiedades
+-- estudiadas anteriormente.
+-- ----------------------------------------------------
+
+def aplica : (α → β) → list α → list β
+| f []        := []
+| f (x :: xs) := (f x) :: aplica f xs
+
+@[simp]
+lemma aplica_nil
+  (f : α → β)
+  : aplica f [] = [] :=
+rfl
+
+@[simp]
+lemma aplica_cons
+  (f : α → β)
+  : aplica f (x :: xs) = (f x) :: aplica f xs :=
+rfl
 
 -- ----------------------------------------------------
 -- Ejercicio 1. Definir la función
@@ -44,59 +65,19 @@ lemma suma_cons :
 rfl
 
 -- ----------------------------------------------------
--- Ejercicio 3. Definir la función
---    aplica_a_todos : (α → β) → list α → 'b list
--- tal que (aplica_a_todos f xs) es la lista obtenida
--- aplicando la función f a los elementos de xs. Por
--- ejemplo,
---    aplica_a_todos (λx, 2*x) [3,2,5] = [6,4,10]
---    aplica_a_todos ((*) 2)   [3,2,5] = [6,4,10]
---    aplica_a_todos ((+) 2)   [3,2,5] = [5,4,7]
--- ----------------------------------------------------
-
-def aplica_a_todos : (α → β) → list α → list β
-| f []        := []
-| f (x :: xs) := (f x) :: aplica_a_todos f xs
-
--- #eval aplica_a_todos (λx, 2*x) [3,2,5]
--- #eval aplica_a_todos ((*) 2) [3,2,5]
--- #eval aplica_a_todos ((+) 2) [3,2,5]
-
--- ----------------------------------------------------
--- Ejercicio 4. Demostrar los siguientes lemas
--- + aplica_a_todos_nil :
---      aplica_a_todos ([] : list ℕ) = 0 :=
--- + aplica_a_todos_cons :
---      aplica_a_todos (n :: ns) = n + aplica_a_todos ns :=
--- ----------------------------------------------------
-
-@[simp]
-lemma aplica_a_todos_nil
-  (f : α → β)
-  : aplica_a_todos f [] = [] :=
-rfl
-
-@[simp]
-lemma aplica_a_todos_cons
-  (f : α → β)
-  : aplica_a_todos f (x :: xs) =
-    (f x) :: aplica_a_todos f xs :=
-rfl
-
--- ----------------------------------------------------
--- Ejercicio 5. (p. 45) Demostrar que
---    suma (aplica_a_todos (λ x, 2*x) ns) = 2 * (suma ns)
+-- Ejercicio 3. (p. 45) Demostrar que
+--    suma (aplica (λ x, 2*x) ns) = 2 * (suma ns)
 -- ----------------------------------------------------
 
 -- 1ª demostración
 example :
-  suma (aplica_a_todos (λ x, 2*x) ns) = 2 * (suma ns) :=
+  suma (aplica (λ x, 2*x) ns) = 2 * (suma ns) :=
 begin
-  induction ns with n ns HI,
-  { rw aplica_a_todos_nil,
+  induction ns with m ms HI,
+  { rw aplica_nil,
     rw suma_nil,
     rw mul_zero, },
-  { rw aplica_a_todos_cons,
+  { rw aplica_cons,
     rw suma_cons,
     rw HI,
     rw suma_cons,
@@ -105,26 +86,41 @@ end
 
 -- 2ª demostración
 example :
-  suma (aplica_a_todos (λ x, 2*x) ns) = 2 * (suma ns) :=
+  suma (aplica (λ x, 2*x) ns) = 2 * (suma ns) :=
 begin
-  induction ns with n ns HI,
-  { calc suma (aplica_a_todos (λ (x : ℕ), 2 * x) [])
-         = suma []     : by rw aplica_a_todos_nil
-     ... = 0           : by rw suma_nil
-     ... = 2 * 0       : by rw mul_zero
-     ... = 2 * suma [] : by rw suma_nil, },
-  { calc suma (aplica_a_todos (λ x, 2 * x) (n :: ns))
-         = suma (2 * n :: aplica_a_todos (λ x, 2 * x) ns) : by rw aplica_a_todos_cons
-     ... = 2 * n + suma (aplica_a_todos (λ x, 2 * x) ns)  : by rw suma_cons
-     ... = 2 * n + 2 * suma ns                            : by rw HI
-     ... = 2 * (n + suma ns)                              : by rw mul_add
-     ... = 2 * suma (n :: ns)                             : by rw suma_cons, },
+  induction ns with m ms HI,
+  { calc suma (aplica (λ (x : ℕ), 2 * x) [])
+         = suma []                                : by rw aplica_nil
+     ... = 0                                      : by rw suma_nil
+     ... = 2 * 0                                  : by rw mul_zero
+     ... = 2 * suma []                            : by rw suma_nil, },
+  { calc suma (aplica (λ x, 2 * x) (m :: ms))
+         = suma (2 * m :: aplica (λ x, 2 * x) ms) : by rw aplica_cons
+     ... = 2 * m + suma (aplica (λ x, 2 * x) ms)  : by rw suma_cons
+     ... = 2 * m + 2 * suma ms                    : by rw HI
+     ... = 2 * (m + suma ms)                      : by rw mul_add
+     ... = 2 * suma (m :: ms)                     : by rw suma_cons, },
 end
 
 -- 3ª demostración
 example :
-  suma (aplica_a_todos (λ x, 2*x) ns) = 2 * (suma ns) :=
+  suma (aplica (λ x, 2*x) ns) = 2 * (suma ns) :=
+begin
+  induction ns with m ms HI,
+  { simp, },
+  { simp [HI, mul_add], },
+end
+
+-- 4ª demostración
+example :
+  suma (aplica (λ x, 2*x) ns) = 2 * (suma ns) :=
 by induction ns ; simp [*, mul_add]
+
+-- 4ª demostración
+lemma suma_aplica :
+  ∀ ns, suma (aplica (λ x, 2*x) ns) = 2 * (suma ns)
+| []        := by simp
+| (m :: ms) := by simp [suma_aplica ms, mul_add]
 
 -- Comentarios sobre las funciones sum y map:
 -- + Es equivalente a la función longitud.

@@ -8,8 +8,8 @@
 
 import tactic
 
-variable {U : Type}
-variable {P : U -> Prop}
+variable (U : Type)
+variable (P : U -> Prop)
 
 -- 1ª demostración
 example
