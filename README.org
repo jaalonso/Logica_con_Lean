@@ -1,5 +1,5 @@
-#+AUTHOR: José A. Alonso
 #+TITLE: Lógica con Lean
+#+AUTHOR: José A. Alonso
 #+OPTIONS: ^:nil
 #+OPTIONS: num:t
 #+OPTIONS: :makeindex
@@ -565,6 +565,15 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** Pruebas de la distributiva del producto sobre sumas
     Enlaces al [[./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean" src lean
+
+* Tipos inductivos (árboles).
+
+** Razonamiento sobre árboles binarios
+
+*** Razonamiento sobre árboles binarios: La función espejo es involutiva
+    Enlaces al [[./src/8_Arboles/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Arboles/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/8_Arboles/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean" src lean
+
 
 # #+LATEX:\printindex
 #+LATEX: \end{document}

@@ -76,7 +76,7 @@ begin
   induction ns with m ms HI,
   { rw aplica_nil,
     rw suma_nil,
-    rw mul_zero, },
+    rw nat.mul_zero, },
   { rw aplica_cons,
     rw suma_cons,
     rw HI,
@@ -92,7 +92,7 @@ begin
   { calc suma (aplica (λ (x : ℕ), 2 * x) [])
          = suma []                                : by rw aplica_nil
      ... = 0                                      : by rw suma_nil
-     ... = 2 * 0                                  : by rw mul_zero
+     ... = 2 * 0                                  : by rw nat.mul_zero
      ... = 2 * suma []                            : by rw suma_nil, },
   { calc suma (aplica (λ x, 2 * x) (m :: ms))
          = suma (2 * m :: aplica (λ x, 2 * x) ms) : by rw aplica_cons
@@ -116,14 +116,14 @@ example :
   suma (aplica (λ x, 2*x) ns) = 2 * (suma ns) :=
 by induction ns ; simp [*, mul_add]
 
--- 4ª demostración
+-- 5ª demostración
 lemma suma_aplica :
   ∀ ns, suma (aplica (λ x, 2*x) ns) = 2 * (suma ns)
 | []        := by simp
 | (m :: ms) := by simp [suma_aplica ms, mul_add]
 
 -- Comentarios sobre las funciones sum y map:
--- + Es equivalente a la función longitud.
+-- + Son equivalentes a las funciones suma y aplica.
 -- + Para usarla hay que importar la librería
 --   data.list.basic y abrir el espacio de nombre
 --   list escribiendo al principio del fichero
