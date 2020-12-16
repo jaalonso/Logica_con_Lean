@@ -527,43 +527,43 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Razonamiento por inducción sobre listas
 
 *** Pruebas de la asociatividad de la concatenación
-    Enlaces al [[./src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean][sesión en Lean Web]] y al [[https://youtu.be/THc2kJg13yY][vídeo]].
     #+INCLUDE: "./src/7_Programas/Prueba_de_la_asociatividad_de_la_concatenacion.lean" src lean
 
 *** Pruebas del elemento neutro por la derecha de la concatenación
-    Enlaces al [[./src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean][sesión en Lean Web]] y al [[https://youtu.be/W2r2VVWtrP8][vídeo]].
     #+INCLUDE: "./src/7_Programas/Prueba_del_elemento_neutro_por_la_derecha_de_la_concatenacion.lean" src lean
 
 *** Pruebas de longitud (conc xs ys) = longitud xs + longitud ys
-    Enlaces al [[./src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean][sesión en Lean Web]] y al [[https://youtu.be/XTvWzcnXNJA][vídeo]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud(conc_xs_ys)_Ig_longitud_xs+longitud_ys.lean" src lean
 
 ** Inducción con patrones para funciones recursivas generales
 
 *** Pruebas de conc (coge n xs) (elimina n xs) = xs
-    Enlaces al [[./src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean][sesión en Lean Web]] y al [[https://youtu.be/H4sJhLqyR_Y][vídeo]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_conc_(coge_n_xs)_(elimina_n_xs)_Ig_xs.lean" src lean
 
 ** Razonamiento por casos
 
 *** Pruebas de esVacia xs = esVacia (conc xs xs)
-    Enlaces al [[./src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean][sesión en Lean Web]] y al [[https://youtu.be/x5qvLVy6rcU][vídeo]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_esVacia_xs_Ig_esVacia_(conc_xs_xs).lean" src lean
 
 ** Heurística de generalización
 
 *** Pruebas de equivalencia entre definiciones de inversa (Heurística de generalización)
-    Enlaces al [[./src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean][sesión en Lean Web]] y al [[https://youtu.be/m4Ua0cbvL8k][vídeo]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_equivalencia_entre_definiciones_de_inversa.lean" src lean
 
 ** Inducción para funciones de orden superior
 
 *** Pruebas de la relación entre length y map.
-    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean][sesión en Lean Web]] y al [[https://youtu.be/A5kKPtAgzBA][vídeo]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_longitud_(aplica_a_todo_f_xs)_Ig_longitud_xs.lean" src lean
 
 *** Pruebas de la distributiva del producto sobre sumas
-    Enlaces al [[./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]] y al [[https://youtu.be/sBeyykD2MoU][vídeo]].
     #+INCLUDE: "./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean" src lean
 
 * Tipos inductivos
@@ -571,29 +571,23 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 ** Tipos abreviados
 
 *** Razonamiento con tipos abreviados: Posiciones
-    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][sesión en Lean Web]].
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][sesión en Lean Web]] y al [[https://youtu.be/wuPMtyMRECI][vídeo]].
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean" src lean
 
 ** Tipos enumerados
 
 *** Razonamiento con tipos enumerados: Los días de la semana
-    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][sesión en Lean Web]].
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean" src lean
-
-
-*** zzz
-    Enlaces al [[./src/8_Inductivos/zzz.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/zzz.lean][sesión en Lean Web]].
-    #+INCLUDE: "./src/8_Inductivos/zzz.lean" src lean
-
 
 ** Árboles binarios
 
 *** Razonamiento sobre árboles binarios: La función espejo es involutiva
-    Enlaces al [[./src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][sesión en Lean Web]].
+    Enlaces al [[./src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][sesión en Lean Web]] y al [[https://youtu.be/-jZeVA2BAZo][vídeo]].
     #+INCLUDE: "./src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean" src lean
 
 *** Razonamiento sobre arboles binarios: Aplanamiento e imagen especular
-    Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][sesión en Lean Web]].
+    Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean" src lean
 
 
