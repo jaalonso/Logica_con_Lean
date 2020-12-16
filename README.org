@@ -566,13 +566,42 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
     Enlaces al [[./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/7_Programas/Pruebas_de_la_distributiva_de_producto_sobre_sumas.lean" src lean
 
-* Tipos inductivos (árboles).
+* Tipos inductivos
 
-** Razonamiento sobre árboles binarios
+** Tipos abreviados
+
+*** Razonamiento con tipos abreviados: Posiciones
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean" src lean
+
+** Tipos enumerados
+
+*** Razonamiento con tipos enumerados: Los días de la semana
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean" src lean
+
+
+*** zzz
+    Enlaces al [[./src/8_Inductivos/zzz.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/zzz.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/8_Inductivos/zzz.lean" src lean
+
+
+** Árboles binarios
 
 *** Razonamiento sobre árboles binarios: La función espejo es involutiva
-    Enlaces al [[./src/8_Arboles/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Arboles/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][sesión en Lean Web]].
-    #+INCLUDE: "./src/8_Arboles/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean" src lean
+    Enlaces al [[./src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean" src lean
+
+*** Razonamiento sobre arboles binarios: Aplanamiento e imagen especular
+    Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][sesión en Lean Web]].
+    #+INCLUDE: "./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean" src lean
+
+
+# ** Razonamiento sobre árboles y bosques
+#
+# *** Razonamiento sobre árboles y bosques con recursión mutua
+#     Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_y_bosques_con_recursion_mutua.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_y_bosques_con_recursion_mutua.lean][sesión en Lean Web]].
+#     #+INCLUDE: "./src/8_Inductivos/Razonamiento_sobre_arboles_y_bosques_con_recursion_mutua.lean" src lean
 
 
 # #+LATEX:\printindex
