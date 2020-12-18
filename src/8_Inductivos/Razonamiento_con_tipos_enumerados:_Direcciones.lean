@@ -4,20 +4,59 @@
 import tactic
 
 -- ----------------------------------------------------
--- Ejercicio 1. Definir el tipo Pos como una abreviatura
--- de pares de enteros para representar posiciones.
+-- Ejercicio 1. Definir el tipo Direccion cuyos
+-- constructores son las cuatro direcciones
+-- (Izquierda, Derecha, Arriba y Abajo).
 -- ----------------------------------------------------
 
-abbreviation Pos : Type := ℤ × ℤ
-
-@[derive]
 inductive Direccion : Type
 | Izquierda : Direccion
 | Derecha   : Direccion
 | Arriba    : Direccion
 | Abajo     : Direccion
 
+-- ----------------------------------------------------
+-- Ejercicio 2. Abrir el espacio de nombre Direccion.
+-- ----------------------------------------------------
+
 namespace Direccion
+
+-- ----------------------------------------------------
+-- Ejercicio 3. Definir la función
+--    repr : Direccion → string
+-- tal que (repr d) es la cadena que representa a la
+-- dirección d. Por ejemplo,
+--     repr Derecha = "Derecha"
+-- ----------------------------------------------------
+
+def repr : Direccion → string
+| Izquierda := "Izquierda"
+| Derecha   := "Derecha"
+| Arriba    := "Arriba"
+| Abajo     := "Abajo"
+
+-- #eval repr Derecha
+-- Da: "Derecha"
+
+-- ----------------------------------------------------
+-- Ejercicio 4. Declarar repr la función para
+-- representar direcciones. Por ejemplo,
+--    #eval Derecha
+-- da Derecha.
+-- ----------------------------------------------------
+
+instance : has_repr Direccion := ⟨repr⟩
+
+-- #eval Derecha
+-- Da: Derecha
+
+-- ----------------------------------------------------
+-- Ejercicio 5. Definir la función
+--    opuesta : Direccion → Direccion
+-- tal que (opuesta d) es la dirección opuesta de d. §
+-- Por ejemplo,
+--    opuesta Derecha = Izquierda
+-- ----------------------------------------------------
 
 def opuesta : Direccion → Direccion
 | Izquierda := Derecha
@@ -25,12 +64,21 @@ def opuesta : Direccion → Direccion
 | Arriba    := Abajo
 | Abajo     := Arriba
 
+-- #eval opuesta Derecha
+-- Da: Izquierda
 
-
-#eval opuesta (opuesta Arriba)
--- Da Arriba
+-- ----------------------------------------------------
+-- Ejercicio 6. Declarar d como una variable sobre
+-- direcciones.
+-- ----------------------------------------------------
 
 variable (d : Direccion)
+
+-- ----------------------------------------------------
+-- Ejercicio 7. Demostrar que, para cualquier dirección
+-- d, se tiene que
+--    opuesta (opuesta d) = d
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example :
@@ -112,148 +160,12 @@ example :
   opuesta (opuesta d) = d :=
 by apply Direccion.rec_on d; refl
 
--- ------------------------------------------------------------------------
-
--- 1ª demostración
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-begin
-  intro d,
-  use opuesta d,
-  rintro ⟨x,y⟩,
-  cases d,
-  { calc movimiento (opuesta Izquierda) (movimiento Izquierda (x,y))
-         = movimiento (opuesta Izquierda) (x-1,y)       :by simp [movimiento]
-     ... = movimiento Derecha (x-1,y)                   :by simp [opuesta]
-     ... = (x-1+1,y)                                    :by simp [movimiento]
-     ... = (x,y)                                        :by simp },
-  { calc movimiento (opuesta Derecha) (movimiento Derecha (x,y))
-         = movimiento (opuesta Derecha) (x+1,y)         :by simp [movimiento]
-     ... = movimiento Izquierda (x+1,y)                 :by simp [opuesta]
-     ... = (x+1-1,y)                                    :by simp [movimiento]
-     ... = (x,y)                                        :by simp },
-  { calc movimiento (opuesta Arriba) (movimiento Arriba (x,y))
-         = movimiento (opuesta Arriba) (x,y+1)          :by simp [movimiento]
-     ... = movimiento Abajo (x,y+1)                     :by simp [opuesta]
-     ... = (x,y+1-1)                                    :by simp [movimiento]
-     ... = (x,y)                                        :by simp },
-  { calc movimiento (opuesta Abajo) (movimiento Abajo (x,y))
-         = movimiento (opuesta Abajo) (x,y-1)           :by simp [movimiento]
-     ... = movimiento Arriba (x,y-1)                    :by simp [opuesta]
-     ... = (x,y-1+1)                                    :by simp [movimiento]
-     ... = (x,y)                                        :by simp },
-end
-
--- 2ª demostración
-attribute [simp] movimiento
-
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-begin
-  intro d,
-  use opuesta d,
-  rintro ⟨x,y⟩,
-  cases d,
-  { calc movimiento (opuesta Izquierda) (movimiento Izquierda (x,y))
-         = movimiento (opuesta Izquierda) (x-1,y)       :by simp
-     ... = movimiento Derecha (x-1,y)                   :by simp
-     ... = (x-1+1,y)                                    :by simp
-     ... = (x,y)                                        :by simp },
-  { calc movimiento (opuesta Derecha) (movimiento Derecha (x,y))
-         = movimiento (opuesta Derecha) (x+1,y)         :by simp
-     ... = movimiento Izquierda (x+1,y)                 :by simp
-     ... = (x+1-1,y)                                    :by simp
-     ... = (x,y)                                        :by simp },
-  { calc movimiento (opuesta Arriba) (movimiento Arriba (x,y))
-         = movimiento (opuesta Arriba) (x,y+1)          :by simp
-     ... = movimiento Abajo (x,y+1)                     :by simp
-     ... = (x,y+1-1)                                    :by simp
-     ... = (x,y)                                        :by simp },
-  { calc movimiento (opuesta Abajo) (movimiento Abajo (x,y))
-         = movimiento (opuesta Abajo) (x,y-1)           :by simp
-     ... = movimiento Arriba (x,y-1)                    :by simp
-     ... = (x,y-1+1)                                    :by simp
-     ... = (x,y)                                        :by simp },
-end
-
--- 3ª demostración
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-begin
-  intro d,
-  use opuesta d,
-  rintro ⟨x,y⟩,
-  cases d,
-  { simp, },
-  { simp, },
-  { simp, },
-  { simp, },
-end
-
--- 4ª demostración
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-begin
-  intro d,
-  use opuesta d,
-  rintro ⟨x,y⟩,
-  cases d ;
-  simp,
-end
-
--- 5ª demostración
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-assume d,
-exists.intro (opuesta d)
-  (assume ⟨x,y⟩,
-   show movimiento (opuesta d) (movimiento d (x,y)) = (x,y), from
-     Direccion.cases_on d
-       (calc movimiento (opuesta Izquierda) (movimiento Izquierda (x,y))
-             = movimiento (opuesta Izquierda) (x-1,y)       :by simp
-         ... = movimiento Derecha (x-1,y)                   :by simp
-         ... = (x-1+1,y)                                    :by simp
-         ... = (x,y)                                        :by simp)
-       (calc movimiento (opuesta Derecha) (movimiento Derecha (x,y))
-             = movimiento (opuesta Derecha) (x+1,y)         :by simp
-         ... = movimiento Izquierda (x+1,y)                 :by simp
-         ... = (x+1-1,y)                                    :by simp
-         ... = (x,y)                                        :by simp )
-       (calc movimiento (opuesta Arriba) (movimiento Arriba (x,y))
-             = movimiento (opuesta Arriba) (x,y+1)          :by simp
-         ... = movimiento Abajo (x,y+1)                     :by simp
-         ... = (x,y+1-1)                                    :by simp
-         ... = (x,y)                                        :by simp)
-       (calc movimiento (opuesta Abajo) (movimiento Abajo (x,y))
-             = movimiento (opuesta Abajo) (x,y-1)           :by simp
-         ... = movimiento Arriba (x,y-1)                    :by simp
-         ... = (x,y-1+1)                                    :by simp
-         ... = (x,y)                                        :by simp))
-
--- 6ª demostración
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-assume d,
-exists.intro (opuesta d)
-  (assume ⟨x,y⟩,
-   show movimiento (opuesta d) (movimiento d (x,y)) = (x,y), from
-     Direccion.cases_on d
-       (by simp)
-       (by simp)
-       (by simp)
-       (by simp))
-
--- 7ª demostración
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-assume d,
-exists.intro (opuesta d)
-  (λ ⟨x,y⟩, Direccion.cases_on d (by simp) (by simp) (by simp) (by simp))
-
--- 8ª demostración
-example :
-  ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
-λ d, exists.intro (opuesta d)
-       (λ ⟨x,y⟩, Direccion.cases_on d (by simp) (by simp) (by simp) (by simp))
+-- 9ª demostración
+lemma opuesta_opuesta :
+  ∀ d, opuesta (opuesta d) = d
+| Izquierda := by simp
+| Derecha   := by simp
+| Arriba    := by simp
+| Abajo     := by simp
 
 end Direccion
