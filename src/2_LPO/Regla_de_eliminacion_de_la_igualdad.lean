@@ -3,7 +3,7 @@
 
 import tactic
 
-#check @eq.subst
+-- #check @eq.subst
 
 -- ----------------------------------------------------
 -- Ej. 1. Demostrar que
@@ -20,7 +20,7 @@ variable [has_lt U]
 variable [has_zero U]
 
 -- 1ª demostración
-example 
+example
   (h1 : x + 1 = 1 + x)
   (h2 : x + 1 > 1 → x + 1 > 0)
   : 1 + x > 1 → 1 + x > 0 :=
@@ -28,14 +28,14 @@ eq.subst h1 h2
 
 
 -- 2ª demostración
-example 
+example
   (h1 : x + 1 = 1 + x)
   (h2 : x + 1 > 1 → x + 1 > 0)
   : 1 + x > 1 → 1 + x > 0 :=
 h1 ▸ h2
 
 -- 3ª demostración
-example 
+example
   (h1 : x + 1 = 1 + x)
   (h2 : x + 1 > 1 → x + 1 > 0)
   : 1 + x > 1 → 1 + x > 0 :=
@@ -45,7 +45,7 @@ begin
 end
 
 -- 4ª demostración
-example 
+example
   (h1 : x + 1 = 1 + x)
   (h2 : x + 1 > 1 → x + 1 > 0)
   : 1 + x > 1 → 1 + x > 0 :=
@@ -55,7 +55,7 @@ begin
 end
 
 -- 5ª demostración
-example 
+example
   (h1 : x + 1 = 1 + x)
   (h2 : x + 1 > 1 → x + 1 > 0)
   : 1 + x > 1 → 1 + x > 0 :=

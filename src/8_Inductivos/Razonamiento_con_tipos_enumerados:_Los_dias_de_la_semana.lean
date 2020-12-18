@@ -259,4 +259,11 @@ example (d: dia) :
   siguiente (anterior d) = d :=
 by apply dia.rec_on d; refl
 
+-- 6ª demostración
+attribute [simp] siguiente anterior
+
+example (d: dia) :
+  siguiente (anterior d) = d :=
+by cases d; simp
+
 end dia

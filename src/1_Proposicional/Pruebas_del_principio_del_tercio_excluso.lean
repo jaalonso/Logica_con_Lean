@@ -94,10 +94,11 @@ example : F ∨ ¬F :=
 begin
   by_contra h1,
   apply h1,
-  apply or.inr,
+  right,
   intro h2,
   apply h1,
-  exact or.inl h2,
+  left,
+  exact h2,
 end
 
 -- 11ª demostración

@@ -574,7 +574,23 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
     Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean][sesión en Lean Web]] y al [[https://youtu.be/wuPMtyMRECI][vídeo]].
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_abreviados:_Posiciones.lean" src lean
 
+** Tipos parametrizados
+
+*** Razonamiento con tipos parametrizados: Pares
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_parametrizados:_Pares.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_parametrizados:_Pares.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_parametrizados:_Pares.lean" src lean
+
 ** Tipos enumerados
+
+*** Razonamiento con tipos enumerados: Direcciones
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Direcciones.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Direcciones.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Direcciones.lean" src lean
+
+
+*** Razonamiento con tipos enumerados: Movimientos
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Movimientos.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Movimientos.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Movimientos.lean" src lean
+
 
 *** Razonamiento con tipos enumerados: Los días de la semana
     Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][sesión en Lean Web]] y al vídeo.

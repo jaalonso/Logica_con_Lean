@@ -85,10 +85,16 @@ iff.intro
 -- 7ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 iff.intro
-  ( λ h, ⟨h.2, h.1⟩)
-  ( λ h, ⟨h.2, h.1⟩)
+  (λ h, ⟨h.2, h.1⟩)
+  (λ h, ⟨h.2, h.1⟩)
 
 -- 8ª demostración
+example : P ∧ Q ↔ Q ∧ P :=
+iff.intro
+  (λ ⟨hP, hQ⟩, ⟨hQ, hP⟩)
+  (λ ⟨hQ, hP⟩, ⟨hP, hQ⟩)
+
+-- 9ª demostración
 lemma aux :
   P ∧ Q → Q ∧ P :=
 λ h, ⟨h.2, h.1⟩
@@ -96,12 +102,12 @@ lemma aux :
 example : P ∧ Q ↔ Q ∧ P :=
 iff.intro (aux P Q) (aux Q P)
 
--- 9ª demostración
+-- 10ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 -- by library_search
 and.comm
 
--- 10ª demostración
+-- 11ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 begin
   split,
@@ -117,7 +123,7 @@ begin
     { exact h5, }},
 end
 
--- 11ª demostración
+-- 12ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 begin
   split,
@@ -131,7 +137,7 @@ begin
     { exact h5, }},
 end
 
--- 12ª demostración
+-- 13ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 begin
   constructor,
@@ -145,11 +151,11 @@ begin
     { exact h5, }},
 end
 
--- 13ª demostración
+-- 14ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 -- by hint
 by tauto
 
--- 14ª demostración
+-- 15ª demostración
 example : P ∧ Q ↔ Q ∧ P :=
 by finish

@@ -50,8 +50,8 @@ example
   : P ∨ Q → P ∨ R :=
 assume h2 : P ∨ Q,
 or.elim h2
-  ( λ h3, or.inl h3 )
-  ( λ h4, or.inr (h1 h4) )
+  (λ h3, or.inl h3)
+  (λ h4, or.inr (h1 h4))
 
 -- 5ª demostración
 example
@@ -60,7 +60,7 @@ example
 assume h2 : P ∨ Q,
 or.elim h2
   or.inl
-  ( λ h, or.inr (h1 h) )
+  (λ h, or.inr (h1 h) )
 
 -- 6ª demostración
 example
@@ -68,35 +68,26 @@ example
   : P ∨ Q → P ∨ R :=
 λ h2, or.elim h2 or.inl (λ h, or.inr (h1 h))
 
+-- 7ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 λ h2, h2.elim or.inl (λ h, or.inr (h1 h))
 
+-- 8ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 λ h2, h2.elim or.inl (or.inr ∘ h1)
 
--- 7ª demostración
+-- 9ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 -- by library_search
 or.imp_right h1
 
--- 8ª demostración
-example
-  (h1 : Q → R)
-  : P ∨ Q → P ∨ R :=
-begin
-  intro h2,
-  cases h2 with h3 h4,
-  { exact or.inl h3, },
-  { exact or.inr (h1 h4), },
-end
-
--- 9ª demostración
+-- 10ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
@@ -109,7 +100,7 @@ begin
     exact (h1 h4), },
 end
 
--- 10ª demostración
+-- 11ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
@@ -121,14 +112,24 @@ begin
     exact (h1 h4), },
 end
 
--- 11ª demostración
+-- 12ª demostración
+example
+  (h1 : Q → R)
+  : P ∨ Q → P ∨ R :=
+begin
+  rintro (h3 | h4),
+  { exact or.inl h3, },
+  { exact or.inr (h1 h4), },
+end
+
+-- 13ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
 -- by hint
 by tauto
 
--- 12ª demostración
+-- 14ª demostración
 example
   (h1 : Q → R)
   : P ∨ Q → P ∨ R :=
