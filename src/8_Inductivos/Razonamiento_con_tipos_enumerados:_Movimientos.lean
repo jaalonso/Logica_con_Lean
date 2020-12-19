@@ -4,8 +4,11 @@
 import tactic
 
 -- ----------------------------------------------------
--- Ejercicio 1. Definir el tipo Pos como una abreviatura
--- de pares de enteros para representar posiciones.
+-- Nota. Usaremos los tipo Pos (como una abreviatura
+-- de pares de enteros para representar posiciones) y
+-- Direccion (como un tipo enumerado con las cuatro
+-- direcciones) y la función opuesta, definidas
+-- anteriormente
 -- ----------------------------------------------------
 
 abbreviation Pos : Type := ℤ × ℤ
@@ -18,6 +21,23 @@ inductive Direccion : Type
 
 namespace Direccion
 
+@[simp]
+def opuesta : Direccion → Direccion
+| Izquierda := Derecha
+| Derecha   := Izquierda
+| Arriba    := Abajo
+| Abajo     := Arriba
+
+-- ----------------------------------------------------
+-- Ejercicio ?. Definir la función
+--    movimiento : Direccion → Pos → Pos
+-- tal que (movimiento d p) es la posición alcanzada
+-- al dar un paso en la dirección d a partir de la
+-- posición p. Por ejemplo,
+--    movimiento Arriba (2,5) = (2, 6)
+-- ----------------------------------------------------
+
+@[simp]
 def movimiento : Direccion → Pos → Pos
 | Izquierda (x,y) := (x-1,y)
 | Derecha   (x,y) := (x+1,y)
@@ -27,6 +47,15 @@ def movimiento : Direccion → Pos → Pos
 -- #eval movimiento Arriba (2,5)
 -- Da: (2, 6)
 
+-- ----------------------------------------------------
+-- Ejercicio ?. Definir la función
+--    movimientos : list Direccion → Pos → Pos
+-- tal que (movimientos ms p) es la posición obtenida
+-- aplicando la lista de movimientos ms a la posición
+-- p. Por ejemplo,
+--    movimientos [Arriba, Izquierda] (2,5) = (1,6)
+-- ----------------------------------------------------
+
 def movimientos : list Direccion → Pos → Pos
 | []        p := p
 | (m :: ms) p := movimientos ms (movimiento m p)
@@ -34,98 +63,11 @@ def movimientos : list Direccion → Pos → Pos
 -- #eval movimientos [Arriba, Izquierda] (2,5)
 -- Da:  (1,6)
 
-def opuesta : Direccion → Direccion
-| Izquierda := Derecha
-| Derecha   := Izquierda
-| Arriba    := Abajo
-| Abajo     := Arriba
-
--- #eval movimiento (opuesta Arriba) (2,5)
--- Da (2, 4)
-
-variable (d : Direccion)
-
--- 1ª demostración
-example :
-  opuesta (opuesta d) = d :=
-begin
-  cases d,
-  { calc opuesta (opuesta Izquierda)
-         = opuesta Derecha         :by simp [opuesta]
-     ... = Izquierda               :by simp [opuesta], },
-  { calc opuesta (opuesta Derecha)
-         = opuesta Izquierda       :by simp [opuesta]
-     ... = Derecha                 :by simp [opuesta], },
-  { calc opuesta (opuesta Arriba)
-         = opuesta Abajo           :by simp [opuesta]
-     ... = Arriba                  :by simp [opuesta], },
-  { calc opuesta (opuesta Abajo)
-         = opuesta Arriba          :by simp [opuesta]
-     ... = Abajo                   :by simp [opuesta], },
-end
-
--- 2ª demostración
-attribute [simp] opuesta
-
-example :
-  opuesta (opuesta d) = d :=
-begin
-  cases d,
-  { calc opuesta (opuesta Izquierda)
-         = opuesta Derecha         :by simp
-     ... = Izquierda               :by simp, },
-  { calc opuesta (opuesta Derecha)
-         = opuesta Izquierda       :by simp
-     ... = Derecha                 :by simp, },
-  { calc opuesta (opuesta Arriba)
-         = opuesta Abajo           :by simp
-     ... = Arriba                  :by simp, },
-  { calc opuesta (opuesta Abajo)
-         = opuesta Arriba          :by simp
-     ... = Abajo                   :by simp, },
-end
-
--- 3ª demostración
-example :
-  opuesta (opuesta d) = d :=
-begin
-  cases d,
-  { simp, },
-  { simp, },
-  { simp, },
-  { simp, },
-end
-
--- 4ª demostración
-example :
-  opuesta (opuesta d) = d :=
-by cases d; simp
-
--- 5ª demostración
-example :
-  opuesta (opuesta d) = d :=
-Direccion.cases_on d
-  (show opuesta (opuesta Izquierda) = Izquierda, from rfl)
-  (show opuesta (opuesta Derecha)   = Derecha,   from rfl)
-  (show opuesta (opuesta Arriba)    = Arriba,    from rfl)
-  (show opuesta (opuesta Abajo)     = Abajo,     from rfl)
-
--- 6ª demostración
-example :
-  opuesta (opuesta d) = d :=
-Direccion.cases_on d rfl rfl rfl rfl
-
--- 7ª demostración
-example :
-  opuesta (opuesta d) = d :=
-by apply Direccion.cases_on d; refl
-
--- 8ª demostración
-example :
-  opuesta (opuesta d) = d :=
-by apply Direccion.rec_on d; refl
-
--- ------------------------------------------------------------------------
+-- ----------------------------------------------------
+-- Ejercicio ?. Demostrar que para cada dirección d
+-- existe una dirección d' tal que para toda posición p,
+--    movimiento d' (movimiento d p) = p
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example :
@@ -158,8 +100,6 @@ begin
 end
 
 -- 2ª demostración
-attribute [simp] movimiento
-
 example :
   ∀ d, ∃ d', ∀ p, movimiento d' (movimiento d p) = p :=
 begin

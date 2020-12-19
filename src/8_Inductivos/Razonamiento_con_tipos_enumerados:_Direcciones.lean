@@ -21,6 +21,8 @@ inductive Direccion : Type
 
 namespace Direccion
 
+-- #print prefix Direccion
+
 -- ----------------------------------------------------
 -- Ejercicio 3. Definir la función
 --    repr : Direccion → string
@@ -35,7 +37,7 @@ def repr : Direccion → string
 | Arriba    := "Arriba"
 | Abajo     := "Abajo"
 
--- #eval repr Derecha
+---#eval repr Derecha
 -- Da: "Derecha"
 
 -- ----------------------------------------------------
@@ -58,6 +60,7 @@ instance : has_repr Direccion := ⟨repr⟩
 --    opuesta Derecha = Izquierda
 -- ----------------------------------------------------
 
+@[simp]
 def opuesta : Direccion → Direccion
 | Izquierda := Derecha
 | Derecha   := Izquierda
@@ -100,8 +103,6 @@ begin
 end
 
 -- 2ª demostración
-attribute [simp] opuesta
-
 example :
   opuesta (opuesta d) = d :=
 begin
@@ -134,7 +135,7 @@ end
 -- 4ª demostración
 example :
   opuesta (opuesta d) = d :=
-by cases d; simp
+by cases d ; simp
 
 -- 5ª demostración
 example :
@@ -153,7 +154,7 @@ Direccion.cases_on d rfl rfl rfl rfl
 -- 7ª demostración
 example :
   opuesta (opuesta d) = d :=
-by apply Direccion.cases_on d; refl
+by apply Direccion.cases_on d ; refl
 
 -- 8ª demostración
 example :
@@ -167,5 +168,9 @@ lemma opuesta_opuesta :
 | Derecha   := by simp
 | Arriba    := by simp
 | Abajo     := by simp
+
+-- ----------------------------------------------------
+-- Ejercicio 8. Cerrar el espacio de nombre Direccion.
+-- ----------------------------------------------------
 
 end Direccion
