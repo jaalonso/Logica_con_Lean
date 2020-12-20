@@ -10,7 +10,6 @@ import data.real.basic
 -- altura).
 -- ----------------------------------------------------
 
-
 inductive Figura : Type
 | Triangulo  : ℚ → ℚ → Figura
 | Circulo    : ℚ → Figura

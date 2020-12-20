@@ -598,8 +598,14 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
     Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean" src lean
 
+** Tipo inductivo: Los números naturales
 
-** Árboles binarios
+*** El tipo de los números naturales
+    Enlaces al [[./src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean" src lean
+
+
+** Tipo inductivo: Árboles binarios
 
 *** Razonamiento sobre árboles binarios: La función espejo es involutiva
     Enlaces al [[./src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean][sesión en Lean Web]] y al [[https://youtu.be/-jZeVA2BAZo][vídeo]].
@@ -608,7 +614,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** Razonamiento sobre arboles binarios: Aplanamiento e imagen especular
     Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean" src lean
-
 
 # ** Razonamiento sobre árboles y bosques
 #
