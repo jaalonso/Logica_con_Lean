@@ -594,6 +594,11 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
     Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados:_Los_dias_de_la_semana.lean" src lean
 
+*** Razonamiento con tipos enumerados con constructores con parámetros
+    Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean" src lean
+
+
 ** Árboles binarios
 
 *** Razonamiento sobre árboles binarios: La función espejo es involutiva
