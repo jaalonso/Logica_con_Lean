@@ -604,7 +604,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
     Enlaces al [[./src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean" src lean
 
-
 ** Tipo inductivo: Árboles binarios
 
 *** Razonamiento sobre árboles binarios: La función espejo es involutiva

@@ -3,9 +3,19 @@
 
 import tactic
 
+-- ----------------------------------------------------
+-- Ejercicio 1. Definir el tipo Nat de los números
+-- naturales con los constructores Cero (para el número
+-- 0) y Suc (para la función sucesor).
+-- ----------------------------------------------------
+
 inductive Nat : Type
 | Cero : Nat
 | Suc  : Nat → Nat
+
+-- ----------------------------------------------------
+-- Ejercicio 2. Abrir el espacio de nimbre de Nat
+-- ----------------------------------------------------
 
 namespace Nat
 
@@ -34,7 +44,7 @@ instance : has_repr Nat := ⟨repr⟩
 -- #eval Suc (Cero) -- = Suc (Cero)
 
 -- ----------------------------------------------------
--- Ejercicio ?. Definir la función
+-- Ejercicio 5. Definir la función
 --    nat2int : Nat → ℕ
 -- tal que (nat2int n) es el número entero
 -- correspondiente al número natural n. Por ejemplo,
@@ -46,7 +56,7 @@ def nat2int : Nat → ℕ
 | (Suc n) := 1 + nat2int n
 
 -- ----------------------------------------------------
--- Ejercicio ?. Definir la función
+-- Ejercicio 6. Definir la función
 --    int2nat : ℕ -> Nat
 -- tal que (int2nat n) es el número natural
 -- correspondiente al número entero n. Por ejemplo,
@@ -60,7 +70,7 @@ def int2nat : ℕ -> Nat
 -- #eval int2nat 3 -- ==  Suc (Suc (Suc (Cero)))
 
 -- ----------------------------------------------------
--- Ejercicio ?. Definir la función
+-- Ejercicio 7. Definir la función
 --    suma : Nat → Nat → Nat
 -- tal que (suma m n) es la suma de los número
 -- naturales m y n. Por ejemplo,
@@ -75,7 +85,19 @@ def suma : Nat → Nat → Nat
 -- #eval suma (Suc (Suc Cero)) (Suc Cero)
 -- Da: Suc (Suc (Suc (Cero)))
 
+-- ----------------------------------------------------
+-- Ejercicio 8. Declarar lar variables m y n sobre Nat.
+-- ----------------------------------------------------
+
 variables (m n : Nat)
+
+-- ----------------------------------------------------
+-- Ejercicio 9. Demostrar los siguientes lemas:
+-- + suma_1 :
+--      suma Cero n = n :=
+-- + suma_2 :
+--      suma (Suc m) n = Suc (suma m n) :=
+-- ----------------------------------------------------
 
 @[simp]
 lemma suma_1 :
@@ -86,6 +108,11 @@ rfl
 lemma suma_2 :
   suma (Suc m) n = Suc (suma m n) :=
 rfl
+
+-- ----------------------------------------------------
+-- Ejercicio 10. Demostrar que
+--    suma n Cero = n
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example :
@@ -183,5 +210,9 @@ lemma suma_Cero :
   ∀ n, suma n Cero = n
 | Cero    := by simp
 | (Suc m) := by simp [suma_Cero m]
+
+-- ----------------------------------------------------
+-- Ejercicio 11. Cerrar el espacio de nombre Nat.
+-- ----------------------------------------------------
 
 end Nat
