@@ -11,7 +11,7 @@ variable {α : Type}
 -- α por α.
 -- ----------------------------------------------------
 
-abbreviation Par (α : Type) : Type := α × α
+def Par (α : Type) : Type := α × α
 
 -- ----------------------------------------------------
 -- Ejercicio 2. Definir ejPar como el par de números

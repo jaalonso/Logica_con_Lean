@@ -13,6 +13,8 @@ inductive Nat : Type
 | Cero : Nat
 | Suc  : Nat → Nat
 
+-- #print prefix Nat
+
 -- ----------------------------------------------------
 -- Ejercicio 2. Abrir el espacio de nimbre de Nat
 -- ----------------------------------------------------
@@ -54,6 +56,8 @@ instance : has_repr Nat := ⟨repr⟩
 def nat2int : Nat → ℕ
 | Cero    := 0
 | (Suc n) := 1 + nat2int n
+
+-- #eval nat2int (Suc (Suc (Suc Cero)))
 
 -- ----------------------------------------------------
 -- Ejercicio 6. Definir la función
@@ -121,7 +125,7 @@ begin
   induction n with m HI,
   { rw suma_1, },
   { rw suma_2,
-    rw congr_arg Suc HI, },
+    rw HI, },
 end
 
 -- 2ª demostración

@@ -598,11 +598,18 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
     Enlaces al [[./src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_con_tipos_enumerados_con_constructores_con_parametros.lean" src lean
 
-** Tipo inductivo: Los números naturales
+** Tipo inductivo: Números naturales
 
 *** El tipo de los números naturales
     Enlaces al [[./src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean][sesión en Lean Web]] y al vídeo.
     #+INCLUDE: "./src/8_Inductivos/El_tipo_de_los_numeros_naturales.lean" src lean
+
+** Tipo inductivo: Listas
+
+*** El tipo de las listas
+    Enlaces al [[./src/8_Inductivos/El_tipo_de_las_listas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/El_tipo_de_las_listas.lean][sesión en Lean Web]] y al vídeo.
+    #+INCLUDE: "./src/8_Inductivos/El_tipo_de_las_listas.lean" src lean
+
 
 ** Tipo inductivo: Árboles binarios
 

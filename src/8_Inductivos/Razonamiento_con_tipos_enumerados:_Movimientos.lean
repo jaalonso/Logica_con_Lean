@@ -11,7 +11,7 @@ import tactic
 -- anteriormente
 -- ----------------------------------------------------
 
-abbreviation Pos : Type := ℤ × ℤ
+def Pos : Type := ℤ × ℤ
 
 inductive Direccion : Type
 | Izquierda : Direccion

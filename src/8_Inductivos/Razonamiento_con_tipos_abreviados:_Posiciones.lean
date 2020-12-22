@@ -8,7 +8,17 @@ import tactic
 -- de pares de enteros para representar posiciones.
 -- ----------------------------------------------------
 
-abbreviation Pos : Type := ℤ × ℤ
+-- 1ª definición
+-- abbreviation Pos : Type := ℤ × ℤ
+
+-- 2ª definición
+-- notation `Pos` := ℤ × ℤ
+
+-- 3ª definición
+-- local notation `Pos` := ℤ × ℤ
+
+-- 4ª definición
+def Pos := ℤ × ℤ
 
 -- ----------------------------------------------------
 -- Ejercicio 2. Definir la posición origen.
@@ -83,4 +93,4 @@ lemma izquierda_derecha_2 :
 -- posición inicial a la final.
 -- ----------------------------------------------------
 
-abbreviation Movimiento : Type := Pos → Pos
+def Movimiento : Type := Pos → Pos
