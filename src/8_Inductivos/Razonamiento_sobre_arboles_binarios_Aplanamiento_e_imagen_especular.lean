@@ -6,6 +6,9 @@ open list
 
 variable {α : Type}
 
+-- Para que no use la notación con puntos
+set_option pp.structure_projections false
+
 -- ----------------------------------------------------
 -- Nota. Se usarán las definiciones de árboles e
 -- imagen especular estudiadas anteriormente.
@@ -17,6 +20,11 @@ inductive arbol (α : Type) : Type
 
 namespace arbol
 
+--        3
+--       / \
+--      2   4
+--     / \
+--    1   5
 def ejArbol : arbol ℕ :=
   nodo 3 (nodo 2 (hoja 1) (hoja 5)) (hoja 4)
 
@@ -36,12 +44,12 @@ variable  (x : α)
 @[simp]
 lemma espejo_1 :
   espejo (hoja x) = hoja x :=
-espejo.equations._eqn_1 x
+rfl
 
 @[simp]
 lemma espejo_2 :
   espejo (nodo x i d) = nodo x (espejo d) (espejo i) :=
-espejo.equations._eqn_2 x i d
+rfl
 
 -- ----------------------------------------------------
 -- Ejercicio 1. Definir la función
@@ -50,7 +58,13 @@ espejo.equations._eqn_2 x i d
 -- el árbole a recorriéndolo en orden infijo. Por
 -- ejemplo,
 --    #eval aplana ejArbol
---    -- Da: [1, 2, 5, 3, 4]
+--    Da: [1, 2, 5, 3, 4]
+--
+--        3
+--       / \
+--      2   4
+--     / \
+--    1   5
 -- ----------------------------------------------------
 
 def aplana : arbol α → list α
@@ -71,12 +85,12 @@ def aplana : arbol α → list α
 @[simp]
 lemma aplana_1 :
   aplana (hoja x) = [x] :=
-aplana.equations._eqn_1 x
+rfl
 
 @[simp]
 lemma aplana_2 :
   aplana (nodo x i d) = (aplana i) ++ [x] ++ (aplana d) :=
-aplana.equations._eqn_2 x i d
+rfl
 
 -- ----------------------------------------------------
 -- Ejercicio 3. Demostrar que

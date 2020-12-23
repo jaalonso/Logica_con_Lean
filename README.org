@@ -618,14 +618,8 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
     #+INCLUDE: "./src/8_Inductivos/Pruebas_de_que_la_funcion_espejo_de_los_arboles_binarios_es_involutiva.lean" src lean
 
 *** Razonamiento sobre arboles binarios: Aplanamiento e imagen especular
-    Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][sesión en Lean Web]] y al vídeo.
+    Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean][sesión en Lean Web]] y al [[https://youtu.be/-cALVTMuiu0][vídeo]].
     #+INCLUDE: "./src/8_Inductivos/Razonamiento_sobre_arboles_binarios_Aplanamiento_e_imagen_especular.lean" src lean
-
-# ** Razonamiento sobre árboles y bosques
-#
-# *** Razonamiento sobre árboles y bosques con recursión mutua
-#     Enlaces al [[./src/8_Inductivos/Razonamiento_sobre_arboles_y_bosques_con_recursion_mutua.lean][código]] y a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/Razonamiento_sobre_arboles_y_bosques_con_recursion_mutua.lean][sesión en Lean Web]].
-#     #+INCLUDE: "./src/8_Inductivos/Razonamiento_sobre_arboles_y_bosques_con_recursion_mutua.lean" src lean
 
 
 # #+LATEX:\printindex
