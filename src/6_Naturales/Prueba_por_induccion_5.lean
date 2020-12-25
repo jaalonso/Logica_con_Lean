@@ -22,11 +22,11 @@ variables (m n : ℕ)
 example : m^(succ n) = m * m^n :=
 begin
   induction n with n HI,
-  { rw nat.pow_succ,
-    rw nat.pow_zero,
+  { rw pow_succ',
+    rw pow_zero,
     rw nat.one_mul,
     rw nat.mul_one, },
-  { rw nat.pow_succ,
+  { rw pow_succ',
     rw HI,
     rw nat.mul_assoc,
     rw nat.mul_comm (m^n), },
@@ -36,24 +36,24 @@ end
 example : m^(succ n) = m * m^n :=
 begin
   induction n with n HI,
-  rw [nat.pow_succ, nat.pow_zero, one_mul, mul_one],
-  rw [nat.pow_succ, HI, mul_assoc, mul_comm (m^n)],
+  rw [pow_succ', pow_zero, one_mul, mul_one],
+  rw [pow_succ', HI, mul_assoc, mul_comm (m^n)],
 end
 
 -- 3ª demostración
 example : m^(succ n) = m * m^n :=
 begin
   induction n with n HI,
-  { simp only [nat.pow_succ, nat.pow_zero, one_mul, mul_one]},
-  { simp only [nat.pow_succ, HI, mul_assoc, mul_comm (m^n)]},
+  { simp only [pow_succ', pow_zero, one_mul, mul_one]},
+  { simp only [pow_succ', HI, mul_assoc, mul_comm (m^n)]},
 end
 
 -- 4ª demostración
 example : m^(succ n) = m * m^n :=
 by induction n;
    simp only [*,
-              nat.pow_succ,
-              nat.pow_zero,
+              pow_succ',
+              pow_zero,
               nat.one_mul,
               nat.mul_one,
               nat.mul_assoc,
@@ -63,7 +63,7 @@ by induction n;
 example : m^(succ n) = m * m^n :=
 by induction n;
    simp [*,
-         nat.pow_succ,
+         pow_succ',
          mul_comm]
 
 -- 6ª demostración
@@ -71,7 +71,7 @@ example : m^(succ n) = m * m^n :=
 begin
   induction n with n HI,
   { simp, },
-  { simp [nat.pow_succ, HI],
+  { simp [pow_succ', HI],
     cc, },
 end
 
@@ -81,45 +81,45 @@ begin
   induction n with n HI,
   { calc
       m^(succ 0)
-          = m^0 * m : by rw nat.pow_succ
-      ... = 1 * m   : by rw nat.pow_zero
+          = m^0 * m : by rw pow_succ'
+      ... = 1 * m   : by rw pow_zero
       ... = m       : by rw nat.one_mul
       ... = m * 1   : by rw nat.mul_one
-      ... = m * m^0 : by rw nat.pow_zero, },
+      ... = m * m^0 : by rw pow_zero, },
   { calc
       m^(succ (succ n))
-          = m^(succ n) * m   : by rw nat.pow_succ
+          = m^(succ n) * m   : by rw pow_succ'
       ... = (m * m^n) * m    : by rw HI
       ... = m * (m^n * m)    : by rw nat.mul_assoc
-      ... = m * m^(succ n)   : by rw nat.pow_succ, },
+      ... = m * m^(succ n)   : by rw pow_succ', },
 end
 
 -- 8ª demostración
 example : m^(succ n) = m * m^n :=
 nat.rec_on n
   (show m^(succ 0) = m * m^0, from calc
-    m^(succ 0) = m^0 * m : by rw nat.pow_succ
-           ... = 1 * m   : by rw nat.pow_zero
+    m^(succ 0) = m^0 * m : by rw pow_succ'
+           ... = 1 * m   : by rw pow_zero
            ... = m       : by rw one_mul
            ... = m * 1   : by rw mul_one
-           ... = m * m^0 : by rw nat.pow_zero)
+           ... = m * m^0 : by rw pow_zero)
   (assume n,
     assume HI : m^(succ n) = m * m^n,
     show m^(succ (succ n)) = m * m^(succ n), from calc
-      m^(succ (succ n)) = m^(succ n) * m   : by rw nat.pow_succ
+      m^(succ (succ n)) = m^(succ n) * m   : by rw pow_succ'
                     ... = (m * m^n) * m    : by rw HI
                     ... = m * (m^n * m)    : by rw mul_assoc
-                    ... = m * m^(succ n)   : by rw nat.pow_succ)
+                    ... = m * m^(succ n)   : by rw pow_succ')
 
 -- 9ª demostración
 example : m^(succ n) = m * (m^n) :=
 nat.rec_on n
   (show m^(succ 0) = m * m^0,
-    by rw [nat.pow_succ, nat.pow_zero, mul_one, one_mul])
+    by rw [pow_succ', pow_zero, mul_one, one_mul])
   (assume n,
     assume HI : m^(succ n) = m * m^n,
     show m^(succ (succ n)) = m * m^(succ n),
-      by rw [nat.pow_succ, HI, mul_assoc, mul_comm (m^n)])
+      by rw [pow_succ', HI, mul_assoc, mul_comm (m^n)])
 
 -- 10ª demostración
 example : m^(succ n) = m * (m^n) :=
@@ -129,29 +129,29 @@ nat.rec_on n
   (assume n,
     assume HI : m^(succ n) = m * m^n,
     show m^(succ (succ n)) = m * m^(succ n),
-      by finish [nat.pow_succ, HI] )
+      by finish [pow_succ', HI] )
 
 -- 11ª demostración
 example : m^(succ n) = m * (m^n) :=
 nat.rec_on n
   (by simp)
-  (λ n HI, by finish [nat.pow_succ, HI])
+  (λ n HI, by finish [pow_succ', HI])
 
 -- 12ª demostración
 lemma aux : ∀ m n : ℕ, m^(succ n) = m * (m^n)
 | m 0     := by simp
-| m (n+1) := by simp [nat.pow_succ,
+| m (n+1) := by simp [pow_succ',
                       aux m n,
                       mul_assoc,
                       mul_comm (m^n)]
 
 -- 13ª demostración
 lemma aux2 : ∀ m n : ℕ, m^(succ n) = m * (m^n)
-| m 0     := by simp only [nat.pow_succ,
-                           nat.pow_zero,
+| m 0     := by simp only [pow_succ',
+                           pow_zero,
                            one_mul,
                            mul_one]
-| m (n+1) := by simp only [nat.pow_succ,
+| m (n+1) := by simp only [pow_succ',
                            aux2 m n,
                            mul_assoc,
                            mul_comm (m^n)]
@@ -159,4 +159,4 @@ lemma aux2 : ∀ m n : ℕ, m^(succ n) = m * (m^n)
 -- 14ª demostración
 lemma aux3 : ∀ m n : ℕ, m^(succ n) = m * (m^n)
 | m 0     := by simp
-| m (n+1) := by simp [nat.pow_succ, aux3 m n] ; cc
+| m (n+1) := by simp [pow_succ', aux3 m n] ; cc

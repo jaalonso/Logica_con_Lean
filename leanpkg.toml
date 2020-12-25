@@ -1,8 +1,8 @@
 [package]
 name = "Logica_con_Lean"
 version = "0.1"
-lean_version = "leanprover-community/lean:3.18.4"
+lean_version = "leanprover-community/lean:3.23.0"
 path = "src"
 
 [dependencies]
-mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "b68702e697c883fee5785918a55c21b8187db344"}
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "1f0231dfae27d9d59d1e2c412269ddfeba26cdcb"}

@@ -24,8 +24,8 @@ show R,
 variable (h1 : P → Q)
 variable (h2 : Q → R)
 variable (h : P)
-#check h1 h
-#check h2 (h1 h)
+-- #check h1 h
+-- #check h2 (h1 h)
 
 -- 2º demostración
 example

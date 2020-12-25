@@ -3,14 +3,14 @@
 
 import tactic
 
-#check @eq.refl
+-- #check @eq.refl
 
 variable  (U : Type)
 variables (x y : U)
 
 -- ----------------------------------------------------
 -- Ej. Demostrar
---    x = y ⊢ y = x 
+--    x = y ⊢ y = x
 -- ----------------------------------------------------
 
 -- 1ª demostración
@@ -91,6 +91,3 @@ example
   (h1 : x = y)
   : y = x :=
 by solve_by_elim
-
-
-

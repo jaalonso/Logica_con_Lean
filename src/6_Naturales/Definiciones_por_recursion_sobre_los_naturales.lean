@@ -1,6 +1,8 @@
 -- Definiciones por recursión sobre los naturales
 -- ==============================================
 
+import data.nat.basic
+
 -- ----------------------------------------------------
 -- Ej. 1. Definir el tipo nat de los números naturales
 -- con los constructores zero (para el número cero) y
@@ -114,16 +116,13 @@ def potencia : ℕ → ℕ → ℕ
 variables m n : ℕ
 
 -- 1ª demostración
-example : m^0 = 1 := nat.pow_zero m
+example : m^0 = 1 := pow_zero m
 
 -- 2ª demostración
 example : m^0 = 1 := rfl
 
 -- 1ª demostración
-example : m^(n+1) = m^n * m := nat.pow_succ m n
-
--- 2ª demostración
-example : m^(n+1) = m^n * m := rfl
+example : m^(n+1) = m^n * m := pow_succ' m n
 
 -- ----------------------------------------------------
 -- Ej. 11. Definir la función
