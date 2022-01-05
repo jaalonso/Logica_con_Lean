@@ -1,7 +1,6 @@
 -- Pruebas de longitud (repite n x) = n
 -- ====================================
 
-import data.nat.basic
 open nat
 open list
 

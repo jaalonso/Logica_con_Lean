@@ -61,18 +61,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** Regla de eliminación del condicional en P → Q, P ⊢ Q
 + Enlaces al [[./src/1_Proposicional/Eliminacion_del_condicional.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Eliminacion_del_condicional.lean][sesión en Lean Web]] y al [[https://youtu.be/ov_8ddfR-yM][vídeo]].
 #+INCLUDE: "./src/1_Proposicional/Eliminacion_del_condicional.lean" src lean
-#+INDEX: Ordenes!import
-#+INDEX: Ordenes!variables
-#+INDEX: Ordenes!example
-#+INDEX: Ordenes!begin
-#+INDEX: Ordenes!end
-#+INDEX: Ordenes!by
-#+INDEX: Tácticas!apply
-#+INDEX: Tácticas!exact
-#+INDEX: Tácticas!tauto
-#+INDEX: Tácticas!finish
-#+INDEX: Tácticas!solve-by-elim
-#+INDEX: Tipos!Prop
 
 *** Pruebas de P, P → Q, P → (Q → R) ⊢ R
 + Enlaces al [[./src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/1_Proposicional/Pruebas_de_P,P→Q,P→(Q→R)_⊢R.lean][sesión en Lean Web]] y al [[https://youtu.be/_mWTkhjydk0][vídeo]].
@@ -609,7 +597,6 @@ en [[https://www.youtube.com/playlist?list=PLPIlzBVlfbbFakjDQVGW5iQXH1CatGuMZ][Y
 *** El tipo de las listas
     Enlaces al [[./src/8_Inductivos/El_tipo_de_las_listas.lean][código]], a la [[https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Logica_con_Lean/master/src/8_Inductivos/El_tipo_de_las_listas.lean][sesión en Lean Web]] y al [[https://youtu.be/wr7PzT8VVgQ][vídeo]].
     #+INCLUDE: "./src/8_Inductivos/El_tipo_de_las_listas.lean" src lean
-
 
 ** Tipo inductivo: Árboles binarios
 
