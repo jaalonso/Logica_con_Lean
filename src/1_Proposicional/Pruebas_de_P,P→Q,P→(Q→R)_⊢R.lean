@@ -92,3 +92,19 @@ example
 begin
   { exact (h3 h1) (h2 h1), },
 end
+
+-- 8ª demostración
+example
+  (h1 : P)
+  (h2 : P → Q)
+  (h3 : P → (Q → R))
+  : R :=
+by exact (h3 h1) (h2 h1)
+
+-- 9ª demostración
+example
+  (h1 : P)
+  (h2 : P → Q)
+  (h3 : P → (Q → R))
+  : R :=
+(h3 h1) (h2 h1)
