@@ -29,23 +29,32 @@ false.rec Q h
 -- 3ª demostración
 example
   (h : false)
-  : P :=
--- by hint
-by tauto
+  : Q :=
+begin
+  exfalso,
+  exact h,
+end
 
 -- 4ª demostración
 example
   (h : false)
   : P :=
-by cases h
+-- by hint
+by tauto
 
 -- 5ª demostración
 example
   (h : false)
   : P :=
-by finish
+by cases h
 
 -- 6ª demostración
+example
+  (h : false)
+  : P :=
+by finish
+
+-- 7ª demostración
 example
   (h : false)
   : P :=
@@ -73,6 +82,23 @@ example
 not.elim h2 h1
 
 -- 2ª demostración
+example
+  (h1: P)
+  (h2: ¬P)
+  : false :=
+begin
+  apply h2,
+  exact h1,
+end
+
+-- 3ª demostración
+example
+  (h1: P)
+  (h2: ¬P)
+  : false :=
+absurd h1 h2
+
+-- 4ª demostración
 example
   (h1: P)
   (h2: ¬P)
