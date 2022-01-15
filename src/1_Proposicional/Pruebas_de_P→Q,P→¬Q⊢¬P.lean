@@ -117,3 +117,10 @@ example
   : ¬P :=
 -- by hint
 by finish
+
+-- 12ª demostración
+example
+  (h1 : P → Q)
+  (h2 : P → ¬Q)
+  : ¬P :=
+by tauto!
