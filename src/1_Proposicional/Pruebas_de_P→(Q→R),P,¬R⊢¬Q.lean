@@ -101,3 +101,11 @@ example
   : ¬Q :=
 -- by hint
 by finish
+
+-- 10ª demostración
+example
+  (h1 : P → (Q → R))
+  (h2 : P)
+  (h3 : ¬R)
+  : ¬Q :=
+by tauto!
