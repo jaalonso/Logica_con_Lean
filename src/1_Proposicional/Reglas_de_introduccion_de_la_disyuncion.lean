@@ -27,10 +27,19 @@ or.inl h
 example
   (h : P)
   : P ∨ Q :=
+begin
+  left,
+  exact h,
+end
+
+-- 4ª demostración
+example
+  (h : P)
+  : P ∨ Q :=
 -- by hint
 by tauto
 
--- 4ª demostración
+-- 5ª demostración
 example
   (h : P)
   : P ∨ Q :=
@@ -85,10 +94,29 @@ or.inl h1.1
 example
   (h1 : P ∧ Q)
   : P ∨ R :=
+begin
+  left,
+  cases h1 with hP hQ,
+  exact hP,
+end
+
+-- 7ª demostración
+example
+  (h1 : P ∧ Q)
+  : P ∨ R :=
+begin
+  left,
+  exact h1.1,
+end
+
+-- 8ª demostración
+example
+  (h1 : P ∧ Q)
+  : P ∨ R :=
 -- by hint
 by tauto
 
--- 7ª demostración
+-- 9ª demostración
 example
   (h1 : P ∧ Q)
   : P ∨ R :=
@@ -116,10 +144,19 @@ or.inr h
 example
   (h : Q)
   : P ∨ Q :=
+begin
+  right,
+  exact h,
+end
+
+-- 4ª demostración
+example
+  (h : Q)
+  : P ∨ Q :=
 -- by hint
 by tauto
 
--- 4ª demostración
+-- 5ª demostración
 example
   (h : Q)
   : P ∨ Q :=
@@ -174,10 +211,29 @@ or.inr h1.2
 example
   (h1 : P ∧ Q)
   : R ∨ Q :=
+begin
+  right,
+  cases h1 with hP hQ,
+  exact hQ,
+end
+
+-- 7ª demostración
+example
+  (h1 : P ∧ Q)
+  : R ∨ Q :=
+begin
+  right,
+  exact h1.2,
+end
+
+-- 8ª demostración
+example
+  (h1 : P ∧ Q)
+  : R ∨ Q :=
 -- by hint
 by tauto
 
--- 7ª demostración
+-- 9ª demostración
 example
   (h1 : P ∧ Q)
   : R ∨ Q :=
