@@ -113,17 +113,32 @@ example
   (h1 : P ↔ Q)
   (h2 : P ∨ Q)
   : P ∧ Q :=
--- by hint
-by tauto
+begin
+  cases h2 with h3 h4,
+  { split,
+    { exact h3, },
+    { rwa ← h1, }},
+  { split,
+    { rwa h1, },
+    { exact h4, }},
+end
 
 -- 8ª demostración
 example
   (h1 : P ↔ Q)
   (h2 : P ∨ Q)
   : P ∧ Q :=
-by finish
+-- by hint
+by tauto
 
 -- 9ª demostración
+example
+  (h1 : P ↔ Q)
+  (h2 : P ∨ Q)
+  : P ∧ Q :=
+by finish
+
+--10ª demostración
 example
   (h1 : P ↔ Q)
   (h2 : P ∨ Q)
