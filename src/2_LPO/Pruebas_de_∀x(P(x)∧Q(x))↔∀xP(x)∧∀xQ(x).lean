@@ -8,23 +8,23 @@ section
 variable  {U : Type}
 variables {P Q : U -> Prop}
 
--- ------------------------------------------------------
+-- ----------------------------------------------------
 -- Ej. 1. Demostrar
 --    ∀x (P(x) ∧ Q(x)) ⊢ ∀x P(x) ∧ ∀x Q(x)
--- ------------------------------------------------------
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
   (h1 : ∀x, P x ∧ Q x)
   : (∀x, P x) ∧ (∀x, Q x) :=
 have h5 : ∀x, P x, from
-    assume x₀,
-    have h3 : P x₀ ∧ Q x₀,  from h1 x₀,
-    show P x₀,              from and.elim_left h3,
+    assume a,
+    have h3 : P a ∧ Q a,  from h1 a,
+    show P a,             from and.elim_left h3,
 have h9 : ∀x, Q x, from
-    assume x₁,
-    have h7 : P x₁ ∧ Q x₁,  from h1 x₁,
-    show Q x₁,              from and.elim_right h7,
+    assume b,
+    have h7 : P b ∧ Q b,  from h1 b,
+    show Q b,              from and.elim_right h7,
 show (∀x, P x) ∧ (∀x, Q x), from and.intro h5 h9
 
 -- 2ª demostración
@@ -32,13 +32,13 @@ example
   (h1 : ∀x, P x ∧ Q x)
   : (∀x, P x) ∧ (∀x, Q x) :=
 have h5 : ∀x, P x, from
-    assume x₀,
-    have h3 : P x₀ ∧ Q x₀,  from h1 x₀,
-    show P x₀,              from h3.left,
+    assume a,
+    have h3 : P a ∧ Q a,  from h1 a,
+    show P a,             from h3.left,
 have h9 : ∀x, Q x, from
-    assume x₁,
-    have h7 : P x₁ ∧ Q x₁,  from h1 x₁,
-    show Q x₁,              from h7.right,
+    assume b,
+    have h7 : P b ∧ Q b,  from h1 b,
+    show Q b,              from h7.right,
 show (∀x, P x) ∧ (∀x, Q x), from ⟨h5, h9⟩
 
 -- 3ª demostración
@@ -46,12 +46,12 @@ example
   (h1 : ∀x, P x ∧ Q x)
   : (∀x, P x) ∧ (∀x, Q x) :=
 have h5 : ∀x, P x, from
-    assume x₀,
-    have h3 : P x₀ ∧ Q x₀,  from h1 x₀,
+    assume a,
+    have h3 : P a ∧ Q a,  from h1 a,
     h3.left,
 have h9 : ∀x, Q x, from
-    assume x₁,
-    have h7 : P x₁ ∧ Q x₁,  from h1 x₁,
+    assume b,
+    have h7 : P b ∧ Q b,  from h1 b,
     h7.right,
 show (∀x, P x) ∧ (∀x, Q x), from ⟨h5, h9⟩
 
@@ -60,11 +60,11 @@ example
   (h1 : ∀x, P x ∧ Q x)
   : (∀x, P x) ∧ (∀x, Q x) :=
 have h5 : ∀x, P x, from
-    assume x₀,
-    (h1 x₀).left,
+    assume a,
+    (h1 a).left,
 have h9 : ∀x, Q x, from
-    assume x₁,
-    (h1 x₁).right,
+    assume b,
+    (h1 b).right,
 show (∀x, P x) ∧ (∀x, Q x), from ⟨h5, h9⟩
 
 -- 5ª demostración
@@ -72,9 +72,9 @@ example
   (h1 : ∀x, P x ∧ Q x)
   : (∀x, P x) ∧ (∀x, Q x) :=
 have h5 : ∀x, P x, from
-    λ x₀, (h1 x₀).left,
+    λ a, (h1 a).left,
 have h9 : ∀x, Q x, from
-    λ x₁, (h1 x₁).right,
+    λ b, (h1 b).right,
 show (∀x, P x) ∧ (∀x, Q x), from ⟨h5, h9⟩
 
 -- 6ª demostración
@@ -82,16 +82,16 @@ example
   (h1 : ∀x, P x ∧ Q x)
   : (∀x, P x) ∧ (∀x, Q x) :=
 have h5 : ∀x, P x, from
-    λ x₀, (h1 x₀).left,
+    λ a, (h1 a).left,
 have h9 : ∀x, Q x, from
-    λ x₁, (h1 x₁).right,
+    λ b, (h1 b).right,
 ⟨h5, h9⟩
 
 -- 7ª demostración
 example
   (h1 : ∀x, P x ∧ Q x)
   : (∀x, P x) ∧ (∀x, Q x) :=
-⟨λ x₀, (h1 x₀).left, λ x₁, (h1 x₁).right⟩
+⟨λ a, (h1 a).left, λ b, (h1 b).right⟩
 
 -- 8ª demostración
 example
@@ -106,11 +106,11 @@ example
   : (∀x, P x) ∧ (∀x, Q x) :=
 begin
   split,
-  { intro x₀,
-    specialize h1 x₀,
+  { intro a,
+    specialize h1 a,
     exact h1.left, },
-  { intro x₁,
-    specialize h1 x₁,
+  { intro b,
+    specialize h1 b,
     exact h1.right, },
 end
 
@@ -121,83 +121,83 @@ lemma aux1
 -- by hint
 by finish
 
--- ------------------------------------------------------
+-- ----------------------------------------------------
 -- Ej. 2. Demostrar
 --    ∀x P(x) ∧ ∀x Q(x) ⊢ ∀x (P(x) ∧ Q(x))
--- ------------------------------------------------------
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-assume x₀,
+assume a,
 have h3 : ∀x, P x, from and.elim_left h1,
-have h4 : P x₀,    from h3 x₀,
+have h4 : P a,     from h3 a,
 have h5 : ∀x, Q x, from and.elim_right h1,
-have h6 : Q x₀,    from h5 x₀,
-show P x₀ ∧ Q x₀,  from and.intro h4 h6
+have h6 : Q a,     from h5 a,
+show P a ∧ Q a,    from and.intro h4 h6
 
 -- 2ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-assume x₀,
+assume a,
 have h3 : ∀x, P x, from h1.left,
-have h4 : P x₀,    from h3 x₀,
+have h4 : P a,     from h3 a,
 have h5 : ∀x, Q x, from h1.right,
-have h6 : Q x₀,    from h5 x₀,
-show P x₀ ∧ Q x₀,  from ⟨h4, h6⟩
+have h6 : Q a,     from h5 a,
+show P a ∧ Q a,    from ⟨h4, h6⟩
 
 -- 3ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-assume x₀,
+assume a,
 have h3 : ∀x, P x, from h1.left,
-have h4 : P x₀,    from h3 x₀,
+have h4 : P a,     from h3 a,
 have h5 : ∀x, Q x, from h1.right,
-have h6 : Q x₀,    from h5 x₀,
+have h6 : Q a,     from h5 a,
 ⟨h4, h6⟩
 
 -- 4ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-assume x₀,
+assume a,
 have h3 : ∀x, P x, from h1.left,
-have h4 : P x₀,    from h3 x₀,
+have h4 : P a,     from h3 a,
 have h5 : ∀x, Q x, from h1.right,
-⟨h4, h5 x₀⟩
+⟨h4, h5 a⟩
 
 -- 5ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-assume x₀,
+assume a,
 have h3 : ∀x, P x, from h1.left,
-have h4 : P x₀,    from h3 x₀,
-⟨h4, h1.right x₀⟩
+have h4 : P a,     from h3 a,
+⟨h4, h1.right a⟩
 
 -- 6ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-assume x₀,
+assume a,
 have h3 : ∀x, P x, from h1.left,
-⟨h3 x₀, h1.right x₀⟩
+⟨h3 a, h1.right a⟩
 
 -- 7ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-assume x₀,
-⟨h1.left x₀, h1.right x₀⟩
+assume a,
+⟨h1.left a, h1.right a⟩
 
 -- 8ª demostración
 example
   (h1 : (∀x, P x) ∧ (∀x, Q x))
   : ∀x, P x ∧ Q x :=
-λ x₀, ⟨h1.left x₀, h1.right x₀⟩
+λ a, ⟨h1.left a, h1.right a⟩
 
 -- 9ª demostración
 example
@@ -212,7 +212,7 @@ example
   : ∀x, P x ∧ Q x :=
 begin
   cases h1 with h2 h3,
-  intro x₀,
+  intro a,
   split,
   { apply h2, },
   { apply h3, },
@@ -231,10 +231,10 @@ lemma aux2
   : ∀x, P x ∧ Q x :=
 by finish
 
--- ------------------------------------------------------
+-- ----------------------------------------------------
 -- Ej. 3. Demostrar
 --    ∀x (P(x) ∧ Q(x)) ↔ ∀x P(x) ∧ ∀x Q(x)
--- ------------------------------------------------------
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example :

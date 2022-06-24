@@ -15,11 +15,11 @@ example
   (h1 : P → Q)
   (h2 : P → ¬Q)
   : ¬P :=
-assume h : P,
+assume h3 : P,
 have h4 : Q,
-  from h1 h,
+  from h1 h3,
 have h5 : ¬Q,
-  from h2 h,
+  from h2 h3,
 show false,
   from h5 h4
 
@@ -28,9 +28,9 @@ example
   (h1 : P → Q)
   (h2 : P → ¬Q)
   : ¬P :=
-assume h : P,
-have h4 : Q  := h1 h,
-have h5 : ¬Q := h2 h,
+assume h3 : P,
+have h4 : Q  := h1 h3,
+have h5 : ¬Q := h2 h3,
 show false,
   from h5 h4
 
@@ -39,16 +39,16 @@ example
   (h1 : P → Q)
   (h2 : P → ¬Q)
   : ¬P :=
-assume h : P,
+assume h3 : P,
 show false,
-  from (h2 h) (h1 h)
+  from (h2 h3) (h1 h3)
 
 -- 4ª demostración
 example
   (h1 : P → Q)
   (h2 : P → ¬Q)
   : ¬P :=
-assume h : P, (h2 h) (h1 h)
+assume h3 : P, (h2 h3) (h1 h3)
 
 -- 5ª demostración
 example

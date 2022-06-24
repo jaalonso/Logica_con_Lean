@@ -8,7 +8,7 @@
 #+LATEX_CLASS_OPTIONS: [a4paper,12pt,twoside]
 #+LATEX_HEADER:\usepackage{makeidx}
 #+LATEX_HEADER:\makeindex
-
+ 
 # * Contenido                                                             :TOC:
 
 #+LATEX: \input preambulo

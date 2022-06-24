@@ -61,8 +61,11 @@ example
   (hPQ : P ∧ Q)
   (hR : R)
   : Q ∧ R :=
-match hPQ with ⟨hP, hQ⟩ :=
-  and.intro hQ hR
+begin
+  split,
+  { cases hPQ with hP hQ,
+    exact hQ, },
+  { exact hR, },
 end
 
 -- 7ª demostración
@@ -72,36 +75,12 @@ example
   : Q ∧ R :=
 begin
   split,
-  { cases hPQ with hP hQ,
-    exact hQ, },
-  { exact hR, },
-end
-
--- 9ª demostración
-example
-  (hPQ : P ∧ Q)
-  (hR : R)
-  : Q ∧ R :=
-begin
-  split,
   { cases hPQ,
     assumption, },
   { assumption, },
 end
 
--- 10ª demostración
-example
-  (hPQ : P ∧ Q)
-  (hR : R)
-  : Q ∧ R :=
-begin
-  constructor,
-  { cases hPQ,
-    assumption, },
-  { assumption, },
-end
-
--- 11ª demostración
+-- 8ª demostración
 example
   (hPQ : P ∧ Q)
   (hR : R)
@@ -109,7 +88,7 @@ example
 -- by hint
 by tauto
 
--- 12ª demostración
+-- 9ª demostración
 example
   (hPQ : P ∧ Q)
   (hR : R)

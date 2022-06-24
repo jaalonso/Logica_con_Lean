@@ -89,6 +89,10 @@ example : P ∧ Q → Q ∧ P :=
 and.comm.mp
 
 -- 12ª demostración
+example : P ∧ Q → Q ∧ P :=
+and.swap
+
+-- 13ª demostración
 example : P ∧ Q → Q ∧ P:=
 -- by hint
 by tauto

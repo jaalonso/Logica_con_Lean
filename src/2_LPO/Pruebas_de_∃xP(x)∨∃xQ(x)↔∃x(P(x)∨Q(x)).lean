@@ -1,4 +1,4 @@
--- Pruebas de ∃x (P(x) ∨ Q(x)) ↔ ∃x P(x) ∨ ∃x Q(x) 
+-- Pruebas de ∃x (P(x) ∨ Q(x)) ↔ ∃x P(x) ∨ ∃x Q(x)
 -- ===============================================
 
 import tactic
@@ -8,82 +8,82 @@ section
 variable  {U : Type}
 variables {P Q : U -> Prop}
 
--- -----------------------------------------------------
+-- ----------------------------------------------------
 -- Ej. 1. Demostrar
 --    ∃x (P(x) ∨ Q(x)) ⊢ ∃x P(x) ∨ ∃x Q(x)
--- -----------------------------------------------------
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
-exists.elim h1 
-  ( assume x₀ (h2 : P x₀ ∨ Q x₀),
+exists.elim h1
+  ( assume a (h2 : P a ∨ Q a),
     or.elim h2
-    ( assume h3 : P x₀,
-      have h4 : ∃x, P x,          from exists.intro x₀ h3,
+    ( assume h3 : P a,
+      have h4 : ∃x, P x,          from exists.intro a h3,
       show (∃x, P x) ∨ (∃x, Q x), from or.inl h4 )
-    ( assume h6 : Q x₀,
-      have h7 : ∃x, Q x,          from exists.intro x₀ h6,
+    ( assume h6 : Q a,
+      have h7 : ∃x, Q x,          from exists.intro a h6,
       show (∃x, P x) ∨ (∃x, Q x), from or.inr h7 ))
 
 -- 2ª demostración
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
-exists.elim h1 
-  ( assume x₀ (h2 : P x₀ ∨ Q x₀),
+exists.elim h1
+  ( assume a (h2 : P a ∨ Q a),
     or.elim h2
-    ( assume h3 : P x₀,
-      have h4 : ∃x, P x,          from ⟨x₀, h3⟩,
+    ( assume h3 : P a,
+      have h4 : ∃x, P x,          from ⟨a, h3⟩,
       show (∃x, P x) ∨ (∃x, Q x), from or.inl h4 )
-    ( assume h6 : Q x₀,
-      have h7 : ∃x, Q x,          from ⟨x₀, h6⟩,
+    ( assume h6 : Q a,
+      have h7 : ∃x, Q x,          from ⟨a, h6⟩,
       show (∃x, P x) ∨ (∃x, Q x), from or.inr h7 ))
 
 -- 3ª demostración
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
-exists.elim h1 
-  ( assume x₀ (h2 : P x₀ ∨ Q x₀),
+exists.elim h1
+  ( assume a (h2 : P a ∨ Q a),
     or.elim h2
-    ( assume h3 : P x₀,
-      have h4 : ∃x, P x,          from ⟨x₀, h3⟩,
+    ( assume h3 : P a,
+      have h4 : ∃x, P x,          from ⟨a, h3⟩,
       or.inl h4 )
-    ( assume h6 : Q x₀,
-      have h7 : ∃x, Q x,          from ⟨x₀, h6⟩,
+    ( assume h6 : Q a,
+      have h7 : ∃x, Q x,          from ⟨a, h6⟩,
       or.inr h7 ))
 
 -- 4ª demostración
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
-exists.elim h1 
-  ( assume x₀ (h2 : P x₀ ∨ Q x₀),
+exists.elim h1
+  ( assume a (h2 : P a ∨ Q a),
     or.elim h2
-    ( assume h3 : P x₀,
-      or.inl ⟨x₀, h3⟩ )
-    ( assume h6 : Q x₀,
-      or.inr ⟨x₀, h6⟩ ))
+    ( assume h3 : P a,
+      or.inl ⟨a, h3⟩ )
+    ( assume h6 : Q a,
+      or.inr ⟨a, h6⟩ ))
 
 -- 5ª demostración
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
-exists.elim h1 
-  ( assume x₀ (h2 : P x₀ ∨ Q x₀),
+exists.elim h1
+  ( assume a (h2 : P a ∨ Q a),
     or.elim h2
-    ( λ h3, or.inl ⟨x₀, h3⟩ )
-    ( λ h6, or.inr ⟨x₀, h6⟩ ))
+    ( λ h3, or.inl ⟨a, h3⟩ )
+    ( λ h6, or.inr ⟨a, h6⟩ ))
 
 -- 6ª demostración
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
-exists.elim h1 
-  (λ x₀ h2, h2.elim (λ h3, or.inl ⟨x₀, h3⟩)
-                    (λ h6, or.inr ⟨x₀, h6⟩))
+exists.elim h1
+  (λ a h2, h2.elim (λ h3, or.inl ⟨a, h3⟩)
+                   (λ h6, or.inr ⟨a, h6⟩))
 
 -- 7ª demostración
 example
@@ -96,13 +96,13 @@ exists_or_distrib.mp h1
 example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
-match h1 with ⟨x₀, (h2 : P x₀ ∨ Q x₀)⟩ :=
+match h1 with ⟨a, (h2 : P a ∨ Q a)⟩ :=
   ( or.elim h2
-    ( assume h3 : P x₀,
-      have h4 : ∃x, P x,          from exists.intro x₀ h3,
+    ( assume h3 : P a,
+      have h4 : ∃x, P x,          from exists.intro a h3,
       show (∃x, P x) ∨ (∃x, Q x), from or.inl h4 )
-    ( assume h6 : Q x₀,
-      have h7 : ∃x, Q x,          from exists.intro x₀ h6,
+    ( assume h6 : Q a,
+      have h7 : ∃x, Q x,          from exists.intro a h6,
       show (∃x, P x) ∨ (∃x, Q x), from or.inr h7 ))
 end
 
@@ -111,13 +111,13 @@ example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
 begin
-  cases h1 with x₀ h3,
+  cases h1 with a h3,
   cases h3 with hp hq,
   { left,
-    use x₀,
+    use a,
     exact hp, },
   { right,
-    use x₀,
+    use a,
     exact hq, },
 end
 
@@ -126,12 +126,12 @@ example
   (h1 : ∃x, P x  ∨ Q x)
   : (∃x, P x) ∨ (∃x, Q x) :=
 begin
-  rcases h1 with ⟨x₀, hp | hq⟩,
+  rcases h1 with ⟨a, hp | hq⟩,
   { left,
-    use x₀,
+    use a,
     exact hp, },
   { right,
-    use x₀,
+    use a,
     exact hq, },
 end
 
@@ -142,68 +142,68 @@ lemma aux1
 -- by hint
 by finish
 
--- -----------------------------------------------------
+-- ----------------------------------------------------
 -- Ej. 2. Demostrar
 --    ∃x P(x) ∨ ∃x Q(x) ⊢ ∃x (P(x) ∨ Q(x))
--- -----------------------------------------------------
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example
   (h1 : (∃x, P x) ∨ (∃x, Q x))
   : ∃x, P x  ∨ Q x :=
-or.elim h1 
+or.elim h1
   ( assume h2 : ∃x, P x,
-    exists.elim h2 
-      ( assume x₀ (h3 : P x₀),
-        have h4 : P x₀ ∨ Q x₀, from or.inl h3,
-        show ∃x, P x  ∨ Q x,   from exists.intro x₀ h4 ))
+    exists.elim h2
+      ( assume a (h3 : P a),
+        have h4 : P a ∨ Q a, from or.inl h3,
+        show ∃x, P x  ∨ Q x, from exists.intro a h4 ))
   ( assume h2 : ∃x, Q x,
-    exists.elim h2 
-      ( assume x₀ (h3 : Q x₀),
-        have h4 : P x₀ ∨ Q x₀, from or.inr h3,
-        show ∃x, P x  ∨ Q x,   from exists.intro x₀ h4 ))
+    exists.elim h2
+      ( assume a (h3 : Q a),
+        have h4 : P a ∨ Q a, from or.inr h3,
+        show ∃x, P x  ∨ Q x, from exists.intro a h4 ))
 
 -- 2ª demostración
 example
   (h1 : (∃x, P x) ∨ (∃x, Q x))
   : ∃x, P x  ∨ Q x :=
-h1.elim 
-  ( assume ⟨x₀, (h3 : P x₀)⟩,
-    have h4 : P x₀ ∨ Q x₀, from or.inl h3,
-    show ∃x, P x  ∨ Q x,   from ⟨x₀, h4⟩ )
-  ( assume ⟨x₀, (h3 : Q x₀)⟩,
-    have h4 : P x₀ ∨ Q x₀, from or.inr h3,
-    show ∃x, P x  ∨ Q x,   from ⟨x₀, h4⟩ )
+h1.elim
+  ( assume ⟨a, (h3 : P a)⟩,
+    have h4 : P a ∨ Q a, from or.inl h3,
+    show ∃x, P x  ∨ Q x, from ⟨a, h4⟩ )
+  ( assume ⟨a, (h3 : Q a)⟩,
+    have h4 : P a ∨ Q a, from or.inr h3,
+    show ∃x, P x  ∨ Q x, from ⟨a, h4⟩ )
 
 -- 3ª demostración
 example
   (h1 : (∃x, P x) ∨ (∃x, Q x))
   : ∃x, P x  ∨ Q x :=
-h1.elim 
-  ( assume ⟨x₀, (h3 : P x₀)⟩,
-    have h4 : P x₀ ∨ Q x₀, from or.inl h3,
-    ⟨x₀, h4⟩ )
-  ( assume ⟨x₀, (h3 : Q x₀)⟩,
-    have h4 : P x₀ ∨ Q x₀, from or.inr h3,
-    ⟨x₀, h4⟩ )
+h1.elim
+  ( assume ⟨a, (h3 : P a)⟩,
+    have h4 : P a ∨ Q a, from or.inl h3,
+    ⟨a, h4⟩ )
+  ( assume ⟨a, (h3 : Q a)⟩,
+    have h4 : P a ∨ Q a, from or.inr h3,
+    ⟨a, h4⟩ )
 
 -- 4ª demostración
 example
   (h1 : (∃x, P x) ∨ (∃x, Q x))
   : ∃x, P x  ∨ Q x :=
-h1.elim 
-  ( assume ⟨x₀, (h3 : P x₀)⟩,
-    ⟨x₀, or.inl h3⟩ )
-  ( assume ⟨x₀, (h3 : Q x₀)⟩,
-    ⟨x₀, or.inr h3⟩ )
+h1.elim
+  ( assume ⟨a, (h3 : P a)⟩,
+    ⟨a, or.inl h3⟩ )
+  ( assume ⟨a, (h3 : Q a)⟩,
+    ⟨a, or.inr h3⟩ )
 
 -- 5ª demostración
 example
   (h1 : (∃x, P x) ∨ (∃x, Q x))
   : ∃x, P x  ∨ Q x :=
-h1.elim 
-  (λ ⟨x₀, h3⟩, ⟨x₀, or.inl h3⟩)
-  (λ ⟨x₀, h3⟩, ⟨x₀, or.inr h3⟩)
+h1.elim
+  (λ ⟨a, h3⟩, ⟨a, or.inl h3⟩)
+  (λ ⟨a, h3⟩, ⟨a, or.inr h3⟩)
 
 -- 6ª demostración
 example
@@ -218,10 +218,10 @@ example
   : ∃x, P x  ∨ Q x :=
 begin
   cases h1 with hp hq,
-  { cases hp with x₀ hx₀,
-    use x₀,
+  { cases hp with a ha,
+    use a,
     left,
-    exact hx₀, },
+    exact ha, },
   { cases hq with x₁ hx₁,
     use x₁,
     right,
@@ -233,10 +233,10 @@ example
   (h1 : (∃x, P x) ∨ (∃x, Q x))
   : ∃x, P x  ∨ Q x :=
 begin
-  rcases h1 with ⟨x₀, hx₀⟩ | ⟨x₁, hx₁⟩,
-  { use x₀,
+  rcases h1 with ⟨a, ha⟩ | ⟨x₁, hx₁⟩,
+  { use a,
     left,
-    exact hx₀, },
+    exact ha, },
   { use x₁,
     right,
     exact hx₁, },
@@ -249,10 +249,10 @@ lemma aux2
 -- by hint
 by finish
 
--- -----------------------------------------------------
+-- ----------------------------------------------------
 -- Ej. 3. Demostrar
---    ∃x (P(x) ∨ Q(x)) ↔ ∃x P(x) ∨ ∃x Q(x) 
--- -----------------------------------------------------
+--    ∃x (P(x) ∨ Q(x)) ↔ ∃x P(x) ∨ ∃x Q(x)
+-- ----------------------------------------------------
 
 -- 1ª demostración
 example :

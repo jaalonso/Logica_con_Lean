@@ -12,7 +12,7 @@ variables (P Q : Prop)
 
 -- 1ª demostración
 example : P → (Q → P) :=
-assume (h1 : P),
+assume h1 : P,
 show Q → P, from
   ( assume h2 : Q,
     show P, from h1)
